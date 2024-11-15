@@ -1,3 +1,4 @@
 main.jsx -> This file contains the main file.
 app.jsx -> It is the root component of the project .
 index.html -> The Entry point to REact project.
+json file -> contains the meta data regarding  the react project.
