@@ -1,2 +1,3 @@
-main.jsx file contains the main file.
-app.jsx - is the root component of the project .
+main.jsx -> This file contains the main file.
+app.jsx -> It is the root component of the project .
+index.html -> The Entry point to REact project.
