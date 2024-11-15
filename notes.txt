@@ -1,1 +1,2 @@
 main.jsx file contains the main file.
+app.jsx - is the root component of the project .
