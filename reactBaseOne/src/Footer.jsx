@@ -4,4 +4,5 @@ function Footer(){
                 <p>&copy; This is all about the website</p>
             </footer>
         );
-}
+};
+export default Footer
