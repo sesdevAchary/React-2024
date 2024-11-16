@@ -1,7 +1,0 @@
-function Footer(){
-    return(
-        <footer>
-        <p>&copy;This is the website name</P>
-          <footer/>
-    );
-};
