@@ -3,7 +3,8 @@ import Footer from './Footer.jsx'
 
 function App() {
   return (
-    <header/>
+    <>
+    </><Header/>
   );
 }
 
