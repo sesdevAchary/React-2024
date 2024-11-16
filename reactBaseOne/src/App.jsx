@@ -1,5 +1,6 @@
 import Header from './header.jsx'
-import 
+import Footer from './Footer.jsx
+'
 
 function App() {
   return (
