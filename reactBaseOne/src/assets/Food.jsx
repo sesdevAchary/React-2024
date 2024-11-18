@@ -6,7 +6,7 @@ function Food(){
         <ul>
             <li>Orange</li>
             <li>{Food2}</li> { /*js snippet always under the {} */}
-            <li>{Food</li>
+            <li>{Food2().toUpperCase}</li>
 
 
         </ul>
