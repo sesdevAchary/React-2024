@@ -10,5 +10,7 @@ function Food(){
 
 
         </ul>
-    )
-}
+    );
+};
+
+export default Food ;
