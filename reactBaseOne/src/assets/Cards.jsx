@@ -1,4 +1,4 @@
-// import 
+// import profilePic from './assets/profile.jpg'// -> src={profilePic}
 
 function cards(){
     return(
