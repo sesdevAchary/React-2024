@@ -9,3 +9,5 @@ function cards(){
         </div>
     )
 }
+
+export default cards;
