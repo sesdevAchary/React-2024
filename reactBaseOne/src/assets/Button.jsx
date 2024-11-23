@@ -1,8 +1,10 @@
 function Button (){
 
 
-    const styles={
-        backgroundColor: "azure",
+    const style = {
+        backgroundColor: "azure", // within the JSX content we can't use any hyphen
+      
+      
         border:"2px solid black",
 
     }
