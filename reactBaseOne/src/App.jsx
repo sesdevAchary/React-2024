@@ -1,5 +1,6 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import Button from './Button.jsx'
 // import Food from './Food.jsx'//
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <Header/>
     <Food/>
     <Footer/>
+    <Button/>
     </>
   );
 }
