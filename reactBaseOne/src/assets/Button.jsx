@@ -3,8 +3,6 @@ function Button (){
 
     const style = {
         backgroundColor: "azure", // within the JSX content we can't use any hyphen kind of statements.
-      
-      
         border:"2px solid black",
 
     }
@@ -15,3 +13,4 @@ export  default Button ;
 
 
 // otherwise we can use external Css styling too where we can create another file named Button.module.css and can export it in the JSX content.//
+// with {styles.button} attribute
