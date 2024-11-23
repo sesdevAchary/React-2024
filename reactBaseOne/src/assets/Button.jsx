@@ -6,7 +6,7 @@ function Button (){
         border:"2px solid black",
 
     }
-    return( <button className = "button-class">CLICK ME </button>);
+    return( <button style={styles}>CLICK ME </button>);
 }
 
 export  default Button ;
