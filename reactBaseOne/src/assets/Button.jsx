@@ -12,3 +12,6 @@ function Button (){
 }
 
 export  default Button ;
+
+
+// otherwise we can use external Css styling too where we can create another file named Button.module.css and can export it in the JSX content.//
