@@ -11,7 +11,7 @@ return (
 );
 };
 Student.propTypes;{
-    name:propTypes.string ;
+    name:propTypes.string ; {/* to confit, that name should only be of string type*/}
     age:propTypes.int;
 
 }
