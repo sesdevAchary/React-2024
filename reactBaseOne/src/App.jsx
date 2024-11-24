@@ -13,7 +13,7 @@ function App() {
     <Button/>
    
    {/* including student component within the App component//App is the parent and student is the child component// */}
-    <student></student>
+    <student name="Lnt ki Gotti"/> {/* setting key value pair to student component this will also transfer to the props */}
     </>
   );
 }
