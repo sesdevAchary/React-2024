@@ -4,10 +4,13 @@ return (
         <p>Name: {props.name}</p>
         <p>Age: {props.age}</p>
         <p>Name: {props.isStudent ? " Nice ": "Not Nice"}</p>  {/*BOOLEANS need conditions , dont get directly displayed on Js Dom*/}
-
-
-        </div>
+    </div>
 
 )
+}
+Student.propTypes{
+    name:propTypes.string ;
+    age:propTypes.int;
+
 }
 export default Student;
