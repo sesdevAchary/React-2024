@@ -2,7 +2,10 @@ function student(props){  {/*To accept props,student function needs a parameter,
 return ( 
     <div>
         <p>Name: {props.name}</p>
-    </div>
+        <p>Age: {props.age}</p>
+
+        </div>
+
 )
 }
 export default student;
