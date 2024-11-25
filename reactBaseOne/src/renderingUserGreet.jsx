@@ -1,3 +1,5 @@
 function userGreeting(props){
-     if()
+     if( props.isLoggedIn){
+        return <h2>{props.userName}</h2>
+     }
 }
