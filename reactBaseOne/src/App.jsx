@@ -15,9 +15,12 @@ function App() {
    
    {/* including student component within the App component//App is the parent and student is the child component// */}
     <student name="Lnt ki Gotti" age={21} isStudent={fasle}/> {/* setting key value pair to student component this will also transfer to the props */}
+
+
+    <userGreeting isLoggedIn={true}  username="if true then this will be displayed"/>
+
     </>
 
-    
   );
 }
 
