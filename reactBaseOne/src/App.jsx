@@ -2,6 +2,7 @@ import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import Button from './Button.jsx'
 import student from './propsStudent.jsx'
+import 
 // import Food from './Food.jsx'//
 
 function App() {
