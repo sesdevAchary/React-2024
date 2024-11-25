@@ -1,3 +1,3 @@
-function userGreeting(){
-    
+function userGreeting(props){
+     if()
 }
