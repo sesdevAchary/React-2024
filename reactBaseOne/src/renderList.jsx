@@ -4,5 +4,5 @@ function renderingList(){
     const listItems = fruits.map(fruit => <li>{fruits}</li>
     )
 
-    return()
+    return( <ol>listItems</ol>)
 }
