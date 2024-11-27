@@ -10,6 +10,6 @@ const fruits =[ { id:1, name:"apple" ,cal:21},
                  { id:1, name:"orange" ,cal:85},
                   { id:1, name:"banana" ,cal:218} ]
 
-cosnt lsitItems
+cosnt lsitItems= fruits.map
 
  }
