@@ -1,7 +1,8 @@
 function renderingList(){
     const fruits = {apple,banan,Orange,coconut}
 
-    const listItems =
+    const listItems = fruits.map(fruit => <li>{fruits}</li>
+    )
 
     return()
 }
