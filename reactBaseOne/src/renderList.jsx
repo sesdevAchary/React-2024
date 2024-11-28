@@ -22,6 +22,8 @@ const listItems= fruits.map(fruit => <li key={fruit.id}>{fruit.name}:&nbsp;
                                                        <b>{fruit.cal}</b></li>); { /*each key item should have always an unique id */}
 
   return(<ol>{listItems}</ol>);
+  
+  // ohterwise we can create an array in the app.jsx and can make a prop call here //
 
  }
 export default  renderingList;
