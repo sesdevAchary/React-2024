@@ -13,6 +13,8 @@ const fruits =[ { id:1, name:"apple" ,cal:21},
 /* for sorting purpose---->
   fruits.sort((a,b)=> a.name.localCompare(b.name)); // for lexicographically sorting the array //
   fruits.sort((a,b)=> b.name.localCompare(a.name)); // for lexicographically  reverse sorting the array //
+  fruits.sort((a,b)=> a.calories-b.calories); // to sort in numeric order //
+  fruits.sort((a,b)=> b.calories-a.calories); // to reverse sort in numeric order //
 
 */
 
