@@ -15,6 +15,7 @@ function Button (){
  const handleCLick3 = (name)=>{
          if (count < 3){
           count ++;
+          console.log(`${name} you clicked me ${count} times`);
          }
  }
 
