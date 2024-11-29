@@ -6,10 +6,12 @@ function Button (){
    */
 
 // button click having a parameter //
-  const handleClick2=(name)=> console.log( `${name} stop clicking me `)
+ /* const handleClick2=(name)=> console.log( `${name} stop clicking me `)
   return( <button onclick=()=>{handleClick2("bro")};> click me </button>)
    // output here will be -> Bro stop clicking me//
+*/
 
+ let count = 0;
 
 }
 export default Button ;
