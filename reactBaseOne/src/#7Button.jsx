@@ -18,7 +18,7 @@ function Button (){
           console.log(`${name} you clicked me ${count} times`);
          }
          else{
-          cosnole.log(`${name}`)
+          cosnole.log(`${name} stop clicling me`);
          }
  }
 
