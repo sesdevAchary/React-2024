@@ -21,7 +21,7 @@ function Button (){
           cosnole.log(`${name} stop clicling me`); // here the output =>bro stop clicking me
          }
  }
- return( <button onClick={})
+ return( <button onClick={()=>{handleCLick3('bro')}}> click me </button>);
 
 }
 export default Button ;
