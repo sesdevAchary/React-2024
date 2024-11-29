@@ -12,6 +12,9 @@ function Button (){
 */
 
  let count = 0;
+ const handleCLick3 = (name)=>{
+  
+ }
 
 }
 export default Button ;
