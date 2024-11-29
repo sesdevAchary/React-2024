@@ -13,7 +13,9 @@ function Button (){
 
  let count = 0;
  const handleCLick3 = (name)=>{
-  
+         if (count < 3){
+          count ++;
+         }
  }
 
 }
