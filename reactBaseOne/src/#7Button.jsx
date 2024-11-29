@@ -17,6 +17,9 @@ function Button (){
           count ++;
           console.log(`${name} you clicked me ${count} times`);
          }
+         else{
+          cosnole.log(`${name}`)
+         }
  }
 
 }
