@@ -15,10 +15,10 @@ function Button (){
  const handleCLick3 = (name)=>{
          if (count < 3){
           count ++;
-          console.log(`${name} you clicked me ${count} times`);
+          console.log(`${name} you clicked me ${count} times`); //Here the o/p=> bro clicked me 1/2/3 times //
          }
          else{
-          cosnole.log(`${name} stop clicling me`);
+          cosnole.log(`${name} stop clicling me`); // here the output =>bro stop clicking me
          }
  }
 
