@@ -24,10 +24,16 @@ function Button (){
  return( <button onClick={()=>{handleCLick3('bro')}}> click me </button>);
 */
 
+/*
+function button (){
+   const handleCLick4=(e)=>{e.target.textContent = 'oouch' }; // console.log("Ouuch")
+   return ( <button onDoubleClick={(e)=>handleCLick4(e)} >click me </button>) //  will show first the click me area then it will convert to oouch ater we doubleCLick the event //
+}
+   */
 
 function button (){
-   const handleCLick4=(e)=>{e.target.textContent = 'oouch'};
-   return ( <button onDoubleClick={(e)=>handleCLick4(e)} >click me </button>) //  will show first the click me area then it will convert to oouch ater we doubleCLick the event //
+   const imgUrl='./src/assets....location';
+   
 }
 }
 export default Button ;
