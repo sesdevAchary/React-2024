@@ -26,7 +26,7 @@ function Button (){
 
 
 function button (){
-   
+   const handleCLick4=(e)=>{e.target}
 }
 }
 export default Button ;
