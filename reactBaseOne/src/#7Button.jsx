@@ -10,7 +10,7 @@ function Button (){
   return( <button onclick={()=>{handleClick2("bro")}};> click me </button>)
    // output here will be -> Bro stop clicking me//
 */
-
+/*
  let count = 0;
  const handleCLick3 = (name)=>{
          if (count < 3){
@@ -22,6 +22,11 @@ function Button (){
          }
  }
  return( <button onClick={()=>{handleCLick3('bro')}}> click me </button>);
+*/
 
+
+function button (){
+   
+}
 }
 export default Button ;
