@@ -1,6 +1,7 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
-import Button from './Button.jsx'
+import Button from '<div className="" />
+<div id="7"></div>Button.jsx'
 import student from './propsStudent.jsx'
 import userGreeting from './renderingUserGreet.jsx'
 // import Food from './Food.jsx'//
