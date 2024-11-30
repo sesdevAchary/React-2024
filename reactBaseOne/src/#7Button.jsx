@@ -33,7 +33,7 @@ function button (){
 
 function button (){
    const imgUrl='./src/assets....location';
-   
+   const handleClick5 = (e)=>{ console.log("iamge to be clicked ")} 
 }
 }
 export default Button ;
