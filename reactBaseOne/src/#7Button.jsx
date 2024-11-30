@@ -27,7 +27,7 @@ function Button (){
 
 function button (){
    const handleCLick4=(e)=>{e.target.textContent = 'oouch'};
-   return ( <button onclick={(e)=>handleCLick4(e)} click me ></button>)
+   return ( <button onclick={(e)=>handleCLick4(e)} >click me </button>)
 }
 }
 export default Button ;
