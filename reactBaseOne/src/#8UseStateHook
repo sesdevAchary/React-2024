@@ -1,4 +1,4 @@
-import react ,{useState} from 'react';
+import React ,{useState} from 'react';
 
 function myComponents(){
     const [name,setname]= useState("initial default name");
@@ -16,13 +16,13 @@ function myComponents(){
     */
 
     const  updateAge=()=>{
-        setname(Age+1);
+        setAge(Age+1);
     }
  return(
-    <p> Age:{Age} </p>
-            <button onClick = {updateAge}> for updating  the age </button> ; // connect to ln 7 //
+       <p>age:{Age} </p>
+            <button onClick = {updateAge}> for updating  the age </button> ; );
 
 
- );
+
     
 }
