@@ -1,0 +1,12 @@
+import react ,{useState} from 'react';
+
+function myComponents(){
+    const [name,setname]= useState("initial default name");
+
+    
+
+    return (
+        <p> Name:{name}</p>
+        <button onClick = {updateName}> for setting the name </button>
+    );
+}
