@@ -14,5 +14,8 @@ function myComponents(){
     );
     */
 
-    const 
+    const  updateAge=()=>{
+        setname("age+1");
+
+    }
 }
