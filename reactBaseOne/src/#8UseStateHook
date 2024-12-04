@@ -2,7 +2,7 @@ import React ,{useState} from 'react';
 
 function myComponents(){
     const [name,setname]= useState("initial default name");
-    consr [ quantity,setQuantity]=useState(" ");
+    const [ quantity,setQuantity]=useState(" ");
    
    /*
     const updateName=()=>{
@@ -19,7 +19,7 @@ function myComponents(){
 function handleNameChange(event){
       setname(event.target.value)
 }
-function handleQuantity(){
+function handleQuantity(event){
     setQuantity(event.target.value)
 }
 
@@ -28,7 +28,7 @@ return (
     <input value ={name} onchange ={handleNameChange}/>
     <p>Name:{name}</p>
 
-    <input value = {quantity} onchange={handleQuantity}/>
+    <input value = {name} onchange={handleQuantity}/>
     <P> quantity: {quantity}</P>
     </div>
 )
