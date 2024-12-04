@@ -2,6 +2,7 @@ import React ,{useState} from 'react';
 
 function myComponents(){
     const [name,setname]= useState("initial default name");
+    consr [ quantity,setQuantity]=useState(" ");
    
    /*
     const updateName=()=>{
