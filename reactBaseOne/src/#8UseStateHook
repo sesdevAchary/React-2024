@@ -28,7 +28,7 @@ return (
     <input value ={name} onchange ={handleNameChange}/>
     <p>Name:{name}</p>
 
-    <input value = {name} onchange={handleQuantity}/>
+    <input value = {quantity} onchange={handleQuantity}/>
     <P> quantity: {quantity}</P>
     </div>
 )
