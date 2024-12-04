@@ -15,11 +15,13 @@ function myComponents(){
     
 */
 
-
+function handleNameChange(event){
+      setname(event.target.value)
+}
 
 return (
     <div>
-    <input value ={name}
+    <input value ={name} onchange ={handleNameChange}/>
     </div>
 )
 
