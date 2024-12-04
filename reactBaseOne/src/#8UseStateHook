@@ -19,6 +19,9 @@ function myComponents(){
 function handleNameChange(event){
       setname(event.target.value)
 }
+function handleQuantity(){
+    setQuantity(event.target.value)
+}
 
 return (
     <div>
