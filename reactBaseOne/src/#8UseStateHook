@@ -2,9 +2,8 @@ import React ,{useState} from 'react';
 
 function myComponents(){
     const [name,setname]= useState("initial default name");
-    const [ Age,setAge] = useState(0);
-
-
+   
+   /*
     const updateName=()=>{
         setname("Rudra Narayan"); //will show us an output first as Name:initial default name,after clicking on the button => Rudra//
     }
@@ -14,7 +13,12 @@ function myComponents(){
         <button onClick = {updateName}> for setting the name </button> ; // connect to ln 7 //
     );
     
+*/
 
+return (
+    <div>
+    </div>
+)
 
     
 }
