@@ -15,8 +15,11 @@ function myComponents(){
     
 */
 
+
+
 return (
     <div>
+    <input value ={name}
     </div>
 )
 
