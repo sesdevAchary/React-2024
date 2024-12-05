@@ -7,6 +7,10 @@ function colorpicker(){
 
     // CREAING HTML ELEMENT WITHIN THE RETURN APP //
     return(
-        <div className=""></div>
+        <div className="color-picker-container">
+            <h1>COLOR PICKER </h1>
+            
+            <div className="color-display"></div>
+        </div>
     )
 }
