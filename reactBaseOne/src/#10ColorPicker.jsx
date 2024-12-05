@@ -10,7 +10,7 @@ function colorpicker(){
         <div className="color-picker-container">
             <h1>COLOR PICKER </h1>
             
-            <div className="color-display"></div>
+            <div className="color-display" style={backgroundColor:color}></div>
         </div>
     )
 }
