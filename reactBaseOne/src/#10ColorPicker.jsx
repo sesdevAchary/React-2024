@@ -4,8 +4,8 @@ import react from 'react'
 function colorpicker(){
     const[color,setColor]= useState("#FFFFFF");
 
-    function handleColorChange(){
-        
+    function handleColorChange(event){
+        setColor(event.target.value);
     }
 
 
