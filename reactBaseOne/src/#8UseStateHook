@@ -1,8 +1,8 @@
 import React ,{useState} from 'react';
 
 function myComponents(){
-    const [name,setname]= useState("initial default name");
-    const [ quantity,setQuantity]=useState(" ");
+    //const [name,setname]= useState("initial default name");//
+    //const [ quantity,setQuantity]=useState(" ");//
    
    /*
     const updateName=()=>{
@@ -16,7 +16,9 @@ function myComponents(){
     
 */
 
-function handleNameChange(event){
+
+/*
+ function handleNameChange(event){
       setname(event.target.value)
 }
 function handleQuantity(event){
@@ -35,5 +37,25 @@ return (
 
     
 }
+*/
+
+
+
+
+// 11  increment decrement and reset part 11 //
+
+
+
+//  UPDATER FUNCTION /////////
+
+const 
+
+
+
+
+
+
+
+
 
 export default myComponents ;
