@@ -56,7 +56,9 @@ function increment(){
     setCount(count+1);
     setCount(count+1); // it wont get incremented for 2 times per click// */
    
-    // thus we need to set 
+    // thus we need to set  an updater function to increment our value one after one //
+
+    setCount(c=>c+1);
 
 }
 
