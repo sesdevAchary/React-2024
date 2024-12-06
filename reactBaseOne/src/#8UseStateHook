@@ -54,12 +54,15 @@ const [ count , setCount ] = useState(0) ;
 function increment(){
    /*
     setCount(count+1);
-    setCount(count+1); // it wont get incremented for 2 times per click// */
+    setCount(count+1); // it wont get incremented for 2 times per click// 
+    output will be 1 then  1 then  1 like this every time we step on the increment button */
    
     // thus we need to set  an updater function to increment our value one after one //
 
     setCount(c=>c+1);
-
+    // again //
+    setCount(c=>c+1);
+     
 }
 
 
