@@ -67,9 +67,9 @@ function increment(){
      // during the next render it will call them in the same order //
 
 
+     function myComponent(){
 
+     }
 
 }
- function myComponent(){
-    
- }
+export default myComponents;
