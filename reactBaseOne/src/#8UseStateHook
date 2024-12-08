@@ -68,7 +68,7 @@ function increment(){
 
 
      function myComponent(){
-
+    const [car ,setCar]=useState(' ')
      }
 
 }
