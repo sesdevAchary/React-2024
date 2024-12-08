@@ -50,7 +50,7 @@ return (
 
 const [ count , setCount ] = useState(0) ;
 
-
+/*
 function increment(){
    /*
     setCount(count+1);
@@ -65,12 +65,11 @@ function increment(){
      // This will be like  1 then 2 with the output value with every step up on the increment button //
      // It takes the pending state to calculate the next state , react puts the updater function in a queue //
      // during the next render it will call them in the same order //
+
+
+
+
 }
-
-
-
-
-
-
-
-export default myComponents ;
+ function myComponent(){
+    
+ }
