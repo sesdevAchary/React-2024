@@ -70,7 +70,7 @@ function increment(){
      function myComponent(){
     const [car ,setCar]=useState(' ') // this is the default value in the initial state //
 
-    <return/>
+    
      }
 
 }
