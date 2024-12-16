@@ -1,0 +1,18 @@
+import react ,{useState} from 'react'
+
+function myComponent(){
+    const[food,setFood]=  useState( [" orange","olive"])
+
+function addFruit(){
+
+}
+
+
+return(
+    <div>LIst of Fruits </div>
+    <ul> {foods.map((food,index)=><li {index}>{food}</li>)}
+)
+
+
+
+}
