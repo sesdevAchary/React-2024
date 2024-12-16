@@ -4,7 +4,10 @@ function myComponent(){
     const[food,setFood]=  useState( [" orange","olive"] );
 
 function addFruit(){
-   const newFood= document.getElementById(" foodId ")
+   const newFood= document.getElementById(" foodId ").value=" ";
+
+   setFood([...food,newFood]); // it will add the new fruit name with orange and olive //
+
 }
 
 
