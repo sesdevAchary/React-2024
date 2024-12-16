@@ -1,16 +1,23 @@
 import react ,{useState} from 'react'
 
 function myComponent(){
-    const[food,setFood]=  useState( [" orange","olive"])
+    const[food,setFood]=  useState( [" orange","olive"] );
 
 function addFruit(){
-
+   const newFood= document.getElementById(" foodId ")
 }
 
 
 return(
-    <div>LIst of Fruits </div>
-    <ul> {foods.map((food,index)=><li {index}>{food}</li>)}
+    <div>LIst of Fruits 
+    <ul>
+     {foods.map((food,index)=><li key={index}>{food}</li>)}
+    </ul>
+
+    <input type ="text" id ="foodId" placeholder="Add new food here " />
+    <button onClick={addFruit}> add food here </button>
+
+    </div>
 )
 
 
