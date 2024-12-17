@@ -1,30 +1,36 @@
-import react ,{useState} from 'react'
+ import react ,{useState} from 'react'
 
-function myComponent(){
-    const[food,setFood]=  useState( [" orange","olive"] );
+// function myComponent(){
+//     const[food,setFood]=  useState( [" orange","olive"] );
 
-function addFruit(){
-   const newFood= document.getElementById(" foodId ").value=" ";
+// function addFruit(){
+//    const newFood= document.getElementById(" foodId ").value=" ";
 
-   setFood([...food,newFood]); // it will add the new fruit name with orange and olive //
+//    setFood([...food,newFood]); // it will add the new fruit name with orange and olive //
 
+// }
+
+
+// return(
+//     <div>LIst of Fruits 
+//     <ul>
+//      {foods.map((food,index)=><li key={index}>{food}</li>)}
+//     </ul>
+
+//     <input type ="text" id ="foodId" placeholder="Add new food here " />
+//     <button onClick={addFruit}> add food here </button>
+
+//     </div>
+// )
+
+
+
+// }
+
+// export default myComponent;
+
+
+
+function Component(){
+    const{}
 }
-
-
-return(
-    <div>LIst of Fruits 
-    <ul>
-     {foods.map((food,index)=><li key={index}>{food}</li>)}
-    </ul>
-
-    <input type ="text" id ="foodId" placeholder="Add new food here " />
-    <button onClick={addFruit}> add food here </button>
-
-    </div>
-)
-
-
-
-}
-
-export default myComponent;
