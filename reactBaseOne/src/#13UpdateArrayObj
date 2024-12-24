@@ -1,4 +1,4 @@
- import react ,{useState} from 'react'
+//  import react ,{useState} from 'react'
 
 // function myComponent(){
 //     const[food,setFood]=  useState( [" orange","olive"] );
@@ -30,16 +30,3 @@
 // export default myComponent;
 
 
-
-function Component(){
-    const[ cars , setCar ]= useState([]);
-    const [carYear , setCarYear]= useState()
-    const [carMake , setCarMake]= useState()
-    const [carModel , setCarModel]= useState()
-
-
-
-
-
-    return(<></>)
-}
