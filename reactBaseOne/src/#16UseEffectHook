@@ -1,8 +1,17 @@
-useEffect= A react hook that is added up when
+ /*useEffect= A react hook that is added up when
            the component re renders / mounts 
 
 useEffect(function,[dependency])
 
 useEffect(()=>{})   // runs after every re render 
 useEffect ( ()=>{},[])
-useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes 
+useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes  */
+
+
+
+import react ,{useState} from 'react';
+
+function myComponent(){
+
+   
+}
