@@ -4,4 +4,5 @@ useEffect= A react hook that is added up when
 useEffect(function,[dependency])
 
 useEffect(()=>{})   // runs after every re render 
-useEffect ( ()=>{},[]) // runs only after mounting
+useEffect ( ()=>{},[])
+useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes 
