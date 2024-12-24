@@ -1,0 +1,7 @@
+useEffect= A react hook that is added up when
+           the component re renders / mounts 
+
+useEffect(function,[dependency])
+
+useEffect(()=>{})   // runs after every re render 
+useEffect ( ()=>{},[]) // runs only after mounting
