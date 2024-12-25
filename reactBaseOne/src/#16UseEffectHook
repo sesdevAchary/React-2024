@@ -9,23 +9,21 @@ useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re
 
 
 
-import React ,{useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-function myComponent(){
+function MyComponent() {
+  const [count, setCount] = useState(0);
 
+  function addCount() {
+    setCount((c) => c + 1);
+  }
 
-const [count,setCount] = useState(0);
-
-          function addCount (){
-            setCount(c=>c+1);
-          }
-
-
-    return(
-     <p>count:{count}</p>
-     <Button onClick={addCount}>ADD<Buton>
-     
-    );
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={addCount}>ADD</button>
+    </>
+  );
 }
 
-export default myComponent
+export default MyComponent;
