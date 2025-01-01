@@ -67,3 +67,31 @@ function Garage() {
 
 const root1 = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
+
+
+
+
+
+
+// index.js
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// functional component to illustrate props
+function DemoComponent(props) {
+    return (
+        <div>
+            {/*accessing information from props */}
+            <h2>Hello {props.user}</h2>
+            <h3>Welcome to GeeksforGeeks</h3>
+        </div>
+    );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <React.StrictMode>
+        <DemoComponent user="Geeks" />
+    </React.StrictMode>
+);
