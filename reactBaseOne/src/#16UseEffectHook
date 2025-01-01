@@ -225,3 +225,26 @@ root.render(
         <App />
     </React.StrictMode>
 );
+
+
+import React from 'react';
+
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            brand: 'Ford', // Example property in the state
+        };
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>My Car</h1>
+                {/* Other component content */}
+            </div>
+        );
+    }
+}
+
+export default MyComponent;
