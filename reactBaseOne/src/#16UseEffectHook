@@ -218,3 +218,12 @@ class Question extends React.Component {
     return <h3> Lets go for a <FaBeer />? </h3>  
   }  
 }  
+
+
+
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";  
+class Question extends React.Component {  
+  render() {  
+    return <h3> Lets go for a <FaBeer />? </h3>  
+  }  
+}  
