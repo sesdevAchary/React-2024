@@ -54,64 +54,43 @@ const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerR
     };  
 };  
 
-
-
-import React, { Component } from 'react';  
-import ReactDOM from 'react-dom';  
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader  
-import { Carousel } from 'react-responsive-carousel';  
-   
-class DemoCarousel extends Component {  
-    render() {  
-        return (  
-            <Carousel>  
-                <div>  
-                    <img src="assets/1.jpeg" />  
-                    <p className="legend">Legend 1</p>  
-                </div>  
-                <div>  
-                    <img src="assets/2.jpeg" />  
-                    <p className="legend">Legend 2</p>  
-                </div>  
-                <div>  
-                    <img src="assets/3.jpeg" />  
-                    <p className="legend">Legend 3</p>  
-                </div>  
-            </Carousel>  
-        );  
-    }  
-});  
-
-
 import React, { useState } from 'react';  
-function Counter() {  
-  // Initialize the state with an initial value of 0  
-  const [count, setCount] = useState(0);  
-  // Event handler for incrementing the count  
-  const handleIncrement = () => {  
-    setCount(count + 1); // Update the count using setCount  
+function TodoList() {  
+  const [tasks, setTasks] = useState([]);  
+  const [newTask, setNewTask] = useState('');  
+  
+  const addTask = () => {  
+    if (newTask) {  
+      setTasks([...tasks, newTask]);  
+      setNewTask('');  
+    }  
+  };  
+  
+  const removeTask = (index) => {  
+    const updatedTasks = [...tasks];  
+    updatedTasks.splice(index, 1);  
+    setTasks(updatedTasks);  
   };  
   
   return (  
     <div>  
-      <h1>Counter: {count}</h1>  
-      <button onClick={handleIncrement}>Increment</button>  
+      <h2>Todo List</h2>  
+      <input  
+        type="text"  
+        placeholder="Add a task"  
+        value={newTask}  
+        onChange={(e) => setNewTask(e.target.value)}  
+      />  
+      <button onClick={addTask}>Add</button>  
+      <ul>  
+        {tasks.map((task, index) => (  
+          <li key={index}>  
+            {task}  
+            <button onClick={() => removeTask(index)}>Remove</button>  
+          </li>  
+        ))}  
+      </ul>  
     </div>  
   );  
 }  
-export default Counter;  
-
-unction Parent() {  
-    const [count, setCount] = useState(0);  
-    
-    return (  
-      <div>  
-        <Child count={count} />  
-        <button onClick={() => setCount(count + 1)}>Increment</button>  
-      </div>  
-    );  
-  }  
-    
-  function Child({ count }) {  
-    return <p>Count: {count}</p>;  
-  }  
+export default TodoList;  
