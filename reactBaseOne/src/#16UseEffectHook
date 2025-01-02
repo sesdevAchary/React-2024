@@ -100,3 +100,18 @@ function Counter() {
   );  
 }  
 export default Counter;  
+
+unction Parent() {  
+    const [count, setCount] = useState(0);  
+    
+    return (  
+      <div>  
+        <Child count={count} />  
+        <button onClick={() => setCount(count + 1)}>Increment</button>  
+      </div>  
+    );  
+  }  
+    
+  function Child({ count }) {  
+    return <p>Count: {count}</p>;  
+  }  
