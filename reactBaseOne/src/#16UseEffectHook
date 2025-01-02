@@ -8,222 +8,41 @@ useEffect ( ()=>{},[])
 useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes  */
 
 
-
-
-
-import React from 'react';  
-
-function App() {  
-  const myArray = ['Jack', 'Mary', 'John', 'Krish', 'Navin'];  
-    
-  return (  
-    <div className="container">     
-        <h1> Example of React Map Loop </h1>  
-        <ul>
-          {myArray.map((name, index) => (  
-            <li key={index}>  
-              {name}  
-            </li>  
-          ))}  
-        </ul>
-    </div>  
-  );  
-}  
-
-export default App;  
-
-
-import React from 'react';  
-    
-function App() {  
-    
- const students = [  
-              {  
-                'id': 1,   
-                'name': Jack,   
-                'email': 'jack@gmail.com'  
-              },  
-              {  
-                'id': 2,   
-                'name': 'Mary',   
-                'email': ?mary@gmail.com'  
-              },  
-              {  
-                'id': 3,   
-                'name': 'John',   
-                'email': 'john@gmail.com'  
-              },  
-          ];  
-    
-  return (  
-    <div className="container">  
-        <h1> Example of React Map Loop </h1>  
-     
-        <table className="table table-bordered">  
-            <tr>  
-                <th>ID</th>  
-                <th>Name</th>  
-                <th>Email</th>  
-            </tr>  
-    
-            {students.map((student, index) => (  
-              <tr data-index={index}>  
-                <td>{student.id}</td>  
-                <td>{student.name}</td>  
-                <td>{student.email}</td>  
-              </tr>  
-            ))}  
-    
-        </table>  
-    
-    </div>  
-  );  
-}  
-    
-export default App;  
-
-
-
-
-
-
-
-export default class PostList extends React.Component {  
-    state = {  
-      posts: []  
-    }  
-      
-    componentDidMount() {  
-      axios.get(`https://jsonplaceholder.typicode.com/posts`)  
-        .then(res => {  
-          const posts = res.data;  
-          this.setState({ posts });  
-        })  
-    }  
-      
-    deleteRow(id, e){  
-      axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)  
-        .then(res => {  
-          console.log(res);  
-          console.log(res.data);  
-      
-          const posts = this.state.posts.filter(item => item.id !== id);  
-          this.setState({ posts });  
-        })  
-      
-    }  
-      
-    render() {  
-      return (  
-        <div>  
-          <h1> Example of React Axios Delete Request </h1>  
-      
-          <table className="table table-bordered">  
-              <thead>  
-                <tr>  
-                    <th>ID</th>  
-                    <th>Title</th>  
-                    <th>Body</th>  
-                    <th>Action</th>  
-                </tr>  
-              </thead>  
-      
-              <tbody>  
-                {this.state.posts.map((post) => (  
-                  <tr>  
-                    <td>{post.id}</td>  
-                    <td>{post.title}</td>  
-                    <td>{post.body}</td>  
-                    <td>  
-                      <button className="btn btn-danger" onClick={(e) => this.deleteRow(post.id, e)}>Delete</button>  
-                    </td>  
-                  </tr>  
-                ))}  
-              </tbody>  
-      
-          </table>  
-        </div>  
-      )  
-    }  
-  }  
-
-
-  import React, { Component } from 'react';  
-import { render } from 'react-dom';  
-         
-class App extends Component {  
-  constructor() {  
-    super();  
-    this.state = {  
-      categories: [  
-        {id: 1, value: "Angular"},  
-        {id: 2, value: "React"},  
-        {id: 3, value: "PHP"},  
-        {id: 4, value: "Laravel"}  
-      ],  
-      checkedItems: new Map()  
+const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerResponse => {  
+    const transitionTime = props.transitionTime + 'ms';  
+    const transitionTimingFunction = 'ease-in-out';  
+   
+    let slideStyle: React.CSSProperties = {  
+        position: 'absolute',  
+        display: 'block',  
+        zIndex: -2,  
+        minHeight: '100%',  
+        opacity: 0,  
+        top: 0,  
+        right: 0,  
+        left: 0,  
+        bottom: 0,  
+        transitionTimingFunction: transitionTimingFunction,  
+        msTransitionTimingFunction: transitionTimingFunction,  
+        MozTransitionTimingFunction: transitionTimingFunction,  
+        WebkitTransitionTimingFunction: transitionTimingFunction,  
+        OTransitionTimingFunction: transitionTimingFunction,  
     };  
-    
-    this.handleChange = this.handleChange.bind(this);  
-    this.handleSubmit = this.handleSubmit.bind(this);  
-  }  
-       
-  handleChange(event) {  
-        var isChecked = event.target.checked;  
-        var item = event.target.value;  
-           
-        this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));  
-  }  
-       
-  handleSubmit(event) {  
-    console.log(this.state);  
-    event.preventDefault();  
-  }  
-       
-  render() {  
-    return (  
-      <div>  
-        <h1> Examples of Multiple Checkbox in React </h1>  
-    
-        <form onSubmit={this.handleSubmit}>  
-             
-          {  
-            this.state.categories.map(item => (  
-              <li>  
-                <label>  
-                  <input  
-                    type="checkbox"  
-                    value={item.id}  
-                    onChange={this.handleChange}  
-                  /> {item.value}  
-                </label>  
-              </li>  
-            ))  
-          }  
-             
-          <br/>  
-          <input type="submit" value="Submit" />  
-        </form>  
-      </div>  
-    );  
-  }  
-}  
-     
-render(<App />, document.getElementById('root'));  
-
-
-import { FaBeer } from 'react-icons/fa';  
-class Question extends React.Component {  
-  render() {  
-    return <h3> Lets go for a <FaBeer />? </h3>  
-  }  
-}  
-
-
-
-import { FaBeer } from "@react-icons/all-files/fa/FaBeer";  
-class Question extends React.Component {  
-  render() {  
-    return <h3> Lets go for a <FaBeer />? </h3>  
-  }  
-}  
+   
+    if (!state.swiping) {  
+        slideStyle = {  
+            ...slideStyle,  
+            WebkitTransitionDuration: transitionTime,  
+            MozTransitionDuration: transitionTime,  
+            OTransitionDuration: transitionTime,  
+            transitionDuration: transitionTime,  
+            msTransitionDuration: transitionTime,  
+        };  
+    }  
+   
+    return {  
+        slideStyle,  
+        selectedStyle: { ...slideStyle, opacity: 1, position: 'relative' },  
+        prevStyle: { ...slideStyle },  
+    };  
+};  
