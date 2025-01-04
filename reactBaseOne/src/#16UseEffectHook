@@ -41,8 +41,54 @@ useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re
 
 
 
+// import React, { useState, useEffect } from "react";
+// import ReactDOM from "react-dom/client";
+
+// function FavoriteColor() {
+//   const [color, setColor] = useState("red");
+
+//   // This useEffect will run every time the color changes
+//   useEffect(() => {
+//     console.log(`My favorite color is now ${color}!`);
+//   }, [color]); // Dependency array ensures the effect runs only when `color` changes
+
+//   return (
+//     <>
+//       <h1>My favorite color is {color}!</h1>
+//       <button
+//         type="button"
+//         onClick={() => setColor("blue")}
+//       >
+//         Blue
+//       </button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("red")}
+//       >
+//         Red
+//       </button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("pink")}
+//       >
+//         Pink
+//       </button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("green")}
+//       >
+//         Green
+//       </button>
+//     </>
+//   );
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<FavoriteColor />);
+
+
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client"; // React 18+ import
 
 function FavoriteColor() {
   const [color, setColor] = useState("red");
@@ -55,30 +101,10 @@ function FavoriteColor() {
   return (
     <>
       <h1>My favorite color is {color}!</h1>
-      <button
-        type="button"
-        onClick={() => setColor("blue")}
-      >
-        Blue
-      </button>
-      <button
-        type="button"
-        onClick={() => setColor("red")}
-      >
-        Red
-      </button>
-      <button
-        type="button"
-        onClick={() => setColor("pink")}
-      >
-        Pink
-      </button>
-      <button
-        type="button"
-        onClick={() => setColor("green")}
-      >
-        Green
-      </button>
+      <button type="button" onClick={() => setColor("blue")}>Blue</button>
+      <button type="button" onClick={() => setColor("red")}>Red</button>
+      <button type="button" onClick={() => setColor("pink")}>Pink</button>
+      <button type="button" onClick={() => setColor("green")}>Green</button>
     </>
   );
 }
