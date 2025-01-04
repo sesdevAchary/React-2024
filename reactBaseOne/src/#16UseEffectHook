@@ -7,90 +7,33 @@ useEffect(()=>{})   // runs after every re render
 useEffect ( ()=>{},[])
 useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes  */
 
-import react from 'react'
 
 
-import React, { Component } from 'react';  
-import ReactDOM from 'react-dom';  
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader  
-import { Carousel } from 'react-responsive-carousel';  
-   
-const fadeAnimationHandler: AnimationHandler = (props, state): AnimationHandlerResponse => {  
-    const transitionTime = props.transitionTime + 'ms';  
-    const transitionTimingFunction = 'ease-in-out';  
-   
-    let slideStyle: React.CSSProperties = {  
-        position: 'absolute',  
-        display: 'block',  
-        zIndex: -2,  
-        minHeight: '100%',  
-        opacity: 0,  
-        top: 0,  
-        right: 0,  
-        left: 0,  
-        bottom: 0,  
-        transitionTimingFunction: transitionTimingFunction,  
-        msTransitionTimingFunction: transitionTimingFunction,  
-        MozTransitionTimingFunction: transitionTimingFunction,  
-        WebkitTransitionTimingFunction: transitionTimingFunction,  
-        OTransitionTimingFunction: transitionTimingFunction,  
-    };  
-   
-    if (!state.swiping) {  
-        slideStyle = {  
-            ...slideStyle,  
-            WebkitTransitionDuration: transitionTime,  
-            MozTransitionDuration: transitionTime,  
-            OTransitionDuration: transitionTime,  
-            transitionDuration: transitionTime,  
-            msTransitionDuration: transitionTime,  
-        };  
-    }  
-   
-    return {  
-        slideStyle,  
-        selectedStyle: { ...slideStyle, opacity: 1, position: 'relative' },  
-        prevStyle: { ...slideStyle },  
-    };  
-};  
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 
-import React, { useState } from 'react';  
-function TodoList() {  
-  const [tasks, setTasks] = useState([]);  
-  const [newTask, setNewTask] = useState('');  
-  
-  const addTask = () => {  
-    if (newTask) {  
-      setTasks([...tasks, newTask]);  
-      setNewTask('');  
-    }  
-  };  
-  
-  const removeTask = (index) => {  
-    const updatedTasks = [...tasks];  
-    updatedTasks.splice(index, 1);  
-    setTasks(updatedTasks);  
-  };  
-  
-  return (  
-    <div>  
-      <h2>Todo List</h2>  
-      <input  
-        type="text"  
-        placeholder="Add a task"  
-        value={newTask}  
-        onChange={(e) => setNewTask(e.target.value)}  
-      />  
-      <button onClick={addTask}>Add</button>  
-      <ul>  
-        {tasks.map((task, index) => (  
-          <li key={index}>  
-            {task}  
-            <button onClick={() => removeTask(index)}>Remove</button>  
-          </li>  
-        ))}  
-      </ul>  
-    </div>  
-  );  
-}  
-export default TodoList;  
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")}
+      >Blue</button>
+      <button
+        type="button"
+        onClick={() => setColor("red")}
+      >Red</button>
+      <button
+        type="button"
+        onClick={() => setColor("pink")}
+      >Pink</button>
+      <button
+        type="button"
+        onClick={() => setColor("green")}
+      >Green</button>
+    </>
+  );
+}
