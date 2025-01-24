@@ -30,3 +30,12 @@
 // export default myComponent;
 
 
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Faisal Arkan" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
