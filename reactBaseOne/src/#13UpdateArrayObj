@@ -63,11 +63,17 @@ class Cat extends React.Component {
   }
 
 
-  const Cat = props => {
-    return (  
-      <div>
-        <h1>{props.name}</h1>
-        <p>{props.color}</p>
-      </div>;
+  import React from 'react';
+
+class MyComponent extends React.Component {
+  render(){
+    return (
+      <React.Fragment>
+        <div>I am an element!</div>
+        <button>I am another element</button>
+      </React.Fragment>
     );
-  };
+  }
+}
+
+export default MyComponent;
