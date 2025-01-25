@@ -121,62 +121,32 @@ class App extends React.Component {
   export default App;
 
 
-
-
-  import React from 'react';
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    // We declare the state as shown below
-    this.state = {                           
-      x: "This is x from state",    
-      y: "This is y from state"
-    }
-  }
-
-  render() {
-    let x1 = this.state.x;
-    let y1 = this.state.y;
-
+  import React, { useState } from "react";
+  import ReactDOM from "react-dom/client";
+  
+  function FavoriteColor() {
+    const [color, setColor] = useState("red");
+  
     return (
-      <div>
-        <h1>{x1}</h1>
-        <h2>{y1}</h2>
-      </div>
+      <>
+        <h1>My favorite color is {color}!</h1>
+        <button
+          type="button"
+          onClick={() => setColor("blue")}
+        >Blue</button>
+        <button
+          type="button"
+          onClick={() => setColor("red")}
+        >Red</button>
+        <button
+          type="button"
+          onClick={() => setColor("pink")}
+        >Pink</button>
+        <button
+          type="button"
+          onClick={() => setColor("green")}
+        >Green</button>
+      </>
     );
   }
-}
-
-
-
-
-
-import React from 'react';
-
-class Person extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      age:0
-    this.incrementAge = this.incrementAge.bind(this)
-  }
-
-  incrementAge(){
-    this.setState({
-      age:this.state.age + 1;
-    });
-  }
-
-  render(){
-    return(
-      <div>
-        <label>My age is: {this.state.age}</label>
-        <button onClick={this.incrementAge}>Grow me older !!<button>
-      </div>
-    );
-  }
-}
-
-export default Person;
+  
