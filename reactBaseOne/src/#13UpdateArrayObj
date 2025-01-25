@@ -1,4 +1,4 @@
-//  import react ,{useState} from 'react'
+ import React ,{useState} from 'react'
 
 // function myComponent(){
 //     const[food,setFood]=  useState( [" orange","olive"] );
@@ -63,90 +63,14 @@ class Cat extends React.Component {
   }
 
 
-  import React from 'react';
+  import { useState } from "react";
+import ReactDOM from "react-dom/client";
 
-class MyComponent extends React.Component {
-  render(){
-    return (
-      <React.Fragment>
-        <div>I am an element!</div>
-        <button>I am another element</button>
-      </React.Fragment>
-    );
-  }
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return <h1>My favorite color is {color}!</h1>
 }
 
-
-
-
-
-import React, { Component, Fragment } from 'react';
-
-class MyComponent extends Component {
-  render(){
-    return (
-      <Fragment>
-        <div>I am an element!</div>
-        <button>I am another element</button>
-      </Fragment>
-    );
-  }
-}
-
-// export default MyComponent;
-
-
-
-
-class App extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      // We declare the state as shown below
-  
-      this.state = {                           
-        x: "This is x from state",    
-        y: "This is y from state"
-      }
-    }
-    render() {
-      return (
-        <div>
-          <h1>{this.state.x}</h1>
-          <h2>{this.state.y}</h2>
-        </div>
-      );
-    }
-  }
-  export default App;
-
-
-  import React, { useState } from "react";
-  import ReactDOM from "react-dom/client";
-  
-  function FavoriteColor() {
-    const [color, setColor] = useState("red");
-  
-    return (
-      <>
-        <h1>My favorite color is {color}!</h1>
-        <button
-          type="button"
-          onClick={() => setColor("blue")}
-        >Blue</button>
-        <button
-          type="button"
-          onClick={() => setColor("red")}
-        >Red</button>
-        <button
-          type="button"
-          onClick={() => setColor("pink")}
-        >Pink</button>
-        <button
-          type="button"
-          onClick={() => setColor("green")}
-        >Green</button>
-      </>
-    );
-  }
-  
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FavoriteColor />);
