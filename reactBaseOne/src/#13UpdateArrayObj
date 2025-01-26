@@ -314,3 +314,24 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+import { StyleSheet, SafeAreaView, Text, TextInput } from "react-native";
+import { useState } from "react";
+
+export default function App() {
+    const [message, setMessage] = useState("");
+
+      return (
+        <SafeAreaView style={styles.container}>
+              <TextInput
+                placeholder="Enter message here"
+                value={message}
+                onChangeText={(text) => setMessage(text)}
+                style={styles.input}
+                onSubmitEditing={() => alert(message)}
+              />
+        </SafeAreaView>
+      );
+}
