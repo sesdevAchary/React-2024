@@ -335,3 +335,18 @@ export default function App() {
         </SafeAreaView>
       );
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: "#fff",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    input: {
+      fontSize: 20,
+      color: "#228B22",
+      fontWeight: "bold"
+  },
+});
