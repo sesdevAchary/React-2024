@@ -429,3 +429,17 @@ root.render(
         <App />
     </React.StrictMode>
 );
+
+
+// Filename - App.js
+
+import React, { useState } from 'react';
+
+function App() {
+    const click = useState('GeeksForGeeks');
+    return (
+        <h1>Welcome to {click}</h1>
+    );
+}
+
+export default App; 
