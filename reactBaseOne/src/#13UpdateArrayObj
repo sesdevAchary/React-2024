@@ -387,6 +387,73 @@ class App extends React.Component {
         };
     }
 
+
+
+    // Filename - App.js 
+
+import React, { useState } from 'react';
+
+function App() {
+    const [data, setData] = useState({
+        username: '',
+        password: ''
+    });
+    const [form, setForm] = useState({
+        username: '',
+        password: ''
+    });
+    const [submit, submitted] = useState(false);
+
+    const printValues = e => {
+        e.preventDefault();
+        setForm({
+            username: data.username,
+            password: data.password
+        });
+        submitted(true);
+    };
+
+    const updateField = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    return (
+        <div>
+            <form onSubmit={printValues}>
+                <label>
+                    Username:
+                    <input
+                        value={data.username}
+                        name="username"
+                        onChange={updateField}
+                    />
+                </label>
+                <br />
+                <label>
+                    Password:
+                    <input
+                        value={data.password}
+                        name="password"
+                        type="password"
+                        onChange={updateField}
+                    />
+                </label>
+                <br />
+                <button>Submit</button>
+            </form>
+
+            <p>{submit ? form.username : null}</p>
+
+            <p>{submit ? form.password : null}</p>
+        </div>
+    );
+}
+
+export default App;
+
     increment = () => {
         this.setState((prevState) => ({
             count: prevState.count + 1,
@@ -466,3 +533,19 @@ export default App;
 
 
 
+
+
+// App.js
+
+import React from 'react';
+import FlipCoin from './components/FlipCoin'
+
+const App=()=> {
+  return (
+    <div className="App">
+      <FlipCoin />
+    </div>
+  );
+}
+
+export default App;
