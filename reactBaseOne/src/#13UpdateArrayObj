@@ -313,44 +313,40 @@ class App extends Component {
   }
 }
 
-export default App;
 
 
+// Filename - App.js
 
-import { StyleSheet, SafeAreaView, Text, TextInput } from "react-native";
-import { useState } from "react";
+import React, { useState } from 'react';
 
-export default function App() {
-    const [message, setMessage] = useState("");
+function App() {
+    const [click, setClick] = useState([]);
 
-      return (
-        <SafeAreaView style={styles.container}>
-              <TextInput
-                placeholder="Enter message here"
-                value={message}
-                onChangeText={(text) => setMessage(text)}
-                style={styles.input}
-                onSubmitEditing={() => alert(message)}
-              />
-        </SafeAreaView>
-      );
+    const addNumber = () => {
+        setClick([
+            ...click,
+            {
+                id: click.length,
+                value: Math.random() * 10
+            }
+        ]);
+    };
+
+    return (
+        <div>
+            <ul>
+                {click.map(item => (
+                    <li key={item.id}>{item.value}</li>
+                ))}
+            </ul>
+            <button onClick={addNumber}>
+                Click me
+            </button>
+        </div>
+    );
 }
 
-
-const styles = StyleSheet.create({
-  container: {
-      flex: 1,
-      backgroundColor: "#fff",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    input: {
-      fontSize: 20,
-      color: "#228B22",
-      fontWeight: "bold"
-  },
-});
-
+export default App;
 
 
 
