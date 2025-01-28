@@ -195,4 +195,14 @@ const rgbValue = () => {
     }
     
     export { rgbValue, generateColors }
+
     
+
+     
+
+function button (){
+    const imgUrl='./src/assets....location';
+    const handleClick5 = (e)=>{ console.log("iamge to be clicked ")}; // or to hide =>e.target.style.display ="none" 
+      //return (<img onClick={(e)=>{handleClick5(e)} src = {imgUrl}></img>);//
+ }
+ 
