@@ -244,4 +244,15 @@ const rgbValue = () => {
     return colors
     }
     
-    
+
+    function Demo() {
+        return (
+          <CodeSandbox
+            files={{
+              "package.json": {
+                content: {
+                  dependencies: {
+                    react: "latest",
+                    "react-dom": "latest"
+                  }
+                }
