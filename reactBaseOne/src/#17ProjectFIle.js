@@ -282,3 +282,15 @@ const App = (
     Hello, {formatName(user)}!
   </h1>
 );
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const element = (
+  <h1> Hello, CodeSandbox! </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
