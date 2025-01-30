@@ -256,3 +256,17 @@ const rgbValue = () => {
                     "react-dom": "latest"
                   }
                 }
+
+            },
+            "index.js": {
+              content: code
+            },
+            "index.html": {
+              content: `<div id="root"></div>`
+            }
+          }}
+        >
+          Open in CodeSandbox
+        </CodeSandbox>
+      )
+    }
