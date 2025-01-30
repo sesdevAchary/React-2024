@@ -303,3 +303,18 @@ function Hello(props) {
   const container = document.getElementById("root");
   const root = ReactDOM.createRoot(container);
   root.render(<Hello />);
+
+
+  function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take the shot!</button>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Football />);
+
