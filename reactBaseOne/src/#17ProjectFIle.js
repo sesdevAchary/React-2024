@@ -270,3 +270,15 @@ const rgbValue = () => {
         </CodeSandbox>
       )
     }
+
+    import React from 'react';
+import CodeSandbox from '@uiw/react-codesandbox';
+
+const code = `import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
