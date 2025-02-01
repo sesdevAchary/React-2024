@@ -297,3 +297,17 @@ class Game extends Component{
                 <button onClick={()=>this.decision("SCISSORS")}>
                     <i className={`fas fa-hand-scissors`} />  Scissors 
                 </button>
+
+                </div>
+                <div className="content">
+                    <p>Your choice: {playerVal}</p>
+                    <p>Computer's choice: {computerVal}</p>
+                    <h2>Your Score:{playerScore}</h2>
+                    <h2>Computer Score: {compScore}</h2>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Game;
