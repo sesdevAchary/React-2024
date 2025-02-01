@@ -224,3 +224,16 @@ class App extends Component{
 
 export default App;
 
+
+import React, {Component} from "react";
+import './Game.css';
+
+class Game extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            playerVal : null,
+            computerVal : null,
+            playerScore: 0,
+            compScore: 0,
+        };
