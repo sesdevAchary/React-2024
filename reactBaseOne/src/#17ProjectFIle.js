@@ -266,3 +266,18 @@ class Game extends Component{
               computerVal : compChoice, 
               playerScore : this.state.playerScore +1
           })
+        } else if(val == -1) {
+          console.log("Hello")
+          this.setState({
+              playerVal: playerChoice,
+              computerVal : compChoice,
+              compScore : this.state.compScore +1
+          })
+      } else {
+          console.log("Hello")
+          this.setState({
+              computerVal : compChoice,
+              playerVal : playerChoice
+          })
+      }
+  }
