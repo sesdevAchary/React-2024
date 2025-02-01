@@ -237,3 +237,19 @@ class Game extends Component{
             playerScore: 0,
             compScore: 0,
         };
+
+
+      };
+    }
+    logic = (playerVal, computerVal)=>{
+        if(playerVal == computerVal){
+            return 0;
+        } else if ((playerVal == "ROCK" && computerVal == "SCISSORS") ||
+            (playerVal == "SCISSORS" && computerVal == "PAPER") ||
+            (playerVal == "PAPER" && computerVal == "ROCK")
+        ) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
