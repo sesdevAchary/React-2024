@@ -253,3 +253,16 @@ class Game extends Component{
             return -1;
         }
     }
+
+    
+    decision = (playerChoice)=> {
+      const choices = ["ROCK", "PAPER", "SCISSORS"];
+      const compChoice =  choices[Math.floor(Math.random() * choices.length)];
+      const val = this.logic(playerChoice, compChoice)
+      if(val == 1) {
+          console.log("Hello")
+          this.setState({
+              playerVal: playerChoice,
+              computerVal : compChoice, 
+              playerScore : this.state.playerScore +1
+          })
