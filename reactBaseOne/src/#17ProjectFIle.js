@@ -281,3 +281,19 @@ class Game extends Component{
           })
       }
   }
+
+  render(){
+    const {playerVal, computerVal, playerScore, compScore} = this.state;
+    return(
+        <div className="container">
+            <h1>Welcome to Rock, Paper, Scissors Game</h1>
+            <div >
+                <button onClick={()=>this.decision("ROCK")}>
+                    <i className={`fas fa-hand-rock`} /> Rock
+                </button>
+                <button onClick={()=>this.decision("PAPER")}>
+                    <i className={`fas fa-hand-paper`} /> Paper
+                </button>
+                <button onClick={()=>this.decision("SCISSORS")}>
+                    <i className={`fas fa-hand-scissors`} />  Scissors 
+                </button>
