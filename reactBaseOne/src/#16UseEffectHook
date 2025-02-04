@@ -1,255 +1,3 @@
-//  /*useEffect= A react hook that is added up when
-//            the component re renders / mounts 
-
-// useEffect(function,[dependency])
-
-// useEffect(()=>{})   // runs after every re render 
-// useEffect ( ()=>{},[])
-// useEffect ( ()=>{},[value]) // runs only after mounting , unless  after every re rendering + value changes  */
-
-
-
-// // import React, { useState } from "react";
-// // import ReactDOM from "react-dom/client";
-
-// // function FavoriteColor() {
-// //   const [color, setColor] = useState("red");
-
-// //   return (
-// //     <>
-// //       <h1>My favorite color is {color}!</h1>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("blue")}
-// //       >Blue</button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("red")}
-// //       >Red</button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("pink")}
-// //       >Pink</button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("green")}
-// //       >Green</button>
-// //     </>
-// //   );
-// // }
-
-
-
-
-// // import React, { useState, useEffect } from "react";
-// // import ReactDOM from "react-dom/client";
-
-// // function FavoriteColor() {
-// //   const [color, setColor] = useState("red");
-
-// //   // This useEffect will run every time the color changes
-// //   useEffect(() => {
-// //     console.log(`My favorite color is now ${color}!`);
-// //   }, [color]); // Dependency array ensures the effect runs only when `color` changes
-
-// //   return (
-// //     <>
-// //       <h1>My favorite color is {color}!</h1>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("blue")}
-// //       >
-// //         Blue
-// //       </button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("red")}
-// //       >
-// //         Red
-// //       </button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("pink")}
-// //       >
-// //         Pink
-// //       </button>
-// //       <button
-// //         type="button"
-// //         onClick={() => setColor("green")}
-// //       >
-// //         Green
-// //       </button>
-// //     </>
-// //   );
-// // }
-
-// // const root = ReactDOM.createRoot(document.getElementById("root"));
-// // root.render(<FavoriteColor />);
-
-
-// import React, { useState, useEffect } from "react";
-// import ReactDOM from "react-dom/client"; // React 18+ import
-
-// function FavoriteColor() {
-//   const [color, setColor] = useState("red");
-
-//   // This useEffect will run every time the color changes
-//   useEffect(() => {
-//     console.log(`My favorite color is now ${color}!`);
-//   }, [color]); // Dependency array ensures the effect runs only when `color` changes
-
-//   return (
-//     <>
-//       <h1>My favorite color is {color}!</h1>
-//       <div>
-      
-//         <button type="button" onClick={() => setColor("red")}>
-//           Red
-//         </button>
-//         <button type="button" onClick={() => setColor("pink")}>
-//           Pink
-//         </button>
-//         <button type="button" onClick={() => setColor("green")}>
-//           Green
-//         </button>
-//       </div>
-//     </>
-//   );
-// }
-
-
-
-
-// import { useState } from "react";
-
-// function FavoriteColor() {
-//   const [color, setColor] = useState("");
-// }
-
-
-
-// import { useState } from "react";
-// import ReactDOM from "react-dom/client";
-
-// function FavoriteColor() {
-//   const [color, setColor] = useState("red");
-
-//   return <h1>My favorite color is {color}!</h1>
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<FavoriteColor />);
-
-
-
-
-// function MissedGoal() {
-//   return <h1>MISSED!</h1>;
-// }
-
-// function MadeGoal() {
-//   return <h1>Goal!</h1>;
-// }
-
-
-
-// function Goal(props) {
-//   const isGoal = props.isGoal;
-//   if (isGoal) {
-//     return <MadeGoal/>;
-//   }
-//   return <MissedGoal/>;
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Goal isGoal={false} />);
-
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Goal isGoal={true} />);
-
-
-
-// function Garage(props) {
-//   const cars = props.cars;
-//   return (
-//     <>
-//       <h1>Garage</h1>
-//       {cars.length > 0 &&
-//         <h2>
-//           You have {cars.length} cars in your garage.
-//         </h2>
-//       }
-//     </>
-//   );
-// }
-
-// const cars = ['Ford', 'BMW', 'Audi'];
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Garage cars={cars} />);
-
-
-
-// const cars = [];
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Garage cars={cars} />);
-
-
-// function Goal(props) {
-//   const isGoal = props.isGoal;
-//   return (
-//     <>
-//       { isGoal ? <MadeGoal/> : <MissedGoal/> }
-//     </>
-//   );
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Goal isGoal={false} />);
-
-
-// function Car(props) {
-//   return <li>I am a { props.brand }</li>;
-// }
-
-// function Garage() {
-//   const cars = ['Ford', 'BMW', 'Audi'];
-//   return (
-//     <>
-//       <h1>Who lives in my garage?</h1>
-//       <ul>
-//         {cars.map((car) => <Car brand={car} />)}
-//       </ul>
-//     </>
-//   );
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Garage />);
-
-
-// function Car(props) {
-//   return <li>I am a { props.brand }</li>;
-// }
-
-// function Garage() {
-//   const cars = [
-//     {id: 1, brand: 'Ford'},
-//     {id: 2, brand: 'BMW'},
-//     {id: 3, brand: 'Audi'}
-//   ];
-//   return (
-//     <>
-//       <h1>Who lives in my garage?</h1>
-//       <ul>
-//         {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
-//       </ul>
-//     </>
-//   );
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<Garage />);
 
 
 
@@ -340,3 +88,24 @@ const App = () => {
       const data = await response.json();
       setfood_recipes(data.hits);
   };
+
+
+
+  
+export default function App() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="blogs" element={<Blogs />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<App />);
