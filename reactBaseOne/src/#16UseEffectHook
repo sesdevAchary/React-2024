@@ -188,3 +188,15 @@ const Todos = ({ todos, addTodo }) => {
 };
 
 export default memo(Todos);
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+  const calculation = expensiveCalculation(count);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
+  };
