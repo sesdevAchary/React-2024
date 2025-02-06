@@ -228,3 +228,12 @@ const App = () => {
         .then((res) => res.json())
         .then((data) => setData(data));
    }, []);
+   return (
+    <>
+      {data &&
+        data.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
+    </>
+  );
+};
