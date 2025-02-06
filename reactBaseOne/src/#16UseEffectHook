@@ -160,3 +160,15 @@ const App = () => {
       const addTodo = () => {
         setTodos((t) => [...t, "New Todo"]);
       };
+      
+  return (
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );
+};
