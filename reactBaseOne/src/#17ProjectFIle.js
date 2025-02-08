@@ -190,3 +190,14 @@ const Todos = ({ todos, addTodo }) => {
     </>
   );
 };
+
+
+<>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );
