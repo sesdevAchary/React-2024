@@ -174,3 +174,10 @@ const expensiveCalculation = (num) => {
     num += 1;
   }
   return num;
+
+  <Todos todos={todos} addTodo={addTodo} />
+  <hr />
+  <div>
+    Count: {count}
+    <button onClick={increment}>+</button>
+  </div>
