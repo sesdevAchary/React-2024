@@ -118,3 +118,14 @@ const Todos = ({ todos, addTodo }) => {
         'createRoot(...): Target container is not a DOM element.'
       )
     }
+
+    const root = createContainer(
+      container,
+      ConcurrentRoot,
+      null,
+      isStrictMode,
+      concurrentUpdatesByDefaultOverride,
+      identifierPrefix,
+      onRecoverableError,
+      transitionCallbacks
+    )
