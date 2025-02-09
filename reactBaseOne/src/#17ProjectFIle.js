@@ -129,3 +129,20 @@ const Todos = ({ todos, addTodo }) => {
       onRecoverableError,
       transitionCallbacks
     )
+
+    ReactDOMHydrationRoot.prototype.render =
+  ReactDOMRoot.prototype.render = function (
+    children: ReactNodeList
+  ): void {
+    const root = this._internalRoot
+
+    if (root === null) {
+      throw new Error('Cannot update an unmounted root.')
+    }
+
+    if (__DEV__) {
+      // ...
+    }
+
+    updateContainer(children, root, null, null)
+  }
