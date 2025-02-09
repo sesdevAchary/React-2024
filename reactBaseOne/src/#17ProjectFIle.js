@@ -108,3 +108,13 @@ const Todos = ({ todos, addTodo }) => {
     }
     return createRootImpl(container, options)
   }
+
+  export function createRoot(
+    container: Element | Document | DocumentFragment,
+    options?: CreateRootOptions
+  ): RootType {
+    if (!isValidContainer(container)) {
+      throw new Error(
+        'createRoot(...): Target container is not a DOM element.'
+      )
+    }
