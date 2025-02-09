@@ -146,6 +146,11 @@ const Todos = ({ todos, addTodo }) => {
 
     updateContainer(children, root, null, null)
   }
-  export const updateContainer = enableNewReconciler
-  ? updateContainer_new
-  : updateContainer_old
+  
+ 
+  export function updateContainer(
+    element: ReactNodeList,
+    container: OpaqueRoot,
+    parentComponent: ?React$Component<any, any>,
+    callback: ?Function
+  ): Lane 
