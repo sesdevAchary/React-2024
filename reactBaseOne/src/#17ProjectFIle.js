@@ -146,3 +146,6 @@ const Todos = ({ todos, addTodo }) => {
 
     updateContainer(children, root, null, null)
   }
+  export const updateContainer = enableNewReconciler
+  ? updateContainer_new
+  : updateContainer_old
