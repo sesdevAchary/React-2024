@@ -173,3 +173,7 @@ const Todos = ({ todos, addTodo }) => {
   }
   const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
+
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
