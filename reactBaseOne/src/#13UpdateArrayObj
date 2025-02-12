@@ -588,3 +588,16 @@ class Car extends React.Component {
   
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<Car color="red"/>);
+
+
+  class Car extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      return <h2>I am a {this.props.model}!</h2>;
+    }
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<Car model="Mustang"/>);
