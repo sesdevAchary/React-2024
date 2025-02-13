@@ -617,3 +617,12 @@ function Timer() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Timer />);
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, []);
