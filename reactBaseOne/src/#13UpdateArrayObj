@@ -632,3 +632,11 @@ function Timer() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Timer />);
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+
+  useEffect(() => {
+    setCalculation(() => count * 2);
+  }, [count]);
