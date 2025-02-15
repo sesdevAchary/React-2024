@@ -144,3 +144,11 @@ const myElement = React.createElement('h1', {}, 'I do not use JSX!');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
+
+const myElement = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+);
