@@ -160,3 +160,9 @@ if (x < 10) {
 }
 
 const myElement = <h1>{text}</h1>;
+
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
