@@ -1,141 +1,6 @@
 
 
 
-class Car extends React.Component {
-    render() {
-      return <h2>Hi, I am a Car!</h2>;
-    }
-  }
-
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
-
-class Car extends React.Component {
-    constructor() {
-      super();
-      this.state = {color: "red"};
-    }
-    render() {
-      return <h2>I am a Car!</h2>;
-    }
-  }
-
-  class Car extends React.Component {
-    constructor() {
-      super();
-      this.state = {color: "red"};
-    }
-    render() {
-      return <h2>I am a {this.state.color} Car!</h2>;
-    }
-  }
-  class Car extends React.Component {
-    render() {
-      return <h2>I am a {this.props.color} Car!</h2>;
-    }
-  }
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Car color="red"/>);
-
-
-  class Car extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-    render() {
-      return <h2>I am a {this.props.model}!</h2>;
-    }
-  }
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<Car model="Mustang"/>);
-
-
-  
-function Timer() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  });
-  return <h1>I've rendered {count} times!</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Timer />);
-
-function Timer() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-  }, []);
-  
-  return <h1>I've rendered {count} times!</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Timer />);
-
-function Counter() {
-  const [count, setCount] = useState(0);
-  const [calculation, setCalculation] = useState(0);
-
-  useEffect(() => {
-    setCalculation(() => count * 2);
-  }, [count]);
-  
-  return (
-    <>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount((c) => c + 1)}>+</button>
-      <p>Calculation: {calculation}</p>
-    </>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Counter />);
-
-function MissedGoal() {
-  return <h1>MISSED!</h1>;
-}
-function Goal(props) {
-  const isGoal = props.isGoal;
-  if (isGoal) {
-    return <MadeGoal/>;
-  }
-  return <MissedGoal/>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Goal isGoal={false} />);
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Goal isGoal={true} />);
-
-function Garage(props) {
-  const cars = props.cars;
-  return (
-    <>
-      <h1>Garage</h1>
-      {cars.length > 0 &&
-        <h2>
-          You have {cars.length} cars in your garage.
-        </h2>
-      }
-    </>
-  );
-}
-
-const cars = ['Ford', 'BMW', 'Audi'];
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage cars={cars} />);
-
-
 const myElement = <h1>I Love JSX!</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -196,3 +61,21 @@ function Car() {
 }
 
 export default Car;
+
+
+
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
+
+function Garage() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <ul>
+        {cars.map((car) => <Car brand={car} />)}
+      </ul>
+    </>
+  );
+}
