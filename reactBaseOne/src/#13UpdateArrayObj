@@ -1,69 +1,5 @@
 
 
-
-const myElement = <h1>I Love JSX!</h1>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
-const myElement = React.createElement('h1', {}, 'I do not use JSX!');
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
-
-const myElement = (
-  <ul>
-    <li>Apples</li>
-    <li>Bananas</li>
-    <li>Cherries</li>
-  </ul>
-);
-
-const x = 5;
-let text = "Goodbye";
-if (x < 10) {
-  text = "Hello";
-}
-
-const myElement = <h1>{text}</h1>;
-
-class Car extends React.Component {
-  render() {
-    return <h2>Hi, I am a Car!</h2>;
-  }
-}
-
-function Car(props) {
-  return <h2>I am a {props.color} Car!</h2>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car color="red"/>);
-
-function Car() {
-  return <h2>I am a Car!</h2>;
-}
-
-function Garage() {
-  return (
-    <>
-      <h1>Who lives in my Garage?</h1>
-      <Car />
-    </>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
-
-
-function Car() {
-  return <h2>Hi, I am a Car!</h2>;
-}
-
-export default Car;
-
-
-
 function Car(props) {
   return <li>I am a { props.brand }</li>;
 }
@@ -141,3 +77,11 @@ function MyForm() {
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
+
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
