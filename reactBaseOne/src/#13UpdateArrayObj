@@ -23,3 +23,5 @@ function Football() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Football />);
 
+nst root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Football />);
