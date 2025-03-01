@@ -1,31 +1,3 @@
-function Football() {
-  const shoot = () => {
-    alert("Great Shot!");
-  }
-
-  return (
-    <button onClick={shoot}>Take the shot!</button>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
-
-
-function Football() {
-  const shoot = (a) => {
-    alert(a);
-  }
-
-  return (
-    <button onClick={() => shoot("Goal!")}>Take the shot!</button>
-  );
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
-
-nst root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
-
 
 
 import React from 'react';
@@ -137,7 +109,9 @@ const Home = () => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Home />);
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
@@ -167,3 +141,5 @@ const Home = () => {
 };
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Home />);
+
+
