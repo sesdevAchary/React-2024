@@ -172,3 +172,5 @@ function Component4({ user }) {
     </>
   );
 }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Component1 />);
