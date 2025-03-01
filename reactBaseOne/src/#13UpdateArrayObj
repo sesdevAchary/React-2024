@@ -156,3 +156,11 @@ function Component2({ user }) {
     </>
   );
 }
+function Component3({ user }) {
+  return (
+    <>
+      <h1>Component 3</h1>
+      <Component4 user={user} />
+    </>
+  );
+}
