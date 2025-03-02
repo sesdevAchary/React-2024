@@ -193,3 +193,10 @@ const App = () => {
         })}
         <button onClick={addTodo}>Add Todo</button>
       </div>
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+        <h2>Expensive Calculation</h2>
+        {calculation}
+      </div>
