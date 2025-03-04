@@ -88,3 +88,10 @@ function MyForm() {
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
+function MyForm() {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`)
+  }
