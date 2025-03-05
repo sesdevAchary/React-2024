@@ -116,4 +116,7 @@ const Header = () => {
       <p>Add a little style!.</p>
     </>
   );
-}
+} 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './my-sass.scss';
