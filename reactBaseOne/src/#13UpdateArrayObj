@@ -124,3 +124,8 @@ function MyForm() {
   
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(<Header />);
+  $myColor: red;
+
+h1 {
+  color: $myColor;
+}
