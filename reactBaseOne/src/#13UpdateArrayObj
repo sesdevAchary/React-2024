@@ -129,3 +129,11 @@ function MyForm() {
 h1 {
   color: $myColor;
 }
+const Header = () => {
+  return (
+    <>
+
+      <p>Add a little style!.</p>
+    </>
+  );
+}
