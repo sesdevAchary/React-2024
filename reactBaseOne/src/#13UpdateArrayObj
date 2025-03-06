@@ -137,3 +137,9 @@ const Header = () => {
     </>
   );
 }
+
+ useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+ }, []);
