@@ -155,3 +155,10 @@ const Header = () => {
 };
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Home />);
+
+
+useEffect(() => {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => setData(data));
+}, [url]);
