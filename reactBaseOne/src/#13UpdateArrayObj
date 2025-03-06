@@ -171,3 +171,9 @@ return (
   </>
 );
 };
+
+import ReactDOM from "react-dom/client";
+import useFetch from "./useFetch";
+
+const Home = () => {
+  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
