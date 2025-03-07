@@ -211,3 +211,9 @@ return (
       <h2>My Todos</h2>
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
+
+      };
+      const addTodo = () => {
+        setTodos((t) => [...t, "New Todo"]);
+      };
+    
