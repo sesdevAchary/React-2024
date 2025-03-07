@@ -204,3 +204,10 @@ Count: {count}
   
   const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
+return (
+  <div>
+    <div>
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
