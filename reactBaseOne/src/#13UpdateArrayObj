@@ -94,3 +94,22 @@ export default Todos;
       </>
     );
   }
+
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Sans-Serif"
+  };
+  return (
+    <>
+      <h1 style={myStyle}>Hello Style!</h1>
+      <p>Add a little style!</p>
+    </>
+    body {
+      background-color: #282c34;
+      color: white;
+      padding: 40px;
+      font-family: Sans-Serif;
+      text-align: center;
+    }
