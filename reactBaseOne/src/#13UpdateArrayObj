@@ -49,3 +49,11 @@ const Todos = ({ todos }) => {
 };
 
 export default Todos;
+
+
+<form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  )
