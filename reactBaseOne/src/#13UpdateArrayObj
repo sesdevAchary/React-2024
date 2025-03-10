@@ -1,56 +1,4 @@
 
-
-  const expensiveCalculation = (num) => {
-    console.log("Calculating...");
-    for (let i = 0; i < 1000000000; i++) {
-      num += 1;
-    }
-    return num;
-  };
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-
-return (
-  <div>
-    <div>
-      <h2>My Todos</h2>
-      {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
-
-      };
-      const addTodo = () => {
-        setTodos((t) => [...t, "New Todo"]);
-      };
-    
-      const App = () => {
-        const [count, setCount] = useState(0);
-        const [todos, setTodos] = useState(["todo 1", "todo 2"]);
-
-        <>
-        <Todos todos={todos} />
-        <hr />
-        <div>
-          Count: {count}
-          <button onClick={increment}>+</button>
-        </div>
-      </>
-
-const Todos = ({ todos }) => {
-  console.log("child render");
-  return (
-    <>
-      <h2>My Todos</h2>
-      {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
-      })}
-    </>
-  );
-};
-
-export default Todos;
-
-
 <form>
       <label>Enter your name:
         <input type="text" />
@@ -113,3 +61,9 @@ export default Todos;
       font-family: Sans-Serif;
       text-align: center;
     }
+
+    import { useState } from "react";
+import ReactDOM from "react-dom/client";
+
+function Component1() {
+  const [user, setUser] = useState("Jesse Hall");
