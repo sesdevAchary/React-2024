@@ -90,3 +90,11 @@ function Component2({ user }) {
       </>
     );
   }
+  function Component4({ user }) {
+    return (
+      <>
+        <h1>Component 4</h1>
+        <Component5 user={user} />
+      </>
+    );
+  }
