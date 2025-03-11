@@ -1,86 +1,4 @@
 
-<form>
-      <label>Enter your name:
-        <input type="text" />
-      </label>
-    </form>
-  )
-  function MyForm() {
-    return (
-      <form>
-        <label>Enter your name:
-          <input type="text" />
-        </label>
-      </form>
-    )
-  }
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<MyForm />);
-
-  const Header = () => {
-    return (
-      <>
-        <h1 style={{color: "red"}}>Hello Style!</h1>
-        <p>Add a little style!</p>
-      </>
-    );
-  }
-  const Header = () => {
-    return (
-      <>
-        <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
-        <p>Add a little style!</p>
-      </>
-    );
-  }
-
-  const Header = () => {
-    return (
-      <>
-        <h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
-        <p>Add a little style!</p>
-      </>
-    );
-  }
-
-  const myStyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "10px",
-    fontFamily: "Sans-Serif"
-  };
-  return (
-    <>
-      <h1 style={myStyle}>Hello Style!</h1>
-      <p>Add a little style!</p>
-    </>
-    body {
-      background-color: #282c34;
-      color: white;
-      padding: 40px;
-      font-family: Sans-Serif;
-      text-align: center;
-    }
-
-    import { useState } from "react";
-import ReactDOM from "react-dom/client";
-
-function Component1() {
-  const [user, setUser] = useState("Jesse Hall");
-  return (
-    <>
-      <h1>{`Hello ${user}!`}</h1>
-      <Component2 user={user} />
-    </>
-
-    
-function Component2({ user }) {
-  return (
-    <>
-      <h1>Component 2</h1>
-      <Component3 user={user} />
-    </>
-  );
 
   function Component3({ user }) {
     return (
@@ -106,3 +24,13 @@ function Component2({ user }) {
         <h2>{`Hello ${user} again!`}</h2>
       </>
     );
+
+    
+const Home = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+ }, []);
