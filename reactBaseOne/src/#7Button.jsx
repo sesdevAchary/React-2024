@@ -59,3 +59,15 @@ export default function CustomButton({ label, onClick }) {
     </button>
   );
 }
+
+
+export default function OutlineButton({ label, onClick }) {
+  return (
+    <button 
+      onClick={onClick} 
+      className="px-4 py-2 border-2 border-blue-500 text-blue-500 font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+    >
+      {label}
+    </button>
+  );
+}
