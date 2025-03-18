@@ -136,3 +136,20 @@ function Counter() {
 }
 
 export default Counter;
+
+import React from 'react';
+
+function Button(props) {
+  const handleClick = () => {
+    props.onClick(props.id);
+  };
+
+  return (
+    <button onClick={handleClick} style={{ backgroundColor: props.color }}>
+      {props.text}
+    </button>
+  );
+}
+
+export default Button;
+// Usage: <Button id={1} text="Click Me" color="blue" onClick={(id) => console.log(id)} />
