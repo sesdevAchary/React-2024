@@ -109,6 +109,7 @@ function Garage() {
     </>
   );
 }
+const Greet = ({ name }) => <h2>Hello, {name}!</h2>;
 
 const Hello = () => <h1>Hello, World!</h1>;
 export default Hello;
