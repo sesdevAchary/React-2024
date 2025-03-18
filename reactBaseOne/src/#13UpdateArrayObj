@@ -113,3 +113,10 @@ const Greet = ({ name }) => <h2>Hello, {name}!</h2>;
 
 const Hello = () => <h1>Hello, World!</h1>;
 export default Hello;
+
+import { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
+};
