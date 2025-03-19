@@ -130,6 +130,8 @@ function Counter() {
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>
         Click me
+
+        counter 01
       </button>
     </div>
   );
