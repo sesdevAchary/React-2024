@@ -132,6 +132,15 @@ function Counter() {
         Click me
 
         counter 01
+
+
+
+
+        class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
       </button>
     </div>
   );
