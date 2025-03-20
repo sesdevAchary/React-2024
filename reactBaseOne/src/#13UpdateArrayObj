@@ -194,3 +194,8 @@ function Hello(props) {
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(<Hello />);
+
+const myElement = <h1>I Love JSX!</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
