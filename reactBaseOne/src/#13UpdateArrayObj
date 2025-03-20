@@ -185,3 +185,12 @@ function Button(props) {
 
 export default Button;
 // Usage: <Button id={1} text="Click Me" color="blue" onClick={(id) => console.log(id)} />
+
+
+function Hello(props) {
+  return <h1>Hello World!</h1>;
+}
+
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<Hello />);
