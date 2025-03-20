@@ -191,6 +191,14 @@ function Hello(props) {
   return <h1>Hello World!</h1>;
 }
 
+const myElement = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+);
+
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(<Hello />);
