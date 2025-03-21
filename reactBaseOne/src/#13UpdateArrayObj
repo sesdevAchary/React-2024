@@ -265,3 +265,8 @@ const two = (
     <li>Twice</li>
   </ul>
 );
+
+function who() {
+  return "World";
+}
+const greet = <h1>Hello {who()}!</h1>;
