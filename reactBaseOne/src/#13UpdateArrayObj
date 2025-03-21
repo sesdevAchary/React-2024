@@ -258,3 +258,10 @@ class MyComponent extends Component {
 }
 
 export default MyComponent;
+
+const two = (
+  <ul>
+    <li>Once</li>
+    <li>Twice</li>
+  </ul>
+);
