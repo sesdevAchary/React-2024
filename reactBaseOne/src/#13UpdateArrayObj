@@ -71,3 +71,15 @@ return (
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
+
+
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+        <h2>Expensive Calculation</h2>
+        {calculation}
+      </div>
+    </div>
+  );
+};
