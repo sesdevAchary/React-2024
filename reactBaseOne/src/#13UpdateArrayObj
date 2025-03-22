@@ -63,3 +63,11 @@ const increment = () => {
 const addTodo = () => {
   setTodos((t) => [...t, "New Todo"]);
 };
+
+return (
+  <div>
+    <div>
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
+      })}
