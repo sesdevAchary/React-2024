@@ -128,3 +128,9 @@ class Greet extends React.Component {
       return <h1>Hello, {this.props.name}!</h1>;
 }
 }
+function Greet(props) {
+  return <h2>Welcome, {props.username}!</h2>;
+}
+
+// Usage
+<Greet username="Anil" />;
