@@ -106,3 +106,21 @@ export default function Joke() {
 
   return <p className="p-4">{joke}</p>;
 }
+
+
+import { useState } from "react";
+
+export default function DarkModeToggle() {
+  const [dark, setDark] = useState(false);
+
+  return (
+    <div className={`p-4 ${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+      <button 
+        className="px-4 py-2 bg-gray-700 text-white rounded"
+        onClick={() => setDark(!dark)}
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
+  );
+}
