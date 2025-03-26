@@ -91,3 +91,18 @@ export default function Counter() {
     </div>
   );
 }
+
+
+import { useState, useEffect } from "react";
+
+export default function Joke() {
+  const [joke, setJoke] = useState("");
+
+  useEffect(() => {
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then(res => res.json())
+      .then(data => setJoke(`${data.setup} - ${data.punchline}`));
+  }, []);
+
+  return <p className="p-4">{joke}</p>;
+}
