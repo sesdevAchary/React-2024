@@ -168,3 +168,10 @@ function Hello(props) {
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(<Hello />);
+
+
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
