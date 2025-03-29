@@ -89,3 +89,7 @@ export default App;
   justify-content: center;
   align-items: center;
 }
+.App>h2 {
+  text-align: center;
+  font-size: 2rem;
+}
