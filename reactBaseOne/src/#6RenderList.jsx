@@ -103,3 +103,22 @@ export default App;
   background-color: rgb(34, 34, 33);
   border-radius: 10px;
 }
+// App.js
+import React from 'react';
+
+class App extends React.Component { 
+  handleMouseUp = () => {
+    console.log('Mouse button released.');
+    // Additional code...
+  };
+
+  render() {
+    return (
+      <div onMouseUp={this.handleMouseUp}>
+        <p>Click and hold, then release the mouse button.</p>
+      </div>
+    );
+  }
+}
+
+export default App; 
