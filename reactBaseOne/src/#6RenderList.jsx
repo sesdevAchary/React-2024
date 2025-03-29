@@ -81,3 +81,11 @@ const App = () => {
 };
 
 export default App;
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
