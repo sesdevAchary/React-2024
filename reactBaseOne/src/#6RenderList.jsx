@@ -93,3 +93,13 @@ export default App;
   text-align: center;
   font-size: 2rem;
 }
+
+.App>button {
+  width: 20rem;
+  font-size: larger;
+  padding: 2vmax auto;
+  height: 2.6rem;
+  color: white;
+  background-color: rgb(34, 34, 33);
+  border-radius: 10px;
+}
