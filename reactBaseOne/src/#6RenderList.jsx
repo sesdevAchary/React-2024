@@ -160,3 +160,15 @@ class Car extends React.Component {
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Car />);
+
+
+<BrowserRouter>
+<Routes>
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Home />} />
+    <Route path="blogs" element={<Blogs />} />
+    <Route path="contact" element={<Contact />} />
+    <Route path="*" element={<NoPage />} />
+  </Route>
+</Routes>
+</BrowserRouter>
