@@ -199,3 +199,9 @@ const Blogs = () => {
 };
 
 export default Blogs
+
+const NoPage = () => {
+  return <h1>404</h1>;
+};
+
+export default NoPage;
