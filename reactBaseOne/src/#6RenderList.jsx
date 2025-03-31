@@ -205,3 +205,7 @@ const NoPage = () => {
 };
 
 export default NoPage;
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState(["todo 1", "todo 2"]);
