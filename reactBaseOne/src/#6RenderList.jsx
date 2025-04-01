@@ -233,3 +233,15 @@ const App = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
+  
+  return (
+    <>
+      <Todos todos={todos} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );
+};
