@@ -238,6 +238,9 @@ const App = () => {
     <>
       <Todos todos={todos} />
       <hr />
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
       <div>
         Count: {count}
         <button onClick={increment}>+</button>
