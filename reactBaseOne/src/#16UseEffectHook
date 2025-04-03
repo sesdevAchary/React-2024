@@ -1,141 +1,4 @@
 
-const App = () => {
-  const APP_ID = 'YOUR_API_ID';
-  const APP_KEY = 'YOUR_API_KEY';
-  const [food_recipes, setfood_recipes] = useState([]);
-  const [search_recipe, setSearch_recipe] = useState('');
-  const [search_query, setSearch_Query] = useState('chicken');
-
-  useEffect(() => {
-      getRecipesFunction();
-  }, [search_query]);
-
-  const getRecipesFunction = async () => {
-      const response = await fetch(
-`https://api.edamam.com/search?q=${search_query}&app_id=${APP_ID}&app_key=${APP_KEY}`
-      );
-      const data = await response.json();
-      setfood_recipes(data.hits);
-  };
-
-
-
-
-  import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
-
-  
-export default function App() {
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    );
-  }
-  
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(<App />);
-
-
-
-  import { Outlet, Link } from "react-router-dom";
-
-const Layout = () => {
-  return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
-    </>
-
-const Home = () => {
-    return <h1>Home</h1>;
-  };
-  
-  export default Home;
-
-  const Blogs = () => {
-    return <h1>Blog Articles</h1>;
-  };
-  
-  export default Blogs;
-
-
-  const App = () => {
-    const [count, setCount] = useState(0);
-    const [todos, setTodos] = useState(["todo 1", "todo 2"]);
-  
-    const increment = () => {
-      setCount((c) => c + 1);
-    };
-  
-    return (
-      <>
-        <Todos todos={todos} />
-        <hr />
-        <div>
-          Count: {count}
-          <button onClick={increment}>+</button>
-        </div>
-      </>
-    );
-  };
-  onst App = () => {
-    const [count, setCount] = useState(0);
-    const [todos, setTodos] = useState(["todo 1", "todo 2"]);
-  
-    const increment = () => {
-      setCount((c) => c + 1);
-    };
-    <>
-      <h2>My Todos</h2>
-      {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
-      })}
-    </>
-  );
-
-
-  function Greet(props) {
-    return <h1>Hello, {props.name}!</h1>;
-}
-class Greet extends React.Component {
-  render() {
-      return <h1>Hello, {this.props.name}!</h1>;
-}
-}
-function Greet(props) {
-  return <h2>Welcome, {props.username}!</h2>;
-}
-
-// Usage
-<Greet username="Anil" />;
-
-
 function Counter() {
   const [count, setCount] = React.useState(0);
 
@@ -184,3 +47,12 @@ class Car extends React.Component {
     return <h2>Hi, I am a Car!</h2>;
   }
 }
+
+
+import React from "react";
+
+const HelloWorld = () => {
+  return <h1>Hello, World!</h1>;
+};
+
+export default HelloWorld;
