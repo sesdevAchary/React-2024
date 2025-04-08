@@ -84,3 +84,10 @@ useEffect(() => {
 function Message({ isLoggedIn }) {
   return isLoggedIn ? <p>Welcome back!</p> : <p>Please sign in</p>;
 }
+
+const items = ['Apple', 'Banana', 'Cherry'];
+return (
+  <ul>
+    {items.map(item => <li key={item}>{item}</li>)}
+  </ul>
+);
