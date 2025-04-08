@@ -64,3 +64,6 @@ export default function OutlineButton({ label, onClick }) {
 }
 
 
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
