@@ -74,3 +74,10 @@ function Counter() {
   const [count, setCount] = useState(0);
   return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
 }
+
+import { useEffect } from 'react';
+
+useEffect(() => {
+  console.log("Component mounted");
+  return () => console.log("Component unmounted");
+}, []);
