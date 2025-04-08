@@ -95,3 +95,9 @@ return (
 const inputRef = useRef();
 <input ref={inputRef} />
 <button onClick={() => inputRef.current.focus()}>Focus</button>
+
+useEffect(() => {
+  fetch('https://api.example.com/data')
+    .then(res => res.json())
+    .then(data => setData(data));
+}, []);
