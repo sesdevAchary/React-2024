@@ -91,3 +91,7 @@ return (
     {items.map(item => <li key={item}>{item}</li>)}
   </ul>
 );
+
+const inputRef = useRef();
+<input ref={inputRef} />
+<button onClick={() => inputRef.current.focus()}>Focus</button>
