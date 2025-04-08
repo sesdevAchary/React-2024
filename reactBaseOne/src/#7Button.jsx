@@ -67,3 +67,10 @@ export default function OutlineButton({ label, onClick }) {
 function Greeting({ name }) {
   return <h1>Hello, {name}!</h1>;
 }
+
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
+}
