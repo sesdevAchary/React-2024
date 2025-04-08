@@ -81,3 +81,6 @@ useEffect(() => {
   console.log("Component mounted");
   return () => console.log("Component unmounted");
 }, []);
+function Message({ isLoggedIn }) {
+  return isLoggedIn ? <p>Welcome back!</p> : <p>Please sign in</p>;
+}
