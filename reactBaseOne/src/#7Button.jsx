@@ -91,6 +91,7 @@ return (
     {items.map(item => <li key={item}>{item}</li>)}
   </ul>
 );
+<button onClick={() => alert('Clicked!')}>Click Me</button>
 
 const inputRef = useRef();
 <input ref={inputRef} />
