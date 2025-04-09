@@ -314,3 +314,20 @@ const Counter = () => {
 };
 
 export default Counter;
+// src/components/LoginStatus.js
+import React, { useState } from 'react';
+
+const LoginStatus = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {loggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}
+      <button onClick={() => setLoggedIn(!loggedIn)}>
+        {loggedIn ? 'Logout' : 'Login'}
+      </button>
+    </div>
+  );
+};
+
+export default LoginStatus;
