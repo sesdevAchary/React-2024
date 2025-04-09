@@ -102,3 +102,9 @@ useEffect(() => {
     .then(res => res.json())
     .then(data => setData(data));
 }, []);
+
+<form>
+<label>Enter your name:
+  <input type="text" />
+</label>
+</form>
