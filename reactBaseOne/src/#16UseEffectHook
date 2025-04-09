@@ -327,7 +327,39 @@ const LoginStatus = () => {
         {loggedIn ? 'Logout' : 'Login'}
       </button>
     </div>
+  );// src/components/TodoList.js
+import React from 'react';
+
+const TodoList = () => {
+  const todos = ['Buy groceries', 'Walk the dog', 'Write React code'];
+
+  return (
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>{todo}</li>
+      ))}
+    </ul>
   );
 };
 
+export default TodoList;
+
+};
+
 export default LoginStatus;
+// src/components/TodoList.js
+import React from 'react';
+
+const TodoList = () => {
+  const todos = ['Buy groceries', 'Walk the dog', 'Write React code'];
+
+  return (
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>{todo}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default TodoList;
