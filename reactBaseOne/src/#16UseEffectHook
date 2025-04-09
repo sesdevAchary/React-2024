@@ -284,3 +284,17 @@ const Greeting = ({ name }) => {
 };
 
 export default Greeting;
+// src/App.js
+import React from 'react';
+import Greeting from './components/Greeting';
+
+function App() {
+  return (
+    <div>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+    </div>
+  );
+}
+
+export default App;
