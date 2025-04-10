@@ -11,3 +11,8 @@ function cards(){
 }
 
 export default cards;
+
+const [isOn, setIsOn] = useState(false);
+<button onClick={() => setIsOn(!isOn)}>
+  {isOn ? "ON" : "OFF"}
+</button>
