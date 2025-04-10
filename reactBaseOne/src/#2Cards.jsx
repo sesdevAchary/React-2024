@@ -39,3 +39,9 @@ const [text, setText] = useState("");
 <p>{text}</p>
 
 {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}
+
+useEffect(() => {
+    const timer = setTimeout(() => alert("Hi!"), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+  
