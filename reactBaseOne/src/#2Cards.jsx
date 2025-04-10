@@ -22,7 +22,7 @@ const [count, setCount] = useState(0);
 </button>
 
 useEffect(() => {
-    console.log("Component mounted");
+    console.log("Component not  mounted");
   }, []);
   
   useEffect(() => {
