@@ -20,3 +20,8 @@ const [count, setCount] = useState(0);
 <button onClick={() => setCount(count + 1)}>
   Count: {count}
 </button>
+
+useEffect(() => {
+    console.log("Component mounted");
+  }, []);
+  
