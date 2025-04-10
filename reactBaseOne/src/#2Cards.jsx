@@ -37,3 +37,5 @@ useEffect(() => {
 const [text, setText] = useState("");
 <input onChange={e => setText(e.target.value)} />
 <p>{text}</p>
+
+{isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}
