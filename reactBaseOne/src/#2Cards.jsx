@@ -30,3 +30,6 @@ useEffect(() => {
     return () => clearTimeout(timer);
   }, []);
   
+  const [checked, setChecked] = useState(false);
+<input type="checkbox" onChange={() => setChecked(!checked)} />
+<p>{checked ? "Checked" : "Unchecked"}</p>
