@@ -25,3 +25,8 @@ useEffect(() => {
     console.log("Component mounted");
   }, []);
   
+  useEffect(() => {
+    const timer = setTimeout(() => alert("Hi!"), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+  
