@@ -33,3 +33,7 @@ useEffect(() => {
   const [checked, setChecked] = useState(false);
 <input type="checkbox" onChange={() => setChecked(!checked)} />
 <p>{checked ? "Checked" : "Unchecked"}</p>
+
+const [text, setText] = useState("");
+<input onChange={e => setText(e.target.value)} />
+<p>{text}</p>
