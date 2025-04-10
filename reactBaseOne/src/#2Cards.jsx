@@ -16,3 +16,7 @@ const [isOn, setIsOn] = useState(false);
 <button onClick={() => setIsOn(!isOn)}>
   {isOn ? "ON" : "OFF"}
 </button>
+const [count, setCount] = useState(0);
+<button onClick={() => setCount(count + 1)}>
+  Count: {count}
+</button>
