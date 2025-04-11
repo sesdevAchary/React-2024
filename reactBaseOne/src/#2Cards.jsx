@@ -99,3 +99,24 @@ function TodoList({ tasks }) {
 }
 
 // Usage: <TodoList tasks={['Buy milk', 'Read book']} />
+import { useState } from 'react';
+
+function ContactForm() {
+  const [name, setName] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Hello, ${name}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Your name"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
