@@ -81,3 +81,10 @@ function Timer() {
 
   return <p>Seconds: {seconds}</p>;
 }
+function Status({ isLoggedIn }) {
+  return (
+    <div>
+      {isLoggedIn ? <p>Welcome back!</p> : <p>Please sign in.</p>}
+    </div>
+  );
+}
