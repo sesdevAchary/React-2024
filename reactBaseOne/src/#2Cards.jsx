@@ -88,3 +88,14 @@ function Status({ isLoggedIn }) {
     </div>
   );
 }
+function TodoList({ tasks }) {
+  return (
+    <ul>
+      {tasks.map((task, index) => (
+        <li key={index}>{task}</li>
+      ))}
+    </ul>
+  );
+}
+
+// Usage: <TodoList tasks={['Buy milk', 'Read book']} />
