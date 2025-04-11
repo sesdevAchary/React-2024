@@ -48,4 +48,9 @@ useEffect(() => {
   function Greeting() {
     return <h1>Hello, React!</h1>;
   }
+  function Welcome(props) {
+    return <h2>Welcome, {props.name}!</h2>;
+  }
+  
+  // Usage: <Welcome name="Alice" />
   
