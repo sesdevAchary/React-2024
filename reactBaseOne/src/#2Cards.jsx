@@ -120,3 +120,23 @@ function ContactForm() {
     </form>
   );
 }
+
+function Parent() {
+  const [message, setMessage] = useState('');
+
+  return (
+    <>
+      <Child onMessageChange={setMessage} />
+      <p>Message: {message}</p>
+    </>
+  );
+}
+
+function Child({ onMessageChange }) {
+  return (
+    <input
+      onChange={(e) => onMessageChange(e.target.value)}
+      placeholder="Type message"
+    />
+  );
+}
