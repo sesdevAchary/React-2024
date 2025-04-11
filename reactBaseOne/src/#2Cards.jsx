@@ -45,3 +45,7 @@ useEffect(() => {
     return () => clearTimeout(timer);
   }, []);
   
+  function Greeting() {
+    return <h1>Hello, React!</h1>;
+  }
+  
