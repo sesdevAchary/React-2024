@@ -221,3 +221,22 @@ function SimpleForm() {
     </form>
   );
 }
+import { useState } from 'react';
+
+const quotes = ["Stay curious!", "React is awesome.", "Keep learning!", "Code every day."];
+
+function RandomQuote() {
+  const [quote, setQuote] = useState('');
+
+  const getQuote = () => {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote(random);
+  };
+
+  return (
+    <div>
+      <button onClick={getQuote}>Get Quote</button>
+      <p>{quote}</p>
+    </div>
+  );
+}
