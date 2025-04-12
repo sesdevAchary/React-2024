@@ -167,3 +167,15 @@ function ToggleText() {
     </div>
   );
 }
+
+import { useState } from 'react';
+
+function LivePreview() {
+  const [text, setText] = useState('');
+  return (
+    <div>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
