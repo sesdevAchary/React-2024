@@ -179,3 +179,16 @@ function LivePreview() {
     </div>
   );
 }
+
+import { useState } from 'react';
+
+function DarkModeToggle() {
+  const [dark, setDark] = useState(false);
+  return (
+    <div style={{ background: dark ? '#333' : '#fff', color: dark ? '#fff' : '#000', padding: 20 }}>
+      <button onClick={() => setDark(!dark)}>
+        Toggle {dark ? 'Light' : 'Dark'} Mode
+      </button>
+    </div>
+  );
+}
