@@ -354,6 +354,11 @@ function Users() {
     <ul>
       {users.map(user => (
         <li key={user.id}>{user.name}</li>
+
+
+        <P>adding extra values with completing the session 
+          have a good luck !
+        </P>
       ))}
     </ul>
   );
