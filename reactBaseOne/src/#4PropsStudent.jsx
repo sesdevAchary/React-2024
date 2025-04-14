@@ -86,3 +86,22 @@ const ThemeProvider = ({ children }) => {
 };
 
 export default ThemeProvider;
+import React from 'react';
+import { FixedSizeList as List } from 'react-window';
+
+const Row = ({ index, style }) => (
+  <div style={style}>Row #{index}</div>
+);
+
+const VirtualizedList = () => (
+  <List
+    height={400}
+    itemCount={1000}
+    itemSize={35}
+    width={'100%'}
+  >
+    {Row}
+  </List>
+);
+
+export default VirtualizedList;
