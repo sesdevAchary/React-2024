@@ -158,3 +158,42 @@ const Chat = () => {
 };
 
 export default Chat;
+import React from 'react';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+const initialTasks = ['Task 1', 'Task 2', 'Task 3'];
+
+const Kanban = () => {
+  const [tasks, setTasks] = React.useState(initialTasks);
+
+  const onDragEnd = (result) => {
+    if (!result.destination) return;
+    const newTasks = [...tasks];
+    const [moved] = newTasks.splice(result.source.index, 1);
+    newTasks.splice(result.destination.index, 0, moved);
+    setTasks(newTasks);
+  };
+
+  return (
+    <DragDropContext onDragEnd={onDragEnd}>
+      <Droppable droppableId="board">
+        {(provided) => (
+          <div {...provided.droppableProps} ref={provided.innerRef}>
+            {tasks.map((task, i) => (
+              <Draggable key={task} draggableId={task} index={i}>
+                {(provided) => (
+                  <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                    {task}
+                  </div>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
+    </DragDropContext>
+  );
+};
+
+export default Kanban;
