@@ -221,3 +221,19 @@ const MultiStepForm = () => {
 };
 
 export default MultiStepForm;
+
+import React, { useEffect, useRef, useState } from 'react';
+
+const InfiniteScroll = () => {
+  const [items, setItems] = useState(Array.from({ length: 20 }));
+  const loader = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        setItems(prev => [...prev, ...Array.from({ length: 20 })]);
+      }
+    }, { threshold: 1.0 });
+
+    if (loader.current) observer.observe(loader.current);
+    return () => observer.disconnect
