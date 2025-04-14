@@ -130,4 +130,31 @@ const D3BarChart = () => {
 };
 
 export default D3BarChart;
+import React, { useEffect, useState } from 'react';
 
+const Chat = () => {
+  const [messages, setMessages] = useState([]);
+  const [msg, setMsg] = useState('');
+  const socketRef = useRef(null);
+
+  useEffect(() => {
+    socketRef.current = new WebSocket('ws://localhost:4000');
+    socketRef.current.onmessage = e => setMessages(prev => [...prev, e.data]);
+    return () => socketRef.current.close();
+  }, []);
+
+  const sendMessage = () => {
+    socketRef.current.send(msg);
+    setMsg('');
+  };
+
+  return (
+    <div>
+      <div>{messages.map((m, i) => <p key={i}>{m}</p>)}</div>
+      <input value={msg} onChange={e => setMsg(e.target.value)} />
+      <button onClick={sendMessage}>Send</button>
+    </div>
+  );
+};
+
+export default Chat;
