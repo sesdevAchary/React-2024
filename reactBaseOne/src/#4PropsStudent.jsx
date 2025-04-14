@@ -105,3 +105,29 @@ const VirtualizedList = () => (
 );
 
 export default VirtualizedList;
+import React, { useRef, useEffect } from 'react';
+import * as d3 from 'd3';
+
+const data = [30, 86, 168, 281, 303, 365];
+
+const D3BarChart = () => {
+  const ref = useRef();
+
+  useEffect(() => {
+    const svg = d3.select(ref.current);
+    svg.selectAll('*').remove();
+
+    svg.selectAll('rect')
+      .data(data)
+      .join('rect')
+      .attr('width', d => d)
+      .attr('height', 25)
+      .attr('y', (_, i) => i * 30)
+      .attr('fill', 'steelblue');
+  }, []);
+
+  return <svg ref={ref} width={400} height={200}></svg>;
+};
+
+export default D3BarChart;
+
