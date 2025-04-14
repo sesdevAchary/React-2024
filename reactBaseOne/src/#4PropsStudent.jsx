@@ -197,3 +197,27 @@ const Kanban = () => {
 };
 
 export default Kanban;
+
+import React, { useState } from 'react';
+
+const steps = ['Personal Info', 'Contact Info', 'Finish'];
+
+const MultiStepForm = () => {
+  const [step, setStep] = useState(0);
+
+  const next = () => setStep(prev => Math.min(prev + 1, steps.length - 1));
+  const prev = () => setStep(prev => Math.max(prev - 1, 0));
+
+  return (
+    <div>
+      <h2>{steps[step]}</h2>
+      <progress value={step + 1} max={steps.length} />
+      <div>
+        {step > 0 && <button onClick={prev}>Back</button>}
+        {step < steps.length - 1 ? <button onClick={next}>Next</button> : <button>Submit</button>}
+      </div>
+    </div>
+  );
+};
+
+export default MultiStepForm;
