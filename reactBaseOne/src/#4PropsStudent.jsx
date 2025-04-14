@@ -16,3 +16,48 @@ Student.propTypes;{
 
 }
 export default Student;
+
+import React, { useState } from 'react';
+
+const formConfig = [
+  { name: 'email', type: 'email', label: 'Email', required: true },
+  { name: 'password', type: 'password', label: 'Password', required: true },
+];
+
+const DynamicForm = () => {
+  const [form, setForm] = useState({});
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    formConfig.forEach(({ name, required }) => {
+      if (required && !form[name]) newErrors[name] = 'This field is required';
+    });
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) alert('Form Submitted: ' + JSON.stringify(form));
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {formConfig.map(({ name, type, label }) => (
+        <div key={name}>
+          <label>{label}</label>
+          <input name={name} type={type} onChange={handleChange} />
+          {errors[name] && <span style={{ color: 'red' }}>{errors[name]}</span>}
+        </div>
+      ))}
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default DynamicForm;
