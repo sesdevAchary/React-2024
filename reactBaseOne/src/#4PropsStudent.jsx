@@ -315,3 +315,26 @@ function SimpleForm() {
 }
 
 export default SimpleForm;
+function Page() {
+  return (
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return <h1>My Site</h1>;
+}
+
+function Content() {
+  return <p>This is the content section.</p>;
+}
+
+function Footer() {
+  return <small>© 2025 My Site</small>;
+}
+
+export default Page;
