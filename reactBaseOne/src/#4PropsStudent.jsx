@@ -295,3 +295,23 @@ function ItemList({ items }) {
 }
 
 export default ItemList;
+
+import { useState } from "react";
+
+function SimpleForm() {
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Submitted: ${input}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={input} onChange={(e) => setInput(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default SimpleForm;
