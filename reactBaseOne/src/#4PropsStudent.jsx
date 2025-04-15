@@ -275,3 +275,12 @@ function Timer() {
 }
 
 export default Timer;
+function UserStatus({ isLoggedIn }) {
+  return (
+    <div>
+      {isLoggedIn ? <p>Welcome back!</p> : <p>Please sign in.</p>}
+    </div>
+  );
+}
+
+export default UserStatus;
