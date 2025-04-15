@@ -284,3 +284,14 @@ function UserStatus({ isLoggedIn }) {
 }
 
 export default UserStatus;
+function ItemList({ items }) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default ItemList;
