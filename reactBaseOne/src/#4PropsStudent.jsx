@@ -237,3 +237,9 @@ const InfiniteScroll = () => {
 
     if (loader.current) observer.observe(loader.current);
     return () => observer.disconnect
+    function Greeting() {
+      return <h1>Hello, React!</h1>;
+    }
+    
+    export default Greeting;
+    
