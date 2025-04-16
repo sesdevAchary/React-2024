@@ -168,3 +168,23 @@ function Dropdown() {
     open && <div ref={ref} className="dropdown">Dropdown Content</div>
   );
 }
+
+import create from 'zustand';
+
+const useFormStore = create(set => ({
+  step: 1,
+  next: () => set(state => ({ step: state.step + 1 })),
+  back: () => set(state => ({ step: state.step - 1 })),
+}));
+
+export default function MultiStepForm() {
+  const { step, next, back } = useFormStore();
+
+  return (
+    <div>
+      <p>Step: {step}</p>
+      <button onClick={back} disabled={step === 1}>Back</button>
+      <button onClick={next} disabled={step === 3}>Next</button>
+    </div>
+  );
+}
