@@ -141,3 +141,30 @@ export function ProtectedRoute() {
   const { user } = useAuth();
   return user ? <Outlet /> : <Navigate to="/login" />;
 }
+import { useEffect, useRef } from 'react';
+
+export function useOutsideClick(callback) {
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleClick = e => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        callback();
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [callback]);
+
+  return ref;
+}
+
+// Example Usage
+function Dropdown() {
+  const [open, setOpen] = useState(true);
+  const ref = useOutsideClick(() => setOpen(false));
+
+  return (
+    open && <div ref={ref} className="dropdown">Dropdown Content</div>
+  );
+}
