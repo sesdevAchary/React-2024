@@ -68,3 +68,23 @@ export default function FormBuilder() {
     </DndProvider>
   );
 }
+import { createContext, useEffect, useState, useContext } from 'react';
+
+const ThemeContext = createContext();
+
+export const useTheme = () => useContext(ThemeContext);
+
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggle: () => setTheme(t => (t === 'light' ? 'dark' : 'light')) }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
