@@ -122,3 +122,22 @@ export function Users() {
     </ul>
   );
 }
+import { Navigate, Outlet } from 'react-router-dom';
+import { useContext, createContext, useState } from 'react';
+
+const AuthContext = createContext(null);
+
+export const useAuth = () => useContext(AuthContext);
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const login = () => setUser({ name: 'User' });
+  const logout = () => setUser(null);
+
+  return <AuthContext.Provider value={{ user, login, logout }}>{children}</AuthContext.Provider>;
+}
+
+export function ProtectedRoute() {
+  const { user } = useAuth();
+  return user ? <Outlet /> : <Navigate to="/login" />;
+}
