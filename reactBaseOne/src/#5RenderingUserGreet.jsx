@@ -213,3 +213,28 @@ export default function WebSocketComponent() {
     </ul>
   );
 }
+import { useEffect, useState } from 'react';
+
+export default function WebSocketComponent() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    const socket = new WebSocket('wss://echo.websocket.org');
+
+    socket.onmessage = e => {
+      setMessages(prev => [...prev, e.data]);
+    };
+
+    socket.onopen = () => socket.send('Hello WebSocket!');
+
+    return () => socket.close();
+  }, []);
+
+  return (
+    <ul>
+      {messages.map((msg, i) => (
+        <li key={i}>{msg}</li>
+      ))}
+    </ul>
+  );
+}
