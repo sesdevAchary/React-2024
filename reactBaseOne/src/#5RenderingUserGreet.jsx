@@ -100,3 +100,25 @@ export function useDebounce(value, delay) {
 
   return debounced;
 }
+import { useQuery } from 'react-query';
+import axios from 'axios';
+
+const fetchUsers = async () => {
+  const { data } = await axios.get('https://jsonplaceholder.typicode.com/users');
+  return data;
+};
+
+export function Users() {
+  const { data, error, isLoading } = useQuery('users', fetchUsers);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error fetching users</p>;
+
+  return (
+    <ul>
+      {data.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
