@@ -12,3 +12,59 @@ function userGreeting(props){
        }
      }
 export default userGreeting
+
+
+
+import { useState } from 'react';
+import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
+const ItemTypes = { FIELD: 'field' };
+
+const Field = ({ field, index, moveField }) => {
+  const [, ref] = useDrag({
+    type: ItemTypes.FIELD,
+    item: { index },
+  });
+
+  const [, drop] = useDrop({
+    accept: ItemTypes.FIELD,
+    hover(item) {
+      if (item.index !== index) {
+        moveField(item.index, index);
+        item.index = index;
+      }
+    },
+  });
+
+  return (
+    <div ref={(node) => ref(drop(node))} className="field">
+      {field.label}
+    </div>
+  );
+};
+
+export default function FormBuilder() {
+  const [fields, setFields] = useState([
+    { label: 'Name' },
+    { label: 'Email' },
+    { label: 'Age' },
+  ]);
+
+  const moveField = (from, to) => {
+    const updated = [...fields];
+    const [moved] = updated.splice(from, 1);
+    updated.splice(to, 0, moved);
+    setFields(updated);
+  };
+
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <div className="form-builder">
+        {fields.map((field, index) => (
+          <Field key={index} field={field} index={index} moveField={moveField} />
+        ))}
+      </div>
+    </DndProvider>
+  );
+}
