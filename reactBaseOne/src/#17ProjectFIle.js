@@ -353,3 +353,15 @@ function Toggle() {
     </button>
   );
 }
+function Button({ label }) {
+  return <button>{label}</button>;
+}
+
+function App() {
+  return (
+    <div>
+      <Button label="Click Me" />
+      <Button label="Submit" />
+    </div>
+  );
+}
