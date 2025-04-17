@@ -331,3 +331,15 @@ function ListItems() {
     </ul>
   );
 }
+
+import { useState } from 'react';
+
+function TextInput() {
+  const [text, setText] = useState('');
+  return (
+    <div>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
