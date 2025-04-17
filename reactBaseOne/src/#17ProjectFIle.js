@@ -298,3 +298,8 @@ root.render(<MyForm />);
 function HelloWorld() {
   return <h1>Hello, World!</h1>;
 }
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+// Usage: <Greeting name="Alice" />
