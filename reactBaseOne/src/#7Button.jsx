@@ -203,3 +203,14 @@ function Welcome({ name }) {
 
 // Usage
 // <Welcome name="Alice" />
+const items = ['Apple', 'Banana', 'Orange'];
+
+function List() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
