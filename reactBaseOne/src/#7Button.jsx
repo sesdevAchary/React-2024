@@ -197,3 +197,9 @@ function FormExample() {
     </form>
   );
 }
+function Welcome({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
+
+// Usage
+// <Welcome name="Alice" />
