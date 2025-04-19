@@ -37,3 +37,16 @@ function App() {
   );
 }
 export default App;
+function App() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted!");
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input placeholder="Type something" />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+export default App;
