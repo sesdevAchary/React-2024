@@ -25,3 +25,15 @@ function App() {
   );
 }
 export default App;
+import { useState } from "react";
+
+function App() {
+  const [text, setText] = useState("");
+  return (
+    <div>
+      <input onChange={(e) => setText(e.target.value)} />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
+export default App;
