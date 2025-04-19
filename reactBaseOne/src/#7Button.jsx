@@ -98,3 +98,23 @@ function App() {
   );
 }
 export default App;
+import { useEffect, useState } from "react";
+
+function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+
+  return (
+    <ul>
+      {data.map((post) => (
+        <li key={post.id}>{post.title}</li>
+      ))}
+    </ul>
+  );
+}
+export default App;
