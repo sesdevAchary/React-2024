@@ -13,3 +13,15 @@ function App() {
   );
 }
 export default App;
+import { useState } from "react";
+
+function App() {
+  const [visible, setVisible] = useState(true);
+  return (
+    <div>
+      <button onClick={() => setVisible(!visible)}>Toggle</button>
+      {visible && <p>This is visible</p>}
+    </div>
+  );
+}
+export default App;
