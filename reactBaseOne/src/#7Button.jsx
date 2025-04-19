@@ -50,3 +50,14 @@ function App() {
   );
 }
 export default App;
+function App() {
+  const fruits = ["🍎 Apple", "🍌 Banana", "🍊 Orange"];
+  return (
+    <ul>
+      {fruits.map((fruit, i) => (
+        <li key={i}>{fruit}</li>
+      ))}
+    </ul>
+  );
+}
+export default App;
