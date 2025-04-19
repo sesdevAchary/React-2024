@@ -61,3 +61,12 @@ function App() {
   );
 }
 export default App;
+function App() {
+  const isLoggedIn = true;
+  return (
+    <h2 style={{ color: isLoggedIn ? "green" : "red" }}>
+      {isLoggedIn ? "Welcome back!" : "Please log in"}
+    </h2>
+  );
+}
+export default App;
