@@ -83,3 +83,18 @@ function App() {
   return <h1>{time}</h1>;
 }
 export default App;
+
+import { useState } from "react";
+
+function App() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div>
+      <input type={visible ? "text" : "password"} placeholder="Password" />
+      <button onClick={() => setVisible(!visible)}>
+        {visible ? "Hide" : "Show"}
+      </button>
+    </div>
+  );
+}
+export default App;
