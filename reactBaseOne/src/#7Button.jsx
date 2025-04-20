@@ -185,3 +185,16 @@ function TextInput() {
     </div>
   );
 }
+import { useEffect, useState } from 'react';
+
+function FetchUser() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch('https://randomuser.me/api/')
+      .then(res => res.json())
+      .then(data => setUser(data.results[0]));
+  }, []);
+
+  return user ? <p>{user.name.first} {user.name.last}</p> : <p>Loading...</p>;
+}
