@@ -129,3 +129,26 @@ function Counter() {
     </div>
   );
 }
+import { useState } from 'react';
+
+function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  const [text, setText] = useState('');
+
+  const addTodo = () => {
+    if (text) {
+      setTodos([...todos, text]);
+      setText('');
+    }
+  };
+
+  return (
+    <div>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <button onClick={addTodo}>Add</button>
+      <ul>
+        {todos.map((t, i) => <li key={i}>{t}</li>)}
+      </ul>
+    </div>
+  );
+}
