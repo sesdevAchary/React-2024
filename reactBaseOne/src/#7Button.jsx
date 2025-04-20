@@ -198,3 +198,13 @@ function FetchUser() {
 
   return user ? <p>{user.name.first} {user.name.last}</p> : <p>Loading...</p>;
 }
+import { useState } from 'react';
+
+function DarkMode() {
+  const [dark, setDark] = useState(false);
+  return (
+    <div style={{ background: dark ? '#333' : '#fff', color: dark ? '#fff' : '#000', padding: '20px' }}>
+      <button onClick={() => setDark(!dark)}>Toggle Dark Mode</button>
+    </div>
+  );
+}
