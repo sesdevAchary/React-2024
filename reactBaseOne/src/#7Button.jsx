@@ -52,3 +52,12 @@ document.addEventListener("keydown", function(event) {
   console.log("You pressed: " + event.key);
 });
 </script>
+<img id="myImage" src="img1.jpg" width="200">
+<button onclick="switchImage()">Switch Image</button>
+
+<script>
+function switchImage() {
+  const img = document.getElementById("myImage");
+  img.src = img.src.includes("img1.jpg") ? "img2.jpg" : "img1.jpg";
+}
+</script>
