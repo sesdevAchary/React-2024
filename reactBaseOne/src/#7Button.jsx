@@ -40,3 +40,10 @@ setInterval(function() {
   document.getElementById("clock").innerHTML = now.toLocaleTimeString();
 }, 1000);
 </script>
+<script>
+function getRandom() {
+  return Math.floor(Math.random() * 10) + 1;
+}
+
+console.log(getRandom());
+</script>
