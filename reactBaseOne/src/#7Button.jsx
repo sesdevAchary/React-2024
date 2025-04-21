@@ -18,3 +18,17 @@ window.onload = function() {
   alert("Page Loaded!");
 };
 </script>
+<button onclick="toggleDark()">Toggle Dark Mode</button>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+<style>
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
