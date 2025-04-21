@@ -32,3 +32,11 @@ function toggleDark() {
   color: white;
 }
 </style>
+<p id="clock"></p>
+
+<script>
+setInterval(function() {
+  const now = new Date();
+  document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+}, 1000);
+</script>
