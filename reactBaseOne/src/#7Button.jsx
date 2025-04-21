@@ -13,3 +13,8 @@ function add(a, b) {
 
 console.log(add(5, 3)); // Output: 8
 </script>
+<script>
+window.onload = function() {
+  alert("Page Loaded!");
+};
+</script>
