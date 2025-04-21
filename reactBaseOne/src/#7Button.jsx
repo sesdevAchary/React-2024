@@ -61,3 +61,18 @@ function switchImage() {
   img.src = img.src.includes("img1.jpg") ? "img2.jpg" : "img1.jpg";
 }
 </script>
+<form onsubmit="return validateForm()">
+  <input type="text" id="name" placeholder="Enter name">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+  const name = document.getElementById("name").value;
+  if (name === "") {
+    alert("Name must be filled out!");
+    return false;
+  }
+  return true;
+}
+</script>
