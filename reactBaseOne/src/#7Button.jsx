@@ -47,3 +47,8 @@ function getRandom() {
 
 console.log(getRandom());
 </script>
+<script>
+document.addEventListener("keydown", function(event) {
+  console.log("You pressed: " + event.key);
+});
+</script>
