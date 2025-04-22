@@ -79,3 +79,8 @@ function validateForm() {
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Text copied to clipboard!");
+  });
+}
