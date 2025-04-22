@@ -113,3 +113,13 @@ function getQueryParams() {
 function isEmptyObject(obj) {
   return Object.keys(obj).length === 0;
 }
+function countdown(seconds) {
+  let interval = setInterval(() => {
+    console.log(seconds);
+    seconds--;
+    if (seconds < 0) {
+      clearInterval(interval);
+      console.log("Time's up!");
+    }
+  }, 1000);
+}
