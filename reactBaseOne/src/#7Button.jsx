@@ -107,3 +107,6 @@ function scrollToTop() {
 function shuffleArray(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
+function getQueryParams() {
+  return Object.fromEntries(new URLSearchParams(window.location.search));
+}
