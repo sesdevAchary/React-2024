@@ -101,3 +101,6 @@ function debounce(func, delay) {
     timer = setTimeout(() => func.apply(this, args), delay);
   };
 }
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
