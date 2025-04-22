@@ -104,3 +104,6 @@ function debounce(func, delay) {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
