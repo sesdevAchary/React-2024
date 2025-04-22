@@ -91,3 +91,13 @@ function isPrime(n) {
   }
   return true;
 }
+function getRandomColor() {
+  return "#" + Math.floor(Math.random()*16777215).toString(16);
+}
+function debounce(func, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
