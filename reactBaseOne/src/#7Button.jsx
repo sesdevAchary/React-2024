@@ -110,3 +110,6 @@ function shuffleArray(arr) {
 function getQueryParams() {
   return Object.fromEntries(new URLSearchParams(window.location.search));
 }
+function isEmptyObject(obj) {
+  return Object.keys(obj).length === 0;
+}
