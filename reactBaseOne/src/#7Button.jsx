@@ -156,3 +156,7 @@ console.log("Dark mode is", isDarkMode ? "enabled" : "disabled");
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
