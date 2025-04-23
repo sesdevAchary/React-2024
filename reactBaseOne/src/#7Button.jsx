@@ -153,3 +153,6 @@ function getRandomColor() {
 }
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 console.log("Dark mode is", isDarkMode ? "enabled" : "disabled");
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
