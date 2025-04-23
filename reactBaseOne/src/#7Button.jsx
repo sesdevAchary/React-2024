@@ -151,3 +151,5 @@ function getRandomColor() {
 function getRandomColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log("Dark mode is", isDarkMode ? "enabled" : "disabled");
