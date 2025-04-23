@@ -130,3 +130,8 @@ function debounce(func, delay) {
     timeoutId = setTimeout(() => func(...args), delay);
   };
 }
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log("Copied to clipboard!");
+  });
+}
