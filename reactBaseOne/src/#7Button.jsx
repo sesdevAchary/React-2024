@@ -187,3 +187,12 @@ function getRandomColor() {
 }
 
 console.log(getRandomColor());
+
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log("Copied to clipboard!");
+  });
+}
+
+copyToClipboard("Hello, World!");
