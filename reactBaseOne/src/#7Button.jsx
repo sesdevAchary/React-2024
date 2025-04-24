@@ -160,3 +160,8 @@ function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(isEven(4)); // true
