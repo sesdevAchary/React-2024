@@ -264,3 +264,20 @@ function asyncTask(success = true) {
 asyncTask(true)
   .then(msg => console.log(msg))
   .catch(err => console.error(err));
+  <div id="drag" draggable="true" style="width:100px;height:100px;background:red;"></div>
+  <div id="drop" style="width:150px;height:150px;background:lightgray;margin-top:20px;"></div>
+  
+  <script>
+  let drag = document.getElementById("drag");
+  drag.addEventListener("dragstart", e => {
+    e.dataTransfer.setData("text", "drag");
+  });
+  
+  let drop = document.getElementById("drop");
+  drop.addEventListener("dragover", e => e.preventDefault());
+  drop.addEventListener("drop", e => {
+    e.preventDefault();
+    drop.appendChild(drag);
+  });
+  </script>
+  
