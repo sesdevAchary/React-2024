@@ -296,3 +296,19 @@ function stop() {
 
 start();
 // call stop() to stop it later
+let seconds = 0;
+let interval;
+
+function start() {
+  interval = setInterval(() => {
+    seconds++;
+    console.log("Time:", seconds);
+  }, 1000);
+}
+
+function stop() {
+  clearInterval(interval);
+}
+
+start();
+// call stop() to stop it later
