@@ -252,3 +252,15 @@ class Dog extends Animal {
 
 let d = new Dog("Rex");
 d.speak(); // Rex barks.
+function asyncTask(success = true) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (success) resolve("Task completed!");
+      else reject("Task failed.");
+    }, 1000);
+  });
+}
+
+asyncTask(true)
+  .then(msg => console.log(msg))
+  .catch(err => console.error(err));
