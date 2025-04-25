@@ -207,3 +207,15 @@ function sleep(ms) {
 
 // Usage
 sleep(1000).then(() => console.log("1 second passed"));
+<input id="task" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+
+<script>
+function addTask() {
+  let taskText = document.getElementById("task").value;
+  let li = document.createElement("li");
+  li.textContent = taskText;
+  document.getElementById("list").appendChild(li);
+}
+</script>
