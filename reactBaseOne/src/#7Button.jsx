@@ -223,3 +223,15 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error("Error:", error));
+  function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+// Example usage
+window.addEventListener('resize', debounce(() => {
+  console.log("Resized!");
+}, 500));
