@@ -235,3 +235,20 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 window.addEventListener('resize', debounce(() => {
   console.log("Resized!");
 }, 500));
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+let d = new Dog("Rex");
+d.speak(); // Rex barks.
