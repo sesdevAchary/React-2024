@@ -397,3 +397,16 @@ function sum(a) {
   fn.toString = () => String(a);
   return fn;
 }
+function combinations(arr) {
+  const result = [];
+  const backtrack = (start, path) => {
+    result.push([...path]);
+    for (let i = start; i < arr.length; i++) {
+      path.push(arr[i]);
+      backtrack(i + 1, path);
+      path.pop();
+    }
+  };
+  backtrack(0, []);
+  return result;
+}
