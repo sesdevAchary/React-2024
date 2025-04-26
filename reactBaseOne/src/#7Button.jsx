@@ -371,3 +371,10 @@ class LRUCache {
     this.cache.set(key, value);
   }
 }
+function curry(fn) {
+  return function curried(...args) {
+    return args.length >= fn.length
+      ? fn.apply(this, args)
+      : (...rest) => curried.apply(this, args.concat(rest));
+  };
+}
