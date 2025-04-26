@@ -322,3 +322,17 @@ function memoize(fn) {
     return result;
   };
 }
+function deepClone(obj, hash = new WeakMap()) {
+  if (Object(obj) !== obj) return obj;
+  if (hash.has(obj)) return hash.get(obj);
+  const result = Array.isArray(obj) ? [] :
+    obj instanceof Date ? new Date(obj) :
+    obj instanceof Set ? new Set(obj) :
+    obj instanceof Map ? new Map(obj) :
+    Object.create(Object.getPrototypeOf(obj));
+  hash.set(obj, result);
+  for (let key of Reflect.ownKeys(obj)) {
+    result[key] = deepClone(obj[key], hash);
+  }
+  return result;
+}
