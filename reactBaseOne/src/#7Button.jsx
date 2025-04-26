@@ -391,3 +391,9 @@ async function promisePool(tasks, limit) {
   }
   return Promise.all(results);
 }
+function sum(a) {
+  const fn = (b) => sum(a + b);
+  fn.valueOf = () => a;
+  fn.toString = () => String(a);
+  return fn;
+}
