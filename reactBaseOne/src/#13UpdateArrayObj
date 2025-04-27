@@ -99,3 +99,20 @@ export default function TodoList() {
     </div>
   );
 }
+import { useState } from "react";
+
+export default function ModalExample() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setOpen(true)}>Open Modal</button>
+      {open && (
+        <div style={{ position: "fixed", top: "30%", left: "30%", background: "white", padding: "20px", border: "1px solid black" }}>
+          <h2>Modal Title</h2>
+          <button onClick={() => setOpen(false)}>Close</button>
+        </div>
+      )}
+    </div>
+  );
+}
