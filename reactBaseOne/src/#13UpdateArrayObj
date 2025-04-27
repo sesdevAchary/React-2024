@@ -66,3 +66,15 @@ export default function DarkModeToggle() {
     </div>
   );
 }
+import { useState } from "react";
+
+export default function Accordion() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <h2 onClick={() => setIsOpen(!isOpen)}>Click to {isOpen ? "Collapse" : "Expand"}</h2>
+      {isOpen && <p>This is hidden content!</p>}
+    </div>
+  );
+}
