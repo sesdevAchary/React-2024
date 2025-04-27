@@ -43,3 +43,15 @@ export default function ToggleText() {
     </div>
   );
 }
+import { useState } from "react";
+
+export default function FormExample() {
+  const [input, setInput] = useState("");
+
+  return (
+    <div>
+      <input value={input} onChange={(e) => setInput(e.target.value)} />
+      <p>You typed: {input}</p>
+    </div>
+  );
+}
