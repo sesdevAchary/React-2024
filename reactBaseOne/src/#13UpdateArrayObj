@@ -78,3 +78,24 @@ export default function Accordion() {
     </div>
   );
 }
+import { useState } from "react";
+
+export default function TodoList() {
+  const [todos, setTodos] = useState([]);
+  const [task, setTask] = useState("");
+
+  const addTask = () => {
+    setTodos([...todos, task]);
+    setTask("");
+  };
+
+  return (
+    <div>
+      <input value={task} onChange={(e) => setTask(e.target.value)} />
+      <button onClick={addTask}>Add</button>
+      <ul>
+        {todos.map((todo, index) => (<li key={index}>{todo}</li>))}
+      </ul>
+    </div>
+  );
+}
