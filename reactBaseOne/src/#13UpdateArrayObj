@@ -55,3 +55,14 @@ export default function FormExample() {
     </div>
   );
 }
+import { useState } from "react";
+
+export default function DarkModeToggle() {
+  const [dark, setDark] = useState(false);
+
+  return (
+    <div style={{ background: dark ? "#333" : "#fff", color: dark ? "#fff" : "#000", height: "100vh" }}>
+      <button onClick={() => setDark(!dark)}>Toggle Dark Mode</button>
+    </div>
+  );
+}
