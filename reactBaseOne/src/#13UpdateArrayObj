@@ -147,3 +147,6 @@ console.log(isPalindrome('A man, a plan, a canal: Panama'));
 const numbers = [5, 12, 8, 130, 44];
 const max = Math.max(...numbers);
 console.log(max);
+const numbers = [5, 12, 8, 130, 44];
+const max = Math.max(...numbers);
+console.log(max);
