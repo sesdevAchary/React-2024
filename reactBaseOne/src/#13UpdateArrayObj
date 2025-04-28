@@ -144,3 +144,6 @@ function isPalindrome(str) {
   return cleanStr === cleanStr.split('').reverse().join('');
 }
 console.log(isPalindrome('A man, a plan, a canal: Panama'));
+const numbers = [5, 12, 8, 130, 44];
+const max = Math.max(...numbers);
+console.log(max);
