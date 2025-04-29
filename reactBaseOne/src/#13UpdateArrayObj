@@ -181,3 +181,11 @@ const interval = setInterval(() => {
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
+
+function validateForm() {
+  const name = document.forms["myForm"]["name"].value;
+  if (name === "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
