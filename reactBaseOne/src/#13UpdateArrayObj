@@ -169,3 +169,12 @@ fetch('https://api.example.com/data')
   console.log(num % 2 === 0 ? "Even" : "Odd");
   const randomNum = Math.floor(Math.random() * 100) + 1;
 console.log(randomNum);
+let count = 10;
+const interval = setInterval(() => {
+  console.log(count);
+  count--;
+  if (count < 0) {
+    clearInterval(interval);
+    console.log("Countdown finished!");
+  }
+}, 1000);
