@@ -167,4 +167,5 @@ fetch('https://api.example.com/data')
   .catch(error => console.error('Error:', error));
   const num = 5;
   console.log(num % 2 === 0 ? "Even" : "Odd");
-  
+  const randomNum = Math.floor(Math.random() * 100) + 1;
+console.log(randomNum);
