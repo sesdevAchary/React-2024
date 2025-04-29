@@ -165,3 +165,6 @@ fetch('https://api.example.com/data')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
+  const num = 5;
+  console.log(num % 2 === 0 ? "Even" : "Odd");
+  
