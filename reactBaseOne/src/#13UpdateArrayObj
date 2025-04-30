@@ -284,3 +284,16 @@ function diff(oldNode, newNode) {
 
   return { type: 'UPDATE', changes };
 }
+function reactive(obj) {
+  return new Proxy(obj, {
+      get(target, key) {
+          console.log(`Getting ${key}: ${target[key]}`);
+          return target[key];
+      },
+      set(target, key, value) {
+          console.log(`Setting ${key} to ${value}`);
+          target[key] = value;
+          return true;
+      }
+  });
+}
