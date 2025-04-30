@@ -266,3 +266,21 @@ class EventEmitter {
       this.events[event] = (this.events[event] || []).filter(fn => fn !== listenerToRemove);
   }
 }
+function diff(oldNode, newNode) {
+  if (!newNode) return { type: 'REMOVE', oldNode };
+  if (!oldNode) return { type: 'ADD', newNode };
+  if (typeof oldNode !== typeof newNode || oldNode.type !== newNode.type)
+      return { type: 'REPLACE', newNode };
+
+  if (typeof oldNode === 'string' && oldNode !== newNode)
+      return { type: 'TEXT', newNode };
+
+  const changes = [];
+  const maxLength = Math.max(oldNode.children.length, newNode.children.length);
+
+  for (let i = 0; i < maxLength; i++) {
+      changes.push(diff(oldNode.children[i], newNode.children[i]));
+  }
+
+  return { type: 'UPDATE', changes };
+}
