@@ -222,3 +222,18 @@ function customPromiseAll(promises) {
       });
   });
 }
+function add(a) {
+  let sum = a;
+
+  function inner(b) {
+      if (b !== undefined) {
+          sum += b;
+          return inner;
+      }
+      return sum;
+  }
+
+  return inner;
+}
+
+// Usage: add(2)(3)(4)() → 9
