@@ -307,3 +307,20 @@ async function retry(fn, retries = 3, delay = 1000) {
       }
   }
 }
+function trampoline(fn) {
+  return function(...args) {
+      let result = fn.apply(this, args);
+      while (typeof result === 'function') {
+          result = result();
+      }
+      return result;
+  };
+}
+
+function sum(x, y) {
+  if (y === 0) return x;
+  return () => sum(x + 1, y - 1);
+}
+
+const trampolinedSum = trampoline(sum);
+// trampolinedSum(1, 100000) // won't cause stack overflow
