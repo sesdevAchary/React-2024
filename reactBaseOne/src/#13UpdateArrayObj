@@ -342,3 +342,7 @@ function greet(name) {
   console.log("Hello, " + name + "!");
 }
 greet("Alice");
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+console.log(celsiusToFahrenheit(25)); // 77
