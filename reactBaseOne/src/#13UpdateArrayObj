@@ -354,3 +354,6 @@ console.log("Random number:", randomNum);
 let str = "JavaScript";
 let reversed = str.split("").reverse().join("");
 console.log(reversed); // tpircSavaJ
+setTimeout(() => {
+  console.log("This prints after 2 seconds");
+}, 2000);
