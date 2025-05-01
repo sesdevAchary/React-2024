@@ -351,3 +351,6 @@ let max = x > y ? x : y;
 console.log("Max:", max);
 let randomNum = Math.floor(Math.random() * 101);
 console.log("Random number:", randomNum);
+let str = "JavaScript";
+let reversed = str.split("").reverse().join("");
+console.log(reversed); // tpircSavaJ
