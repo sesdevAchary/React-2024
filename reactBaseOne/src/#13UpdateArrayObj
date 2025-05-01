@@ -324,3 +324,7 @@ function sum(x, y) {
 
 const trampolinedSum = trampoline(sum);
 // trampolinedSum(1, 100000) // won't cause stack overflow
+let a = 5;
+let b = 3;
+let sum = a + b;
+console.log("Sum:", sum);
