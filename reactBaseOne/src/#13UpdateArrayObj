@@ -346,3 +346,6 @@ function celsiusToFahrenheit(celsius) {
   return (celsius * 9/5) + 32;
 }
 console.log(celsiusToFahrenheit(25)); // 77
+let x = 10, y = 20;
+let max = x > y ? x : y;
+console.log("Max:", max);
