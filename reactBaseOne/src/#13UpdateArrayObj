@@ -441,3 +441,15 @@ function swap(s, i, j) {
 }
 
 permute("ABC");
+let index = 0;
+const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
+const imgElement = document.getElementById("carousel");
+
+function showImage(i) {
+  imgElement.src = images[i];
+}
+
+document.getElementById("next").onclick = () => {
+  index = (index + 1) % images.length;
+  showImage(index);
+};
