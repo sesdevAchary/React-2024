@@ -379,3 +379,12 @@ function debounce(func, delay) {
 window.addEventListener('resize', debounce(() => {
   console.log('Resized');
 }, 300));
+function customPromise(success = true) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      success ? resolve("Resolved!") : reject("Rejected!");
+    }, 1000);
+  });
+}
+
+customPromise().then(console.log).catch(console.error);
