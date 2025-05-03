@@ -63,3 +63,15 @@ worker.postMessage(10);
 worker.onmessage = function(e) {
   console.log('Factorial is', e.data);
 };
+function logger(fn) {
+  return function(...args) {
+    console.log(`Calling ${fn.name} with`, args);
+    const result = fn(...args);
+    console.log(`Result: ${result}`);
+    return result;
+  };
+}
+
+const sum = (a, b) => a + b;
+const loggedSum = logger(sum);
+loggedSum(4, 5);
