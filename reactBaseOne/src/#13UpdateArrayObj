@@ -44,3 +44,16 @@ async function fetchData(url) {
 }
 
 fetchData('https://jsonplaceholder.typicode.com/posts/1');
+const validator = {
+  set(obj, prop, value) {
+    if (prop === 'age' && (value < 0 || value > 120)) {
+      throw new RangeError('Invalid age');
+    }
+    obj[prop] = value;
+    return true;
+  }
+};
+
+const person = new Proxy({}, validator);
+person.age = 30; // OK
+// person.age = -5; // Throws
