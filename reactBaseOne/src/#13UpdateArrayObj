@@ -57,3 +57,9 @@ const validator = {
 const person = new Proxy({}, validator);
 person.age = 30; // OK
 // person.age = -5; // Throws
+const worker = new Worker('worker.js');
+worker.postMessage(10);
+
+worker.onmessage = function(e) {
+  console.log('Factorial is', e.data);
+};
