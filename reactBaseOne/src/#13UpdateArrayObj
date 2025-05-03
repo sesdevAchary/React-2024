@@ -471,3 +471,14 @@ const slowAdd = (a, b) => {
 
 const fastAdd = memoize(slowAdd);
 console.log(fastAdd(5, 10));
+function debounce(func, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+window.addEventListener('resize', debounce(() => {
+  console.log('Resized!');
+}, 300));
