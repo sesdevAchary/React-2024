@@ -146,4 +146,9 @@ Promise.resolve(1)
   fruits.forEach(function(fruit) {
     console.log(fruit);
   });
+  let person = {
+    name: "John",
+    age: 30
+  };
+  console.log(person.name); // John
   
