@@ -160,3 +160,9 @@ function multiply(x, y) {
   return x * y;
 }
 console.log(multiply(3, 4));
+let num = 7;
+if (num % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
