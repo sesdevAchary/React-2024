@@ -142,4 +142,8 @@ Promise.resolve(1)
       document.getElementById("text").innerHTML = "Text Changed!";
     }
   </script>
+  let fruits = ["Apple", "Banana", "Mango"];
+  fruits.forEach(function(fruit) {
+    console.log(fruit);
+  });
   
