@@ -153,3 +153,6 @@ Promise.resolve(1)
   console.log(person.name); // John
   let name = prompt("Enter your name:");
 console.log("Hello, " + name + "!");
+setTimeout(function() {
+  console.log("This message appears after 2 seconds");
+}, 2000);
