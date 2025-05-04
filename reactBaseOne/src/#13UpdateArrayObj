@@ -156,3 +156,7 @@ console.log("Hello, " + name + "!");
 setTimeout(function() {
   console.log("This message appears after 2 seconds");
 }, 2000);
+function multiply(x, y) {
+  return x * y;
+}
+console.log(multiply(3, 4));
