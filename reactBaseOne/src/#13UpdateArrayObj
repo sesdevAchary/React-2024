@@ -203,3 +203,11 @@ console.log("Maximum value:", findMax(values)); // Output: 12
     <script src="artifact10.js"></script>
 </body>
 </html>
+// Function to count vowels in a string
+function countVowels(str) {
+  const vowels = /[aeiou]/gi;
+  return (str.match(vowels) || []).length;
+}
+
+// Test the function
+console.log("Vowels in 'javascript':", countVowels("javascript")); // Output: 3
