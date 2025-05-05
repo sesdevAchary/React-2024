@@ -215,3 +215,5 @@ let a = 5;
 let b = 10;
 let sum = a + b;
 console.log("Sum:", sum);
+let fruits = ["Apple", "Banana", "Orange"];
+fruits.forEach(fruit => console.log(fruit));
