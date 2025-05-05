@@ -166,3 +166,15 @@ if (num % 2 === 0) {
 } else {
   console.log("Odd");
 }
+// Function to check if a number is prime
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+  }
+  return true;
+}
+
+// Test the function
+console.log("Is 17 prime?", isPrime(17)); // Output: true
+console.log("Is 4 prime?", isPrime(4));   // Output: false
