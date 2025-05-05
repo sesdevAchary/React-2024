@@ -194,3 +194,12 @@ function findMax(arr) {
 // Test the function
 const values = [10, 5, 8, 12, 3];
 console.log("Maximum value:", findMax(values)); // Output: 12
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+</head>
+<body>
+    <script src="artifact10.js"></script>
+</body>
+</html>
