@@ -178,3 +178,11 @@ function isPrime(num) {
 // Test the function
 console.log("Is 17 prime?", isPrime(17)); // Output: true
 console.log("Is 4 prime?", isPrime(4));   // Output: false
+
+// Function to reverse a string
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+// Test the function
+console.log("Reverse of 'hello':", reverseString("hello")); // Output: olleh
