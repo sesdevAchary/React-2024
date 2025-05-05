@@ -211,3 +211,7 @@ function countVowels(str) {
 
 // Test the function
 console.log("Vowels in 'javascript':", countVowels("javascript")); // Output: 3
+let a = 5;
+let b = 10;
+let sum = a + b;
+console.log("Sum:", sum);
