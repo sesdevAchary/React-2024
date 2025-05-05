@@ -217,3 +217,7 @@ let sum = a + b;
 console.log("Sum:", sum);
 let fruits = ["Apple", "Banana", "Orange"];
 fruits.forEach(fruit => console.log(fruit));
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Alice"));
