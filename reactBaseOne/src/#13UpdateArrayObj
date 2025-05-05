@@ -186,3 +186,11 @@ function reverseString(str) {
 
 // Test the function
 console.log("Reverse of 'hello':", reverseString("hello")); // Output: olleh
+// Function to find maximum element in an array
+function findMax(arr) {
+  return Math.max(...arr);
+}
+
+// Test the function
+const values = [10, 5, 8, 12, 3];
+console.log("Maximum value:", findMax(values)); // Output: 12
