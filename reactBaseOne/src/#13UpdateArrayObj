@@ -237,3 +237,7 @@ let fruits = ["apple", "banana", "cherry"];
 for (let fruit of fruits) {
   console.log(fruit);
 }
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Alice"));
