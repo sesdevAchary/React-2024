@@ -229,3 +229,4 @@ console.log(reversed);
 let x = 10, y = 20, z = 15;
 let max = Math.max(x, y, z);
 console.log("Max:", max);
+document.getElementById("demo").textContent = "Text changed!";
