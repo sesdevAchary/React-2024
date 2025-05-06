@@ -233,3 +233,7 @@ document.getElementById("demo").textContent = "Text changed!";
 document.getElementById("myButton").addEventListener("click", function() {
   alert("Button clicked!");
 });
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+  console.log(fruit);
+}
