@@ -223,3 +223,6 @@ function greet(name) {
 console.log(greet("Alice"));
 let today = new Date();
 console.log(today.toDateString());
+let str = "hello";
+let reversed = str.split("").reverse().join("");
+console.log(reversed);
