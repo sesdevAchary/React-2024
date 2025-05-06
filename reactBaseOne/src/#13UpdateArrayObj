@@ -221,3 +221,5 @@ function greet(name) {
   return "Hello, " + name + "!";
 }
 console.log(greet("Alice"));
+let today = new Date();
+console.log(today.toDateString());
