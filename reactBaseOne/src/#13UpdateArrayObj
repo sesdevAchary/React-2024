@@ -297,3 +297,9 @@ function getRandom() {
   return Math.floor(Math.random() * 100) + 1;
 }
 console.log(getRandom());
+let count = 5;
+const timer = setInterval(() => {
+  console.log(count);
+  count--;
+  if (count < 0) clearInterval(timer);
+}, 1000);
