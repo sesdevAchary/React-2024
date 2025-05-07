@@ -259,3 +259,8 @@ function findMax(arr) {
   return Math.max(...arr);
 }
 console.log(findMax([10, 20, 5, 50])); // Output: 50
+function isPalindrome(str) {
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+}
+console.log(isPalindrome("madam")); // Output: true
