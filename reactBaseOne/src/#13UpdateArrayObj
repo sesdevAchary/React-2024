@@ -251,3 +251,7 @@ function isEven(num) {
   return num % 2 === 0 ? "Even" : "Odd";
 }
 console.log(isEven(4)); // Output: Even
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+console.log(reverseString("hello")); // Output: olleh
