@@ -46,3 +46,10 @@ class EventEmitter {
       this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
   }
 }
+function curry(fn) {
+  return function curried(...args) {
+      return args.length >= fn.length
+          ? fn.apply(this, args)
+          : (...next) => curried.apply(this, [...args, ...next]);
+  };
+}
