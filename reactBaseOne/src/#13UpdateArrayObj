@@ -30,3 +30,19 @@ function memoize(fn) {
 function chainPromises(functions) {
   return functions.reduce((p, fn) => p.then(fn), Promise.resolve());
 }
+class EventEmitter {
+  constructor() {
+      this.events = {};
+  }
+  on(event, listener) {
+      (this.events[event] ||= []).push(listener);
+  }
+  emit(event, ...args) {
+      for (const fn of this.events[event] || []) {
+          fn(...args);
+      }
+  }
+  off(event, listener) {
+      this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
+  }
+}
