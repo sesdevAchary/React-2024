@@ -27,3 +27,6 @@ function memoize(fn) {
       return cache.get(key);
   };
 }
+function chainPromises(functions) {
+  return functions.reduce((p, fn) => p.then(fn), Promise.resolve());
+}
