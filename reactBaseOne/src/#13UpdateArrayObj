@@ -150,3 +150,15 @@ function Parent() {
 
   return <Child onButtonClick={handleChildClick} />;
 }
+import { useState } from 'react';
+
+function Toggle() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  return (
+    <div>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+      {isVisible && <p>This is visible text.</p>}
+    </div>
+  );
+}
