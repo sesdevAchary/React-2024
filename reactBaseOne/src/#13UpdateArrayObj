@@ -110,3 +110,20 @@ function ItemList() {
     </ul>
   );
 }
+import { useState } from 'react';
+
+function NameForm() {
+  const [name, setName] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert(`Submitted name: ${name}`);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={name} onChange={e => setName(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
