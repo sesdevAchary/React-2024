@@ -139,3 +139,14 @@ function Timer() {
 
   return <p>Seconds: {seconds}</p>;
 }
+function Child({ onButtonClick }) {
+  return <button onClick={onButtonClick}>Click Me</button>;
+}
+
+function Parent() {
+  function handleChildClick() {
+    alert('Child button clicked');
+  }
+
+  return <Child onButtonClick={handleChildClick} />;
+}
