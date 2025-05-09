@@ -90,3 +90,6 @@ function Counter() {
     </div>
   );
 }
+function UserGreeting({ isLoggedIn }) {
+  return <h1>{isLoggedIn ? 'Welcome back!' : 'Please log in'}</h1>;
+}
