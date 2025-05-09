@@ -93,3 +93,10 @@ function Counter() {
 function UserGreeting({ isLoggedIn }) {
   return <h1>{isLoggedIn ? 'Welcome back!' : 'Please log in'}</h1>;
 }
+function ClickButton() {
+  function handleClick() {
+    alert('Button clicked!');
+  }
+
+  return <button onClick={handleClick}>Click Me</button>;
+}
