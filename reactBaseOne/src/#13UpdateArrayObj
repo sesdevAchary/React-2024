@@ -176,3 +176,13 @@ function memoize(fn) {
 const fibonacci = memoize(function(n) {
   return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
 });
+function deepClone(obj, hash = new WeakMap()) {
+  if (Object(obj) !== obj || obj instanceof Function) return obj;
+  if (hash.has(obj)) return hash.get(obj);
+  const result = Array.isArray(obj) ? [] : {};
+  hash.set(obj, result);
+  for (const key in obj) {
+    result[key] = deepClone(obj[key], hash);
+  }
+  return result;
+}
