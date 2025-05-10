@@ -227,3 +227,63 @@ async function promisePool(tasks, limit) {
   }
   return Promise.all(results);
 }
+async function promisePool(tasks, limit) {
+  const results = [];
+  const executing = [];
+
+  for (const task of tasks) {
+    const p = task().then(res => {
+      executing.splice(executing.indexOf(p), 1);
+      return res;
+    });
+    results.push(p);
+    executing.push(p);
+    if (executing.length >= limit) await Promise.race(executing);
+  }
+  return Promise.all(results);
+
+}async function promisePool(tasks, limit) {
+  const results = [];
+  const executing = [];
+
+  for (const task of tasks) {
+    const p = task().then(res => {
+      executing.splice(executing.indexOf(p), 1);
+      return res;
+    });
+    results.push(p);
+    executing.push(p);
+    if (executing.length >= limit) await Promise.race(executing);
+  }
+  return Promise.all(results);
+}
+async function promisePool(tasks, limit) {
+  const results = [];
+  const executing = [];
+
+  for (const task of tasks) {
+    const p = task().then(res => {
+      executing.splice(executing.indexOf(p), 1);
+      return res;
+    });
+    results.push(p);
+    executing.push(p);
+    if (executing.length >= limit) await Promise.race(executing);
+  }
+  return Promise.all(results);
+}
+async function promisePool(tasks, limit) {
+  const results = [];
+  const executing = [];
+
+  for (const task of tasks) {
+    const p = task().then(res => {
+      executing.splice(executing.indexOf(p), 1);
+      return res;
+    });
+    results.push(p);
+    executing.push(p);
+    if (executing.length >= limit) await Promise.race(executing);
+  }
+  return Promise.all(results);
+}
