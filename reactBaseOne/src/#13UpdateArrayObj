@@ -186,3 +186,15 @@ function deepClone(obj, hash = new WeakMap()) {
   }
   return result;
 }
+function curry(fn) {
+  return function curried(...args) {
+    if (args.length >= fn.length) return fn(...args);
+    return function(...next) {
+      return curried(...args, ...next);
+    };
+  };
+}
+
+const sum = (a, b, c) => a + b + c;
+const curriedSum = curry(sum);
+console.log(curriedSum(1)(2)(3)); // 6
