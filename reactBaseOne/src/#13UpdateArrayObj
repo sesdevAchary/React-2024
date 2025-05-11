@@ -48,3 +48,19 @@ class StateMachine {
     return this.state;
   }
 }
+function memoize(fn, ttl = 1000) {
+  const cache = new Map();
+  return function(...args) {
+    const key = JSON.stringify(args);
+    const now = Date.now();
+
+    if (cache.has(key) && now - cache.get(key).time < ttl) {
+      return cache.get(key).value;
+    }
+
+    const result = fn(...args);
+    cache.set(key, { value: result, time: now });
+    return result;
+  };
+}
+Memoization with Cache Expiry
