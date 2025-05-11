@@ -13,3 +13,17 @@ const ModuleSystem = (() => {
     }
   };
 })();
+class Observable {
+  constructor() {
+    this.subscribers = [];
+  }
+
+  subscribe(fn) {
+    this.subscribers.push(fn);
+    return () => this.subscribers = this.subscribers.filter(sub => sub !== fn);
+  }
+
+  notify(data) {
+    this.subscribers.forEach(fn => fn(data));
+  }
+}
