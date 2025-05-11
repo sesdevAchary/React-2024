@@ -101,3 +101,15 @@ class TaskQueue {
     this.running = false;
   }
 }
+function delegate(parent, type, selector, handler) {
+  parent.addEventListener(type, function(event) {
+    let target = event.target;
+    while (target && target !== parent) {
+      if (target.matches(selector)) {
+        handler.call(target, event);
+        return;
+      }
+      target = target.parentElement;
+    }
+  });
+}
