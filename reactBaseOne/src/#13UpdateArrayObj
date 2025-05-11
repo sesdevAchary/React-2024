@@ -82,3 +82,22 @@ class MyPromise {
     return this;
   }
 }
+class TaskQueue {
+  constructor() {
+    this.queue = [];
+    this.running = false;
+  }
+
+  add(task) {
+    this.queue.push(task);
+    if (!this.running) this.run();
+  }
+
+  async run() {
+    this.running = true;
+    while (this.queue.length) {
+      await this.queue.shift()();
+    }
+    this.running = false;
+  }
+}
