@@ -27,3 +27,12 @@ class Observable {
     this.subscribers.forEach(fn => fn(data));
   }
 }
+function reactive(obj, onChange) {
+  return new Proxy(obj, {
+    set(target, key, value) {
+      target[key] = value;
+      onChange(key, value);
+      return true;
+    }
+  });
+}
