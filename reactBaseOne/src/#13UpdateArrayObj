@@ -36,3 +36,15 @@ function reactive(obj, onChange) {
     }
   });
 }
+class StateMachine {
+  constructor(states, initial) {
+    this.states = states;
+    this.state = initial;
+  }
+
+  transition(event) {
+    const next = this.states[this.state][event];
+    if (next) this.state = next;
+    return this.state;
+  }
+}
