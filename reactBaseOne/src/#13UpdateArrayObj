@@ -64,3 +64,21 @@ function memoize(fn, ttl = 1000) {
   };
 }
 Memoization with Cache Expiry
+class MyPromise {
+  constructor(executor) {
+    this.value = null;
+    this.callbacks = [];
+    executor(this.resolve.bind(this));
+  }
+
+  resolve(value) {
+    this.value = value;
+    this.callbacks.forEach(cb => cb(value));
+  }
+
+  then(callback) {
+    if (this.value !== null) callback(this.value);
+    else this.callbacks.push(callback);
+    return this;
+  }
+}
