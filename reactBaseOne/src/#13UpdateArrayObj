@@ -113,3 +113,16 @@ function delegate(parent, type, selector, handler) {
     }
   });
 }
+function h(type, props, ...children) {
+  return { type, props, children };
+}
+
+function render(vnode) {
+  if (typeof vnode === "string") return document.createTextNode(vnode);
+
+  const el = document.createElement(vnode.type);
+  for (const key in vnode.props) el.setAttribute(key, vnode.props[key]);
+
+  vnode.children.forEach(child => el.appendChild(render(child)));
+  return el;
+}
