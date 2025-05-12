@@ -280,3 +280,13 @@ function effect(fn) {
 const state = reactive({ count: 0 });
 effect(() => console.log("Count is:", state.count));
 state.count++;
+function deepClone(obj, hash = new WeakMap()) {
+  if (Object(obj) !== obj || obj instanceof Function) return obj;
+  if (hash.has(obj)) return hash.get(obj);
+  const result = Array.isArray(obj) ? [] : {};
+  hash.set(obj, result);
+  for (let key of Reflect.ownKeys(obj)) {
+    result[key] = deepClone(obj[key], hash);
+  }
+  return result;
+}
