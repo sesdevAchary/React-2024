@@ -250,3 +250,33 @@ class EventEmitter {
     this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
   }
 }
+let activeEffect = null;
+
+function reactive(obj) {
+  const deps = new Map();
+  return new Proxy(obj, {
+    get(target, key) {
+      if (activeEffect) {
+        if (!deps.has(key)) deps.set(key, new Set());
+        deps.get(key).add(activeEffect);
+      }
+      return Reflect.get(target, key);
+    },
+    set(target, key, value) {
+      Reflect.set(target, key, value);
+      if (deps.has(key)) deps.get(key).forEach(effect => effect());
+      return true;
+    }
+  });
+}
+
+function effect(fn) {
+  activeEffect = fn;
+  fn();
+  activeEffect = null;
+}
+
+// Usage:
+const state = reactive({ count: 0 });
+effect(() => console.log("Count is:", state.count));
+state.count++;
