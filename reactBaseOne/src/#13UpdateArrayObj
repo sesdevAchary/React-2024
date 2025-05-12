@@ -190,3 +190,31 @@ class LRUCache {
     this.cache.set(key, value);
   }
 }
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BST {
+  constructor() {
+    this.root = null;
+  }
+
+  insert(value) {
+    const insertNode = (node, value) => {
+      if (!node) return new Node(value);
+      if (value < node.value) node.left = insertNode(node.left, value);
+      else node.right = insertNode(node.right, value);
+      return node;
+    };
+    this.root = insertNode(this.root, value);
+  }
+
+  inorder(node = this.root) {
+    if (!node) return [];
+    return [...this.inorder(node.left), node.value, ...this.inorder(node.right)];
+  }
+}
