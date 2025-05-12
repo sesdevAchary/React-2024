@@ -158,3 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle file upload here
   });
 });
+function promiseAll(promises) {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    let count = 0;
+    promises.forEach((p, i) => {
+      Promise.resolve(p).then(value => {
+        results[i] = value;
+        if (++count === promises.length) resolve(results);
+      }).catch(reject);
+    });
+  });
+}
