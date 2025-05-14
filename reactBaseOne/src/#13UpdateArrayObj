@@ -311,3 +311,8 @@ function getRandomColor() {
 }
 
 console.log(getRandomColor()); // e.g., "#3e2f1b"
+function isPalindrome(str) {
+  const clean = str.replace(/[\W_]/g, '').toLowerCase();
+  return clean === clean.split('').reverse().join('');
+}
+console.log(isPalindrome("Racecar")); // true
