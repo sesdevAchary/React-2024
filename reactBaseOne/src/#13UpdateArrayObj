@@ -316,3 +316,8 @@ function isPalindrome(str) {
   return clean === clean.split('').reverse().join('');
 }
 console.log(isPalindrome("Racecar")); // true
+
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+console.log(shuffleArray([1, 2, 3, 4, 5]));
