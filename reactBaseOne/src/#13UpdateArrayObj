@@ -325,4 +325,10 @@ function copyToClipboard(text) {
   navigator.clipboard.writeText(text)
     .then(() => alert("Copied to clipboard!"))
     .catch(err => console.error("Failed to copy: ", err));
+}function countdown(seconds) {
+  let interval = setInterval(() => {
+    console.log(seconds);
+    if (--seconds < 0) clearInterval(interval);
+  }, 1000);
 }
+countdown(5); // 5...4...3...2...1...0
