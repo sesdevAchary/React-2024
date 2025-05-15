@@ -1,334 +1,35 @@
-const ModuleSystem = (() => {
-  const modules = {};
-  return {
-    define(name, deps, factory) {
-      modules[name] = { deps, factory, instance: null };
-    },
-    require(name) {
-      const m = modules[name];
-      if (!m.instance) {
-        m.instance = m.factory(...m.deps.map(dep => this.require(dep)));
-      }
-      return m.instance;
-    }
-  };
-})();
-class Observable {
-  constructor() {
-    this.subscribers = [];
-  }
-
-  subscribe(fn) {
-    this.subscribers.push(fn);
-    return () => this.subscribers = this.subscribers.filter(sub => sub !== fn);
-  }
-
-  notify(data) {
-    this.subscribers.forEach(fn => fn(data));
-  }
-}
-function reactive(obj, onChange) {
-  return new Proxy(obj, {
-    set(target, key, value) {
-      target[key] = value;
-      onChange(key, value);
-      return true;
-    }
-  });
-}
-class StateMachine {
-  constructor(states, initial) {
-    this.states = states;
-    this.state = initial;
-  }
-
-  transition(event) {
-    const next = this.states[this.state][event];
-    if (next) this.state = next;
-    return this.state;
-  }
-}
-function memoize(fn, ttl = 1000) {
-  const cache = new Map();
-  return function(...args) {
-    const key = JSON.stringify(args);
-    const now = Date.now();
-
-    if (cache.has(key) && now - cache.get(key).time < ttl) {
-      return cache.get(key).value;
-    }
-
-    const result = fn(...args);
-    cache.set(key, { value: result, time: now });
-    return result;
-  };
-}
-Memoization with Cache Expiry
-class MyPromise {
-  constructor(executor) {
-    this.value = null;
-    this.callbacks = [];
-    executor(this.resolve.bind(this));
-  }
-
-  resolve(value) {
-    this.value = value;
-    this.callbacks.forEach(cb => cb(value));
-  }
-
-  then(callback) {
-    if (this.value !== null) callback(this.value);
-    else this.callbacks.push(callback);
-    return this;
-  }
-}
 class TaskQueue {
-  constructor() {
+  constructor(concurrency) {
+    this.concurrency = concurrency;
+    this.running = 0;
     this.queue = [];
-    this.running = false;
   }
 
-  add(task) {
+  push(task) {
     this.queue.push(task);
-    if (!this.running) this.run();
+    this.next();
   }
 
-  async run() {
-    this.running = true;
-    while (this.queue.length) {
-      await this.queue.shift()();
+  next() {
+    while (this.running < this.concurrency && this.queue.length) {
+      const task = this.queue.shift();
+      this.running++;
+      task().finally(() => {
+        this.running--;
+        this.next();
+      });
     }
-    this.running = false;
   }
 }
-function delegate(parent, type, selector, handler) {
-  parent.addEventListener(type, function(event) {
-    let target = event.target;
-    while (target && target !== parent) {
-      if (target.matches(selector)) {
-        handler.call(target, event);
-        return;
-      }
-      target = target.parentElement;
-    }
-  });
-}
-function h(type, props, ...children) {
-  return { type, props, children };
-}
 
-function render(vnode) {
-  if (typeof vnode === "string") return document.createTextNode(vnode);
-
-  const el = document.createElement(vnode.type);
-  for (const key in vnode.props) el.setAttribute(key, vnode.props[key]);
-
-  vnode.children.forEach(child => el.appendChild(render(child)));
-  return el;
-}
-function deepClone(obj, seen = new WeakMap()) {
-  if (obj === null || typeof obj !== 'object') return obj;
-  if (seen.has(obj)) return seen.get(obj);
-
-  const clone = Array.isArray(obj) ? [] : {};
-  seen.set(obj, clone);
-
-  for (const key in obj) {
-    clone[key] = deepClone(obj[key], seen);
-  }
-  return clone;
-}
-document.addEventListener('DOMContentLoaded', () => {
-  const dropZone = document.getElementById('drop-zone');
-
-  dropZone.addEventListener('dragover', e => {
-    e.preventDefault();
-    dropZone.classList.add('dragover');
-  });
-
-  dropZone.addEventListener('dragleave', () => {
-    dropZone.classList.remove('dragover');
-  });
-
-  dropZone.addEventListener('drop', e => {
-    e.preventDefault();
-    dropZone.classList.remove('dragover');
-    const files = [...e.dataTransfer.files];
-    console.log('Dropped files:', files);
-    // Handle file upload here
-  });
+// Usage
+const queue = new TaskQueue(2);
+const delay = (ms, id) => () => new Promise(res => {
+  console.log(`Start ${id}`);
+  setTimeout(() => { console.log(`End ${id}`); res(); }, ms);
 });
-function promiseAll(promises) {
-  return new Promise((resolve, reject) => {
-    let results = [];
-    let count = 0;
-    promises.forEach((p, i) => {
-      Promise.resolve(p).then(value => {
-        results[i] = value;
-        if (++count === promises.length) resolve(results);
-      }).catch(reject);
-    });
-  });
-}
-class LRUCache {
-  constructor(limit) {
-    this.cache = new Map();
-    this.limit = limit;
-  }
 
-  get(key) {
-    if (!this.cache.has(key)) return -1;
-    const value = this.cache.get(key);
-    this.cache.delete(key);
-    this.cache.set(key, value);
-    return value;
-  }
-
-  put(key, value) {
-    if (this.cache.has(key)) this.cache.delete(key);
-    else if (this.cache.size >= this.limit) this.cache.delete(this.cache.keys().next().value);
-    this.cache.set(key, value);
-  }
-}
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BST {
-  constructor() {
-    this.root = null;
-  }
-
-  insert(value) {
-    const insertNode = (node, value) => {
-      if (!node) return new Node(value);
-      if (value < node.value) node.left = insertNode(node.left, value);
-      else node.right = insertNode(node.right, value);
-      return node;
-    };
-    this.root = insertNode(this.root, value);
-  }
-
-  inorder(node = this.root) {
-    if (!node) return [];
-    return [...this.inorder(node.left), node.value, ...this.inorder(node.right)];
-  }
-}
-function memoize(fn) {
-  const cache = new Map();
-  return function (...args) {
-    const key = JSON.stringify(args);
-    if (!cache.has(key)) cache.set(key, fn(...args));
-    return cache.get(key);
-  };
-}
-function debounce(fn, delay) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
-class EventEmitter {
-  constructor() {
-    this.events = {};
-  }
-
-  on(event, listener) {
-    (this.events[event] ||= []).push(listener);
-  }
-
-  emit(event, ...args) {
-    (this.events[event] || []).forEach(fn => fn(...args));
-  }
-
-  off(event, listener) {
-    this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
-  }
-}
-let activeEffect = null;
-
-function reactive(obj) {
-  const deps = new Map();
-  return new Proxy(obj, {
-    get(target, key) {
-      if (activeEffect) {
-        if (!deps.has(key)) deps.set(key, new Set());
-        deps.get(key).add(activeEffect);
-      }
-      return Reflect.get(target, key);
-    },
-    set(target, key, value) {
-      Reflect.set(target, key, value);
-      if (deps.has(key)) deps.get(key).forEach(effect => effect());
-      return true;
-    }
-  });
-}
-
-function effect(fn) {
-  activeEffect = fn;
-  fn();
-  activeEffect = null;
-}
-
-// Usage:
-const state = reactive({ count: 0 });
-effect(() => console.log("Count is:", state.count));
-state.count++;
-function deepClone(obj, hash = new WeakMap()) {
-  if (Object(obj) !== obj || obj instanceof Function) return obj;
-  if (hash.has(obj)) return hash.get(obj);
-  const result = Array.isArray(obj) ? [] : {};
-  hash.set(obj, result);
-  for (let key of Reflect.ownKeys(obj)) {
-    result[key] = deepClone(obj[key], hash);
-  }
-  return result;
-}
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-console.log(isEven(4)); // true
-console.log(isEven(5)); // false
-function reverseString(str) {
-  return str.split('').reverse().join('');
-}
-
-console.log(reverseString("hello")); // "olleh"
-function capitalizeWords(str) {
-  return str.replace(/\b\w/g, char => char.toUpperCase());
-}
-
-console.log(capitalizeWords("hello world")); // "Hello World"
-function getRandomColor() {
-  return '#' + Math.floor(Math.random() * 16777215).toString(16);
-}
-
-console.log(getRandomColor()); // e.g., "#3e2f1b"
-function isPalindrome(str) {
-  const clean = str.replace(/[\W_]/g, '').toLowerCase();
-  return clean === clean.split('').reverse().join('');
-}
-console.log(isPalindrome("Racecar")); // true
-
-function shuffleArray(arr) {
-  return arr.sort(() => Math.random() - 0.5);
-}
-console.log(shuffleArray([1, 2, 3, 4, 5]));
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text)
-    .then(() => alert("Copied to clipboard!"))
-    .catch(err => console.error("Failed to copy: ", err));
-}function countdown(seconds) {
-  let interval = setInterval(() => {
-    console.log(seconds);
-    if (--seconds < 0) clearInterval(interval);
-  }, 1000);
-}
-countdown(5); // 5...4...3...2...1...0
+queue.push(delay(1000, 'A'));
+queue.push(delay(500, 'B'));
+queue.push(delay(300, 'C'));
+queue.push(delay(800, 'D'));
