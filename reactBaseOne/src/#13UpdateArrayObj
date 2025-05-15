@@ -76,3 +76,25 @@ function effect(fn) {
 const state = reactive({ count: 0 });
 effect(() => console.log(`Count is: ${state.count}`));
 state.count++;
+function debounce(delay = 300) {
+  return function (_target, _key, descriptor) {
+    const original = descriptor.value;
+    let timer;
+    descriptor.value = function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => original.apply(this, args), delay);
+    };
+    return descriptor;
+  };
+}
+
+class Search {
+  @debounce(500)
+  query(term) {
+    console.log(`Searching for ${term}`);
+  }
+}
+
+const s = new Search();
+s.query("hello");
+s.query("hello world"); // Only this will be logged after 500ms
