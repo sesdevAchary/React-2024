@@ -174,3 +174,13 @@ const emitter = new EventEmitter();
 emitter.on('user.*', (data) => console.log('Wildcard:', data));
 emitter.on('user.login', (data) => console.log('Login:', data));
 emitter.emit('user.login', { name: 'Alice' });
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+  console.log('Wait...');
+  await sleep(1000);
+  console.log('Done!');
+}
+demo();
