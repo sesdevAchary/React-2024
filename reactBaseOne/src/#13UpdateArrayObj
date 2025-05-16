@@ -184,3 +184,7 @@ async function demo() {
   console.log('Done!');
 }
 demo();
+function getQueryParams(url) {
+  return Object.fromEntries(new URL(url).searchParams);
+}
+console.log(getQueryParams('https://example.com?page=2&sort=asc'));
