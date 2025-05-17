@@ -53,3 +53,30 @@ function deepClone(obj, seen = new WeakMap()) {
   }
   return clone;
 }
+function reactive(obj) {
+  const deps = new Map();
+
+  return new Proxy(obj, {
+    get(target, prop) {
+      if (!deps.has(prop)) deps.set(prop, []);
+      deps.get(prop).push(currentEffect);
+      return target[prop];
+    },
+    set(target, prop, value) {
+      target[prop] = value;
+      (deps.get(prop) || []).forEach(fn => fn());
+      return true;
+    }
+  });
+}
+
+let currentEffect = () => {};
+function watchEffect(effect) {
+  currentEffect = effect;
+  effect();
+}
+
+// Usage
+const state = reactive({ count: 0 });
+watchEffect(() => console.log("Count is", state.count));
+state.count++;
