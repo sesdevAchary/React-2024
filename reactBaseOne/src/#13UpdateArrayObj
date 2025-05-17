@@ -123,3 +123,21 @@ function withLogging(fn) {
 const add = (a, b) => a + b;
 const loggedAdd = withLogging(add);
 loggedAdd(3, 4);
+function validate(obj, schema) {
+  return new Proxy(obj, {
+    set(target, prop, value) {
+      if (!schema[prop](value)) {
+        throw new Error(`Invalid value for ${prop}`);
+      }
+      target[prop] = value;
+      return true;
+    }
+  });
+}
+
+// Usage
+const user = validate({}, {
+  age: v => typeof v === "number" && v > 0
+});
+user.age = 30; // OK
+// user.age = -5; // Error
