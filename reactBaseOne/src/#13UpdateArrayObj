@@ -110,3 +110,16 @@ const user = validate({}, {
 });
 user.age = 30; // OK
 // user.age = -5; // Error
+function withLogging(fn) {
+  return function (...args) {
+    console.log(`Calling ${fn.name} with`, args);
+    const result = fn(...args);
+    console.log(`Result:`, result);
+    return result;
+  };
+}
+
+// Usage
+const add = (a, b) => a + b;
+const loggedAdd = withLogging(add);
+loggedAdd(3, 4);
