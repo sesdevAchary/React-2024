@@ -227,3 +227,13 @@ function FocusInput() {
     </div>
   );
 }
+import React, { createContext, useContext } from 'react';
+
+const ThemeContext = createContext('light');
+
+function ThemedComponent() {
+  const theme = useContext(ThemeContext);
+  return <div>The current theme is {theme}</div>;
+}
+
+// Wrap in <ThemeContext.Provider value="dark">
