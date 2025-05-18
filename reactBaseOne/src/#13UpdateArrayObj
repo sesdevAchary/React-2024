@@ -197,4 +197,13 @@ function ToggleText() {
   }
   
   // Usage: <Greeting name="Alice" />
+  function FruitList({ fruits }) {
+    return (
+      <ul>
+        {fruits.map((fruit, index) => <li key={index}>{fruit}</li>)}
+      </ul>
+    );
+  }
+  
+  // Usage: <FruitList fruits={['Apple', 'Banana', 'Orange']} />
   
