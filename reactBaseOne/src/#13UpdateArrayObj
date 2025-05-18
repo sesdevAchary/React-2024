@@ -206,4 +206,13 @@ function ToggleText() {
   }
   
   // Usage: <FruitList fruits={['Apple', 'Banana', 'Orange']} />
+  function Modal({ isOpen, onClose }) {
+    if (!isOpen) return null;
+    return (
+      <div className="modal">
+        <p>This is a modal!</p>
+        <button onClick={onClose}>Close</button>
+      </div>
+    );
+  }
   
