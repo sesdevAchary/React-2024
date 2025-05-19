@@ -429,3 +429,25 @@ traverse(ast, {
 
 console.log(generate(ast).code);
 // Output: function add(a, y) { return a + y; }
+class Container {
+  constructor() {
+    this.services = new Map();
+  }
+  register(name, definition, deps = []) {
+    this.services.set(name, { definition, deps, instance: null });
+  }
+  get(name) {
+    const c = this.services.get(name);
+    if (!c.instance) {
+      const args = c.deps.map(dep => this.get(dep));
+      c.instance = c.definition(...args);
+    }
+    return c.instance;
+  }
+}
+
+// Example
+const container = new Container();
+container.register('logger', () => console);
+container.register('service', logger => ({ log: () => logger.log('Running') }), ['logger']);
+container.get('service').log();
