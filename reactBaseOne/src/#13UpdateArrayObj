@@ -364,3 +364,25 @@ function createObservable(target) {
 const { proxy, observe } = createObservable({ price: 5 });
 observe(() => console.log('Price changed:', proxy.price));
 proxy.price = 10;
+class Container {
+  constructor() {
+    this.services = new Map();
+  }
+  register(name, definition, deps = []) {
+    this.services.set(name, { definition, deps, instance: null });
+  }
+  get(name) {
+    const c = this.services.get(name);
+    if (!c.instance) {
+      const args = c.deps.map(dep => this.get(dep));
+      c.instance = c.definition(...args);
+    }
+    return c.instance;
+  }
+}
+
+// Example
+const container = new Container();
+container.register('logger', () => console);
+container.register('service', logger => ({ log: () => logger.log('Running') }), ['logger']);
+container.get('service').log();
