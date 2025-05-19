@@ -386,3 +386,17 @@ const container = new Container();
 container.register('logger', () => console);
 container.register('service', logger => ({ log: () => logger.log('Running') }), ['logger']);
 container.get('service').log();
+const deepProxy = obj => new Proxy(obj, {
+  get(target, prop, receiver) {
+    const value = Reflect.get(target, prop, receiver);
+    if (typeof value === 'object' && value !== null) {
+      return deepProxy(value);
+    }
+    console.log(`Accessed ${prop}`);
+    return value;
+  }
+});
+
+// Usage
+const obj = deepProxy({ a: { b: { c: 3 } } });
+console.log(obj.a.b.c);
