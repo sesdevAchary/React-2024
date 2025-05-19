@@ -400,3 +400,15 @@ const deepProxy = obj => new Proxy(obj, {
 // Usage
 const obj = deepProxy({ a: { b: { c: 3 } } });
 console.log(obj.a.b.c);
+function curry(fn, arity = fn.length) {
+  return function curried(...args) {
+    return args.length >= arity
+      ? fn(...args)
+      : (...next) => curried(...args, ...next);
+  };
+}
+
+// Example
+const sum = (a, b, c) => a + b + c;
+const curried = curry(sum);
+console.log(curried(1)(2)(3));
