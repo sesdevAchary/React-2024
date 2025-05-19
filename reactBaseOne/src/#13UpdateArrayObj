@@ -275,3 +275,20 @@ class EventEmitter {
 const emitter = new EventEmitter();
 emitter.on('data', msg => console.log('Received:', msg));
 emitter.emit('data', 'Hello!');
+function memoize(fn, ttl = 5000) {
+  const cache = new Map();
+
+  return function (...args) {
+    const key = JSON.stringify(args);
+    const cached = cache.get(key);
+    if (cached && (Date.now() - cached.timestamp < ttl)) {
+      return cached.value;
+    }
+    const value = fn(...args);
+    cache.set(key, { value, timestamp: Date.now() });
+    return value;
+  };
+}
+
+const slowAdd = memoize((a, b) => a + b);
+console.log(slowAdd(1, 2));
