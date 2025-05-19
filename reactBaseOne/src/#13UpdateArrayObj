@@ -322,3 +322,24 @@ const pipe = (...fns) => input =>
 const add = x => x + 1;
 const asyncDouble = async x => x * 2;
 pipe(add, asyncDouble)(3).then(console.log); // 8
+function createObservable(target) {
+  const observers = new Set();
+
+  return {
+    proxy: new Proxy(target, {
+      set(obj, prop, val) {
+        obj[prop] = val;
+        observers.forEach(fn => fn());
+        return true;
+      }
+    }),
+    observe(fn) {
+      observers.add(fn);
+    }
+  };
+}
+
+// Usage
+const { proxy, observe } = createObservable({ price: 5 });
+observe(() => console.log('Price changed:', proxy.price));
+proxy.price = 10;
