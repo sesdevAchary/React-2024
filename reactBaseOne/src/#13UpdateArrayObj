@@ -237,3 +237,22 @@ function ThemedComponent() {
 }
 
 // Wrap in <ThemeContext.Provider value="dark">
+const reactive = obj => {
+  const subscribers = new Set();
+
+  return new Proxy(obj, {
+    get(target, prop) {
+      subscribers.add(() => console.log(`${prop} accessed: ${target[prop]}`));
+      return target[prop];
+    },
+    set(target, prop, value) {
+      target[prop] = value;
+      subscribers.forEach(fn => fn());
+      return true;
+    }
+  });
+};
+
+const state = reactive({ count: 0 });
+state.count;
+state.count = 1;
