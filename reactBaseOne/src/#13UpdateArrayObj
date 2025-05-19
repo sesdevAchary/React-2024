@@ -343,3 +343,24 @@ function createObservable(target) {
 const { proxy, observe } = createObservable({ price: 5 });
 observe(() => console.log('Price changed:', proxy.price));
 proxy.price = 10;
+function createObservable(target) {
+  const observers = new Set();
+
+  return {
+    proxy: new Proxy(target, {
+      set(obj, prop, val) {
+        obj[prop] = val;
+        observers.forEach(fn => fn());
+        return true;
+      }
+    }),
+    observe(fn) {
+      observers.add(fn);
+    }
+  };
+}
+
+// Usage
+const { proxy, observe } = createObservable({ price: 5 });
+observe(() => console.log('Price changed:', proxy.price));
+proxy.price = 10;
