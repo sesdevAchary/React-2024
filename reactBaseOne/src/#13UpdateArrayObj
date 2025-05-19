@@ -412,3 +412,20 @@ function curry(fn, arity = fn.length) {
 const sum = (a, b, c) => a + b + c;
 const curried = curry(sum);
 console.log(curried(1)(2)(3));
+// Requires Babel
+const babel = require('@babel/core');
+const parser = require('@babel/parser');
+const generate = require('@babel/generator').default;
+const traverse = require('@babel/traverse').default;
+
+const code = `function add(x, y) { return x + y; }`;
+const ast = parser.parse(code);
+
+traverse(ast, {
+  Identifier(path) {
+    if (path.node.name === 'x') path.node.name = 'a';
+  }
+});
+
+console.log(generate(ast).code);
+// Output: function add(a, y) { return a + y; }
