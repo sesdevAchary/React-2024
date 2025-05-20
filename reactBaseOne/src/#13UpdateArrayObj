@@ -17,3 +17,6 @@ function debounce(func, delay) {
     timeout = setTimeout(() => func.apply(this, args), delay);
   };
 }
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
