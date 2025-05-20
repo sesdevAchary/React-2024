@@ -10,3 +10,10 @@
     document.getElementById('chatBox').innerHTML += `<p><strong>ChatGPT:</strong> ${reply}</p>`;
   }
 </script>
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
