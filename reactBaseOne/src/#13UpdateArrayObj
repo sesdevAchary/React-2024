@@ -78,3 +78,15 @@ async function getChatGPTResponse(prompt) {
   const data = await response.json();
   return data.choices[0].message.content;
 }
+<input id="userInput" placeholder="Type your message" />
+<button onclick="sendMessage()">Send</button>
+<div id="chatBox"></div>
+
+<script>
+  async function sendMessage() {
+    const input = document.getElementById('userInput').value;
+    const reply = await getChatGPTResponse(input);
+    document.getElementById('chatBox').innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+    document.getElementById('chatBox').innerHTML += `<p><strong>ChatGPT:</strong> ${reply}</p>`;
+  }
+</script>
