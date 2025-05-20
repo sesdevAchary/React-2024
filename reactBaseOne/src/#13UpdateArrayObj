@@ -60,3 +60,6 @@ function copyToClipboard(text) {
     console.error('Error copying text: ', err);
   });
 }
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
