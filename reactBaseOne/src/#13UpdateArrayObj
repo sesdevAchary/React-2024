@@ -23,3 +23,10 @@ function deepClone(obj) {
 function getRandomHexColor() {
   return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
 }
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Text copied to clipboard');
+  }).catch(err => {
+    console.error('Error copying text: ', err);
+  });
+}
