@@ -53,3 +53,10 @@ function throttle(func, limit) {
 function isDarkMode() {
   return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Text copied to clipboard');
+  }).catch(err => {
+    console.error('Error copying text: ', err);
+  });
+}
