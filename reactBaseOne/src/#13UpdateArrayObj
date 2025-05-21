@@ -90,3 +90,6 @@ async function getChatGPTResponse(prompt) {
     document.getElementById('chatBox').innerHTML += `<p><strong>ChatGPT:</strong> ${reply}</p>`;
   }
 </script>
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
