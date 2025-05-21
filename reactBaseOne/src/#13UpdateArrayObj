@@ -124,3 +124,13 @@ fetch('https://api.example.com/data')
   .then(res => res.json())
   .then(data => console.log(data))
   .catch(err => console.error(err));
+  let count = 5;
+  let timer = setInterval(() => {
+    console.log(count);
+    count--;
+    if (count < 0) {
+      clearInterval(timer);
+      console.log("Time's up!");
+    }
+  }, 1000);
+  
