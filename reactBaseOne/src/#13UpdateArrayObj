@@ -120,3 +120,7 @@ function isPalindrome(str) {
   return clean === clean.split('').reverse().join('');
 }
 console.log(isPalindrome("A man a plan a canal Panama")); // true
+fetch('https://api.example.com/data')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
