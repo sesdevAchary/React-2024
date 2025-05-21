@@ -100,3 +100,7 @@ function flatten(arr) {
 console.log(flatten([1, [2, [3, 4], 5]])); // [1, 2, 3, 4, 5]
 const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 console.log(isDark ? "Dark mode" : "Light mode");
+function factorial(n) {
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
+console.log(factorial(5)); // 120
