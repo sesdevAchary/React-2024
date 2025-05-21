@@ -137,4 +137,9 @@ fetch('https://api.example.com/data')
     return num % 2 === 0 ? "Even" : "Odd";
   }
   console.log(isEven(7)); // "Odd"
+  function flatten(arr) {
+    return arr.reduce((flat, toFlatten) =>
+      flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
+  }
+  console.log(flatten([1, [2, [3, 4], 5]])); // [1, 2, 3, 4, 5]
   
