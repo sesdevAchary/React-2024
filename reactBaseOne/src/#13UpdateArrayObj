@@ -98,3 +98,5 @@ function flatten(arr) {
     flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten), []);
 }
 console.log(flatten([1, [2, [3, 4], 5]])); // [1, 2, 3, 4, 5]
+const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log(isDark ? "Dark mode" : "Light mode");
