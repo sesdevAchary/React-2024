@@ -186,3 +186,14 @@ const curriedAdd = curry(add);
 console.log(curriedAdd(1)(2)(3)); // 6
 
 
+const handler = {
+  get: (target, prop) => {
+    console.log(`Accessing property: ${prop}`);
+    return target[prop];
+  },
+};
+
+const user = { name: 'Alice', age: 30 };
+const proxyUser = new Proxy(user, handler);
+
+console.log(proxyUser.name); // Logs: Accessing property: name
