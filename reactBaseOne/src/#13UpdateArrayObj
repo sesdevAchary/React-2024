@@ -215,4 +215,17 @@ const groupBy = (array, key) =>
     '25': [{ name: 'Bob', age: 25 }]
   }
   */
+  async function* asyncGenerator() {
+    const data = ['a', 'b', 'c'];
+    for (const item of data) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      yield item;
+    }
+  }
+  
+  (async () => {
+    for await (const value of asyncGenerator()) {
+      console.log(value);
+    }
+  })();
   
