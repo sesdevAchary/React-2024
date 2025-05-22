@@ -159,4 +159,7 @@ fetch('https://api.example.com/data')
   }, 500);
   
   window.addEventListener('resize', handleResize);
+  function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+  }
   
