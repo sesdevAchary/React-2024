@@ -181,3 +181,8 @@ const deepFlatten = (arr) => arr.flat(Infinity);
 const curry = (fn) => 
   (...args) => 
     args.length >= fn.length ? fn(...args) : curry(fn.bind(null, ...args));
+const add = (a, b, c) => a + b + c;
+const curriedAdd = curry(add);
+console.log(curriedAdd(1)(2)(3)); // 6
+
+
