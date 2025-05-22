@@ -202,3 +202,17 @@ const groupBy = (array, key) =>
     (result[currentItem[key]] = result[currentItem[key]] || []).push(currentItem);
     return result;
   }, {});
+  const people = [
+    { name: 'Alice', age: 21 },
+    { name: 'Bob', age: 25 },
+    { name: 'Charlie', age: 21 },
+  ];
+  
+  console.log(groupBy(people, 'age'));
+  /*
+  {
+    '21': [{ name: 'Alice', age: 21 }, { name: 'Charlie', age: 21 }],
+    '25': [{ name: 'Bob', age: 25 }]
+  }
+  */
+  
