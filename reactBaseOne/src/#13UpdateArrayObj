@@ -197,3 +197,8 @@ const user = { name: 'Alice', age: 30 };
 const proxyUser = new Proxy(user, handler);
 
 console.log(proxyUser.name); // Logs: Accessing property: name
+const groupBy = (array, key) =>
+  array.reduce((result, currentItem) => {
+    (result[currentItem[key]] = result[currentItem[key]] || []).push(currentItem);
+    return result;
+  }, {});
