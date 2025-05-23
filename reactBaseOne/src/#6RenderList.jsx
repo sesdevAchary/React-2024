@@ -23,3 +23,6 @@ function startCountdown(seconds) {
 function isMobileDevice() {
   return /Mobi|Android/i.test(navigator.userAgent);
 }
+function randomHexColor() {
+  return '#' + Math.floor(Math.random()*16777215).toString(16);
+}
