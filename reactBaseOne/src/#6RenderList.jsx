@@ -38,3 +38,6 @@ function copyText(text) {
     .then(() => alert('Copied!'))
     .catch(err => alert('Failed to copy!'));
 }
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
