@@ -33,3 +33,8 @@ function debounce(func, delay) {
     timeout = setTimeout(() => func.apply(this, args), delay);
   };
 }
+function copyText(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => alert('Copied!'))
+    .catch(err => alert('Failed to copy!'));
+}
