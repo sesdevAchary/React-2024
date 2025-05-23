@@ -26,3 +26,10 @@ function isMobileDevice() {
 function randomHexColor() {
   return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
+function debounce(func, delay) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
