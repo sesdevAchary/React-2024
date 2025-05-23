@@ -20,3 +20,6 @@ function startCountdown(seconds) {
     if (seconds < 0) clearInterval(interval);
   }, 1000);
 }
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
