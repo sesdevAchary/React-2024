@@ -41,3 +41,10 @@ function copyText(text) {
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
+function isPrime(n) {
+  if (n <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
