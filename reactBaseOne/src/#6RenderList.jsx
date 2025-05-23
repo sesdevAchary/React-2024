@@ -14,3 +14,9 @@ function isPrime(n) {
   }
   return true;
 }
+function startCountdown(seconds) {
+  const interval = setInterval(() => {
+    console.log(seconds--);
+    if (seconds < 0) clearInterval(interval);
+  }, 1000);
+}
