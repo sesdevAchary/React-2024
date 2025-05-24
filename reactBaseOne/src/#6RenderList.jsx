@@ -56,3 +56,12 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
+  function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      console.log("Copied!");
+    }).catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+  }
+  copyText("Hello from JavaScript!");
+  
