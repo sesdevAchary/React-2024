@@ -76,4 +76,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return clean === clean.split("").reverse().join("");
   }
   console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  console.log(getRandom(1, 10));
   
