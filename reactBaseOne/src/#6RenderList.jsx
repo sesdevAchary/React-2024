@@ -91,4 +91,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
       timeoutId = setTimeout(() => fn.apply(this, args), delay);
     };
   }
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  console.log(getRandom(1, 10));
   
