@@ -99,4 +99,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return str.split("").reverse().join("");
   }
   console.log(reverseString("hello")); // "olleh"
+  function isEven(num) {
+    return num % 2 === 0 ? "Even" : "Odd";
+  }
+  console.log(isEven(7)); // Odd
   
