@@ -108,4 +108,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return clean === clean.split("").reverse().join("");
   }
   console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
+  function isEven(num) {
+    return num % 2 === 0 ? "Even" : "Odd";
+  }
+  console.log(isEven(7)); // Odd
   
