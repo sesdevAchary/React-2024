@@ -52,3 +52,7 @@ function shuffleArray(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
 
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
