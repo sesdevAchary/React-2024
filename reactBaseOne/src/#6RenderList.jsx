@@ -95,4 +95,8 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   console.log(getRandom(1, 10));
+  function reverseString(str) {
+    return str.split("").reverse().join("");
+  }
+  console.log(reverseString("hello")); // "olleh"
   
