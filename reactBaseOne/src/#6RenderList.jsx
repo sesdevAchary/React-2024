@@ -71,4 +71,9 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     }, 1000);
   }
   countdown(5);
+  function isPalindrome(str) {
+    const clean = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return clean === clean.split("").reverse().join("");
+  }
+  console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
   
