@@ -64,4 +64,11 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     });
   }
   copyText("Hello from JavaScript!");
+  function countdown(seconds) {
+    const interval = setInterval(() => {
+      console.log(seconds);
+      if (seconds-- <= 0) clearInterval(interval);
+    }, 1000);
+  }
+  countdown(5);
   
