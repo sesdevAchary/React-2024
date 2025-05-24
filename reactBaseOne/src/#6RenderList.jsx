@@ -103,4 +103,9 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return num % 2 === 0 ? "Even" : "Odd";
   }
   console.log(isEven(7)); // Odd
+  function isPalindrome(str) {
+    const clean = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return clean === clean.split("").reverse().join("");
+  }
+  console.log(isPalindrome("A man, a plan, a canal, Panama")); // true
   
