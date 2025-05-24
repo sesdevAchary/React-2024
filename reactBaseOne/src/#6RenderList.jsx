@@ -84,4 +84,11 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return str.replace(/\b\w/g, char => char.toUpperCase());
   }
   console.log(capitalizeWords("hello world")); // "Hello World"
+  function debounce(fn, delay) {
+    let timeoutId;
+    return function(...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
   
