@@ -175,4 +175,23 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
       });
     };
   }
+  async function asyncPool(limit, tasks) {
+    const results = [];
+    const executing = new Set();
+  
+    for (const task of tasks) {
+      const p = task().then(res => {
+        executing.delete(p);
+        return res;
+      });
+      executing.add(p);
+      results.push(p);
+  
+      if (executing.size >= limit) {
+        await Promise.race(executing);
+      }
+    }
+  
+    return Promise.all(results);
+  }
   
