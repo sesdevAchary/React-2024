@@ -203,8 +203,30 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
       return result;
     };
   }
-  const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 const compose = (...fns) => x => fns.reduceRight((v, f) => f(v), x);
 function $(selector, root = document) {
   return [...root.querySelectorAll(selector)];
+}
+class Subject {
+  constructor() {
+    this.observers = new Set();
+  }
+
+  subscribe(observer) {
+    this.observers.add(observer);
+  }
+
+  unsubscribe(observer) {
+    this.observers.delete(observer);
+  }
+
+  notify(data) {
+    this.observers.forEach(observer => observer.update(data));
+  }
+}
+
+class Observer {
+  update(data) {
+    console.log('Received:', data);
+  }
 }
