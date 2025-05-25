@@ -116,4 +116,16 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     return num % 2 === 0 ? "Even" : "Odd";
   }
   console.log(isEven(7)); // Odd
+  function deepClone(obj, map = new WeakMap()) {
+    if (obj === null || typeof obj !== 'object') return obj;
+    if (map.has(obj)) return map.get(obj);
+  
+    const result = Array.isArray(obj) ? [] : {};
+    map.set(obj, result);
+  
+    for (let key of Reflect.ownKeys(obj)) {
+      result[key] = deepClone(obj[key], map);
+    }
+    return result;
+  }
   
