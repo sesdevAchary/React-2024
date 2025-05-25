@@ -152,4 +152,17 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
       timer = setTimeout(() => fn.apply(this, args), delay);
     };
   }
+  function lazy(fn) {
+    let cached = false;
+    let result;
+    return new Proxy(() => {}, {
+      apply(_, __, args) {
+        if (!cached) {
+          result = fn(...args);
+          cached = true;
+        }
+        return result;
+      }
+    });
+  }
   
