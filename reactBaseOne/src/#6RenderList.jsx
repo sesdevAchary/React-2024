@@ -145,4 +145,11 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
       this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
     }
   }
+  function debounce(fn, delay) {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
   
