@@ -128,4 +128,21 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     }
     return result;
   }
+  class EventEmitter {
+    constructor() {
+      this.events = {};
+    }
+  
+    on(event, listener) {
+      (this.events[event] ||= []).push(listener);
+    }
+  
+    emit(event, ...args) {
+      (this.events[event] || []).forEach(fn => fn(...args));
+    }
+  
+    off(event, listener) {
+      this.events[event] = (this.events[event] || []).filter(fn => fn !== listener);
+    }
+  }
   
