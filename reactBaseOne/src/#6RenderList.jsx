@@ -346,3 +346,13 @@ const user = new Proxy({}, {
     return true;
   }
 });
+const workerCode = () => {
+  onmessage = function(e) {
+    postMessage(e.data * 2);
+  };
+};
+
+const blob = new Blob(['(' + workerCode.toString() + ')()'], { type: 'application/javascript' });
+const worker = new Worker(URL.createObjectURL(blob));
+worker.onmessage = e => console.log('Result:', e.data);
+worker.postMessage(10);
