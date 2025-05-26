@@ -298,3 +298,9 @@ function flattenObject(obj, prefix = '', res = {}) {
   }
   return res;
 }
+async function* asyncGenerator(arr) {
+  for (const item of arr) {
+    await new Promise(r => setTimeout(r, 100));
+    yield item;
+  }
+}
