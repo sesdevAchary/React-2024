@@ -287,3 +287,14 @@ class LRUCache {
     }
   }
 }
+function flattenObject(obj, prefix = '', res = {}) {
+  for (let key in obj) {
+    const newKey = prefix ? `${prefix}.${key}` : key;
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      flattenObject(obj[key], newKey, res);
+    } else {
+      res[newKey] = obj[key];
+    }
+  }
+  return res;
+}
