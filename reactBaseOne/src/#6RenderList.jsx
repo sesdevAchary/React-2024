@@ -325,3 +325,8 @@ function throttle(fn, limit) {
     }
   };
 }
+function sum(a) {
+  const inner = (b) => sum(a + b);
+  inner.valueOf = () => a;
+  return inner;
+}
