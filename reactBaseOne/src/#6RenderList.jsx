@@ -330,3 +330,10 @@ function sum(a) {
   inner.valueOf = () => a;
   return inner;
 }
+const myIterable = {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+};
