@@ -337,3 +337,12 @@ const myIterable = {
     yield 3;
   }
 };
+const user = new Proxy({}, {
+  set(obj, prop, value) {
+    if (prop === 'age' && typeof value !== 'number') {
+      throw new TypeError('Age must be a number');
+    }
+    obj[prop] = value;
+    return true;
+  }
+});
