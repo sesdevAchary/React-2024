@@ -356,3 +356,6 @@ const blob = new Blob(['(' + workerCode.toString() + ')()'], { type: 'applicatio
 const worker = new Worker(URL.createObjectURL(blob));
 worker.onmessage = e => console.log('Result:', e.data);
 worker.postMessage(10);
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
