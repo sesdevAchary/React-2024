@@ -371,3 +371,6 @@ function isPrime(num) {
   }
   return true;
 }
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
