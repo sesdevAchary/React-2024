@@ -389,3 +389,6 @@ async function fetchData(url) {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+function getQueryParams() {
+  return new URLSearchParams(window.location.search);
+}
