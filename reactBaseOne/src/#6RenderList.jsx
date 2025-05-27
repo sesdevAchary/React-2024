@@ -392,3 +392,9 @@ function scrollToTop() {
 function getQueryParams() {
   return new URLSearchParams(window.location.search);
 }
+function getRandomHexColor() {
+  return '#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
+}
+function getRandomHexColor() {
+  return '#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0');
+}
