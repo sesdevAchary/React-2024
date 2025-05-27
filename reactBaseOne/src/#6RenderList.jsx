@@ -359,3 +359,8 @@ worker.postMessage(10);
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Copied to clipboard!");
+  });
+}
