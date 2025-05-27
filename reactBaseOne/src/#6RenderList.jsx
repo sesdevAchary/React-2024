@@ -386,3 +386,6 @@ async function fetchData(url) {
   const data = await response.json();
   console.log(data);
 }
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
