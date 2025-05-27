@@ -374,3 +374,10 @@ function isPrime(num) {
 function shuffleArray(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
+function debounce(fn, delay) {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+}
