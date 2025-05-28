@@ -434,3 +434,6 @@ function deepClone(obj) {
 }
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 console.log(isDarkMode); // true or false
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
