@@ -411,3 +411,10 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 }
 console.log(reverseString("hello")); // Output: "olleh"
+function debounce(fn, delay) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
+  };
+}
