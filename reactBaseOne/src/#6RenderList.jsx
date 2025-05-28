@@ -403,3 +403,7 @@ function isEmptyObject(obj) {
 function isEmptyObject(obj) {
   return Object.keys(obj).length === 0;
 }
+function isEven(num) {
+  return num % 2 === 0 ? 'Even' : 'Odd';
+}
+console.log(isEven(4)); // Output: Even
