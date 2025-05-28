@@ -429,3 +429,8 @@ function isPalindrome(str) {
 function capitalizeWords(str) {
   return str.replace(/\b\w/g, char => char.toUpperCase());
 }
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log(isDarkMode); // true or false
