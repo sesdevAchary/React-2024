@@ -437,3 +437,12 @@ console.log(isDarkMode); // true or false
 function shuffleArray(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+  console.log('Start');
+  await sleep(1000);
+  console.log('1 second later');
+}
