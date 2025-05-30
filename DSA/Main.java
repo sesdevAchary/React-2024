@@ -16,3 +16,10 @@ int print(){
 for (int i = 0; i < n; i++) {
     // constant time operation o(n)
 }
+
+
+for (int i = 0; i < n; i++) {
+    for(int j=0; j<n;j++){
+        //
+    }
+}              // O(n)+O(1) = O(n)
