@@ -11,3 +11,8 @@ int print(){
     b=97;
     system.out.println(sum(a+b));   // this program has time complexity O(1) constant always //
 }
+
+
+for (int i = 0; i < n; i++) {
+    // constant time operation o(n)
+}
