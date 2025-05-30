@@ -23,3 +23,9 @@ for (int i = 0; i < n; i++) {
         //
     }
 }              // O(n)+O(1) = O(n)
+
+
+for (int i = 0; i < n/2; i++) {
+    system.out.println(" value 1");
+}                 // O(n/2)→O(n)
+ 
