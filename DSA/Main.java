@@ -29,3 +29,9 @@ for (int i = 0; i < n/2; i++) {
     system.out.println(" value 1");
 }                 // O(n/2)→O(n)
  
+ for (int i = 0; i < n; i++) {
+    for(int j=0; j<m;j++){
+        //
+    }
+}        // Time Complexity = O(n * m)
+
