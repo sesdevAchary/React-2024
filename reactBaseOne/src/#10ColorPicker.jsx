@@ -28,3 +28,9 @@ public class HelloWorld {
         System.out.println("Hello, World!");
     }
 }
+public class Sum {
+    public static void main(String[] args) {
+        int a = 5, b = 10;
+        System.out.println("Sum: " + (a + b));
+    }
+}
