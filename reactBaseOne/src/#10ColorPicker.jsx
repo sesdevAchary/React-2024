@@ -78,3 +78,10 @@ public class Palindrome {
             System.out.println("Not a Palindrome");
     }
 }
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Java";
+        StringBuilder reversed = new StringBuilder(str).reverse();
+        System.out.println("Reversed: " + reversed);
+    }
+}
