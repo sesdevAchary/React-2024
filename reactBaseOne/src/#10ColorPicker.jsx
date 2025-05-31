@@ -125,3 +125,14 @@ public class ArraySum {
         System.out.println("Sum: " + sum);
     }
 }
+public class VowelCount {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        int count = 0;
+        for (char ch : str.toLowerCase().toCharArray()) {
+            if ("aeiou".indexOf(ch) != -1)
+                count++;
+        }
+        System.out.println("Vowel Count: " + count);
+    }
+}
