@@ -160,3 +160,6 @@ document.getElementById("btn").addEventListener("click", () => {
 setTimeout(() => {
   console.log("Executed after 2 seconds");
 }, 2000);
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json())
+  .then(data => console.log(data));
