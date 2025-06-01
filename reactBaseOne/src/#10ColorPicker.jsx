@@ -172,3 +172,6 @@ console.log(square(5)); // 25
 
 const rand = Math.floor(Math.random() * 100) + 1;
 console.log(rand);
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
