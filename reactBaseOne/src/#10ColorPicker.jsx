@@ -146,3 +146,11 @@ function isEven(n) {
 console.log(isEven(4)); // true
 const fruits = ["apple", "banana", "cherry"];
 fruits.forEach(fruit => console.log(fruit));
+const person = {
+  name: "Alice",
+  age: 30,
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.greet();
