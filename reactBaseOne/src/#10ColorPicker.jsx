@@ -166,3 +166,5 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
 localStorage.setItem("username", "john");
 const user = localStorage.getItem("username");
 console.log(user);
+const square = x => x * x;
+console.log(square(5)); // 25
