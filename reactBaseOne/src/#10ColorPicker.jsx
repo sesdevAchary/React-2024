@@ -140,3 +140,7 @@ function add(a, b) {
   return a + b;
 }
 console.log(add(5, 3)); // Output: 8
+function isEven(n) {
+  return n % 2 === 0;
+}
+console.log(isEven(4)); // true
