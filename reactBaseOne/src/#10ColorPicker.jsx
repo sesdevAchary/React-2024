@@ -136,3 +136,7 @@ public class VowelCount {
         System.out.println("Vowel Count: " + count);
     }
 }
+function add(a, b) {
+  return a + b;
+}
+console.log(add(5, 3)); // Output: 8
