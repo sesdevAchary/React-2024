@@ -168,3 +168,7 @@ const user = localStorage.getItem("username");
 console.log(user);
 const square = x => x * x;
 console.log(square(5)); // 25
+
+
+const rand = Math.floor(Math.random() * 100) + 1;
+console.log(rand);
