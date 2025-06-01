@@ -144,3 +144,5 @@ function isEven(n) {
   return n % 2 === 0;
 }
 console.log(isEven(4)); // true
+const fruits = ["apple", "banana", "cherry"];
+fruits.forEach(fruit => console.log(fruit));
