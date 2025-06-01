@@ -157,3 +157,6 @@ person.greet();
 document.getElementById("btn").addEventListener("click", () => {
   alert("Button clicked!");
 });
+setTimeout(() => {
+  console.log("Executed after 2 seconds");
+}, 2000);
