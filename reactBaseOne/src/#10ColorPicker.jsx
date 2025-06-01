@@ -154,3 +154,6 @@ const person = {
   }
 };
 person.greet();
+document.getElementById("btn").addEventListener("click", () => {
+  alert("Button clicked!");
+});
