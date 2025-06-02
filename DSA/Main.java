@@ -21,6 +21,7 @@ while(n>1)
  system.out.println(n)
  n=n/2   // each time it gets halved so O(logn)
 
+
 for (int i = 0; i < n; i++) {
     for(int j=0; j<n;j++){
         //
@@ -31,12 +32,14 @@ for (int i = 0; i < n; i++) {
 for (int i = 0; i < n/2; i++) {
     system.out.println(" value 1");
 }                 // O(n/2)→O(n)
+
  
  for (int i = 0; i < n; i++) {
     for(int j=0; j<m;j++){
         //
     }
 }        // Time Complexity = O(n * m)
+
 
 boolean swapped;
 for (int i = 0; i < n - 1; i++) {
@@ -51,3 +54,15 @@ for (int i = 0; i < n - 1; i++) {
     }
     if (!swapped) break; // bubble sort O(n^2)
 }
+
+
+
+
+for ( int i = 0; i<n;i++){
+ system.out.println("one")
+}
+
+for(int j=0; j<n;j++)
+{
+ system.out.println("one")
+}                     // Herer there comes 2 different loops but single at a time so O(n)+O(n)
