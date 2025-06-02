@@ -81,3 +81,12 @@ for(int j=0; j<n;j++)
                 System.out.println(i + "," + j);
             }
         }      // 2 different loops but are associated sooo O(n)+O(n^2)
+
+
+
+
+        for (int i = 0; i < n; i++) {       // Runs n times
+    for (int j = 0; j < 5; j++) {   // Always runs 5 times (constant)
+        System.out.println();      // Constant time operation
+    }
+}                  // outer loop n times but inner loop only 5 times sooooooo O(n)
