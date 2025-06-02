@@ -17,6 +17,9 @@ for (int i = 0; i < n; i++) {
     // constant time operation o(n)
 }
 
+while(n>1)
+ system.out.println(n)
+ n=n/2   // each time it gets halved so O(logn)
 
 for (int i = 0; i < n; i++) {
     for(int j=0; j<n;j++){
