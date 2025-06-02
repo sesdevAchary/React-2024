@@ -66,3 +66,18 @@ for(int j=0; j<n;j++)
 {
  system.out.println("one")
 }                     // Herer there comes 2 different loops but single at a time so O(n)+O(n)
+
+
+
+
+   // Single loop
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
+        }
+
+        // Nested loop
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(i + "," + j);
+            }
+        }      // 2 different loops but are associated sooo O(n)+O(n^2)
