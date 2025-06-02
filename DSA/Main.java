@@ -90,3 +90,22 @@ for(int j=0; j<n;j++)
         System.out.println();      // Constant time operation
     }
 }                  // outer loop n times but inner loop only 5 times sooooooo O(n)
+
+
+
+
+
+
+public class Practice2 {
+    public static void main(String[] args) {
+        int n = 10;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("i: " + i);
+        }
+
+        for (int i = 1; i < n; i = i * 2) {
+            System.out.println("Log loop i: " + i);
+        }
+    }
+          }             // O(n)+O(logn) but dominant is O(n)

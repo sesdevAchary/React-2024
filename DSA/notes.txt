@@ -1,0 +1,6 @@
+O(logn)- binary search ; equally into 2 halves
+O(1)- constant and for linear program 
+O(n)- for single unassociated loops
+O(n^2)-for nested loops
+O(nlogn)- for merge and quick sort
+O(2^n)	Exponential	Recursion with 2 branches (Fibonacci)
