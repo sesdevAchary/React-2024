@@ -120,4 +120,15 @@ pubblic class uniqueCharChecker{
     scanner sc = new scanner(system.in);
     system.out.print(" enter a string : ")
     string input = sc.nextLine(); // to read the entire line
+
+     string result= " ";
+
+     for(i = 0 ; i<=input.length();i++)
+     {
+        if(!result.contains(string.valueOf(input.charAt(i))));
+          result= result+ input.charAt(i);
+     }
+
 }
+
+System.out.println(result);
