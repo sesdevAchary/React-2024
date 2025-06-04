@@ -173,3 +173,5 @@ System.out.println(a.equals(b)); // true
 String x = "Coding";
 System.out.println(x.toUpperCase()); // CODING
 System.out.println(x.toLowerCase()); // coding
+String sentence = "apples are red";
+System.out.println(sentence.replace("red", "green"));
