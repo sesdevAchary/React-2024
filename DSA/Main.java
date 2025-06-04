@@ -164,4 +164,6 @@ String text = "Java";
 System.out.println(text.charAt(2)); // Output: v
 
 String msg = "HelloWorld";
-System.out.println(msg.substring(5)); // Output: World
+System.out.println(msg.substring(5)); // Output: World   extracting a particular string 
+String s = "";
+System.out.println(s.isEmpty()); // true
