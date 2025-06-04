@@ -175,3 +175,8 @@ System.out.println(x.toUpperCase()); // CODING
 System.out.println(x.toLowerCase()); // coding
 String sentence = "apples are red";
 System.out.println(sentence.replace("red", "green"));
+
+
+string og= " are you a gay "
+string reversed  = new stringBuilder(og).reverse().toString();
+system.out.print(reversed)
