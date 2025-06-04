@@ -153,3 +153,8 @@ public class UniqueCharacters {
         System.out.println("String after removing duplicates: " + result);
     }
 }
+
+
+String first = "Hello";
+String second = "World";
+System.out.println(first + " " + second);
