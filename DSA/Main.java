@@ -113,22 +113,43 @@
 
 
 
-import java.util.scanner;
+// import java.util.scanner;
 
-pubblic class uniqueCharChecker{
-    pubblic static void main(String args[])
-    scanner sc = new scanner(system.in);
-    system.out.print(" enter a string : ")
-    string input = sc.nextLine(); // to read the entire line
+// pubblic class uniqueCharChecker{
+//     pubblic static void main(String args[])
+//     scanner sc = new scanner(system.in);
+//     system.out.print(" enter a string : ")
+//     string input = sc.nextLine(); // to read the entire line
 
-     string result= " ";
+//      string result= " ";
 
-     for(i = 0 ; i<=input.length();i++)
-     {
-        if(!result.contains(string.valueOf(input.charAt(i))));
-          result= result+ input.charAt(i);
-     }
+//      for(i = 0 ; i<=input.length();i++)
+//      {
+//         if(!result.contains(string.valueOf(input.charAt(i))));
+//           result= result+ input.charAt(i);
+//      }
 
+// }
+
+// System.out.println(result);
+
+
+import java.util.Scanner;
+
+public class UniqueCharacters {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);   // to take input
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();          // read the entire line
+
+        String result = "";
+
+        for (int i = 0; i < input.length(); i++) {
+            if (!result.contains(String.valueOf(input.charAt(i)))) {
+                result += input.charAt(i);
+            }
+        }
+
+        System.out.println("String after removing duplicates: " + result);
+    }
 }
-
-System.out.println(result);
