@@ -162,3 +162,6 @@ String word = "Programming";
 System.out.println(word.length());
 String text = "Java";
 System.out.println(text.charAt(2)); // Output: v
+
+String msg = "HelloWorld";
+System.out.println(msg.substring(5)); // Output: World
