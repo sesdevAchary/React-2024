@@ -158,3 +158,5 @@ public class UniqueCharacters {
 String first = "Hello";
 String second = "World";
 System.out.println(first + " " + second);
+String word = "Programming";
+System.out.println(word.length());
