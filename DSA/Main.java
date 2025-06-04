@@ -1,111 +1,123 @@
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello from Gitpod!");
-    }
-}
+// public class Main {
+//     public static void main(String[] args) {
+//         System.out.println("Hello from Gitpod!");
+//     }
+// }
 
 
-int print(){
-    System.out.println(" xyz");
-    a=87;
-    b=97;
-    system.out.println(sum(a+b));   // this program has time complexity O(1) constant always //
-}
+// int print(){
+//     System.out.println(" xyz");
+//     a=87;
+//     b=97;
+//     system.out.println(sum(a+b));   // this program has time complexity O(1) constant always //
+// }
 
 
-for (int i = 0; i < n; i++) {
-    // constant time operation o(n)
-}
+// for (int i = 0; i < n; i++) {
+//     // constant time operation o(n)
+// }
 
-while(n>1)
- system.out.println(n)
- n=n/2   // each time it gets halved so O(logn)
-
-
-for (int i = 0; i < n; i++) {
-    for(int j=0; j<n;j++){
-        //
-    }
-}              // O(n)+O(1) = O(n)
+// while(n>1)
+//  system.out.println(n)
+//  n=n/2   // each time it gets halved so O(logn)
 
 
-for (int i = 0; i < n/2; i++) {
-    system.out.println(" value 1");
-}                 // O(n/2)→O(n)
+// for (int i = 0; i < n; i++) {
+//     for(int j=0; j<n;j++){
+//         //
+//     }
+// }              // O(n)+O(1) = O(n)
+
+
+// for (int i = 0; i < n/2; i++) {
+//     system.out.println(" value 1");
+// }                 // O(n/2)→O(n)
 
  
- for (int i = 0; i < n; i++) {
-    for(int j=0; j<m;j++){
-        //
-    }
-}        // Time Complexity = O(n * m)
+//  for (int i = 0; i < n; i++) {
+//     for(int j=0; j<m;j++){
+//         //
+//     }
+// }        // Time Complexity = O(n * m)
 
 
-boolean swapped;
-for (int i = 0; i < n - 1; i++) {
-    swapped = false;
-    for (int j = 0; j < n - 1 - i; j++) {
-        if (arr[j] > arr[j + 1]) {
-            int temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
-            swapped = true;
-        }
-    }
-    if (!swapped) break; // bubble sort O(n^2)
+// boolean swapped;
+// for (int i = 0; i < n - 1; i++) {
+//     swapped = false;
+//     for (int j = 0; j < n - 1 - i; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//             int temp = arr[j];
+//             arr[j] = arr[j + 1];
+//             arr[j + 1] = temp;
+//             swapped = true;
+//         }
+//     }
+//     if (!swapped) break; // bubble sort O(n^2)
+// }
+
+
+
+
+// for ( int i = 0; i<n;i++){
+//  system.out.println("one")
+// }
+
+// for(int j=0; j<n;j++)
+// {
+//  system.out.println("one")
+// }                     // Herer there comes 2 different loops but single at a time so O(n)+O(n)
+
+
+
+
+//    // Single loop
+//         for (int i = 0; i < n; i++) {
+//             System.out.println(i);
+//         }
+
+//         // Nested loop
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 System.out.println(i + "," + j);
+//             }
+//         }      // 2 different loops but are associated sooo O(n)+O(n^2)
+
+
+
+
+//         for (int i = 0; i < n; i++) {       // Runs n times
+//     for (int j = 0; j < 5; j++) {   // Always runs 5 times (constant)
+//         System.out.println();      // Constant time operation
+//     }
+// }                  // outer loop n times but inner loop only 5 times sooooooo O(n)
+
+
+
+
+
+
+// public class Practice2 {
+//     public static void main(String[] args) {
+//         int n = 10;
+
+//         for (int i = 0; i < n; i++) {
+//             System.out.println("i: " + i);
+//         }
+
+//         for (int i = 1; i < n; i = i * 2) {
+//             System.out.println("Log loop i: " + i);   //log2(n) each time it gets multiplied by 2 so
+//         }
+//     }
+//           }             // O(n)+O(logn) but dominant is O(n)
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+import java.util.scanner;
+
+pubblic class uniqueCharChecker{
+    pubblic static void main(String args[])
+    scanner sc = new scanner(system.in);
+    system.out.print(" enter a string : ")
+    string input = sc.nextLine(); // to read the entire line
 }
-
-
-
-
-for ( int i = 0; i<n;i++){
- system.out.println("one")
-}
-
-for(int j=0; j<n;j++)
-{
- system.out.println("one")
-}                     // Herer there comes 2 different loops but single at a time so O(n)+O(n)
-
-
-
-
-   // Single loop
-        for (int i = 0; i < n; i++) {
-            System.out.println(i);
-        }
-
-        // Nested loop
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.println(i + "," + j);
-            }
-        }      // 2 different loops but are associated sooo O(n)+O(n^2)
-
-
-
-
-        for (int i = 0; i < n; i++) {       // Runs n times
-    for (int j = 0; j < 5; j++) {   // Always runs 5 times (constant)
-        System.out.println();      // Constant time operation
-    }
-}                  // outer loop n times but inner loop only 5 times sooooooo O(n)
-
-
-
-
-
-
-public class Practice2 {
-    public static void main(String[] args) {
-        int n = 10;
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("i: " + i);
-        }
-
-        for (int i = 1; i < n; i = i * 2) {
-            System.out.println("Log loop i: " + i);
-        }
-    }
-          }             // O(n)+O(logn) but dominant is O(n)
