@@ -160,3 +160,5 @@ String second = "World";
 System.out.println(first + " " + second);
 String word = "Programming";
 System.out.println(word.length());
+String text = "Java";
+System.out.println(text.charAt(2)); // Output: v
