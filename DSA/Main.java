@@ -167,3 +167,6 @@ String msg = "HelloWorld";
 System.out.println(msg.substring(5)); // Output: World   extracting a particular string 
 String s = "";
 System.out.println(s.isEmpty()); // true
+String a = "Java";
+String b = "Java";
+System.out.println(a.equals(b)); // true
