@@ -170,3 +170,6 @@ System.out.println(s.isEmpty()); // true
 String a = "Java";
 String b = "Java";
 System.out.println(a.equals(b)); // true
+String x = "Coding";
+System.out.println(x.toUpperCase()); // CODING
+System.out.println(x.toLowerCase()); // coding
