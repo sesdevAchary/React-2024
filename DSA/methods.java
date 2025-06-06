@@ -121,3 +121,45 @@ class Geeks
         System.out.println("No of instances created: " + o);
     }
 }
+
+public class Geeks
+{
+    private int num;
+    private String n;
+
+    // Accessor (getter) methods
+    public int getNumber() 
+    { 
+      return num; 
+    }
+    
+    public String getName() 
+    { 
+      return n; 
+    }
+
+    // Mutator (setter) methods
+    public void setNumber(int num) 
+    { 
+      this.num = num; 
+    }
+    
+    public void setName(String n) 
+    { 
+      this.n = n; 
+    }
+
+    // Other methods
+    public void printDetails() {
+        System.out.println("Number: " + num);
+        System.out.println("Name: " + n);
+    }
+
+    // Main method to run the code
+    public static void main(String[] args) {
+        Geeks g = new Geeks();
+        g.setNumber(123);  
+        g.setName("GFG Write");   
+        g.printDetails();  
+    }
+}
