@@ -182,7 +182,7 @@ abstract class Geekshelp {
 }
 
 // Main class extending to helper class
-public class Geeks extends Geekshelp {
+ class Geeks extends Geekshelp {
 
     public static void main(String[] args) {
 
