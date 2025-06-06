@@ -183,6 +183,9 @@ abstract class Geekshelp {
 
 // Main class extending to helper class
  class Geeks extends Geekshelp {
+    oid check(String n) {
+        System.out.println("Checking: " + n);
+    }
 
     public static void main(String[] args) {
 
