@@ -19,13 +19,15 @@ class calculator {
         return a-b;
        }
 
-       static void (){
+       static void greet(){
         system.out.println("welcoome here ")
        }
        class method{
         public static void main (String[] args)
        {
-        class calculator
+        calculator.greet();
+        calculator calc = new calculator ();
+        system.out.println(calc.sub(15,8));
 
        }
 
