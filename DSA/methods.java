@@ -163,3 +163,14 @@ public class Geeks
         g.printDetails();  
     }
 }
+
+class git{
+    void greet (){
+                System.out.println("This is a user-defined method.");
+
+    }
+       public static void main(String[] args) {
+        git obj = new git;
+        obj.greet();
+       }
+}
