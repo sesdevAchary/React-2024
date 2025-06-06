@@ -13,164 +13,183 @@
 
 
 
-class calculator {
-       public int sub ( int a, int b)
-       {
-        return a-b;
-       }
+// class calculator {
+//        public int sub ( int a, int b)
+//        {
+//         return a-b;
+//        }
 
-       static void greet(){
-        system.out.println("welcoome here ")
-       }
-       class method{
-        public static void main (String[] args)
-       {
-        calculator.greet();
-        calculator calc = new calculator ();
-        system.out.println(calc.sub(15,8));
+//        static void greet(){
+//         system.out.println("welcoome here ")
+//        }
+//        class method{
+//         public static void main (String[] args)
+//        {
+//         calculator.greet();
+//         calculator calc = new calculator ();
+//         system.out.println(calc.sub(15,8));
 
-       }
+//        }
 
-       }
+//        }
        
-}
+// }
 
 
 
 
-// Java program demonstrates how to call a method
-class Add {
-    int s = 0;
+// // Java program demonstrates how to call a method
+// class Add {
+//     int s = 0;
     
-    // Method 
-    public int addTwoInt(int a, int b) {
-        // Perfrom sum of two numbers given as argument
-        s = a + b;
+//     // Method 
+//     public int addTwoInt(int a, int b) {
+//         // Perfrom sum of two numbers given as argument
+//         s = a + b;
         
-        // Return the sum of two numbers
-        return s;
-    }
-}
+//         // Return the sum of two numbers
+//         return s;
+//     }
+// }
 
-class Geeks
-{
-    public static void main(String[] args) {
+// class Geeks
+// {
+//     public static void main(String[] args) {
         
-        // Creating an object of Add class
-        Add a = new Add();
+//         // Creating an object of Add class
+//         Add a = new Add();
         
-        // Calling method using object and storing the return 
-        // Value in res variable of int type
-        int res = a.addTwoInt(1, 2);
+//         // Calling method using object and storing the return 
+//         // Value in res variable of int type
+//         int res = a.addTwoInt(1, 2);
         
-        // Printing the output
-        System.out.println("Sum: " + res);  
-    }
-}
+//         // Printing the output
+//         System.out.println("Sum: " + res);  
+//     }
+// }
 
-// Java Program to Illustrate Method Calling
-import java.io.*;
+// // Java Program to Illustrate Method Calling
+// import java.io.*;
 
-// Helper class
-class Test {
+// // Helper class
+// class Test {
 
-    public static int i = 0;
+//     public static int i = 0;
 
-    // Constructor to count objects
-    Test() {
-        i++;
-    }
+//     // Constructor to count objects
+//     Test() {
+//         i++;
+//     }
 
-    // Static method to get the 
-    // number of objects created
-    public static int get() {
-        return i;
-    }
+//     // Static method to get the 
+//     // number of objects created
+//     public static int get() {
+//         return i;
+//     }
 
-    // Instance method m1 calling 
-    // another method m2
-    public int m1() {
-        System.out.println("Inside the method m1");
-        this.m2();  // Calling m2 method
-        return 1;
-    }
+//     // Instance method m1 calling 
+//     // another method m2
+//     public int m1() {
+//         System.out.println("Inside the method m1");
+//         this.m2();  // Calling m2 method
+//         return 1;
+//     }
 
-    // Method m2 that prints a message
-    public void m2() {
-        System.out.println("In method m2");
-    }
-}
+//     // Method m2 that prints a message
+//     public void m2() {
+//         System.out.println("In method m2");
+//     }
+// }
 
-// Main class
-class Geeks 
-{
-    // Main driver method
-    public static void main(String[] args) {
+// // Main class
+// class Geeks 
+// {
+//     // Main driver method
+//     public static void main(String[] args) {
 
-        // Creating object of Test class
-        Test obj = new Test();
+//         // Creating object of Test class
+//         Test obj = new Test();
 
-        // Calling m1 method using the class object
-        int i = obj.m1();
-        System.out.println("Control returned after m1: " + i);
+//         // Calling m1 method using the class object
+//         int i = obj.m1();
+//         System.out.println("Control returned after m1: " + i);
 
-        // Calling the get method directly using the class name
-        int o = Test.get();
+//         // Calling the get method directly using the class name
+//         int o = Test.get();
         
-        // Printing the value
-        System.out.println("No of instances created: " + o);
-    }
-}
+//         // Printing the value
+//         System.out.println("No of instances created: " + o);
+//     }
+// }
 
-public class Geeks
-{
-    private int num;
-    private String n;
+// public class Geeks
+// {
+//     private int num;
+//     private String n;
 
-    // Accessor (getter) methods
-    public int getNumber() 
-    { 
-      return num; 
-    }
+//     // Accessor (getter) methods
+//     public int getNumber() 
+//     { 
+//       return num; 
+//     }
     
-    public String getName() 
-    { 
-      return n; 
-    }
+//     public String getName() 
+//     { 
+//       return n; 
+//     }
 
-    // Mutator (setter) methods
-    public void setNumber(int num) 
-    { 
-      this.num = num; 
-    }
+//     // Mutator (setter) methods
+//     public void setNumber(int num) 
+//     { 
+//       this.num = num; 
+//     }
     
-    public void setName(String n) 
-    { 
-      this.n = n; 
-    }
+//     public void setName(String n) 
+//     { 
+//       this.n = n; 
+//     }
 
-    // Other methods
-    public void printDetails() {
-        System.out.println("Number: " + num);
-        System.out.println("Name: " + n);
-    }
+//     // Other methods
+//     public void printDetails() {
+//         System.out.println("Number: " + num);
+//         System.out.println("Name: " + n);
+//     }
 
-    // Main method to run the code
-    public static void main(String[] args) {
-        Geeks g = new Geeks();
-        g.setNumber(123);  
-        g.setName("GFG Write");   
-        g.printDetails();  
-    }
+//     // Main method to run the code
+//     public static void main(String[] args) {
+//         Geeks g = new Geeks();
+//         g.setNumber(123);  
+//         g.setName("GFG Write");   
+//         g.printDetails();  
+//     }
+// }
+
+// class git{
+//     void greet (){
+//                 System.out.println("This is a user-defined method.");
+
+//     }
+//        public static void main(String[] args) {
+//         git obj = new git;
+//         obj.greet();
+//        }
+// }
+
+abstract class Geekshelp {
+
+    // Creating abstract method
+    abstract void check(String n);
 }
 
-class git{
-    void greet (){
-                System.out.println("This is a user-defined method.");
+// Main class extending to helper class
+public class Geeks extends Geekshelp {
 
+    public static void main(String[] args) {
+
+        // Creating the instance of the class
+        Geeks ob = new Geeks();
+
+        // Accessing the abstract method
+        ob.check("Geeksforgeeks");
     }
-       public static void main(String[] args) {
-        git obj = new git;
-        obj.greet();
-       }
 }
