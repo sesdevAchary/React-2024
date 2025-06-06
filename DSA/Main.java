@@ -134,49 +134,51 @@
 // System.out.println(result);
 
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class UniqueCharacters {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);   // to take input
-        System.out.print("Enter a string: ");
-        String input = sc.nextLine();          // read the entire line
+// public class UniqueCharacters {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);   // to take input
+//         System.out.print("Enter a string: ");
+//         String input = sc.nextLine();          // read the entire line
 
-        String result = "";
+//         String result = "";
 
-        for (int i = 0; i < input.length(); i++) {
-            if (!result.contains(String.valueOf(input.charAt(i)))) {
-                result += input.charAt(i);
-            }
-        }
+//         for (int i = 0; i < input.length(); i++) {
+//             if (!result.contains(String.valueOf(input.charAt(i)))) {
+//                 result += input.charAt(i);
+//             }
+//         }
 
-        System.out.println("String after removing duplicates: " + result);
-    }
-}
-
-
-String first = "Hello";
-String second = "World";
-System.out.println(first + " " + second);
-String word = "Programming";
-System.out.println(word.length());
-String text = "Java";
-System.out.println(text.charAt(2)); // Output: v
-
-String msg = "HelloWorld";
-System.out.println(msg.substring(5)); // Output: World   extracting a particular string 
-String s = "";
-System.out.println(s.isEmpty()); // true
-String a = "Java";
-String b = "Java";
-System.out.println(a.equals(b)); // true
-String x = "Coding";
-System.out.println(x.toUpperCase()); // CODING
-System.out.println(x.toLowerCase()); // coding
-String sentence = "apples are red";
-System.out.println(sentence.replace("red", "green"));
+//         System.out.println("String after removing duplicates: " + result);
+//     }
+// }
 
 
-string og= " are you a gay "
-string reversed  = new stringBuilder(og).reverse().toString();
-system.out.print(reversed)
+// String first = "Hello";
+// String second = "World";
+// System.out.println(first + " " + second);
+// String word = "Programming";
+// System.out.println(word.length());
+// String text = "Java";
+// System.out.println(text.charAt(2)); // Output: v
+
+// String msg = "HelloWorld";
+// System.out.println(msg.substring(5)); // Output: World   extracting a particular string 
+// String s = "";
+// System.out.println(s.isEmpty()); // true
+// String a = "Java";
+// String b = "Java";
+// System.out.println(a.equals(b)); // true
+// String x = "Coding";
+// System.out.println(x.toUpperCase()); // CODING
+// System.out.println(x.toLowerCase()); // coding
+// String sentence = "apples are red";
+// System.out.println(sentence.replace("red", "green"));
+
+
+// string og= " are you a gay "
+// string reversed  = new stringBuilder(og).reverse().toString();
+// system.out.print(reversed)
+
+
