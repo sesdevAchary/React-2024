@@ -195,6 +195,11 @@ public class Main {
     public static void main ( String[] args){
         StringBuilder sb = new StringBuilder("Ethan Hunt"); 
         System.out.println(sb);
+        
+        System.out.println(sb.charAt(3));
+
+                sb.setCharAt(3, 'u');                    // Change 'a' to 'u'
+        System.out.println(sb);
 
     }
 }
