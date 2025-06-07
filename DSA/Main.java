@@ -183,17 +183,19 @@
 // System.out.println(x.toLowerCase()); // coding
 // String sentence = "apples are red";
 // System.out.println(sentence.replace("red", "green"));
+// public class Main {
+ public class Main {
+
+public static void main ( String[] args){
+   String og= " are you a gay ";
+    String reversed  = new StringBuilder(og).reverse().toString();
+     System.out.print(reversed);
+     int count = str.length();
+     System.out.println("Length of string: " + len);
 
 
-string og= " are you a gay "
-string reversed  = new stringBuilder(og).reverse().toString();
-system.out.print(reversed)
-for (int i =0;i<strlen();i++)
-{
-    system.out.print(i)
 }
-
-
+}
 // import java.util.*;
 // public class Main {
 //     public static void main ( String[] args){
