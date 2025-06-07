@@ -190,8 +190,8 @@ public static void main ( String[] args){
    String og= " are you a gay ";
     String reversed  = new StringBuilder(og).reverse().toString();
      System.out.print(reversed);
-     int count = str.length();
-     System.out.println("Length of string: " + len);
+     int count = og.length();
+     System.out.println("Length of string: " + count);
 
 
 }
