@@ -175,24 +175,19 @@
 //        }
 // }
 
-abstract class Geekshelp {
 
-    // Creating abstract method
-    abstract void check(String n);
+
+import java.io.*;
+
+class Test {
+    static void hello(){
+        System.out.println(" good morning babe ");
+    }
 }
 
-// Main class extending to helper class
- class Geeks extends Geekshelp {
-    oid check(String n) {
-        System.out.println("Checking: " + n);
-    }
-
-    public static void main(String[] args) {
-
-        // Creating the instance of the class
-        Geeks ob = new Geeks();
-
-        // Accessing the abstract method
-        ob.check("Geeksforgeeks");
+class methods {
+    public static void main ( String[] args){
+        // calling the hello function through Test 
+        Test.hello();
     }
 }
