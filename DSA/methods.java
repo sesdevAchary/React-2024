@@ -193,19 +193,36 @@
 // }
 
 
+// class Test {
+//     void hello (){
+//         System .out.println(" you a mororn ?");
+//     }
+// }
+// class methods{
+//     void run(){
+//         Test t= new Test();
+//         t.hello();
+//     }
+
+// public static void main (String[]  args ){
+//     methods m= new methods();
+//     m.run();
+// }
+// }
+
+
+
+
+
 class Test {
     void hello (){
         System .out.println(" you a mororn ?");
     }
 }
 class methods{
-    void run(){
-        Test t= new Test();
-        t.hello();
-    }
-
+   
 public static void main (String[]  args ){
-    methods m= new methods();
-    m.run();
+    Test t= new Test();
+        t.hello();
 }
 }
