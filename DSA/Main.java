@@ -185,21 +185,27 @@
 // System.out.println(sentence.replace("red", "green"));
 
 
-// string og= " are you a gay "
-// string reversed  = new stringBuilder(og).reverse().toString();
-// system.out.print(reversed)
-
-
-import java.util.*;
-public class Main {
-    public static void main ( String[] args){
-        StringBuilder sb = new StringBuilder("Ethan Hunt"); 
-        System.out.println(sb);
-        
-        System.out.println(sb.charAt(3));
-
-                sb.setCharAt(3, 'u');                    // Change 'a' to 'u'
-        System.out.println(sb);
-
-    }
+string og= " are you a gay "
+string reversed  = new stringBuilder(og).reverse().toString();
+system.out.print(reversed)
+for (int i =0;i<strlen();i++)
+{
+    system.out.print(i)
 }
+
+
+// import java.util.*;
+// public class Main {
+//     public static void main ( String[] args){
+//         StringBuilder sb = new StringBuilder("Ethan Hunt"); 
+//         System.out.println(sb);
+        
+//         System.out.println(sb.charAt(3));
+
+//                 sb.setCharAt(3, 'u');                    // Change 'a' to 'u'
+//         System.out.println(sb);
+
+//     }
+// }
+
+
