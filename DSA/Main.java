@@ -187,11 +187,24 @@
  public class Main {
 
 public static void main ( String[] args){
-   String og= " are you a gay ";
-    String reversed  = new StringBuilder(og).reverse().toString();
-     System.out.print(reversed);
-     int count = og.length();
-     System.out.println("Length of string: " + count);
+//    String og= " are you a gay ";
+//     String reversed  = new StringBuilder(og).reverse().toString();
+//      System.out.print(reversed);
+//      int count = og.length();
+//      System.out.println("Length of string: " + count);
+
+StringBuilder sb = new StringBuilder(" ethan hunt");
+
+for (int i=0;i<sb.lenght()/2;i++)
+{
+    int front=i; int back = sb.length()-1-i;
+    // accessing the front and back char
+     char frontC=sb.charAt(front);
+     char backC=sb.charAt(back);
+
+     sb.setCharAt(frontC,backC);
+     sb.setCharAt(backC,frontC);
+}
 
 
 }
