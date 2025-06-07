@@ -177,17 +177,35 @@
 
 
 
-import java.io.*;
+// import java.io.*;
+
+// class Test {
+//     static void hello(){
+//         System.out.println(" good morning babe ");
+//     }
+// }
+
+// class methods {
+//     public static void main ( String[] args){
+//         // calling the hello function through Test 
+//         Test.hello();
+//     }
+// }
+
 
 class Test {
-    static void hello(){
-        System.out.println(" good morning babe ");
+    void hello (){
+        System .out.println(" you a mororn ?");
     }
 }
-
-class methods {
-    public static void main ( String[] args){
-        // calling the hello function through Test 
-        Test.hello();
+class methods{
+    void run(){
+        Test t= new Test();
+        t.hello();
     }
+
+public static void main (String[]  args ){
+    methods m= new methods();
+    m.run();
+}
 }
