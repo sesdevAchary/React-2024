@@ -272,20 +272,32 @@
 import java.util.Arrays;
 
 
-public class methods{
-    public static int largestElement(int array[]){
-        int largest=array[0];
-        for ( int i=0;i<array.length;i++){
-            if ( largest > array[i])
-            { 
-                largest=array[i];
-            }
-        }
-        return largest;
-    }
+// public class methods{
+//     public static int largestElement(int array[]){
+//         int largest=array[0];
+//         for ( int i=0;i<array.length;i++){
+//             if ( largest > array[i])
+//             { 
+//                 largest=array[i];
+//             }
+//         }
+//         return largest;
+//     }
 
-    public static void main ( String[] args ){
-        int arr[]= {10,5,65,12,78,35,24,1,37} ;
-        System.out.println(largestElement(arr));
+//     public static void main ( String[] args ){
+//         int arr[]= {10,5,65,12,78,35,24,1,37} ;
+//         System.out.println(largestElement(arr));
+//     }
+// }
+
+
+class Test {
+    void hello (){
+        System .out.println(" you a mororn ?");
     }
 }
+class methods{
+    void run(){
+        Test t= new Test();
+        t.hello();
+    }
