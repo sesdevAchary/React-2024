@@ -193,22 +193,22 @@ public static void main ( String[] args){
 //      int count = og.length();
 //      System.out.println("Length of string: " + count);
 
-StringBuilder sb = new StringBuilder(" ethan hunt");
+// StringBuilder sb = new StringBuilder(" ethan hunt");
 
-for (int i=0;i<sb.lenght()/2;i++)
-{
-    int front=i; int back = sb.length()-1-i;
-    // accessing the front and back char
-     char frontC=sb.charAt(front);
-     char backC=sb.charAt(back);
+// for (int i=0;i<sb.length()/2;i++)
+// {
+//     int front=i; int back = sb.length()-1-i;
+//     // accessing the front and back char
+//      char frontC=sb.charAt(front);
+//      char backC=sb.charAt(back);
 
-     sb.setCharAt(frontC,backC);
-     sb.setCharAt(backC,frontC);
-}
+//      sb.setCharAt(front,backC);
+//      sb.setCharAt(back,frontC);
+// }
 
 
-}
-}
+// }
+// }
 // import java.util.*;
 // public class Main {
 //     public static void main ( String[] args){
@@ -224,3 +224,11 @@ for (int i=0;i<sb.lenght()/2;i++)
 // }
 
 
+
+
+
+public class Main{
+    public static void main ( String[] args){
+        int array [] = { 10,20,30,40,50,60,70,80 };
+    }
+}
