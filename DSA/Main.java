@@ -184,9 +184,9 @@
 // String sentence = "apples are red";
 // System.out.println(sentence.replace("red", "green"));
 // public class Main {
- public class Main {
+//  public class Main {
 
-public static void main ( String[] args){
+// public static void main ( String[] args){
 //    String og= " are you a gay ";
 //     String reversed  = new StringBuilder(og).reverse().toString();
 //      System.out.print(reversed);
@@ -225,10 +225,17 @@ public static void main ( String[] args){
 
 
 
+import java.util.Arrays;
 
 
 public class Main{
     public static void main ( String[] args){
         int array [] = { 10,20,30,40,50,60,70,80 };
+        //  System.out.println(Arrays.toString(array));  // It takes an array (like int[]) and returns a string representation of its contents.
+
+        for(int element: array){
+            System.out.println( element+ " ");  // using the forEach loop //
+        }
+
     }
 }

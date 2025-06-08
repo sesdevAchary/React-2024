@@ -7,6 +7,12 @@ O(n)- for single unassociated loops
 O(n^2)-for nested loops
 O(nlogn)- for merge and quick sort
 O(2^n)	Exponential	Recursion with 2 branches (Fibonacci)
-
-METHODS purpose....
+.....................................................................................................
+->METHODS purpose....
 calling a static fun then no obj req but vice versa
+
+->System.out.println(Arrays.toString(arr));
+It takes an array (like int[]) and returns a string representation of its contents.
+
+
+.......................................................................................................
