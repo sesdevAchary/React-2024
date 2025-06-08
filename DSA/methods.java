@@ -291,16 +291,16 @@ import java.util.Arrays;
 // }
 
 
-
-class methods{
-    void run(){
-        Test t= new Test();
-        t.hello();
+class Test {
+    static void hello(){
+        System.out.println(" good morning babe ");
     }
-
-public static void main (String[]  args ){
-    methods m= new methods();
-    m.run();
 }
+
+class methods {
+    public static void main ( String[] args){
+        // calling the hello function through Test 
+        Test.hello();
+    }
 }
 
