@@ -225,17 +225,4 @@
 
 
 
-import java.util.Arrays;
 
-
-public class Main{
-    public static void main ( String[] args){
-        int array [] = { 10,20,30,40,50,60,70,80 };
-        //  System.out.println(Arrays.toString(array));  // It takes an array (like int[]) and returns a string representation of its contents.
-          array[2]= 100; //  changing the value of the partiuclar index
-        for(int element: array){
-            System.out.println( element+ " ");  // using the forEach loop //
-        }
-
-    }
-}
