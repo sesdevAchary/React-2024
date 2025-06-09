@@ -269,7 +269,7 @@
 
 
 
-import java.util.Arrays;
+import java.util.*;
 
 
 // public class methods{
@@ -289,20 +289,30 @@ import java.util.Arrays;
 //         System.out.println(largestElement(arr));
 //     }
 // }
+
 public class methods{
     public static void main (String[] args){
-        scanner sc = new scanner (system.in);
+        Scanner sc = new Scanner (System.in);
         
         System.out.println("enter the array of numbers you want ");
-        string input= sc.nextLine();
+        String input= sc.nextLine();
 
-        System.out.printlln("enter the exact number you want ");
+        System.out.println("enter the exact number you want ");
         int target = sc.nextInt();
 
-
-        scanner inputsc= new scanner(input);
+          int count = 0;
+        Scanner inputsc= new Scanner(input);
         while(inputsc.hasNextInt()){
             int number = inputsc.nextInt();
+            if(number== target)
+            {
+                count++;
+            }
         }
+
+        System.out.println("the number"+target+"occured"+count+"times");
+
+        sc.close();
+        inputsc.close();
     }
 }
