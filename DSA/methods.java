@@ -289,18 +289,20 @@ import java.util.Arrays;
 //         System.out.println(largestElement(arr));
 //     }
 // }
+public class methods{
+    public static void main (String[] args){
+        scanner sc = new scanner (system.in);
+        
+        System.out.println("enter the array of numbers you want ");
+        string input= sc.nextLine();
+
+        System.out.printlln("enter the exact number you want ");
+        int target = sc.nextInt();
 
 
-class Test {
-    static void hello(){
-        System.out.println(" good morning babe ");
+        scanner inputsc= new scanner(input);
+        while(inputsc.hasNextInt()){
+            int number = inputsc.nextInt();
+        }
     }
 }
-
-class methods {
-    public static void main ( String[] args){
-        // calling the hello function through Test 
-        Test.hello();
-    }
-}
-
