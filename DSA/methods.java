@@ -289,30 +289,43 @@ import java.util.*;
 //         System.out.println(largestElement(arr));
 //     }
 // }
+// COUNTING THE NUMBER OF TIMES 
+// public class methods{
+//     public static void main (String[] args){
+//         Scanner sc = new Scanner (System.in);
+        
+//         System.out.println("enter the array of numbers you want ");
+//         String input= sc.nextLine();
+
+//         System.out.println("enter the exact number you want ");
+//         int target = sc.nextInt();
+
+//           int count = 0;
+//         Scanner inputsc= new Scanner(input);
+//         while(inputsc.hasNextInt()){
+//             int number = inputsc.nextInt();
+//             if(number== target)
+//             {
+//                 count++;
+//             }
+//         }
+
+//         System.out.println("the number"+target+"occured"+count+"times");
+
+//         sc.close();
+//         inputsc.close();
+//     }
+// }
+
+
+
 
 public class methods{
-    public static void main (String[] args){
-        Scanner sc = new Scanner (System.in);
-        
-        System.out.println("enter the array of numbers you want ");
-        String input= sc.nextLine();
+    public static void main (int[] args){
+        int index = 0;
 
-        System.out.println("enter the exact number you want ");
-        int target = sc.nextInt();
-
-          int count = 0;
-        Scanner inputsc= new Scanner(input);
-        while(inputsc.hasNextInt()){
-            int number = inputsc.nextInt();
-            if(number== target)
-            {
-                count++;
-            }
+        for (int num:arr){
+            
         }
-
-        System.out.println("the number"+target+"occured"+count+"times");
-
-        sc.close();
-        inputsc.close();
     }
 }
