@@ -390,19 +390,39 @@ import java.util.*;
 
 
 public class methods{
-    public static int secondLargest( int[] arr){
-        if(arr.length < 2)
-        System.out.println("arrray must contain 2 elements ");
-        return -1;
+   public static int findSecondLargest(int[] arr) {
+        if (arr.length < 2) {
+            System.out.println("Array must contain at least two elements.");
+            return -1; // Or throw an exception
+        }
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int num : arr) {
+            if (num > largest) {
+                secondLargest = largest;  // Update second largest before changing largest
+                largest = num;
+            } else if (num > secondLargest && num != largest) {
+                secondLargest = num;  // Only update if it's less than largest and not equal
+            }
+        }
+
+        if (secondLargest == Integer.MIN_VALUE) {
+            System.out.println("No distinct second largest element found.");
+            return -1;
+        }
+
+        return secondLargest;
     }
 
-    int largest= Integer.MIN_VALUE;
-    int secondLarge =  Integer.MIN_VALUE;   // largest stores the biggest number found so far. secondLargest stores the next biggest number.Both start at the lowest possible integer value.//
-
-
-    
-
-
+    public static void main(String[] args) {
+        int[] arr = {12, 35, 1, 10, 34, 1};
+        int second = findSecondLargest(arr);
+        if (second != -1) {
+            System.out.println("Second largest element: " + second);
+        }
+    }
 
 
 }
