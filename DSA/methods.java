@@ -355,11 +355,28 @@ public class methods {
 
 
     public static void main (String[] args ){
-        int [] arr1=    {1,2,3,4,5};
-        int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74};
+        // int [] arr1=    {1,2,3,4,5};
+        // int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74};
           
-        System.out.println("arr1 is sorted? " + sorted(arr1));
-        System.out.println("arr2 is sorted? " + sorted(arr2));
+        // System.out.println("arr1 is sorted? " + sorted(arr1));
+        // System.out.println("arr2 is sorted? " + sorted(arr2));
+
+
+
+
+    System.out.println("enter the number of elements ");
+    int size = sc.nextInt;
+
+    int array[]= new array[size]
+
+
+    System.out.println("enter " + size + "elements ");
+
+    for (int i=0; i<size;i++){
+        arr[i]=sc.nextInt();
+    }
+
+System.out.println("Is the array sorted? " + sorted(arr));
 
     }
 }
