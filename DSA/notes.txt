@@ -14,5 +14,6 @@ calling a static fun then no obj req but vice versa
 ->System.out.println(Arrays.toString(arr));
 It takes an array (like int[]) and returns a string representation of its contents.
 
+->  for(int element: array) looping foreach..
 
 .......................................................................................................

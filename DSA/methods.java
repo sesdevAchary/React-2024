@@ -319,23 +319,47 @@ import java.util.*;
 
 
 
+// non  zero numbers first then the zero numbers //
 
-public class methods{
-    public static void main (int[] args){
-        int index = 0;
+// public class methods{
+//     public static void main (int[] args){
+//         int index = 0;
 
-        for (int num:arr){
-            if ( num !=0)
-            arr[index++]=num;
-        }
-        while(index<arr.length){
-            arr[index++]=0;
+//         for (int num:arr){
+//             if ( num !=0)
+//             arr[index++]=num;
+//         }
+//         while(index<arr.length){
+//             arr[index++]=0;
+//         }
+//     }
+
+//      public static void main(String[] args) {
+//         int[] arr = {0, 1, 0, 3, 12};
+//         methods(arr);
+//         System.out.println("Array after moving zeroes: " + Arrays.toString(arr)); // converts the array into a redable string //
+//     }
+// }
+
+
+
+public class methods {
+    public static boolean sorted( int[] arr ){
+        for(int i =0;i<arr.length;i++){
+            if ( arr[i<arr[i-1]]){
+                return false;
+            }
+            else{
+                return true;
+            }
         }
     }
 
-     public static void main(String[] args) {
-        int[] arr = {0, 1, 0, 3, 12};
-        methods(arr);
-        System.out.println("Array after moving zeroes: " + Arrays.toString(arr)); // converts the array into a redable string //
+
+    public static void main (string[] args ){
+        int [] arr1=    {1,2,3,4,5};
+        int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74}
+
+        
     }
 }
