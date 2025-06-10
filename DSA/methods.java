@@ -269,7 +269,7 @@
 
 
 
-import java.util.*;
+// import java.util.*;
 
 
 // public class methods{
@@ -341,6 +341,7 @@ import java.util.*;
 //     }
 // }
 
+import java.util.*;
 
 
 public class methods {
@@ -361,22 +362,27 @@ public class methods {
         // System.out.println("arr1 is sorted? " + sorted(arr1));
         // System.out.println("arr2 is sorted? " + sorted(arr2));
 
+Scanner sc = new Scanner(System.in);
 
 
 
     System.out.println("enter the number of elements ");
-    int size = sc.nextInt;
+    int size = sc.nextInt();
 
-    int array[]= new array[size]
+int[] array = new int[size];
 
 
     System.out.println("enter " + size + "elements ");
 
     for (int i=0; i<size;i++){
-        arr[i]=sc.nextInt();
+        array[i]=sc.nextInt();
     }
 
-System.out.println("Is the array sorted? " + sorted(arr));
+System.out.println("Is the array sorted? " + sorted(array));
+
+
+        sc.close();
+
 
     }
 }
