@@ -345,21 +345,21 @@ import java.util.*;
 
 public class methods {
     public static boolean sorted( int[] arr ){
-        for(int i =0;i<arr.length;i++){
-            if ( arr[i<arr[i-1]]){
+        for(int i =1 ; i<arr.length ; i++){
+            if ( arr[i] < arr[i-1]){
                 return false;
             }
-            else{
-                return true;
-            }
         }
+        return true;
     }
 
 
-    public static void main (string[] args ){
+    public static void main (String[] args ){
         int [] arr1=    {1,2,3,4,5};
-        int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74}
+        int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74};
+          
+        System.out.println("arr1 is sorted? " + sorted(arr1));
+        System.out.println("arr2 is sorted? " + sorted(arr2));
 
-        
     }
 }
