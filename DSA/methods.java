@@ -344,45 +344,65 @@
 import java.util.*;
 
 
-public class methods {
-    public static boolean sorted( int[] arr ){
-        for(int i =1 ; i<arr.length ; i++){
-            if ( arr[i] < arr[i-1]){
-                return false;
-            }
-        }
-        return true;
-    }
+// public class methods {
+//     public static boolean sorted( int[] arr ){
+//         for(int i =1 ; i<arr.length ; i++){
+//             if ( arr[i] < arr[i-1]){
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
 
 
-    public static void main (String[] args ){
-        // int [] arr1=    {1,2,3,4,5};
-        // int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74};
+// // SORTING THE ARRAY ..........................................................// // // // // // // // //
+
+//     public static void main (String[] args ){
+//         // int [] arr1=    {1,2,3,4,5};
+//         // int []arr2= {4,1,5,7,3,2,4,5,9,8,4,1,2,5,3,5,74};
           
-        // System.out.println("arr1 is sorted? " + sorted(arr1));
-        // System.out.println("arr2 is sorted? " + sorted(arr2));
+//         // System.out.println("arr1 is sorted? " + sorted(arr1));
+//         // System.out.println("arr2 is sorted? " + sorted(arr2));
 
-Scanner sc = new Scanner(System.in);
-
-
-
-    System.out.println("enter the number of elements ");
-    int size = sc.nextInt();
-
-int[] array = new int[size];
+// Scanner sc = new Scanner(System.in);
 
 
-    System.out.println("enter " + size + "elements ");
 
-    for (int i=0; i<size;i++){
-        array[i]=sc.nextInt();
+//     System.out.println("enter the number of elements ");
+//     int size = sc.nextInt();
+
+// int[] array = new int[size];
+
+
+//     System.out.println("enter " + size + "elements ");
+
+//     for (int i=0; i<size;i++){
+//         array[i]=sc.nextInt();
+//     }
+
+// System.out.println("Is the array sorted? " + sorted(array));
+
+
+//         sc.close();
+
+//     }
+// }
+
+
+public class methods{
+    public static int secondLargest( int[] arr){
+        if(arr.length < 2)
+        System.out.println("arrray must contain 2 elements ");
+        return -1;
     }
 
-System.out.println("Is the array sorted? " + sorted(array));
+    int largest= Integer.MIN_VALUE;
+    int secondLarge =  Integer.MIN_VALUE;   // largest stores the biggest number found so far. secondLargest stores the next biggest number.Both start at the lowest possible integer value.//
 
 
-        sc.close();
+    
 
 
-    }
+
+
 }
