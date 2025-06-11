@@ -469,3 +469,8 @@ function isEven(num) {
   return num % 2 === 0;
 }
 console.log(isEven(4)); // true
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+console.log(capitalize("hello")); // "Hello"
