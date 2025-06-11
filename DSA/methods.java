@@ -491,3 +491,7 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 console.log(shuffle([1, 2, 3, 4])); // Random order
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+console.log(isEmpty({})); // true
