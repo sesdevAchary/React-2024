@@ -446,4 +446,16 @@ public class methods{
   }
 
 
-  
+  // inserting an array //
+
+
+  public void insert(int value ){
+    if (index == this.size){
+     System.out.println (" array is full already ") ;
+     return 1;
+    }
+    array[index]=value;
+    index ++;
+
+
+ }
