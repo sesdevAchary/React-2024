@@ -499,3 +499,7 @@ function copyText(text) {
   navigator.clipboard.writeText(text).then(() => console.log('Copied!'));
 }
 copyText("Hello, world!");
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
