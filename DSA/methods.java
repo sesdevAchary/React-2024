@@ -495,3 +495,7 @@ function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
 console.log(isEmpty({})); // true
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => console.log('Copied!'));
+}
+copyText("Hello, world!");
