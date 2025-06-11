@@ -428,34 +428,30 @@ import java.util.*;
 // }
 
 
-
-public class methods{
-    // array to store data //
+public class Methods {
+    // array to store data
     private int[] array;
-    // size of array //
-    private ind index;
-    //capacity of the array //
+
+    // index where next element will be inserted
+    private int index;
+
+    // capacity of the array
     private int capacity;
-}
 
-
-  public methods(int size){
-    this.size=size;
-    this.array= new int[this.size];
-
-  }
-
-
-  // inserting an array //
-
-
-  public void insert(int value ){
-    if (index == this.size){
-     System.out.println (" array is full already ") ;
-     return 1;
+    // Constructor
+    public Methods(int size) {
+        this.capacity = size;
+        this.array = new int[capacity];
+        this.index = 0;  // initialize index to 0
     }
-    array[index]=value;
-    index ++;
 
-
- }
+    // Method to insert a value
+    public void insert(int value) {
+        if (index == capacity) {
+            System.out.println("Array is full already");
+            return;
+        }
+        array[index] = value;
+        index++;
+    }
+}
