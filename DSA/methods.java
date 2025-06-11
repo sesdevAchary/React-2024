@@ -437,3 +437,13 @@ public class methods{
     //capacity of the array //
     private int capacity;
 }
+
+
+  public methods(int size){
+    this.size=size;
+    this.array= new int[this.size];
+
+  }
+
+
+  
