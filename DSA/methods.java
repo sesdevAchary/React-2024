@@ -487,3 +487,7 @@ function getRandomColor() {
   return `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
 }
 console.log(getRandomColor()); // e.g., "#a3e12f"
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+console.log(shuffle([1, 2, 3, 4])); // Random order
