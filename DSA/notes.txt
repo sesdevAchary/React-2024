@@ -15,5 +15,7 @@ calling a static fun then no obj req but vice versa
 It takes an array (like int[]) and returns a string representation of its contents.
 
 ->  for(int element: array) looping foreach..
+->   return str.charAt(0).toUpperCase() + str.slice(1);   capitalizing the first word
+
 
 .......................................................................................................
