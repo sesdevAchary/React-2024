@@ -489,4 +489,11 @@ public class Methods {
            return array[getIndex];
 
     }
+
+    public void traverse(){
+      for(int 1=0;i<this.index;i++){
+        System.out.print(array[i]+"\t")
+      }
+      System.out.print(" no data is here")
+    }
 }
