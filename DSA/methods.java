@@ -504,5 +504,15 @@ public class Methods {
             return ;
       }
       array[upIndex]= value;
+
+
+      public  static void main ( string args[]){
+        methods mt= new methods;
+
+        array.insert(value:20);
+        array.insert(value:300);
+        array.insert(value:2000);
+
+      }
     }
 }
