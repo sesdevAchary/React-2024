@@ -456,13 +456,27 @@ public class Methods {
     }
 
 
-    public void delete(int value){
-      if ( value<0 || value >=index){
+    public void delete(int delIndex){
+      if ( delIndex<0 || delIndex >=index){
         System.out.println("invalid index this is ");
      }
-     for (int i=value; i<index-1;i++){
+     for (int i=delIndex; i<index-1;i++){
       array[i]=array[i+1];
      }
      index -- ;
+         array[index] = 0;  // Optional: clears last slot
+
+    }
+
+
+    public void update( int value ){
+      int indexResult= -1;
+      for (int i =0;i<index;i++){
+        if(arr[i]=value){
+        indexResult=i;
+        break;
+        }
+      }
+      return indexResult;
     }
 }
