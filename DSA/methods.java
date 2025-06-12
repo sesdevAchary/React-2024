@@ -509,9 +509,9 @@ public class Methods {
       public  static void main ( string[] args){
         methods mt= new methods[5];
 
-        array.insert(value:"20");
-        array.insert(value:"300");
-        array.insert(value:"2000");
+        mt.insert(20);    // pass integer directly
+mt.insert(300);
+mt.insert(2000);
 
       }
     }
