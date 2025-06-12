@@ -496,4 +496,13 @@ public class Methods {
       }
       System.out.print(" no data is here")
     }
+
+
+    public void updateIndex( int upIndex, int value){
+      if(upIndex< index || upIndex >=index){
+                    System.out.println("invalid index");
+            return ;
+      }
+      
+    }
 }
