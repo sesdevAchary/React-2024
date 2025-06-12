@@ -491,10 +491,10 @@ public class Methods {
     }
 
     public void traverse(){
-      for(int 1=0;i<this.index;i++){
-        System.out.print(array[i]+"\t")
+      for(int i=0;i<this.index;i++){
+        System.out.print(array[i]+"\t");
       }
-      System.out.print(" no data is here")
+      System.out.print(" no data is here");
     }
 
 
@@ -506,12 +506,12 @@ public class Methods {
       array[upIndex]= value;
 
 
-      public  static void main ( string args[]){
-        methods mt= new methods;
+      public  static void main ( string[] args){
+        methods mt= new methods[5];
 
-        array.insert(value:20);
-        array.insert(value:300);
-        array.insert(value:2000);
+        array.insert(value:"20");
+        array.insert(value:"300");
+        array.insert(value:"2000");
 
       }
     }
