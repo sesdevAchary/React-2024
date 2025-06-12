@@ -454,52 +454,15 @@ public class Methods {
         array[index] = value;
         index++;
     }
-}
 
 
-
-
-
-
-
-
-
-
-function isEven(num) {
-  return num % 2 === 0;
-}
-console.log(isEven(4)); // true
-
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-console.log(capitalize("hello")); // "Hello"
-
-
-function debounce(fn, delay) {
-  let timer;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
-function getRandomColor() {
-  return `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
-}
-console.log(getRandomColor()); // e.g., "#a3e12f"
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
-console.log(shuffle([1, 2, 3, 4])); // Random order
-function isEmpty(obj) {
-  return Object.keys(obj).length === 0;
-}
-console.log(isEmpty({})); // true
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => console.log('Copied!'));
-}
-copyText("Hello, world!");
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
+    public void delete(int value){
+      if ( value<0 || value >=index){
+        System.out.println("invalid index this is ");
+     }
+     for (int i=value; i<index-1;i++){
+      array[i]=array[i+1];
+     }
+     index -- ;
+    }
 }
