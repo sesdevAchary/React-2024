@@ -503,6 +503,6 @@ public class Methods {
                     System.out.println("invalid index");
             return ;
       }
-      
+      array[upIndex]= value;
     }
 }
