@@ -427,7 +427,6 @@ import java.util.*;
 
 // }
 
-
 public class Methods {
     // array to store data
     private int[] array;
@@ -451,68 +450,81 @@ public class Methods {
             System.out.println("Array is full already");
             return;
         }
-        array[index] = value;
-        index++;
+        array[index++] = value;
     }
 
-
-    public void delete(int delIndex){
-      if ( delIndex<0 || delIndex >=index){
-        System.out.println("invalid index this is ");
-     }
-     for (int i=delIndex; i<index-1;i++){
-      array[i]=array[i+1];
-     }
-     index -- ;
-         array[index] = 0;  // Optional: clears last slot
-
-    }
-
-
-    public int  search( int value ){
-      int indexResult= -1;
-      for (int i =0;i<index;i++){
-        if(arr[i]=value){
-        indexResult=i;
-        break;
+    // Method to delete value at specific index
+    public void delete(int delIndex) {
+        if (delIndex < 0 || delIndex >= index) {
+            System.out.println("Invalid index");
+            return;
         }
-      }
-      return indexResult;
+        for (int i = delIndex; i < index - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        array[--index] = 0; // optional: clear last
     }
 
+    // Method to search a value
+    public int search(int value) {
+        for (int i = 0; i < index; i++) {
+            if (array[i] == value) {
+                return i;
+            }
+        }
+        return -1; // not found
+    }
 
-    public int get(int getIndex){
-           if(getIndex<0|| getIndex>this.index){
-            System.out.println("invalid index");
+    // Method to get value at a specific index
+    public int get(int getIndex) {
+        if (getIndex < 0 || getIndex >= index) {
+            System.out.println("Invalid index");
             return -1;
-           }
-           return array[getIndex];
-
+        }
+        return array[getIndex];
     }
 
-    public void traverse(){
-      for(int i=0;i<this.index;i++){
-        System.out.print(array[i]+"\t");
-      }
-      System.out.print(" no data is here");
+    // Traverse all elements
+    public void traverse() {
+        if (index == 0) {
+            System.out.println("No data is here");
+            return;
+        }
+        for (int i = 0; i < index; i++) {
+            System.out.print(array[i] + "\t");
+        }
+        System.out.println();
     }
 
+    // Update element at a specific index
+    public void updateIndex(int upIndex, int value) {
+        if (upIndex < 0 || upIndex >= index) {
+            System.out.println("Invalid index");
+            return;
+        }
+        array[upIndex] = value;
+    }
 
-    public void updateIndex( int upIndex, int value){
-      if(upIndex< index || upIndex >=index){
-                    System.out.println("invalid index");
-            return ;
-      }
-      array[upIndex]= value;
+    // Main method for testing
+    public static void main(String[] args) {
+        Methods mt = new Methods(5);
 
+        mt.insert(20);
+        mt.insert(300);
+        mt.insert(2000);
 
-      public  static void main ( string[] args){
-        methods mt= new methods[5];
+        System.out.println("Initial array:");
+        mt.traverse();
 
-        mt.insert(20);    // pass integer directly
-mt.insert(300);
-mt.insert(2000);
+        mt.updateIndex(1, 999);
+        System.out.println("After update:");
+        mt.traverse();
 
-      }
+        mt.delete(0);
+        System.out.println("After delete:");
+        mt.traverse();
+
+        System.out.println("Search 999: index = " + mt.search(999));
+        System.out.println("Value at index 1: " + mt.get(1));
     }
 }
