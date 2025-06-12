@@ -469,7 +469,7 @@ public class Methods {
     }
 
 
-    public void update( int value ){
+    public int  search( int value ){
       int indexResult= -1;
       for (int i =0;i<index;i++){
         if(arr[i]=value){
@@ -478,5 +478,15 @@ public class Methods {
         }
       }
       return indexResult;
+    }
+
+
+    public int get(int getIndex){
+           if(getIndex<0|| getIndex>this.index){
+            System.out.println("invalid index");
+            return -1;
+           }
+           return array[getIndex];
+
     }
 }
