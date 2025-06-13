@@ -271,22 +271,29 @@
 
 
 
-public static boolean pallindrome(String s){
-  int left =0; int right = s.length() -1;
+// public static boolean palindrome(String s){
+//   int left =0; int right = s.length() -1;
 
-  while(left<right){
-    if ( s.charAt(left++) != s.charAt(right--))
-    return false;
+//   while(left<right){
+//     if ( s.charAt(left++) != s.charAt(right--))
+//     return false;
    
-  }
-  return true;
+//   }
+//   return true;
   
-}
-public static void main (String[] args){
-  System.out.println(isPalindrome("madam"));  
-        System.out.println(isPalindrome("java"));   
-}
+// }
+// public static void main (String[] args){
+//   System.out.println(palindrome("madam"));  
+//         System.out.println(palindrome("java"));   
+// }
+
+
 
 }
+
+
+
+
+
 
 
