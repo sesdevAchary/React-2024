@@ -209,6 +209,7 @@
 
 // }
 // }
+
 // import java.util.*;
 // public class Main {
 //     public static void main ( String[] args){
@@ -224,5 +225,11 @@
 // }
 
 
-
-
+ import java.util.*;
+ public class Main {
+      string s= "java";
+      char[] arr = s.toCharArray();
+      for(char:arr){
+        System.out.println(c+" ");
+      }
+ }
