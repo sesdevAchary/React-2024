@@ -233,3 +233,10 @@
         System.out.println(c+" ");
       }
  }
+
+
+string s =  " a b c "
+string[]  parts = s.split(" ");
+for(string word:parts){
+  Sysytem.out.println(word);
+}
