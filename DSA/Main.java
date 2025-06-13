@@ -245,12 +245,12 @@
 
 
 
-public static string reverse(string s){
+public static String reverse(String s){
   StringBuilder sb =  new StringBuilder(s);
-   return sb.reverse.toString();
+   return sb.reverse().toString();
 }
-public static void main ( string[] args){
-  SYstem.out.println(reverse("hello"));
+public static void main ( String[] args){
+  System.out.println(reverse("hello"));
 }
 
 }
