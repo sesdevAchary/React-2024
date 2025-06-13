@@ -227,16 +227,32 @@
 
  import java.util.*;
  public class Main {
-      string s= "java";
-      char[] arr = s.toCharArray();
-      for(char:arr){
-        System.out.println(c+" ");
-      }
- }
 
 
-string s =  " a b c "
-string[]  parts = s.split(" ");
-for(string word:parts){
-  Sysytem.out.println(word);
+//       string s= "java";
+//       char[] arr = s.toCharArray();
+//       for(char:arr){
+//         System.out.println(c+" ");
+//       }
+//  }
+
+
+// string s =  " a b c "
+// string[]  parts = s.split(" ");
+// for(string word:parts){
+//   Sysytem.out.println(word);
+// }
+
+
+
+public static string reverse(string s){
+  StringBuilder sb =  new StringBuilder(s);
+   return sb.reverse.toString();
 }
+public static void main ( string[] args){
+  SYstem.out.println(reverse("hello"));
+}
+
+}
+
+
