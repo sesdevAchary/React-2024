@@ -245,14 +245,31 @@
 
 
 
-public static String reverse(String s){
-  StringBuilder sb =  new StringBuilder(s);
-   return sb.reverse().toString();
-}
-public static void main ( String[] args){
-  System.out.println(reverse("hello"));
-}
+// public static String reverse(String s){
+//   StringBuilder sb =  new StringBuilder(s);
+//    return sb.reverse().toString();
+// }
+// public static void main ( String[] args){
+//   System.out.println(reverse("hello"));
+// }
 
+
+
+public static int countV( String s){
+  int count = 0;
+  s= s.toLowerCase();
+
+  for(char c:s.toCharArray()){
+    if("aeiou".indexOf(c) !=-1){
+      count ++;
+    }
+  }
+  return count;
+}
+public static void main (String[] args){
+          System.out.println(countV("education"));  // 5
+
+}
 }
 
 
