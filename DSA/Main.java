@@ -370,3 +370,22 @@ public class FrequencyCounter {
         countFrequency("programming");
     }
 }
+public class CapitalizeWords {
+    public static String capitalize(String str) {
+        String[] words = str.split(" ");
+        StringBuilder sb = new StringBuilder();
+
+        for (String word : words) {
+            if (word.length() > 0) {
+                sb.append(Character.toUpperCase(word.charAt(0)))
+                  .append(word.substring(1)).append(" ");
+            }
+        }
+
+        return sb.toString().trim();  // remove trailing space
+    }
+
+    public static void main(String[] args) {
+        System.out.println(capitalize("hello world this is java"));
+    }
+}
