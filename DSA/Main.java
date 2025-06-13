@@ -314,3 +314,40 @@ public class RemoveDuplicates {
         System.out.println(removeDuplicates("programming"));  // progamin
     }
 }
+
+
+
+import java.util.*;
+
+public class Main {
+
+    // Method to reverse a string
+    public static String reverse(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        return sb.reverse().toString();  // FIXED: reverse() with ()
+    }
+
+    public static void main(String[] args) {
+
+        // 1. Convert string to char array and print characters
+        String s = "java";
+        char[] arr = s.toCharArray();
+        for (char c : arr) {  // FIXED: char c : arr
+            System.out.println(c + " ");
+        }
+
+        System.out.println("----------------");
+
+        // 2. Split a string into parts and print
+        String str = "a b c";
+        String[] parts = str.split(" ");
+        for (String word : parts) {
+            System.out.println(word);
+        }
+
+        System.out.println("----------------");
+
+        // 3. Reverse a string
+        System.out.println("Reversed: " + reverse("hello"));  // FIXED: System
+    }
+}
