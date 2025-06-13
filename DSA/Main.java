@@ -255,21 +255,38 @@
 
 
 
-public static int countV( String s){
-  int count = 0;
-  s= s.toLowerCase();
+// public static int countV( String s){
+//   int count = 0;
+//   s= s.toLowerCase();
 
-  for(char c:s.toCharArray()){
-    if("aeiou".indexOf(c) !=-1){
-      count ++;
-    }
+//   for(char c:s.toCharArray()){      // converts the s to char array //
+//     if("aeiou".indexOf(c) !=-1){    // checks the aeiou in index of char c 
+//       count ++;
+//     }
+//   }
+//   return count;
+// }
+// public static void main (String[] args){
+//           System.out.println(countV("education"));  // 5
+
+
+
+public static boolean pallindrome(String s){
+  int left =0; int right = s.length() -1;
+
+  while(left<right){
+    if ( s.charAt(left++) != s.charAt(right--))
+    return false;
+   
   }
-  return count;
+  return true;
+  
 }
 public static void main (String[] args){
-          System.out.println(countV("education"));  // 5
-
+  System.out.println(isPalindrome("madam"));  
+        System.out.println(isPalindrome("java"));   
 }
+
 }
 
 

@@ -20,4 +20,6 @@ It takes an array (like int[]) and returns a string representation of its conten
 
 .......................................................................................................
 
-1-> s.length() , s.charAt(0) , s.substring(1,4) , (a.equals(b)) , a.compareTo(b) , s.indexOf('p')
+-> s.length() , s.charAt(0) , s.substring(1,4) , (a.equals(b)) , a.compareTo(b) , s.indexOf('p')
+-> for(char c:s.toCharArray())  // converts the s to char array //
+->if("aeiou".indexOf(c) !=-1) // // checks the aeiou in index of char c 
