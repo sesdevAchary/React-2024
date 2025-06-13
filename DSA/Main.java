@@ -297,3 +297,20 @@
 
 
 
+public class RemoveDuplicates {
+    public static String removeDuplicates(String s) {
+        StringBuilder sb = new StringBuilder();
+        boolean[] seen = new boolean[256];
+        for (char c : s.toCharArray()) {
+            if (!seen[c]) {
+                seen[c] = true;
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeDuplicates("programming"));  // progamin
+    }
+}
