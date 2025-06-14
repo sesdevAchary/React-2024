@@ -368,3 +368,10 @@ public static void main ( String  args[]){
 
 
 navigator.clipboard.writeText("Copied text!");
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
