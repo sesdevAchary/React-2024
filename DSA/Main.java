@@ -289,103 +289,32 @@
 
 
 
+
+
+public static boolean anagrams(String s1, String s2){
+    // remove spaces and convert it to lowercase
+    s1= s1.replaceAll("\\s","").toLowerCase();
+    s2=s2.replaceAll("\\s","").toLowerCase();
+
+    //checking for length are equal are not
+    if(s1.length()!=s2.length())
+    return false ;
+
+    //con
+    char[] arr1 = s1.toCharArray();
+    char[] arr2=s2.toCharArray();
+
+    java.util.sort.Arrays.sort(arr1);
+    java.util.sort.Arrays.sort(arr2);
+
+    return java.util.Arrays.equals(arr1,arr2);
+}
+
+public static void main(String[] args) {
+        System.out.println(areAnagrams("listen", "silent"));  // true
+        System.out.println(areAnagrams("hello", "world"));    // false
+    }
+
 }
 
 
-
-
-
-
-
-public class RemoveDuplicates {
-    public static String removeDuplicates(String s) {
-        StringBuilder sb = new StringBuilder();
-        boolean[] seen = new boolean[256];
-        for (char c : s.toCharArray()) {
-            if (!seen[c]) {
-                seen[c] = true;
-                sb.append(c);
-            }
-        }
-        return sb.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(removeDuplicates("programming"));  // progamin
-    }
-}
-
-
-
-import java.util.*;
-
-public class Main {
-
-    // Method to reverse a string
-    public static String reverse(String s) {
-        StringBuilder sb = new StringBuilder(s);
-        return sb.reverse().toString();  // FIXED: reverse() with ()
-    }
-
-    public static void main(String[] args) {
-
-        // 1. Convert string to char array and print characters
-        String s = "java";
-        char[] arr = s.toCharArray();
-        for (char c : arr) {  // FIXED: char c : arr
-            System.out.println(c + " ");
-        }
-
-        System.out.println("----------------");
-
-        // 2. Split a string into parts and print
-        String str = "a b c";
-        String[] parts = str.split(" ");
-        for (String word : parts) {
-            System.out.println(word);
-        }
-
-        System.out.println("----------------");
-
-        // 3. Reverse a string
-        System.out.println("Reversed: " + reverse("hello"));  // FIXED: System
-    }
-}
-import java.util.HashMap;
-
-public class FrequencyCounter {
-    public static void countFrequency(String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
-
-        for (char c : s.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-
-        for (char c : map.keySet()) {
-            System.out.println(c + ": " + map.get(c));
-        }
-    }
-
-    public static void main(String[] args) {
-        countFrequency("programming");
-    }
-}
-public class CapitalizeWords {
-    public static String capitalize(String str) {
-        String[] words = str.split(" ");
-        StringBuilder sb = new StringBuilder();
-
-        for (String word : words) {
-            if (word.length() > 0) {
-                sb.append(Character.toUpperCase(word.charAt(0)))
-                  .append(word.substring(1)).append(" ");
-            }
-        }
-
-        return sb.toString().trim();  // remove trailing space
-    }
-
-    public static void main(String[] args) {
-        System.out.println(capitalize("hello world this is java"));
-    }
-}
