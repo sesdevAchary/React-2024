@@ -367,3 +367,4 @@ public static void main ( String  args[]){
 
 
 
+navigator.clipboard.writeText("Copied text!");
