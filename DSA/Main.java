@@ -291,30 +291,45 @@
 
 
 
-public static boolean anagrams(String s1, String s2){
-    // remove spaces and convert it to lowercase
-    s1= s1.replaceAll("\\s","").toLowerCase();
-    s2=s2.replaceAll("\\s","").toLowerCase();
+// public static boolean anagrams(String s1, String s2){
+//     // remove spaces and convert it to lowercase
+//     s1= s1.replaceAll("\\s","").toLowerCase();
+//     s2=s2.replaceAll("\\s","").toLowerCase();
 
-    //checking for length are equal are not
-    if(s1.length()!=s2.length())
-    return false ;
+//     //checking for length are equal are not
+//     if(s1.length()!=s2.length())
+//     return false ;
 
-    //con
-    char[] arr1 = s1.toCharArray();
-    char[] arr2=s2.toCharArray();
+//     //con
+//     char[] arr1 = s1.toCharArray();
+//     char[] arr2=s2.toCharArray();
 
-    Arrays.sort(arr1);
-    Arrays.sort(arr2);
+//     Arrays.sort(arr1);
+//     Arrays.sort(arr2);
 
-    return Arrays.equals(arr1,arr2);
+//     return Arrays.equals(arr1,arr2);
+// }
+
+// public static void main(String[] args) {
+//         System.out.println(anagrams("listen", "silent"));  // true
+//         System.out.println(anagrams("hello", "world"));    // false
+//     }
+
+
+
+
+public static string reverseString( String s){
+    String reversed = " ";
+    for(int i=s.length()-1; i>=0;i--){
+        reversed+= s.charAt(i);
+    }
+    return reversed;
+
 }
 
-public static void main(String[] args) {
-        System.out.println(anagrams("listen", "silent"));  // true
-        System.out.println(anagrams("hello", "world"));    // false
-    }
-
+ public static Void main ( String[] args){
+    System.out.println(" the reversed string is " reverseString(" Shivaji "));
+ }
 }
 
 
