@@ -225,8 +225,8 @@
 // }
 
 
- import java.util.*;
- public class Main {
+//  import java.util.*;
+//  public class Main {
 
 
 //       string s= "java";
@@ -317,25 +317,48 @@
 
 
 
+ import java.util.*;
+ public class Main {
 
-public static string reverseString( String s){
-    String reversed = " ";
-    for(int i=s.length()-1; i>=0;i--){
-        reversed+= s.charAt(i);
-    }
-    return reversed;
+// public static String reverseString( String s){
+//     String reversed = "";
+//     for(int i=s.length()-1; i>=0;i--){
+//         reversed+= s.charAt(i);
+//     }
+//     return reversed;
 
-}
+// }
 
- public static Void main ( String[] args){
-    Scanner sc = new Scanner ( System.in);
+//  public static void main ( String[] args){
+//     Scanner sc = new Scanner ( System.in);
     
-    System.out.println("enter the string of yours choice ")
-    String.input= Sc.nextLine();
+//     System.out.println("enter the string of yours choice ");
+//     String input= sc.nextLine();
 
-    String result = reverseString(input);
-    System.out.println(" the reversed string is " result);
- }
+//     String result = reverseString(input);
+//     System.out.println(" the reversed string is:"+ result);
+
+//     sc.close();
+
+//  }
+
+
+public static int calcpow(int x,int n){
+    if(n==0){
+        return 1;
+    }
+    if(x==0){
+        return 0;
+    }
+    int xpownm1= calcpow(x,n-1);
+    int xpown= x * xpownm1;
+    return xpown;
+}
+public static void main ( str[] args){
+    int x=2 ; int n=6;
+    int ans = calcpow(x,n);
+    System.out.println("answer is "+ ans);
+}
 }
 
 
