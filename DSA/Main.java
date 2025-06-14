@@ -304,15 +304,15 @@ public static boolean anagrams(String s1, String s2){
     char[] arr1 = s1.toCharArray();
     char[] arr2=s2.toCharArray();
 
-    java.util.sort.Arrays.sort(arr1);
-    java.util.sort.Arrays.sort(arr2);
+    Arrays.sort(arr1);
+    Arrays.sort(arr2);
 
-    return java.util.Arrays.equals(arr1,arr2);
+    return Arrays.equals(arr1,arr2);
 }
 
 public static void main(String[] args) {
-        System.out.println(areAnagrams("listen", "silent"));  // true
-        System.out.println(areAnagrams("hello", "world"));    // false
+        System.out.println(anagrams("listen", "silent"));  // true
+        System.out.println(anagrams("hello", "world"));    // false
     }
 
 }
