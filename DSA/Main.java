@@ -354,11 +354,16 @@ public static int calcpow(int x,int n){
     int xpown= x * xpownm1;
     return xpown;
 }
-public static void main ( str[] args){
+public static void main ( String  args[]){
     int x=2 ; int n=6;
     int ans = calcpow(x,n);
     System.out.println("answer is "+ ans);
 }
 }
+
+
+
+
+
 
 
