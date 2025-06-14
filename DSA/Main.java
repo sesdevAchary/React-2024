@@ -382,3 +382,4 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
