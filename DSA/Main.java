@@ -328,7 +328,13 @@ public static string reverseString( String s){
 }
 
  public static Void main ( String[] args){
-    System.out.println(" the reversed string is " reverseString(" Shivaji "));
+    Scanner sc = new Scanner ( System.in);
+    
+    System.out.println("enter the string of yours choice ")
+    String.input= Sc.nextLine();
+
+    String result = reverseString(input);
+    System.out.println(" the reversed string is " result);
  }
 }
 
