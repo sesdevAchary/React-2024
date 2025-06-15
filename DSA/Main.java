@@ -343,23 +343,31 @@
 //  }
 
 
-public static int calcpow(int x,int n){
-    if(n==0){
-        return 1;
+// public static int calcpow(int x,int n){
+//     if(n==0){
+//         return 1;
+//     }
+//     if(x==0){
+//         return 0;
+//     }
+//     int xpownm1= calcpow(x,n-1);
+//     int xpown= x * xpownm1;
+//     return xpown;
+// }
+// public static void main ( String  args[]){
+//     int x=2 ; int n=6;
+//     int ans = calcpow(x,n);
+//     System.out.println("answer is "+ ans);
+// }
+// }
+
+
+
+public class Main {
+  public statis void perm( String str , String permutation){
+    if(str.length==0){
+      System.out.println(permutation)
+      return 0;
     }
-    if(x==0){
-        return 0;
-    }
-    int xpownm1= calcpow(x,n-1);
-    int xpown= x * xpownm1;
-    return xpown;
+  }
 }
-public static void main ( String  args[]){
-    int x=2 ; int n=6;
-    int ans = calcpow(x,n);
-    System.out.println("answer is "+ ans);
-}
-}
-
-
-
