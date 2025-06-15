@@ -2,13 +2,12 @@ import java.util.*;
 
 public class sorting{
     public  static int linearSearch(int[] array, int target){
-    int index = -1;
     for(int i=0;i<array.length;i++){
         if(array[i] == target){
         return i;
-        index=0;
     }
     }
+    return -1 ; 
     }
     public static void main ( String[] args){
         Scanner sc = new Scanner (System.in);
@@ -24,7 +23,7 @@ public class sorting{
         
         System.out.println("enter the element you want to search-> ");
         int target= sc.nextInt();
-
+   sc.close();
 
     }
 }
