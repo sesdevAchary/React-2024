@@ -11,7 +11,7 @@ public class sorting{
     }
     }
     public static void main ( String[] args){
-        Scanner sc = new scanner (System.in);
+        Scanner sc = new Scanner (System.in);
 
         System.out.println("enter the array size you want-> ");
         int size = sc.nextInt();
