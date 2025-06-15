@@ -317,8 +317,8 @@
 
 
 
- import java.util.*;
- public class Main {
+//  import java.util.*;
+//  public class Main {
 
 // public static String reverseString( String s){
 //     String reversed = "";
@@ -363,20 +363,20 @@
 
 
 
-public class Main {
-  public statis void perm( String str , String permutation){
-    if(str.length==0){
-      System.out.println(permutation)
-      return ;
-    }
-    for (int i =0; i<str.length();i++){
-      char currChar = str.charAt(i);
-      String newstr= str.substring(0,i)+str.substring(i+1);
-      perm(newstr,permutation+currChar);
-    }
-  }
-  public static void main(String args[]) {
-        String str = "abcd";
-        Perm(str, "");
-    }
-}
+// public class Main {
+//   public statis void perm( String str , String permutation){
+//     if(str.length==0){
+//       System.out.println(permutation)
+//       return ;
+//     }
+//     for (int i =0; i<str.length();i++){
+//       char currChar = str.charAt(i);
+//       String newstr= str.substring(0,i)+str.substring(i+1);
+//       perm(newstr,permutation+currChar);
+//     }
+//   }
+//   public static void main(String args[]) {
+//         String str = "abcd";
+//         Perm(str, "");
+//     }
+// }
