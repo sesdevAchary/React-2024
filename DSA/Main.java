@@ -363,23 +363,3 @@ public static void main ( String  args[]){
 
 
 
-
-
-
-
-navigator.clipboard.writeText("Copied text!");
-function debounce(func, delay) {
-  let timeout;
-  return function(...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), delay);
-  };
-}
-const flat = arr => arr.reduce((acc, val) => acc.concat(val), []);
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-}
-const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
