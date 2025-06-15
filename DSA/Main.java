@@ -375,4 +375,8 @@ public class Main {
       perm(newstr,permutation+currChar);
     }
   }
+  public static void main(String args[]) {
+        String str = "abcd";
+        Perm(str, "");
+    }
 }
