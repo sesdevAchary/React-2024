@@ -367,7 +367,12 @@ public class Main {
   public statis void perm( String str , String permutation){
     if(str.length==0){
       System.out.println(permutation)
-      return 0;
+      return ;
+    }
+    for (int i =0; i<str.length();i++){
+      char currChar = str.charAt(i);
+      String newstr= str.substring(0,i)+str.substring(i+1);
+      perm(newstr,permutation+currChar);
     }
   }
 }
