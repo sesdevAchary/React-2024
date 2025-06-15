@@ -1,15 +1,17 @@
+import java.util.*;
+
 public class sorting{
-    public  static int linearSearch(int array, int target){
+    public  static int linearSearch(int[] array, int target){
     int index = -1;
-    for(int i=0;i>array.length;i++){
+    for(int i=0;i<array.length;i++){
         if(array[i] == target){
         return i;
         index=0;
     }
     }
     }
-    public static void main ( Str[] args){
-        scanner sc = new scanner (System.in);
+    public static void main ( String[] args){
+        Scanner sc = new scanner (System.in);
 
         System.out.println("enter the array size you want-> ");
         int size = sc.nextInt();
