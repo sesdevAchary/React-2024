@@ -151,3 +151,33 @@ public class ArrayListExample {
     }
 }
 
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        LinkedList<String> names = new LinkedList<>();
+
+        // Adding elements
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        // Printing the list
+        System.out.println("Names: " + names);
+
+        // Add to front and end
+        names.addFirst("Zara");
+        names.addLast("Tom");
+
+        System.out.println("Updated List: " + names);
+
+        // Remove an element
+        names.remove("Bob");
+        System.out.println("After removing Bob: " + names);
+
+        // Get element at index
+        System.out.println("Element at index 2: " + names.get(2));
+    }
+}
+
+
