@@ -119,3 +119,35 @@ public class MaxOfThree {
         System.out.println("Maximum number is: " + max);
     }
 }
+
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // Adding elements
+        list.add(10);
+        list.add(20);
+        list.add(30);
+
+        // Printing all elements
+        System.out.println("List: " + list);
+
+        // Accessing element at index 1
+        System.out.println("Element at index 1: " + list.get(1));
+
+        // Removing element at index 0
+        list.remove(0);
+        System.out.println("List after removal: " + list);
+
+        // Checking if list contains an element
+        if (list.contains(20)) {
+            System.out.println("List contains 20");
+        }
+
+        // Size of the list
+        System.out.println("Size of the list: " + list.size());
+    }
+}
+
