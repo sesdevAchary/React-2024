@@ -23,6 +23,15 @@
         
 //         System.out.println("enter the element you want to search-> ");
 //         int target= sc.nextInt();
+
+//  int foundIndex= linearSearch(array, target);
+//          if(foundIndex==-1){
+//             System.out.println("element not found: ");
+//          }
+//          else{
+//             System.out.println("Element found successfully: ");
+//          }
+        
 //    sc.close();
 
 //     }
@@ -64,6 +73,15 @@ public static int  bianrySearch( int[] array,int target ){
         
         System.out.println("enter the element you want to search-> ");
         int target= sc.nextInt();
+
+        int foundIndex= bianrySearch(array, target);
+         if(foundIndex==-1){
+            System.out.println("element not found: ");
+         }
+         else{
+            System.out.println("Element found successfully: ");
+         }
+        
    sc.close();
 }
 }
