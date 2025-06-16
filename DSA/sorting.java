@@ -34,52 +34,88 @@
         
 //    sc.close();
 
+// //     }
+// public void sorting{
+//     public static int binarySearch(int[] array , int target){
+//         int low =0; int high = array.length-1;
+//         while(low<=high){
+//             int mid=low+(high-low)/2;
+//             if(array[mid] == target)
+//             return target;
+
+//             if( target<array[mid]){
+//             high=mid-1;
+//             }
+//             else{
+//                 low=mid+1
+//             }
+
+// return -1;
+//         }
 //     }
-public void sorting{
-    public static int binarySearch(int[] array , int target){
-        int low =0; int high = array.length-1;
-        while(low<=high){
-            int mid=low+(high-low)/2;
-            if(array[mid] == target)
-            return target;
 
-            if( target<array[mid]){
-            high=mid-1;
-            }
-            else{
-                low=mid+1
-            }
+// public static void main(String[] args) {
+//     Scanner sc = new Scanner(System.in);
 
-return -1;
+//     System.out.println("Enter the array size you want -> ");
+//     int size = sc.nextInt();
+
+//     System.out.println("Enter the list -> ");
+//     int[] array = new int[size];
+//     for (int j = 0; j < size; j++) {
+//         array[j] = sc.nextInt();
+//     }
+
+//     // ✅ Sort the array before binary search
+//     Arrays.sort(array);  // <-- This line fixes the logical error
+
+//     System.out.println("Enter the element you want to search -> ");
+//     int target = sc.nextInt();
+
+//     int foundIndex = binarySearch(array, target);
+
+//     if (foundIndex == -1) {
+//         System.out.println("Element not found.");
+//     } else {
+//         System.out.println("Element found successfully at index: " + foundIndex);
+//     }
+
+//     sc.close();
+// }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class MaxOfThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter three numbers:");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int max;
+
+        if (a >= b && a >= c) {
+            max = a;
+        } else if (b >= a && b >= c) {
+            max = b;
+        } else {
+            max = c;
         }
+
+        System.out.println("Maximum number is: " + max);
     }
-
-public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-
-    System.out.println("Enter the array size you want -> ");
-    int size = sc.nextInt();
-
-    System.out.println("Enter the list -> ");
-    int[] array = new int[size];
-    for (int j = 0; j < size; j++) {
-        array[j] = sc.nextInt();
-    }
-
-    // ✅ Sort the array before binary search
-    Arrays.sort(array);  // <-- This line fixes the logical error
-
-    System.out.println("Enter the element you want to search -> ");
-    int target = sc.nextInt();
-
-    int foundIndex = binarySearch(array, target);
-
-    if (foundIndex == -1) {
-        System.out.println("Element not found.");
-    } else {
-        System.out.println("Element found successfully at index: " + foundIndex);
-    }
-
-    sc.close();
-}
 }
