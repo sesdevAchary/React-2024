@@ -126,12 +126,25 @@ public class sorting(){
             arr[j]=merged[i];
         }
     }
+
+
     public static void divide(int[] arr,int low,int mid,int high){
         if(low>=high)
         return;
-    }
+    
     mid = low+(high-low)/2;
     divide(arr,low,mid);
     divide(arr,mid+1,high);
     conquer(arr,low,mid,high);
+    }
+
+    public static void main (String args[]){
+        int arr[]= {7,8,9,5,3,4,11};
+        int n = arr.length;
+
+        divide(arr,0,n-1);
+         for (int i = 0; i < n; i++) {
+        System.out.print(arr[i] + " ");
+    }
+    }
 }
