@@ -103,6 +103,25 @@ public class sorting(){
         int idx1=low;
         int idx2=mid+1;
         int x = 0;
+
+        // merging the elemetns in order //
+        while(idx1<=mid && idx2<=high){
+            if(idx1<=idx2){
+                merged[x++]=arr[idx1++];
+            }else{
+                merged[x+=]=arr[idx2++];
+            }
+        }
+
+        // copying the remaining elements //
+        while(idx1<=mid){
+            merged[x++]=array[idx1++];
+        }
+
+        // copying the remaining elements of right subarray 
+        while(idx2<=high){
+            merged[x++]=array[idx2++];
+        }
     }
     public static void divide(int[] arr,int low,int mid,int high){
         if(low>=high)
