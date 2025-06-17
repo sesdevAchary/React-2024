@@ -97,30 +97,30 @@
 
 import java.util.*;
 
-public class sorting(){
+public class sorting {
     public static void conquer(int [] arr,int low,int mid ,int high){
-        int merged = new int [high-low+1];
+        int[] merged = new int [high-low+1];
         int idx1=low;
         int idx2=mid+1;
         int x = 0;
 
         // merging the elemetns in order //
         while(idx1<=mid && idx2<=high){
-            if(idx1<=idx2){
+           if (arr[idx1] <= arr[idx2]){
                 merged[x++]=arr[idx1++];
             }else{
-                merged[x+=]=arr[idx2++];
+                merged[x++]=arr[idx2++];
             }
         }
 
         // copying the remaining elements //
         while(idx1<=mid){
-            merged[x++]=array[idx1++];
+            merged[x++]=arr[idx1++];
         }
 
         // copying the remaining elements of right subarray 
         while(idx2<=high){
-            merged[x++]=array[idx2++];
+            merged[x++]=arr[idx2++];
         }
         for(int i=0,j=low;i<merged.length;i++,j++){
             arr[j]=merged[i];
@@ -128,11 +128,11 @@ public class sorting(){
     }
 
 
-    public static void divide(int[] arr,int low,int mid,int high){
+    public static void divide(int[] arr,int low,int high){
         if(low>=high)
         return;
     
-    mid = low+(high-low)/2;
+    int mid = low+(high-low)/2;
     divide(arr,low,mid);
     divide(arr,mid+1,high);
     conquer(arr,low,mid,high);
