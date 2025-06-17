@@ -98,6 +98,12 @@
 import java.util.*;
 
 public class sorting(){
+    public static void conquer(int [] arr,int low,int mid ,int high){
+        int merged = new int [high-low+1];
+        int idx1=low;
+        int idx2=mid+1;
+        int x = 0;
+    }
     public static void divide(int[] arr,int low,int mid,int high){
         if(low>=high)
         return;
