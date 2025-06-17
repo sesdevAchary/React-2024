@@ -184,3 +184,11 @@ def insertion_sort(arr):
             j -= 1
         arr[j + 1] = key
     return arr
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+    less = [x for x in arr[1:] if x <= pivot]
+    more = [x for x in arr[1:] if x > pivot]
+    return quick_sort(less) + [pivot] + quick_sort(more)
+`
