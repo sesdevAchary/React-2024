@@ -122,6 +122,9 @@ public class sorting(){
         while(idx2<=high){
             merged[x++]=array[idx2++];
         }
+        for(int i=0,j=low;i<merged.length;i++,j++){
+            arr[j]=merged[i];
+        }
     }
     public static void divide(int[] arr,int low,int mid,int high){
         if(low>=high)
