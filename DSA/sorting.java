@@ -95,117 +95,15 @@
 
 
 
-import java.util.Scanner;
+import java.util.*;
 
-public class MaxOfThree {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter three numbers:");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-
-        int max;
-
-        if (a >= b && a >= c) {
-            max = a;
-        } else if (b >= a && b >= c) {
-            max = b;
-        } else {
-            max = c;
-        }
-
-        System.out.println("Maximum number is: " + max);
+public class sorting(){
+    public static void divide(int[] arr,int low,int mid,int high){
+        if(low>=high)
+        return;
     }
+    mid = low+(high-low)/2;
+    divide(arr,low,mid);
+    divide(arr,mid+1,high);
+    conquer(arr,low,mid,high);
 }
-
-import java.util.ArrayList;
-
-public class ArrayListExample {
-    public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-
-        // Adding elements
-        list.add(10);
-        list.add(20);
-        list.add(30);
-
-        // Printing all elements
-        System.out.println("List: " + list);
-
-        // Accessing element at index 1
-        System.out.println("Element at index 1: " + list.get(1));
-
-        // Removing element at index 0
-        list.remove(0);
-        System.out.println("List after removal: " + list);
-
-        // Checking if list contains an element
-        if (list.contains(20)) {
-            System.out.println("List contains 20");
-        }
-
-        // Size of the list
-        System.out.println("Size of the list: " + list.size());
-    }
-}
-
-import java.util.LinkedList;
-
-public class LinkedListExample {
-    public static void main(String[] args) {
-        LinkedList<String> names = new LinkedList<>();
-
-        // Adding elements
-        names.add("Alice");
-        names.add("Bob");
-        names.add("Charlie");
-
-        // Printing the list
-        System.out.println("Names: " + names);
-
-        // Add to front and end
-        names.addFirst("Zara");
-        names.addLast("Tom");
-
-        System.out.println("Updated List: " + names);
-
-        // Remove an element
-        names.remove("Bob");
-        System.out.println("After removing Bob: " + names);
-
-        // Get element at index
-        System.out.println("Element at index 2: " + names.get(2));
-    }
-}
-
-import java.util.LinkedList;
-
-public class LinkedListExample {
-    public static void main(String[] args) {
-        LinkedList<String> names = new LinkedList<>();
-
-        // Adding elements
-        names.add("Alice");
-        names.add("Bob");
-        names.add("Charlie");
-
-        // Printing the list
-        System.out.println("Names: " + names);
-
-        // Add to front and end
-        names.addFirst("Zara");
-        names.addLast("Tom");
-
-        System.out.println("Updated List: " + names);
-
-        // Remove an element
-        names.remove("Bob");
-        System.out.println("After removing Bob: " + names);
-
-        // Get element at index
-        System.out.println("Element at index 2: " + names.get(2));
-    }
-}
-
