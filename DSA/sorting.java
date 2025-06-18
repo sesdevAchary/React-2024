@@ -201,3 +201,42 @@ public static void main ( String args[]){
 
 
 
+
+
+
+
+public static void conquer(int arr[], int si, int mid, int ei) {
+    int merged[] = new int[ei - si + 1];
+    int idx1 = si;
+    int idx2 = mid + 1;
+    int x = 0;
+
+    // Merge elements in order
+    while (idx1 <= mid && idx2 <= ei) {
+        if (arr[idx1] <= arr[idx2]) {
+            merged[x++] = arr[idx1++];
+        } else {
+            merged[x++] = arr[idx2++];
+        }
+    }
+
+    // Copy remaining elements from left subarray
+    while (idx1 <= mid) {
+        merged[x++] = arr[idx1++];
+    }
+
+    // Copy remaining elements from right subarray
+    while (idx2 <= ei) {
+        merged[x++] = arr[idx2++];
+    }
+
+    // Copy merged elements back to original array
+    for (int i = 0, j = si; i < merged.length; i++, j++) {
+        arr[j] = merged[i];
+    }
+}
+
+
+
+
+
