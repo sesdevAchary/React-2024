@@ -143,7 +143,25 @@ public class sorting {
 
 
 public static int partition(int [] arr, int low,int high){
-    int pivot=arr[high];
+    int pivot=arr[high]; // picking the last element as the pivot;//
+    int i=low -1 ; // smaller elements than pivot are kept here
+
+    for(int j=low;j<high;j++){
+        if(arr[j]<pivot){
+        i++;
+        // swap pivot with arr[i+1]
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        }
+    }
+
+     // swap pivot to its correct position
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        return i + 1;  // return pivot index
 }
 
 public static void quickSort(int[] arr, int low,int high){
