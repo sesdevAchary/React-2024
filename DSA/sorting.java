@@ -88,6 +88,9 @@
 import java.util.*;
 
 public class sorting {
+
+    // // // // // this is the MERGE  SORT // // // // // 
+
 //     public static void conquer(int [] arr,int low,int mid ,int high){
 //         int[] merged = new int [high-low+1];
 //         int idx1=low;
@@ -141,6 +144,8 @@ public class sorting {
 
 
 
+// // // // // this is the QUICK SORT // // // // // 
+
 
 public static int partition(int [] arr, int low,int high){
     int pivot=arr[high]; // picking the last element as the pivot;//
@@ -150,9 +155,9 @@ public static int partition(int [] arr, int low,int high){
         if(arr[j]<pivot){
         i++;
         // swap pivot with arr[i+1]
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
         }
     }
 
@@ -167,9 +172,10 @@ public static int partition(int [] arr, int low,int high){
 public static void quickSort(int[] arr, int low,int high){
     if(low<high){
         int pivotIndex=partition(arr,low,high);  //Get pivot's correct position using partitioning.
-    }
+    
     quickSort(arr,low,pivotIndex-1);  // solving the left side of the pivot index
     quickSort(arr,pivotIndex+1,high); // solving the right side
+    }
 }
 
 
@@ -181,7 +187,7 @@ public static void main ( String args[]){
 
     // printing the sorted array //
 
-    for(i=0;i<n;i++){
+    for(int i=0;i<n;i++){
         System.out.println(arr[i]+ " ");
     }
 }
