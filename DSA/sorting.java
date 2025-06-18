@@ -237,6 +237,15 @@ public static void conquer(int arr[], int si, int mid, int ei) {
 }
 
 
+Original: [6, 3, 9, 5, 2, 8]
+
+Divide:
+[6, 3, 9] and [5, 2, 8]
+→ [6] [3] [9] and [5] [2] [8]
+
+Conquer:
+[3, 6, 9] and [2, 5, 8]
+→ [2, 3, 5, 6, 8, 9]
 
 
 
