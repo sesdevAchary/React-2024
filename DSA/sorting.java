@@ -171,6 +171,20 @@ public static void quickSort(int[] arr, int low,int high){
     quickSort(arr,low,pivotIndex-1);  // solving the left side of the pivot index
     quickSort(arr,pivotIndex+1,high); // solving the right side
 }
+
+
+public static void main ( String args[]){
+    int[] arr = {5,2,7,3,6,8,4,9,3,5};
+    int n=arr.length;
+
+    quickSort(arr,0,n-1);
+
+    // printing the sorted array //
+
+    for(i=0;i<n;i++){
+        System.out.println(arr[i]+ " ");
+    }
+}
  }
 
 
