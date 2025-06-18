@@ -295,4 +295,14 @@ def radix_sort(arr):
                 a += 1
         placement *= RADIX
     return arr
-`
+`def counting_sort(arr):
+    if not arr:
+        return []
+    max_val = max(arr)
+    count = [0] * (max_val + 1)
+    for num in arr:
+        count[num] += 1
+    output = []
+    for i, c in enumerate(count):
+        output.extend([i] * c)
+    return output
