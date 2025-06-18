@@ -260,3 +260,5 @@ public static void divide(int arr[], int si, int ei) {
 
 
 
+def tim_sort(arr):
+    return sorted(arr)
