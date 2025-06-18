@@ -85,70 +85,75 @@
 // }
 
 
-
-
-
-
-
-
-
-
-
-
 import java.util.*;
 
 public class sorting {
-    public static void conquer(int [] arr,int low,int mid ,int high){
-        int[] merged = new int [high-low+1];
-        int idx1=low;
-        int idx2=mid+1;
-        int x = 0;
+//     public static void conquer(int [] arr,int low,int mid ,int high){
+//         int[] merged = new int [high-low+1];
+//         int idx1=low;
+//         int idx2=mid+1;
+//         int x = 0;
 
-        // merging the elemetns in order //
-        while(idx1<=mid && idx2<=high){
-           if (arr[idx1] <= arr[idx2]){
-                merged[x++]=arr[idx1++];
-            }else{
-                merged[x++]=arr[idx2++];
-            }
-        }
+//         // merging the elemetns in order //
+//         while(idx1<=mid && idx2<=high){
+//            if (arr[idx1] <= arr[idx2]){
+//                 merged[x++]=arr[idx1++];
+//             }else{
+//                 merged[x++]=arr[idx2++];
+//             }
+//         }
 
-        // copying the remaining elements //
-        while(idx1<=mid){
-            merged[x++]=arr[idx1++];
-        }
+//         // copying the remaining elements //
+//         while(idx1<=mid){
+//             merged[x++]=arr[idx1++];
+//         }
 
-        // copying the remaining elements of right subarray 
-        while(idx2<=high){
-            merged[x++]=arr[idx2++];
-        }
-        for(int i=0,j=low;i<merged.length;i++,j++){
-            arr[j]=merged[i];
-        }
-    }
+//         // copying the remaining elements of right subarray 
+//         while(idx2<=high){
+//             merged[x++]=arr[idx2++];
+//         }
+//         for(int i=0,j=low;i<merged.length;i++,j++){
+//             arr[j]=merged[i];
+//         }
+//     }
 
 
-    public static void divide(int[] arr,int low,int high){
-        if(low>=high)
-        return;
+//     public static void divide(int[] arr,int low,int high){
+//         if(low>=high)
+//         return;
     
-    int mid = low+(high-low)/2;
-    divide(arr,low,mid);
-    divide(arr,mid+1,high);
-    conquer(arr,low,mid,high);
-    }
+//     int mid = low+(high-low)/2;
+//     divide(arr,low,mid);
+//     divide(arr,mid+1,high);
+//     conquer(arr,low,mid,high);
+//     }
 
-    public static void main (String args[]){
-        int arr[]= {7,8,9,5,3,4,11};
-        int n = arr.length;
+//     public static void main (String args[]){
+//         int arr[]= {7,8,9,5,3,4,11};
+//         int n = arr.length;
 
-        divide(arr,0,n-1);
-         for (int i = 0; i < n; i++) {
-        System.out.print(arr[i] + " ");
-    }
-    }
+//         divide(arr,0,n-1);
+//          for (int i = 0; i < n; i++) {
+//         System.out.print(arr[i] + " ");
+//     }
+//     }
+
+
+
+
+
+public static int partition(int [] arr, int low,int high){
+    int pivot=arr[high];
 }
 
+public static void quickSort(int[] arr, int low,int high){
+    if(low<high){
+        int pivotIndex=partition(arr,low,high);  //Get pivot's correct position using partitioning.
+    }
+    quickSort(arr,low,pivotIndex-1);  // solving the left side of the pivot index
+    quickSort(arr,pivotIndex+1,high); // solving the right side
+}
+ }
 
 
 
@@ -159,46 +164,3 @@ public class sorting {
 
 
 
-
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(n - 1 - i):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    return arr
-def selection_sort(arr):
-    for i in range(len(arr)):
-        min_idx = i
-        for j in range(i + 1, len(arr)):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
-        arr[i], arr[min_idx] = arr[min_idx], arr[i]
-    return arr
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-    return arr
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[0]
-    less = [x for x in arr[1:] if x <= pivot]
-    more = [x for x in arr[1:] if x > pivot]
-    return quick_sort(less) + [pivot] + quick_sort(more)
-`def counting_sort(arr):
-    if not arr:
-        return []
-    max_val = max(arr)
-    count = [0] * (max_val + 1)
-    for num in arr:
-        count[num] += 1
-    output = []
-    for i, c in enumerate(count):
-        output.extend([i] * c)
-    return output
