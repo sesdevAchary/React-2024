@@ -246,6 +246,17 @@ Divide:
 Conquer:
 [3, 6, 9] and [2, 5, 8]
 → [2, 3, 5, 6, 8, 9]
+public static void divide(int arr[], int si, int ei) {
+    if (si >= ei) {
+        return;
+    }
+
+    int mid = si + (ei - si) / 2;
+
+    divide(arr, si, mid);      // left half
+    divide(arr, mid + 1, ei);  // right half
+    conquer(arr, si, mid, ei); // merge both halves
+}
 
 
 
