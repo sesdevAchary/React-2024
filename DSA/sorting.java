@@ -184,7 +184,6 @@ public static void main ( String args[]){
     int n=arr.length;
 
     quickSort(arr,0,n-1);
-
     // printing the sorted array //
 
     for(int i=0;i<n;i++){
