@@ -528,3 +528,9 @@ public class Methods {
         System.out.println("Value at index 1: " + mt.get(1));
     }
 }
+
+
+
+
+
+

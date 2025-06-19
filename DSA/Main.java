@@ -380,3 +380,24 @@
 //         Perm(str, "");
 //     }
 // }
+
+
+
+
+
+public class pen(){
+    string color;
+    String type;
+}
+
+public class write(){
+    System.out.println(" beginning of the code ");
+}
+
+public class Main{
+    public static void main(String args[]){
+        pen pen1=new pen();
+        pen1.color="blue";
+        pen1.type="gel";
+    }
+}
