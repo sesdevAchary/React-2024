@@ -397,15 +397,36 @@ public void write(){
 }
 public void printColor(){
     System.out.println(this.color);  //this.color means: "the color variable that belongs to this specific object."//
+    System.out.println(this.type);
+}
 }
 
+
+class Student{
+    String name;
+    int age;
+
+
+    public void printStud(){
+        System.out.println(this.name);
+        System.out.println(this.age);
+    }
 }
 public class Main{
     public static void main(String args[]){
-        Pen pen1=new Pen();
-        pen1.color="blue";
-        pen1.type="gel";
+        // Pen pen1=new Pen();
+        // pen1.color="blue";
+        // pen1.type="gel";
 
-        pen1.printColor();
-    }
+        // pen1.printColor();
+        
+
+
+
+        Student S1= new Student();
+        S1.name= " Rahul JayKar";
+        S1.age=25;
+
+        S1.printStud();
+}
 }
