@@ -385,7 +385,7 @@
 
 
 
-public class Pen{
+class   Pen{
 
     // instance variable //  this belong to the object not to the class //
     String color;
@@ -402,7 +402,7 @@ public void printColor(){
 }
 public class Main{
     public static void main(String args[]){
-        pen pen1=new pen();
+        Pen pen1=new Pen();
         pen1.color="blue";
         pen1.type="gel";
 
