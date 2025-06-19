@@ -16,6 +16,7 @@ It takes an array (like int[]) and returns a string representation of its conten
 
 ->  for(int element: array) looping foreach..
 ->   return str.charAt(0).toUpperCase() + str.slice(1);   capitalizing the first word
+-> in JAVA , classname should be capital 
 
 
 .......................................................................................................

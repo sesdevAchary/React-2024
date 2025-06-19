@@ -385,7 +385,9 @@
 
 
 
-public class pen{
+public class Pen{
+
+    // instance variable //  this belong to the object not to the class //
     String color;
     String type;
 
@@ -394,7 +396,7 @@ public void write(){
     System.out.println(" beginning of the code ");
 }
 public void printColor(){
-    System.out.println(this.color);
+    System.out.println(this.color);  //this.color means: "the color variable that belongs to this specific object."//
 }
 
 }
