@@ -440,6 +440,18 @@ class Student {
         this.age = age;
     }
 
+    public Student(){
+        this.name="unknown";
+        this.age=52
+    }
+
+     public Student(String name){
+        this.name=name;
+        this.age=52
+    }
+    
+    
+
     public void printStud() {
         System.out.println(this.name);
         System.out.println(this.age);
@@ -450,9 +462,13 @@ public class Main {
     public static void main(String[] args) {
         // Create student with constructor
         Student s1 = new Student("Ram", 19);
-        Student s2 = new Student("Rahim", 21);
+        Student s2 = new Student();
+        Student s3 = new Student(" vaisakh ");
 
-        s1.printStud();   // Output: Alice 19
-        s2.printStud();   // Output: Bob 21
+
+        s1.printStud();   
+        s2.printStud();   
+        s3.printStud();   
+
     }
 }
