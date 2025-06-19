@@ -442,12 +442,12 @@ class Student {
 
     public Student(){
         this.name="unknown";
-        this.age=52
+        this.age=52;
     }
 
      public Student(String name){
         this.name=name;
-        this.age=52
+        this.age=52;
     }
     
     
@@ -463,12 +463,14 @@ public class Main {
         // Create student with constructor
         Student s1 = new Student("Ram", 19);
         Student s2 = new Student();
-        Student s3 = new Student(" vaisakh ");
+        Student s3 = new Student();
 
 
-        s1.printStud();   
-        s2.printStud();   
-        s3.printStud();   
+        s1.printStud();     // Ram 19
+        s2.printStud();     // unknown 52
+        s3.printStud();     // vaisakh 52
+
+
 
     }
 }
