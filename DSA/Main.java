@@ -385,48 +385,74 @@
 
 
 
-class   Pen{
+// class   Pen{
 
-    // instance variable //  this belong to the object not to the class //
-    String color;
-    String type;
-
-
-public void write(){
-    System.out.println(" beginning of the code ");
-}
-public void printColor(){
-    System.out.println(this.color);  //this.color means: "the color variable that belongs to this specific object."//
-    System.out.println(this.type);
-}
-}
+//     // instance variable //  this belong to the object not to the class //
+//     String color;
+//     String type;
 
 
-class Student{
+// public void write(){
+//     System.out.println(" beginning of the code ");
+// }
+// public void printColor(){
+//     System.out.println(this.color);  //this.color means: "the color variable that belongs to this specific object."//
+//     System.out.println(this.type);
+// }
+// }
+
+
+// class Student{
+//     String name;
+//     int age;
+
+
+//     public void printStud(){
+//         System.out.println(this.name);
+//         System.out.println(this.age);
+//     }
+// }
+// public class Main{
+//     public static void main(String args[]){
+//         // Pen pen1=new Pen();
+//         // pen1.color="blue";
+//         // pen1.type="gel";
+
+//         // pen1.printColor();
+        
+//         Student S1= new Student();
+//         S1.name= " Rahul JayKar";
+//         S1.age=25;
+
+//         S1.printStud();
+// }
+// }
+
+// USIN THE CONSTRUCTOR //
+
+class Student {
     String name;
     int age;
 
+    // Constructor to initialize name and age
+    public Student(String name, int age) {
+        this.name = name;  // this.name refers to the instance variable
+        this.age = age;
+    }
 
-    public void printStud(){
+    public void printStud() {
         System.out.println(this.name);
         System.out.println(this.age);
     }
 }
-public class Main{
-    public static void main(String args[]){
-        // Pen pen1=new Pen();
-        // pen1.color="blue";
-        // pen1.type="gel";
 
-        // pen1.printColor();
-        
+public class Main {
+    public static void main(String[] args) {
+        // Create student with constructor
+        Student s1 = new Student("Ram", 19);
+        Student s2 = new Student("Rahim", 21);
 
-
-
-        Student S1= new Student();
-        S1.name= " Rahul JayKar";
-        S1.age=25;
-
-        S1.printStud();
-}
+        s1.printStud();   // Output: Alice 19
+        s2.printStud();   // Output: Bob 21
+    }
 }
