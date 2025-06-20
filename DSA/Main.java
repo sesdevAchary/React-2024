@@ -563,3 +563,20 @@ public class Main {
         s.display();
     }
 }
+class Rectangle {
+    int length, width;
+
+    Rectangle() {
+        length = 0;
+        width = 0;
+    }
+
+    Rectangle(int l, int w) {
+        length = l;
+        width = w;
+    }
+
+    void area() {
+        System.out.println("Area: " + (length * width));
+    }
+}
