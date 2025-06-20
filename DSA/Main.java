@@ -591,3 +591,15 @@ class Dog extends Animal {
         System.out.println("Dog barks");
     }
 }
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
