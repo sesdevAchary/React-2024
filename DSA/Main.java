@@ -484,6 +484,10 @@
 
         private int num;
 
+
+class account {
+
+}
     }
 
 
@@ -492,5 +496,11 @@
             Bank ba= new Bank;
             ba.name= " Jaggu daa "
             ba.num = 45;  // this is the private modifier 
+            ba.mail="xyz@gmail.com" // it cant be accessible outside the bank class 
+
+
+
+            account.ac = new account;
+            ac.mail="xyz@mail.com"
         }
     }
