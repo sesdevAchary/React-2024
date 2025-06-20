@@ -430,47 +430,67 @@
 
 // USIN THE CONSTRUCTOR //
 
-class Student {
-    String name;
-    int age;
 
-    // Constructor to initialize name and age
-    public Student(String name, int age) {
-        this.name = name;  // this.name refers to the instance variable
-        this.age = age;
-    }
 
-    public Student(){
-        this.name="unknown";
-        this.age=52;
-    }
+// class Student {
+//     String name;
+//     int age;
 
-     public Student(String name){
-        this.name=name;
-        this.age=52;
-    }
+//     // Constructor to initialize name and age
+//     public Student(String name, int age) {
+//         this.name = name;  // this.name refers to the instance variable
+//         this.age = age;
+//     }
+
+//     public Student(){
+//         this.name="unknown";
+//         this.age=52;
+//     }
+
+//      public Student(String name){
+//         this.name=name;
+//         this.age=52;
+//     }
     
     
 
-    public void printStud() {
-        System.out.println(this.name);
-        System.out.println(this.age);
+//     public void printStud() {
+//         System.out.println(this.name);
+//         System.out.println(this.age);
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         // Create student with constructor
+//         Student s1 = new Student("Ram", 19);
+//         Student s2 = new Student();
+//         Student s3 = new Student();
+
+
+//         s1.printStud();     // Ram 19
+//         s2.printStud();     // unknown 52
+//         s3.printStud();     // vaisakh 52
+
+//     }
+// }
+
+
+
+    class Bank{
+        public string name; public int age;  // this is public class can be accessed anywhere //
+
+        protected string mail; // Protected class can be accessed by  own class + subclass of other package //
+
+        private int num;
+
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        // Create student with constructor
-        Student s1 = new Student("Ram", 19);
-        Student s2 = new Student();
-        Student s3 = new Student();
 
 
-        s1.printStud();     // Ram 19
-        s2.printStud();     // unknown 52
-        s3.printStud();     // vaisakh 52
-
-
-
+    public class Main{
+        public static void main ( String,args[]){
+            Bank ba= new Bank;
+            ba.name= " Jaggu daa "
+            ba.num = 45;  // this is the private modifier 
+        }
     }
-}
