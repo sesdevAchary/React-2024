@@ -631,3 +631,12 @@ class Counter {
         System.out.println("Count: " + count);
     }
 }
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
