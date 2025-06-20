@@ -623,3 +623,11 @@ class Bike implements Vehicle {
         System.out.println("Bike started");
     }
 }
+class Counter {
+    static int count = 0;
+
+    Counter() {
+        count++;
+        System.out.println("Count: " + count);
+    }
+}
