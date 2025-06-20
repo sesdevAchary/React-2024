@@ -504,3 +504,44 @@ class account {
             ac.mail="xyz@mail.com"
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Car {
+    String brand = "Toyota";
+
+    void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        System.out.println(myCar.brand);
+        myCar.start();
+    }
+}
