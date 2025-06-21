@@ -561,6 +561,27 @@ import java.util.ArrayList;
 ArrayList<String> names = new ArrayList<>();
 ArrayList<Integer> numbers = new ArrayList<>();
 
+// Add elements
+names.add("Alice");
+names.add("Bob");
+
+// Access elements
+System.out.println(names.get(0));  // Output: Alice
+
+// Change elements
+names.set(1, "Charlie");  // Bob -> Charlie
+
+// Remove elements
+names.remove(0);  // Removes "Alice"
+
+// Size of ArrayList
+System.out.println(names.size());
+
+// Check existence
+System.out.println(names.contains("Charlie"));  // true
+
+// Clear all elements
+names.clear();
 
 
 
