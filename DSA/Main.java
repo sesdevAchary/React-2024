@@ -475,71 +475,63 @@
 //     }
 // }
 
+////// THE ACCESS MODIFIERS ///
+
+//     class Bank{
+//         public String name; public int age;  // this is public class can be accessed anywhere //
+
+//         protected String mail; // Protected class can be accessed by  own class + subclass of other package //
+
+//         private int num;
+
+//         public void setNum(int n){   // setter for private variable 
+//             num =n;
+//         }
+//         public int  getnum(){        // getter for private variable
+//             return num;
+//         }
+//     }
 
 
-    class Bank{
-        public String name; public int age;  // this is public class can be accessed anywhere //
-
-        protected String mail; // Protected class can be accessed by  own class + subclass of other package //
-
-        private int num;
-
-        public void setNum(int n){   // setter for private variable 
-            num =n;
-        }
-        public int  getnum(){        // getter for private variable
-            return num;
-        }
-    }
-
-
-    public class Main{
-        public static void main ( String args[]){
+//     public class Main{
+//         public static void main ( String args[]){
         
-        // public ->  can be accessed anywhere
-            Bank ba= new Bank();
-            ba.name= " Jaggu daa "; 
+//         // public ->  can be accessed anywhere
+//             Bank ba= new Bank();
+//             ba.name= " Jaggu daa "; 
 
            
-        // private -> cant be accessed anywhere else getter and setter 
-            // ba.num = 45;  // this is the private modifier  cant be accessed like this 
-            ba.setNum(45);
-            System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
+//         // private -> cant be accessed anywhere else getter and setter 
+//             // ba.num = 45;  // this is the private modifier  cant be accessed like this 
+//             ba.setNum(45);
+//             System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
 
 
-       // protected -> can be accessed within the same class or obj or sub class by extending the class 
-            ba.mail="xyz@gmail.com"  ; // it can be accessible because same class
+//        // protected -> can be accessed within the same class or obj or sub class by extending the class 
+//             ba.mail="xyz@gmail.com"  ; // it can be accessible because same class
 
 
 
         
-        }
-    }
+//         }
+//     }
 
+// class Bank {
+//     protected String mail = "protected@mail.com";
+// }
 
+// class Account extends Bank {
+//     public void showMail() {
+//         System.out.println(mail);  // ✅ Allowed: subclass can access protected member
+//     }
+// }
 
-
-
-
-
-
-class Bank {
-    protected String mail = "protected@mail.com";
-}
-
-class Account extends Bank {
-    public void showMail() {
-        System.out.println(mail);  // ✅ Allowed: subclass can access protected member
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Account ac = new Account();
-        ac.showMail();  // ✅ Accessed through subclass method
-    }
-}
-
+// public class Main {
+//     public static void main(String[] args) {
+//         Account ac = new Account();
+//         ac.showMail();  // ✅ Accessed through subclass method
+//     }
+// }
 
 
 
