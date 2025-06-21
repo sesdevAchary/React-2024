@@ -487,7 +487,7 @@
         public void setNum(int n){   // setter for private variable 
             num =n;
         }
-        public void getnum(){        // getter for private variable
+        public int  getnum(){        // getter for private variable
             return num;
         }
     }
@@ -502,10 +502,10 @@
             // ba.num = 45;               // this is the private modifier  
             // ba.mail="xyz@gmail.com"  ; // it cant be accessible outside the bank class 
 
-           ba.setNum();
+           ba.setNum(45);
            System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
 
-           
+
 
 
 
