@@ -484,24 +484,33 @@
 
         private int num;
 
-
-class account {
-
-}
+        public void setNum(int n){   // setter for private variable 
+            num =n;
+        }
+        public void getnum(){        // getter for private variable
+            return num;
+        }
     }
 
 
     public class Main{
-        public static void main ( String,args[]){
-            Bank ba= new Bank;
-            ba.name= " Jaggu daa "
-            ba.num = 45;               // this is the private modifier 
-            ba.mail="xyz@gmail.com"   // it cant be accessible outside the bank class 
+        public static void main ( String args[]){
+            Bank ba= new Bank();
+            ba.name= " Jaggu daa "; 
+
+
+            // ba.num = 45;               // this is the private modifier  
+            // ba.mail="xyz@gmail.com"  ; // it cant be accessible outside the bank class 
+
+           ba.setNum();
+           System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
+
+           
 
 
 
-            account.ac = new account;
-            ac.mail="xyz@mail.com"
+
+        
         }
     }
 
@@ -528,124 +537,3 @@ class account {
 
 
 
-
-
-class Car {
-    String brand = "Toyota";
-
-    void start() {
-        System.out.println("Car is starting...");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Car myCar = new Car();
-        System.out.println(myCar.brand);
-        myCar.start();
-    }
-}
-class Student {
-    String name;
-
-    Student(String studentName) {
-        name = studentName;
-    }
-
-    void display() {
-        System.out.println("Name: " + name);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Student s = new Student("Rahul");
-        s.display();
-    }
-}
-class Rectangle {
-    int length, width;
-
-    Rectangle() {
-        length = 0;
-        width = 0;
-    }
-
-    Rectangle(int l, int w) {
-        length = l;
-        width = w;
-    }
-
-    void area() {
-        System.out.println("Area: " + (length * width));
-    }
-}
-class Animal {
-    void sound() {
-        System.out.println("Animal makes sound");
-    }
-}
-
-class Dog extends Animal {
-    void bark() {
-        System.out.println("Dog barks");
-    }
-}
-class Animal {
-    void sound() {
-        System.out.println("Animal makes sound");
-    }
-}
-
-class Cat extends Animal {
-    @Override
-    void sound() {
-        System.out.println("Cat meows");
-    }
-}
-class Bank {
-    private int balance = 1000;
-
-    public int getBalance() {
-        return balance;
-    }
-
-    public void deposit(int amount) {
-        if (amount > 0) balance += amount;
-    }
-}
-interface Vehicle {
-    void start();
-}
-
-class Bike implements Vehicle {
-    public void start() {
-        System.out.println("Bike started");
-    }
-}
-class Counter {
-    static int count = 0;
-
-    Counter() {
-        count++;
-        System.out.println("Count: " + count);
-    }
-}
-abstract class Shape {
-    abstract void draw();
-}
-
-class Circle extends Shape {
-    void draw() {
-        System.out.println("Drawing Circle");
-    }
-}
-class Calculator {
-    int add(int a, int b) {
-        return a + b;
-    }
-
-    double add(double a, double b) {
-        return a + b;
-    }
-}
