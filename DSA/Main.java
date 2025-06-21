@@ -495,18 +495,20 @@
 
     public class Main{
         public static void main ( String args[]){
+        
+        // public ->  can be accessed anywhere
             Bank ba= new Bank();
             ba.name= " Jaggu daa "; 
 
-
-            // ba.num = 45;               // this is the private modifier  
-            // ba.mail="xyz@gmail.com"  ; // it cant be accessible outside the bank class 
-
-           ba.setNum(45);
-           System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
-
+           
+        // private -> cant be accessed anywhere else getter and setter 
+            // ba.num = 45;  // this is the private modifier  cant be accessed like this 
+            ba.setNum(45);
+            System.out.println("the private number is"+ ba.getnum());  // accessing the private method through a setter getter fun .....
 
 
+       // protected -> can be accessed within the same class or obj or sub class by extending the class 
+            ba.mail="xyz@gmail.com"  ; // it can be accessible because same class
 
 
 
@@ -521,6 +523,22 @@
 
 
 
+class Bank {
+    protected String mail = "protected@mail.com";
+}
+
+class Account extends Bank {
+    public void showMail() {
+        System.out.println(mail);  // ✅ Allowed: subclass can access protected member
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account ac = new Account();
+        ac.showMail();  // ✅ Accessed through subclass method
+    }
+}
 
 
 
