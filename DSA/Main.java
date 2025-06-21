@@ -556,6 +556,10 @@ class Main{
 
 }
 
+import java.util.ArrayList;
+
+ArrayList<String> names = new ArrayList<>();
+ArrayList<Integer> numbers = new ArrayList<>();
 
 
 
