@@ -478,9 +478,9 @@
 
 
     class Bank{
-        public string name; public int age;  // this is public class can be accessed anywhere //
+        public String name; public int age;  // this is public class can be accessed anywhere //
 
-        protected string mail; // Protected class can be accessed by  own class + subclass of other package //
+        protected String mail; // Protected class can be accessed by  own class + subclass of other package //
 
         private int num;
 
@@ -495,8 +495,8 @@ class account {
         public static void main ( String,args[]){
             Bank ba= new Bank;
             ba.name= " Jaggu daa "
-            ba.num = 45;  // this is the private modifier 
-            ba.mail="xyz@gmail.com" // it cant be accessible outside the bank class 
+            ba.num = 45;               // this is the private modifier 
+            ba.mail="xyz@gmail.com"   // it cant be accessible outside the bank class 
 
 
 
