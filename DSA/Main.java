@@ -627,5 +627,11 @@ public class Main {
         students.add(new Student("Amit", 21));
         students.add(new Student("Neha", 22));
         students.add(new Student("Ravi", 20));
+
+
+        System.out.println("student details \n");
+        for( Student s: students){
+                s.printStudent();
+        }
         }
 }
