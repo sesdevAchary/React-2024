@@ -544,6 +544,10 @@ import java.util.*;
 class Main{
         public static void main (String[] args) {
             ArrayList<Integer> a = new ArrayList<Integer>();
+            ArrayList<String> s=new ArrayList<String>();
+
+            s.add("Sourav");
+            s.add("Sammit");
 
 
             a.add(1);
@@ -555,42 +559,3 @@ class Main{
         }
 
 }
-
-import java.util.ArrayList;
-
-ArrayList<String> names = new ArrayList<>();
-ArrayList<Integer> numbers = new ArrayList<>();
-
-// Add elements
-names.add("Alice");
-names.add("Bob");
-
-// Access elements
-System.out.println(names.get(1));  // Output: Alice
-
-// Change elements
-names.set(1, "Charlie");  // Bob -> Charlie
-
-// Remove elements
-names.remove(0);  // Removes "Alice"
-
-// Size of ArrayList
-System.out.println(names.size());
-
-// Check existence
-System.out.println(names.contains("Charlie"));  // true
-
-// Clear all elements
-names.clear();
-
-
-
-
-
-
-
-
-
-
-
-
