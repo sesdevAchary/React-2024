@@ -617,3 +617,15 @@ class Student {
         System.out.println("Name: " + name + ", Age: " + age);
     }
 }
+
+public class Main {
+        public Static Void main ( String[] args){
+ // Create ArrayList of Student
+        ArrayList<Student> students = new ArrayList<>();
+
+        // Add student objects
+        students.add(new Student("Amit", 21));
+        students.add(new Student("Neha", 22));
+        students.add(new Student("Ravi", 20));
+        }
+}
