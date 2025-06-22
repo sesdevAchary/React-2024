@@ -549,12 +549,14 @@ class Main{
             s.add("Sourav");
             s.add("Sammit");
 
+            s.set("Ravi");
+
 
             a.add(1);
             a.add(2);
             a.add(3);
 
-                  	System.out.println(s.get(0));
+                  	System.out.println(s);
 
         }
 
