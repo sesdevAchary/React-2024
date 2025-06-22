@@ -566,7 +566,7 @@ names.add("Alice");
 names.add("Bob");
 
 // Access elements
-System.out.println(names.get(0));  // Output: Alice
+System.out.println(names.get(1));  // Output: Alice
 
 // Change elements
 names.set(1, "Charlie");  // Bob -> Charlie
