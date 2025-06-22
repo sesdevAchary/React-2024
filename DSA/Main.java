@@ -550,6 +550,10 @@ class Main{
             s.add("Sammit");
 
             s.set("Ravi");
+            s.remove(1);
+
+            boolean hasName= s.contains("Ravi");
+            System.out.println("Is the name existing ?" + hasName);
 
 
             a.add(1);
