@@ -541,65 +541,79 @@
 
 import java.util.*;
 
-class Main{
-        public static void main (String[] args) {
-            ArrayList<Integer> a = new ArrayList<Integer>();
-            ArrayList<String> s=new ArrayList<String>();
+// class Main{
+//         public static void main (String[] args) {
+//             ArrayList<Integer> a = new ArrayList<Integer>();
+//             ArrayList<String> s=new ArrayList<String>();
 
-            s.add("Sourav");
-            s.add("Sammit");
+//             s.add("Sourav");
+//             s.add("Sammit");
 
-            s.set("Ravi");
-            s.remove(1);
+//             s.set("Ravi");
+//             s.remove(1);
 
-            boolean hasName= s.contains("Ravi");
-            System.out.println("Is the name existing ?" + hasName);
+//             boolean hasName= s.contains("Ravi");
+//             System.out.println("Is the name existing ?" + hasName);
 
-             s.clear();
-             System.out.println("List after clearing: " + s);
-
-
-            a.add(1);
-            a.add(2);
-            a.add(3);
-
-                  	System.out.println(s);
+//              s.clear();
+//              System.out.println("List after clearing: " + s);
 
 
+//             a.add(1);
+//             a.add(2);
+//             a.add(3);
+
+//                   	System.out.println(s);
+
+
+//         }
+
+// }
+
+
+
+
+// import java.util.ArrayList;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         // Create an ArrayList of Integers
+//         ArrayList<Integer> numbers = new ArrayList<>();
+
+//         // Add numbers
+//         numbers.add(10);
+//         numbers.add(20);
+//         numbers.add(30);
+
+//         // Print all numbers
+//         System.out.println("Numbers: " + numbers);
+
+//         // Get number at index 1
+//         System.out.println("At index 1: " + numbers.get(1));
+
+//         // Change value at index 2
+//         numbers.set(2, 99);
+//         System.out.println("Updated Numbers: " + numbers);
+
+//         // Remove index 0
+//         numbers.remove(0);
+//         System.out.println("After Removing index 0: " + numbers);
+
+//         // Size of list
+//         System.out.println("Size: " + numbers.size());
+//     }
+// }
+
+
+
+class Student {
+        String name; int id;
+
+        Student( name,id){
+                this.name = name;
+                this.id=id;
         }
-
-}
-
-
-
-
-import java.util.ArrayList;
-
-public class Main {
-    public static void main(String[] args) {
-        // Create an ArrayList of Integers
-        ArrayList<Integer> numbers = new ArrayList<>();
-
-        // Add numbers
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
-
-        // Print all numbers
-        System.out.println("Numbers: " + numbers);
-
-        // Get number at index 1
-        System.out.println("At index 1: " + numbers.get(1));
-
-        // Change value at index 2
-        numbers.set(2, 99);
-        System.out.println("Updated Numbers: " + numbers);
-
-        // Remove index 0
-        numbers.remove(0);
-        System.out.println("After Removing index 0: " + numbers);
-
-        // Size of list
-        System.out.println("Size: " + numbers.size());
+        void printStudent() {
+        System.out.println("Name: " + name + ", Age: " + age);
     }
 }

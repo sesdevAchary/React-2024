@@ -18,12 +18,13 @@ It takes an array (like int[]) and returns a string representation of its conten
 ->   return str.charAt(0).toUpperCase() + str.slice(1);   capitalizing the first word
 
 
--> in JAVA , classname should be capital  
 ->public = accessible everywhere
+private =  accessible only inside the same class
+protected =  accessible in: same package ✔ + subclasses (even in different packages) ✔
 
- private =  accessible only inside the same class
 
- protected =  accessible in: same package ✔ + subclasses (even in different packages) ✔
+->this.name = name; → Assigns the value of the parameter to the class variable.
+
 
 
 .......................................................................................................
