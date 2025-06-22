@@ -554,7 +554,7 @@ class Main{
             a.add(2);
             a.add(3);
 
-                  	System.out.println(a);
+                  	System.out.println(s.get(0));
 
         }
 
