@@ -555,12 +555,16 @@ class Main{
             boolean hasName= s.contains("Ravi");
             System.out.println("Is the name existing ?" + hasName);
 
+             s.clear();
+             System.out.println("List after clearing: " + s);
+
 
             a.add(1);
             a.add(2);
             a.add(3);
 
                   	System.out.println(s);
+
 
         }
 
