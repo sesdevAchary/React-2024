@@ -569,3 +569,37 @@ class Main{
         }
 
 }
+
+
+
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList of Integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Add numbers
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+
+        // Print all numbers
+        System.out.println("Numbers: " + numbers);
+
+        // Get number at index 1
+        System.out.println("At index 1: " + numbers.get(1));
+
+        // Change value at index 2
+        numbers.set(2, 99);
+        System.out.println("Updated Numbers: " + numbers);
+
+        // Remove index 0
+        numbers.remove(0);
+        System.out.println("After Removing index 0: " + numbers);
+
+        // Size of list
+        System.out.println("Size: " + numbers.size());
+    }
+}
