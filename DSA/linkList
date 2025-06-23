@@ -19,7 +19,19 @@ class linkList{
 
     }
 
+public void PrintList(){
+    Node current = head;
+
+    while(current != null){
+        System.out.println(current.data"->");
+        current= current.next;
+    }
+}
     public static void main ( String[] args){
         linkList ll = new linkList();
+        ll.add("a");
+        ll.add("b");
+        ll.add("c");
+        ll.PrintList(); 
     }
 }
