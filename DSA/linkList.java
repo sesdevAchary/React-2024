@@ -116,3 +116,14 @@ public void addfront(String data){
    newNd.next = head;  // Connect to existing list
    head = newNd;       // Move head to new node
 }
+public void addfront(String data){
+   Node newNd = new Node (data);
+   if(head == null){
+        head = newNd;
+        return;
+   }
+   else{
+        newNd.next = null;  // ❌ WRONG LINE
+        head = newNd;
+   }
+}
