@@ -8,17 +8,32 @@ class linkList{
             this.next= null;
         }
     }
-    public void addfront(String data){
-       Node newNd = new Node (data);
-       if(head == null){
-        head = newNd;
-        return;
-       }
-       else{
-        newNd.next = head;
-        head = newNd;
-       }
 
+    // public void addfront(String data){
+    //    Node newNd = new Node (data);
+    //    if(head == null){
+    //     head = newNd;
+    //     return;
+    //    }
+    //    else{
+    //     newNd.next = head;
+    //     head = newNd;
+    //    }
+
+    // }
+
+
+    public void
+     addlast(String data){
+        Node newNd= new Node(data);
+        if(head == null){
+            head = newNd;
+        }
+        Node current=head;
+        while(current.next!= null){
+            current=current.next;
+        }
+        current.next=newNd;
     }
 
 public void PrintList(){
@@ -31,9 +46,9 @@ public void PrintList(){
 }
     public static void main ( String[] args){
         linkList ll = new linkList();
-        ll.addfront("a");
-        ll.addfront("b");
-        ll.addfront("c");
+        ll.addlast("a");
+        ll.addlast("b");
+        ll.addlast("c");
         ll.PrintList(); 
     }
 }
