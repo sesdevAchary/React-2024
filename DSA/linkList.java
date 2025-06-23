@@ -110,3 +110,9 @@ public class linkList {
         ll.PrintList();  // Output: a → b → c → null
     }
 }
+
+public void addfront(String data){
+   Node newNd = new Node(data);
+   newNd.next = head;  // Connect to existing list
+   head = newNd;       // Move head to new node
+}
