@@ -15,7 +15,7 @@ class linkList{
         return;
        }
        else{
-        newNd.next = null;
+        newNd.next = head;
         head = newNd;
        }
 
