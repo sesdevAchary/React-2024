@@ -173,3 +173,51 @@ public void addfront(String data){
         head = newNd;
    }
 }
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int age;
+
+    // Constructor
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Display method
+    void printStudent() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Student> students = new ArrayList<>();
+
+        System.out.print("How many students do you want to add? ");
+        int n = sc.nextInt();
+        sc.nextLine();  // consume the newline
+
+        // Take student input
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter details for student " + (i + 1));
+            System.out.print("Name: ");
+            String name = sc.nextLine();
+            System.out.print("Age: ");
+            int age = sc.nextInt();
+            sc.nextLine(); // consume newline
+
+            // Create and add to list
+            students.add(new Student(name, age));
+        }
+
+        // Print all students
+        System.out.println("\nStudent List:");
+        for (Student s : students) {
+            s.printStudent();
+        }
+    }
+}
