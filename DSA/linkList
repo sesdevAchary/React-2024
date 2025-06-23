@@ -1,12 +1,25 @@
 class linkList{
+    Node head ;
     class Node{
         Node(String data){
             this.data = data ;
             this.next= null;
         }
     }
+    public void addfront(String data){
+       Node newNd = new Node (data);
+       if(head == null){
+        head = newNd;
+        return;
+       }
+       else{
+        newNd.next = null;
+        head = newNd;
+       }
+
+    }
 
     public static void main ( String[] args){
-        
+        linkList ll = new linkList();
     }
 }
