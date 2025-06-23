@@ -1,6 +1,8 @@
 class linkList{
     Node head ;
     class Node{
+         String data;
+        Node next;
         Node(String data){
             this.data = data ;
             this.next= null;
@@ -23,15 +25,15 @@ public void PrintList(){
     Node current = head;
 
     while(current != null){
-        System.out.println(current.data"->");
+        System.out.println(current.data+"->");
         current= current.next;
     }
 }
     public static void main ( String[] args){
         linkList ll = new linkList();
-        ll.add("a");
-        ll.add("b");
-        ll.add("c");
+        ll.addfront("a");
+        ll.addfront("b");
+        ll.addfront("c");
         ll.PrintList(); 
     }
 }
