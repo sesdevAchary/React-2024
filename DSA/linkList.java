@@ -144,3 +144,6 @@ public void deleteByValue(int key) {
         current.next = current.next.next;
     }
 }
+System.out.println("Found at index: " + list.search(20));
+list.deleteByValue(20);
+list.printList();
