@@ -55,6 +55,11 @@ public void deleteLast(){
         head=null; // only one node
         return ; 
     }
+    node.current= head;
+    while(current.next.next!= null){
+        current=current.next;
+    }
+    current.next=null;
 }
 
 public void PrintList(){
