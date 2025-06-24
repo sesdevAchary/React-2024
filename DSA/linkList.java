@@ -23,8 +23,7 @@ class linkList{
     // }
 
 
-    public void
-     addlast(String data){
+    public void addlast(String data){
         Node newNd= new Node(data);
         if(head == null){
             head = newNd;
@@ -36,6 +35,14 @@ class linkList{
         current.next=newNd;
     }
 
+public void deleteFirst(string data){
+    if(head == null){
+        System.out.println(" list is empty , no need to delete")        ;
+    
+    }
+    head=head.next; 
+    
+}
 public void PrintList(){
     Node current = head;
 
@@ -46,9 +53,18 @@ public void PrintList(){
 }
     public static void main ( String[] args){
         linkList ll = new linkList();
+
         ll.addlast("a");
         ll.addlast("b");
         ll.addlast("c");
+        ll.addlast("d");
+        ll.addlast("e");
+        ll.addlast("f");
+
+        li.deleteFirst()
+
+
+
         ll.PrintList(); 
     }
 }
@@ -61,163 +77,3 @@ public void PrintList(){
 
 
 
-
-
-public class linkList {
-
-    Node head;
-
-    class Node {
-        String data;
-        Node next;
-
-        Node(String data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
-    // Add node at the end
-    public void addLast(String data) {
-        Node newNd = new Node(data);
-        if (head == null) {
-            head = newNd;
-            return;
-        }
-
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
-        temp.next = newNd;
-    }
-
-    public void PrintList() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " → ");
-            current = current.next;
-        }
-        System.out.println("null");
-    }
-
-    public static void main(String[] args) {
-        linkList ll = new linkList();
-        ll.addLast("a");
-        ll.addLast("b");
-        ll.addLast("c");
-
-        ll.PrintList();  // Output: a → b → c → null
-    }
-}
-
-public void addfront(String data){
-   Node newNd = new Node(data);import java.util.*;
-
-class Student {
-    String name;
-    int age;
-
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    void printStudent() {
-        System.out.println("Name: " + name + ", Age: " + age);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
-
-        students.add(new Student("Neha", 22));
-        students.add(new Student("Amit", 21));
-        students.add(new Student("Ravi", 20));
-
-        System.out.println("Original List:");
-        for (Student s : students) {
-            s.printStudent();
-        }
-
-        // Sort by name
-        students.sort((s1, s2) -> s1.name.compareTo(s2.name));
-
-        System.out.println("\nSorted by Name:");
-        for (Student s : students) {
-            s.printStudent();
-        }
-
-        // Sort by age
-        students.sort((s1, s2) -> s1.age - s2.age);
-
-        System.out.println("\nSorted by Age:");
-        for (Student s : students) {
-            s.printStudent();
-        }
-    }
-}
-
-   newNd.next = head;  // Connect to existing list
-   head = newNd;       // Move head to new node
-}
-public void addfront(String data){
-   Node newNd = new Node (data);
-   if(head == null){
-        head = newNd;
-        return;
-   }
-   else{
-        newNd.next = null;  // ❌ WRONG LINE
-        head = newNd;
-   }
-}
-import java.util.ArrayList;
-import java.util.Scanner;
-
-class Student {
-    String name;
-    int age;
-
-    // Constructor
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    // Display method
-    void printStudent() {
-        System.out.println("Name: " + name + ", Age: " + age);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Student> students = new ArrayList<>();
-
-        System.out.print("How many students do you want to add? ");
-        int n = sc.nextInt();
-        sc.nextLine();  // consume the newline
-
-        // Take student input
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter details for student " + (i + 1));
-            System.out.print("Name: ");
-            String name = sc.nextLine();
-            System.out.print("Age: ");
-            int age = sc.nextInt();
-            sc.nextLine(); // consume newline
-
-            // Create and add to list
-            students.add(new Student(name, age));
-        }
-
-        // Print all students
-        System.out.println("\nStudent List:");
-        for (Student s : students) {
-            s.printStudent();
-        }
-    }
-}
