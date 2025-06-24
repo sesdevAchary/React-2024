@@ -80,7 +80,7 @@ public int search (int key){
 
 
 public value deleteByValue(int key){
-        
+
 }
 
 public void PrintList(){
@@ -118,3 +118,29 @@ public void PrintList(){
 
 
 
+
+
+
+
+public void deleteByValue(int key) {
+    if (head == null) {
+        System.out.println("List is empty");
+        return;
+    }
+
+    if (head.data == key) {
+        head = head.next;
+        return;
+    }
+
+    Node current = head;
+    while (current.next != null && current.next.data != key) {
+        current = current.next;
+    }
+
+    if (current.next == null) {
+        System.out.println("Value not found");
+    } else {
+        current.next = current.next.next;
+    }
+}
