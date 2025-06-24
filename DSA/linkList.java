@@ -68,11 +68,13 @@ public int search (int key){
     while(current != null){
         if ( current.data == key )
         return index;
-    }
+    
     current=current.next;
     index ++;
-            System.out.print(" asset found "+ index);
+                System.out.print(" asset found "+ index);
 
+    }
+  return -1;
 }
 
 public void PrintList(){
