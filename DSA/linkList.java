@@ -46,20 +46,33 @@ class linkList{
 // }
 
 
-public void deleteLast(){
-    if (head == null){
-        System.out.print("empty array");
-        return;
+// public void deleteLast(){
+//     if (head == null){
+//         System.out.print("empty array");
+//         return;
+//     }
+//     if(head.next==null){
+//         head=null; // only one node
+//         return ; 
+//     }
+//     node.current= head;
+//     while(current.next.next!= null){    // ensures current stops at the second-last node. //
+//         current=current.next;         // increasing the loop //
+//     }
+//     current.next=null;        // assigning the middle as last and deleting the last node //
+// }
+
+public int search (int key){
+    Node current = head;
+    int index =0;
+    while(current != null){
+        if ( current.data == key )
+        return index;
     }
-    if(head.next==null){
-        head=null; // only one node
-        return ; 
-    }
-    node.current= head;
-    while(current.next.next!= null){    // ensures current stops at the second-last node. //
-        current=current.next;         // increasing the loop //
-    }
-    current.next=null;        // assigning the middle as last and deleting the last node //
+    current=current.next;
+    index ++;
+            System.out.print(" asset found "+ index);
+
 }
 
 public void PrintList(){
