@@ -94,6 +94,7 @@ public void PrintList(){
         ll.addlast("d");
         ll.addlast("e");
         ll.addlast("f");
+        ll.search("c");
 
         // ll.deleteFirst();
 
