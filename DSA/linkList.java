@@ -56,10 +56,10 @@ public void deleteLast(){
         return ; 
     }
     node.current= head;
-    while(current.next.next!= null){
-        current=current.next;
+    while(current.next.next!= null){    // ensures current stops at the second-last node. //
+        current=current.next;         // increasing the loop //
     }
-    current.next=null;
+    current.next=null;        // assigning the middle as last and deleting the last node //
 }
 
 public void PrintList(){
