@@ -35,14 +35,15 @@ class linkList{
         current.next=newNd;
     }
 
-public void deleteFirst(string data){
-    if(head == null){
-        System.out.println(" list is empty , no need to delete")        ;
+// public void deleteFirst(){
+//     if(head == null){
+//         System.out.println(" list is empty , no need to delete")        ;
     
-    }
-    head=head.next; 
+//     }
+//     head=head.next; 
     
-}
+// }
+
 public void PrintList(){
     Node current = head;
 
@@ -61,7 +62,7 @@ public void PrintList(){
         ll.addlast("e");
         ll.addlast("f");
 
-        li.deleteFirst()
+        // ll.deleteFirst();
 
 
 
