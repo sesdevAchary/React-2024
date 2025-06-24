@@ -77,6 +77,12 @@ public int search (int key){
   return -1;
 }
 
+
+
+public value deleteByValue(int key){
+        
+}
+
 public void PrintList(){
     Node current = head;
 
