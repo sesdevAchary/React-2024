@@ -162,3 +162,15 @@ public int search (int key){
     }
   return -1;
 }
+
+// public void addfront(String data){
+       Node newNd = new Node (data);
+        if(head == null){
+         head = newNd;
+         return;
+        }
+        else{
+         newNd.next = head;
+         head = newNd;
+        }
+ }
