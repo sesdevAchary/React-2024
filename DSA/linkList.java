@@ -27,6 +27,7 @@ class linkList{
         Node newNd= new Node(data);
         if(head == null){
             head = newNd;
+            return ;
         }
         Node current=head;
         while(current.next!= null){
@@ -38,17 +39,29 @@ class linkList{
 // public void deleteFirst(){
 //     if(head == null){
 //         System.out.println(" list is empty , no need to delete")        ;
-    
+//     return ;
 //     }
-//     head=head.next; 
+//     head=head.next;  // just shift the head to the next node.//
     
 // }
+
+
+public void deleteLast(){
+    if (head == null){
+        System.out.print("empty array");
+        return;
+    }
+    if(head.next==null){
+        head=null; // only one node
+        return ; 
+    }
+}
 
 public void PrintList(){
     Node current = head;
 
     while(current != null){
-        System.out.println(current.data+"->");
+        System.out.print(current.data+"->");
         current= current.next;
     }
 }
