@@ -135,7 +135,17 @@ public void deleteByValue(String key){
 
 public void reverseItr(){
     
-    
+    Node next;
+    Node current=head;
+    Node previous = null;
+
+    while(current!= null){
+        next=current.next;       // stores the next value
+        current.next=previous;   // Now b → a instead of b → c. (reverse ptr)
+        previous = current;      // // move prev forward
+        current=next;            // // move current  forward
+    }
+    head = prev; // finally update head
 
 
 }
