@@ -224,3 +224,5 @@ Node reverse(Node node) {
 void reverseRecursive() {
     head = reverse(head);
 }
+[first node]  +  [the rest of the list]
+      a              b → c → d → null
