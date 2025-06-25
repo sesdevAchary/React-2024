@@ -187,3 +187,40 @@ public void PrintList(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Reverse a linked list starting at 'node'.
+// Returns the new head of the reversed part.
+Node reverse(Node node) {
+    // 1) Empty list OR single node? Already reversed ⇒ give it back.
+    if (node == null || node.next == null) {
+        return node;
+    }
+
+    // 2) Reverse “the rest of the list”.
+    Node newHead = reverse(node.next);   // <-- recursion
+
+    // 3) Put 'node' at the end of that reversed part.
+    node.next.next = node; // next node now points back to 'node'
+    node.next = null;      // detach 'node' from the old link
+
+    // 4) Give back the head of the fully reversed list.
+    return newHead;
+}
+
+// One-liner you call from outside:
+void reverseRecursive() {
+    head = reverse(head);
+}
