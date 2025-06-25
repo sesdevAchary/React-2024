@@ -104,8 +104,20 @@ public int search (int key){
 public void deleteByValue(String key){
     if ( head == null){
         System.out.println(" not found ");
+        return;
     }
-    
+
+        // 2. Does the head itself contain the key?
+    if( head.data.equals(key)){
+        head = head.next ;
+        return;
+    }
+
+
+    Node current=head;
+    while(current.next != null && !current.next.data.equals(key)){
+        current=current.next;
+    }
 }
 
 public void PrintList(){
