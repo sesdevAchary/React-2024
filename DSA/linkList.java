@@ -88,6 +88,12 @@ public value deleteByValue(int key){
         head=head.next;
         return;
       }
+      Node current=head ;
+      while ( current.next != null && current.next.data=key){
+        current=current.next;
+      }
+
+      
 }
 
 public void PrintList(){
