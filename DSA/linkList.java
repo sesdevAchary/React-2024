@@ -127,9 +127,17 @@ public void deleteByValue(String key){
     }
     else
     {
-                curr.next = curr.next.next; // bypass the node, deleting it
+        curr.next = curr.next.next; // bypass the node, deleting it
 
     }
+}
+
+
+public void reverseItr(){
+    
+    
+
+
 }
 
 public void PrintList(){
@@ -150,6 +158,7 @@ public void PrintList(){
         ll.addlast("e");
         ll.addlast("f");
         ll.search("c");
+        ll.deleteByValue(3);
 
         // ll.deleteFirst();
 
