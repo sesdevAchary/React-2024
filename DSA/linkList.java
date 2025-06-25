@@ -115,8 +115,20 @@ public void deleteByValue(String key){
 
 
     Node current=head;
+
+        // 3. Walk until we’re right before the target (or end of list)
     while(current.next != null && !current.next.data.equals(key)){
         current=current.next;
+    }
+
+        // 4. Did we find it?
+    if(current.next == null){
+        System.out.print("value not found ");
+    }
+    else
+    {
+                curr.next = curr.next.next; // bypass the node, deleting it
+
     }
 }
 
