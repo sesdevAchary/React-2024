@@ -80,7 +80,14 @@ public int search (int key){
 
 
 public value deleteByValue(int key){
-
+      if ( head == null){
+        System.out.println("No value found here ");
+        return ;
+      }
+      if(head.data=key){
+        head=head.next;
+        return;
+      }
 }
 
 public void PrintList(){
@@ -119,58 +126,3 @@ public void PrintList(){
 
 
 
-
-
-
-public void deleteByValue(int key) {
-    if (head == null) {
-        System.out.println("List is empty");
-        return;
-    }
-
-    if (head.data == key) {
-        head = head.next;
-        return;
-    }
-
-    Node current = head;
-    while (current.next != null && current.next.data != key) {
-        current = current.next;
-    }
-
-    if (current.next == null) {
-        System.out.println("Value not found");
-    } else {
-        current.next = current.next.next;
-    }
-}
-System.out.println("Found at index: " + list.search(20));
-list.deleteByValue(20);
-list.printList();
-
-public int search (int key){
-    Node current = head;
-    int index =0;
-    while(current != null){
-        if ( current.data == key )
-        return index;
-    
-    current=current.next;
-    index ++;
-                System.out.print(" asset found "+ index);
-
-    }
-  return -1;
-}
-
-// public void addfront(String data){
-       Node newNd = new Node (data);
-        if(head == null){
-         head = newNd;
-         return;
-        }
-        else{
-         newNd.next = head;
-         head = newNd;
-        }
- }
