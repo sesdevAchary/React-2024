@@ -79,21 +79,33 @@ public int search (int key){
 
 
 
-public value deleteByValue(int key){
-      if ( head == null){
-        System.out.println("No value found here ");
-        return ;
-      }
-      if(head.data=key){
-        head=head.next;
-        return;
-      }
-      Node current=head ;
-      while ( current.next != null && current.next.data=key){
-        current=current.next;
-      }
+// public value deleteByValue(int key){
+    //   if ( head == null){
+    //     System.out.println("No value found here ");
+    //     return ;
+    //   }
+    //   if(head.data=key){
+    //     head=head.next;
+    //     return;
+    //   }
+    //   Node current=head ;    // Traversal pointer. It will always point to the node just before the one we’re testing.//
+    //   while ( current.next != null && current.next.data=key){
+    //     current=current.next;
+    //   }
 
-      
+    //   if(current.next == null )
+    //   System.out.println(" value was unavailable");
+    //   else
+    //   current.next = current.next.next;
+// }
+
+// the same above we can do with the help of string key value too //
+
+public void deleteByValue(String key){
+    if ( head == null){
+        System.out.println(" not found ");
+    }
+    
 }
 
 public void PrintList(){
