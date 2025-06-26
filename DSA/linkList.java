@@ -256,9 +256,16 @@ public boolean hasCycle(){
     Node fast= head;
 
     while(fast!= null && fast.next != null){
-        
+        slow = slow.next ;     // slow moves 1 step, 
+        fast = fast.next.next; // fast moves 2 steps
+
+        if(slow==fast)   // If there's a loop, they'll eventually meet (like runners on a track)
+        return true;   
     }
-}
+     
+     return false;      // If no loop, fast reaches end
+
+} 
 
 
 public void PrintList(){
@@ -286,6 +293,14 @@ public void PrintList(){
 
         // ll.countNd();
         //ll.middleVal();
+
+
+
+        
+    // // Creating a manual cycle: last node points back to second
+    // list.head.next.next.next = list.head.next;
+
+    // System.out.println("Cycle detected? " + list.hasCycle()); // Output: true
 
 
 
