@@ -9,6 +9,8 @@ class linkList{
         }
     }
 
+
+  //2//
     // public void addfront(String data){
     //    Node newNd = new Node (data);
     //    if(head == null){
@@ -23,7 +25,7 @@ class linkList{
     // }
 
 ///////    adding at the last /////
-
+    //1//
     // public void addlast(String data){
     //     Node newNd= new Node(data);
     //     if(head == null){
@@ -36,9 +38,10 @@ class linkList{
     //     }
     //     current.next=newNd;
     // }
+
 ///// deleting the first //////
 
-
+//5//
 // public void deleteFirst(){
 //     if(head == null){
 //         System.out.println(" list is empty , no need to delete")        ;
@@ -68,7 +71,7 @@ class linkList{
 
 
 ////// searching the value ///////
-
+//3//
 // public int search (int key){
 //     Node current = head;
 //     int index =0;
@@ -87,7 +90,7 @@ class linkList{
 
 ////// delete by value //////
 
-
+//4//
 // public value deleteByValue(int key){
     //   if ( head == null){
     //     System.out.println("No value found here ");
@@ -109,7 +112,7 @@ class linkList{
 // }
 
 ///// the same above we can do with the help of string key value too ///////
-
+//4//
 // public void deleteByValue(String key){
 //     if ( head == null){
 //         System.out.println(" not found ");
@@ -145,7 +148,7 @@ class linkList{
 
 ////// reversing through the iterative method //////
 
-
+//6//
 // public void reverseItr(){
     
 //     Node next;
@@ -165,7 +168,7 @@ class linkList{
 ////// reversing through the recursive  method //////
 
 
-
+//7//
 // public Node reverseRecursive(Node head){
 //     if ( head == null || head.next == null){
 //         SYstem.out.println("No element found ");
@@ -184,7 +187,7 @@ class linkList{
 
 //// printing the link list //////
 
-
+//8//
 // public int countNd(){
 //     int count =0;
 //     Node current=head;  
@@ -200,6 +203,7 @@ class linkList{
 
 ///// obtaining the middle value /////
 
+//9//
 /// slow moves 1 step, fast moves 2 steps.........When fast reaches end, slow will be at middle///
 
 // public int middleVal(){
@@ -220,7 +224,7 @@ class linkList{
 
 
 ////// REMOVING Nth NODE FROM END OF LIST /////////
- 
+ //10//
  public ListNode removeNthElementFromEnd( ListNode head , int n){
     if( head.next == null )
     return null;
@@ -279,27 +283,30 @@ public void PrintList(){
     public static void main ( String[] args){
         linkList ll = new linkList();
 
-        // ll.addlast("a");
+        //1//ll.addlast("a");
         // ll.addlast("b");
         // ll.addlast("c");
         // ll.addlast("d");
         // ll.addlast("e");
         // ll.addlast("f");
 
-        // ll.search("c");
+        //2//ll.addfirst("0")
 
-        // ll.deleteByValue(3);
-        // ll.deleteFirst();
+        //3// ll.search("c");
 
-        // ll.countNd();
-        //ll.middleVal();
-
+        //4// ll.deleteByValue(3);
+        //5// ll.deleteFirst();
 
 
-        
-    // // Creating a manual cycle: last node points back to second
+        //6//ll.reverseItr();
+        //7//ll.reverseRecursive;()
+
+        //8// ll.countNd();
+        //9//ll.middleVal();
+
+
+    //10// Creating a manual cycle: last node points back to second
     // list.head.next.next.next = list.head.next;
-
     // System.out.println("Cycle detected? " + list.hasCycle()); // Output: true
 
 
