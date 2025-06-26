@@ -162,6 +162,9 @@ public Node reverseRecursive(Node head){
     head.next.next=head;             // assigning prev value to head next --- makes d → c  //
     head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
 }
+public void reverseRecursiveCaller() {
+    head = reverseRecursive(head);
+}
 
 public void PrintList(){
     Node current = head;
