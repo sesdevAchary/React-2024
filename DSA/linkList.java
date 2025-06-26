@@ -227,7 +227,24 @@ class linkList{
 
     //size//
     int size = 0; ListNode current=head;
-    while( current!=)
+    while( current!=null){
+        current=current.next;     //     // 2. Find the node before the one to delete //
+         size ++;
+    }
+
+    int indexToSearch = size -n;
+    if (indexToSearch == 0) {
+        // remove the head
+        return head.next;
+    }
+
+    ListNode prev=head;  int prev =1;
+    while( i < indexToSearch ){
+        prev=prev.next; i++ ;
+    }
+
+    prev.next = prev.next.next;
+    return head;
  }
 
 public void PrintList(){
