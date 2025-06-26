@@ -280,6 +280,12 @@ public void PrintList(){
         current= current.next;
     }
 }
+
+
+
+slow = slow.next;          // move 1 step
+fast = fast.next.next;     // move 2 steps
+
     public static void main ( String[] args){
         linkList ll = new linkList();
 
