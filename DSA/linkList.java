@@ -153,7 +153,14 @@ public void reverseItr(){
 
 
 public Node reverseRecursive(Node head){
+    if ( head == null || head.next == null){
+        SYstem.out.println("No element found ");
+        return head ;
+    }
     
+    Node newhd = reverseRecursive(head.next);   // Reverse everything after head  //
+    head.next.next=head;             // assigning prev value to head next --- makes d → c  //
+    head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
 }
 
 public void PrintList(){
