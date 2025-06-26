@@ -22,19 +22,22 @@ class linkList{
 
     // }
 
+///////    adding at the last /////
 
-    public void addlast(String data){
-        Node newNd= new Node(data);
-        if(head == null){
-            head = newNd;
-            return ;
-        }
-        Node current=head;
-        while(current.next!= null){
-            current=current.next;
-        }
-        current.next=newNd;
-    }
+    // public void addlast(String data){
+    //     Node newNd= new Node(data);
+    //     if(head == null){
+    //         head = newNd;
+    //         return ;
+    //     }
+    //     Node current=head;
+    //     while(current.next!= null){
+    //         current=current.next;
+    //     }
+    //     current.next=newNd;
+    // }
+///// deleting the first //////
+
 
 // public void deleteFirst(){
 //     if(head == null){
@@ -42,9 +45,10 @@ class linkList{
 //     return ;
 //     }
 //     head=head.next;  // just shift the head to the next node.//
-    
 // }
 
+
+///// delete last  ///////
 
 // public void deleteLast(){
 //     if (head == null){
@@ -62,21 +66,26 @@ class linkList{
 //     current.next=null;        // assigning the middle as last and deleting the last node //
 // }
 
-public int search (int key){
-    Node current = head;
-    int index =0;
-    while(current != null){
-        if ( current.data == key )
-        return index;
+
+////// searching the value ///////
+
+// public int search (int key){
+//     Node current = head;
+//     int index =0;
+//     while(current != null){
+//         if ( current.data == key )
+//         return index;
     
-    current=current.next;
-    index ++;
-                System.out.print(" asset found "+ index);
+//     current=current.next;
+//     index ++;
+//                 System.out.print(" asset found "+ index);
 
-    }
-  return -1;
-}
+//     }
+//   return -1;
+// }
 
+
+////// delete by value //////
 
 
 // public value deleteByValue(int key){
@@ -99,7 +108,7 @@ public int search (int key){
     //   current.next = current.next.next;
 // }
 
-// the same above we can do with the help of string key value too //
+///// the same above we can do with the help of string key value too ///////
 
 // public void deleteByValue(String key){
 //     if ( head == null){
@@ -133,38 +142,47 @@ public int search (int key){
 // }
 
 
-public void reverseItr(){
+
+////// reversing through the iterative method //////
+
+
+// public void reverseItr(){
     
-    Node next;
-    Node current=head;
-    Node previous = null;
+//     Node next;
+//     Node current=head;
+//     Node previous = null;
 
-    while(current!= null){
-        next=current.next;       // stores the next value
-        current.next=previous;   // Now b → a instead of b → c. (reverse ptr)
-        previous = current;      // // move prev forward
-        current=next;            // // move current  forward
-    }
-    head = prev; // finally update head
-
-
-}
+//     while(current!= null){
+//         next=current.next;       // stores the next value
+//         current.next=previous;   // Now b → a instead of b → c. (reverse ptr)
+//         previous = current;      // // move prev forward
+//         current=next;            // // move current  forward
+//     }
+//     head = prev; // finally update head
+ // }
 
 
+////// reversing through the recursive  method //////
 
-public Node reverseRecursive(Node head){
-    if ( head == null || head.next == null){
-        SYstem.out.println("No element found ");
-        return head ;
-    }
+
+
+// public Node reverseRecursive(Node head){
+//     if ( head == null || head.next == null){
+//         SYstem.out.println("No element found ");
+//         return head ;
+//     }
     
-    Node newhd = reverseRecursive(head.next);   // Reverse everything after head  //
-    head.next.next=head;             // assigning prev value to head next --- makes d → c  //
-    head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
-}
-public void reverseRecursiveCaller() {
-    head = reverseRecursive(head);
-}
+//     Node newhd = reverseRecursive(head.next);   // Reverse everything after head  //
+//     head.next.next=head;             // assigning prev value to head next --- makes d → c  //
+//     head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
+// }
+// public void reverseRecursiveCaller() {
+//     head = reverseRecursive(head);
+// }
+
+
+
+//// printing the link list //////
 
 public void PrintList(){
     Node current = head;
