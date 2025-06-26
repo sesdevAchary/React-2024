@@ -101,36 +101,36 @@ public int search (int key){
 
 // the same above we can do with the help of string key value too //
 
-public void deleteByValue(String key){
-    if ( head == null){
-        System.out.println(" not found ");
-        return;
-    }
+// public void deleteByValue(String key){
+//     if ( head == null){
+//         System.out.println(" not found ");
+//         return;
+//     }
 
-        // 2. Does the head itself contain the key?
-    if( head.data.equals(key)){
-        head = head.next ;
-        return;
-    }
+//         // 2. Does the head itself contain the key?
+//     if( head.data.equals(key)){
+//         head = head.next ;
+//         return;
+//     }
 
 
-    Node current=head;
+//     Node current=head;
 
-        // 3. Walk until we’re right before the target (or end of list)
-    while(current.next != null && !current.next.data.equals(key)){
-        current=current.next;
-    }
+//         // 3. Walk until we’re right before the target (or end of list)
+//     while(current.next != null && !current.next.data.equals(key)){
+//         current=current.next;
+//     }
 
-        // 4. Did we find it?
-    if(current.next == null){
-        System.out.print("value not found ");
-    }
-    else
-    {
-        curr.next = curr.next.next; // bypass the node, deleting it
+//         // 4. Did we find it?
+//     if(current.next == null){
+//         System.out.print("value not found ");
+//     }
+//     else
+//     {
+//         curr.next = curr.next.next; // bypass the node, deleting it
 
-    }
-}
+//     }
+// }
 
 
 public void reverseItr(){
@@ -148,6 +148,12 @@ public void reverseItr(){
     head = prev; // finally update head
 
 
+}
+
+
+
+public Node reverseRecursive(Node head){
+    
 }
 
 public void PrintList(){
@@ -194,35 +200,3 @@ public void PrintList(){
 
 
 
-
-
-
-
-
-
-
-// Reverse a linked list starting at 'node'.
-// Returns the new head of the reversed part.
-Node reverse(Node node) {
-    // 1) Empty list OR single node? Already reversed ⇒ give it back.
-    if (node == null || node.next == null) {
-        return node;
-    }
-
-    // 2) Reverse “the rest of the list”.
-    Node newHead = reverse(node.next);   // <-- recursion
-
-    // 3) Put 'node' at the end of that reversed part.
-    node.next.next = node; // next node now points back to 'node'
-    node.next = null;      // detach 'node' from the old link
-
-    // 4) Give back the head of the fully reversed list.
-    return newHead;
-}
-
-// One-liner you call from outside:
-void reverseRecursive() {
-    head = reverse(head);
-}
-[first node]  +  [the rest of the list]
-      a              b → c → d → null
