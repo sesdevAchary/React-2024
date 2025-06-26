@@ -185,35 +185,37 @@ class linkList{
 //// printing the link list //////
 
 
-public int countNd(){
-    int count =0;
-    Node current=head;  
+// public int countNd(){
+//     int count =0;
+//     Node current=head;  
 
-    while( current!= null) {
-    count++;
-    current=current.next;
-    }
-    return count;
-}
+//     while( current!= null) {
+//     count++;
+//     current=current.next;
+//     }
+//     return count;
+// }
 
 
 
 ///// obtaining the middle value /////
 
-public int middleVal(){
-    if ( head == null){
-        System.out.println(" no such node is present");
-    }
+/// slow moves 1 step, fast moves 2 steps.........When fast reaches end, slow will be at middle///
 
-    Node slow= head; Node fast = head;
+// public int middleVal(){
+//     if ( head == null){
+//         System.out.println(" no such node is present");
+//     }
 
-    while ( fast!= null || fast.next != nul){
-        slow=  slow.next;   fast = fast.next.next;
-    }
+//     Node slow= head; Node fast = head;
 
-        System.out.println("Middle node is: " + slow.data);
+//     while ( fast!= null || fast.next != nul){
+//         slow=  slow.next;   fast = fast.next.next;
+//     }
 
-}
+//         System.out.println("Middle node is: " + slow.data);
+
+// }
 
 
 
