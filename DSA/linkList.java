@@ -185,17 +185,37 @@ class linkList{
 //// printing the link list //////
 
 
-
 public int countNd(){
     int count =0;
     Node current=head;  
 
-    while( current!= null);{
+    while( current!= null) {
     count++;
     current=current.next;
     }
     return count;
 }
+
+
+
+///// obtaining the middle value /////
+
+public int middleVal(){
+    if ( head == null){
+        System.out.println(" no such node is present");
+    }
+
+    Node slow= head; Node fast = head;
+
+    while ( fast!= null || fast.next != nul){
+        slow=  slow.next;   fast = fast.next.next;
+    }
+
+        System.out.println("Middle node is: " + slow.data);
+
+}
+
+
 
 public void PrintList(){
     Node current = head;
@@ -208,16 +228,20 @@ public void PrintList(){
     public static void main ( String[] args){
         linkList ll = new linkList();
 
-        ll.addlast("a");
-        ll.addlast("b");
-        ll.addlast("c");
-        ll.addlast("d");
-        ll.addlast("e");
-        ll.addlast("f");
-        ll.search("c");
-        ll.deleteByValue(3);
+        // ll.addlast("a");
+        // ll.addlast("b");
+        // ll.addlast("c");
+        // ll.addlast("d");
+        // ll.addlast("e");
+        // ll.addlast("f");
 
+        // ll.search("c");
+
+        // ll.deleteByValue(3);
         // ll.deleteFirst();
+
+        // ll.countNd();
+        //ll.middleVal();
 
 
 
