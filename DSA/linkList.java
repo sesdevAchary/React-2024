@@ -247,6 +247,20 @@ class linkList{
     return head;
  }
 
+
+////// checking for CYCLE in a LinkList //////
+
+
+public boolean hasCycle(){
+    Node slow = head;
+    Node fast= head;
+
+    while(fast!= null && fast.next != null){
+        
+    }
+}
+
+
 public void PrintList(){
     Node current = head;
 
