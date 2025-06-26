@@ -219,6 +219,17 @@ class linkList{
 
 
 
+////// REMOVING Nth NODE FROM END OF LIST /////////
+ 
+ public ListNode removeNthElementFromEnd( ListNode head , int n){
+    if( head.next == null )
+    return null;
+
+    //size//
+    int size = 0; ListNode current=head;
+    while( current!=)
+ }
+
 public void PrintList(){
     Node current = head;
 
