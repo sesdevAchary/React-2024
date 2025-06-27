@@ -343,9 +343,24 @@ class linkList{
 
 
     public void addList(int data){
-        Node no = new Node(int data);
-        
-            }
+        Node newNd = new Node(int data);
+
+        if(head == null){
+            head= newNd ;
+            return;
+        }
+
+        Node current=head;
+        while(current != null){
+            current=current.next;
+        }
+        currrent.next = newNd;
+
+    }
+
+
+
+    
 }
 
 
