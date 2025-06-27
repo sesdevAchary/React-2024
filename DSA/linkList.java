@@ -360,7 +360,15 @@ class linkList{
 
 
 
-    
+    public void print(){
+        Node current = head;
+
+        while(current!= null){
+            current=current.next;
+            System.out.print( current.data + " -> ");
+        }
+         System.out.println ( " NULL ");
+    }
 }
 
 
