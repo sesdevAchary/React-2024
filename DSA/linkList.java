@@ -331,7 +331,7 @@ class linkList{
     Node head;
 
     class Node{
-        int data; int next;
+        int data; Node next;
 
 
         Node(int data){
@@ -342,8 +342,8 @@ class linkList{
 
 
 
-    public void addList(int data){
-        Node newNd = new Node(int data);
+    public void addLast(int data){
+        Node newNd = new Node(data);
 
         if(head == null){
             head= newNd ;
@@ -351,23 +351,51 @@ class linkList{
         }
 
         Node current=head;
-        while(current != null){
+        while(current.next != null){
             current=current.next;
         }
-        currrent.next = newNd;
+        current.next = newNd;
 
     }
 
 
 
-    public void print(){
+    public void printList(){
         Node current = head;
 
-        while(current!= null){
-            current=current.next;
+        while(current.next != null){
             System.out.print( current.data + " -> ");
+             current=current.next;
+
         }
          System.out.println ( " NULL ");
+    }
+
+
+
+
+
+    public static void main ( String args[]){
+
+        linkList list1 = new linkList();
+
+        list1.addLast(10);
+        list1.addLast(20);
+        list1.addLast(30);
+
+
+        linkList list2 = new linkList();
+        list2.addLast(2);
+        list2.addLast(4);
+        list2.addLast(6);
+
+        // Print original lists
+        System.out.print("List 1: ");
+        list1.printList();
+
+
+
+
     }
 }
 
