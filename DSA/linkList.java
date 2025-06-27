@@ -330,7 +330,7 @@
 class linkList{
     Node head;
 
-    class Node{
+   static  class Node{
         int data; Node next;
 
 
@@ -358,7 +358,7 @@ class linkList{
 
     }
 
-public static void mergeTwoList(Node head1, Node head2){
+public static  Node mergeTwoList(Node head1, Node head2){
     // takes 2 sorted LL as params then return head of a new merged sorted list//
     Node dummy = new Node(-1);
     Node tail = dummy ;
@@ -376,8 +376,12 @@ public static void mergeTwoList(Node head1, Node head2){
         tail = tail.next;
     }
  
-    if(head1 !=null)tail.next=h1;
-    if(head2 !=null)tail.next=h2;
+    if(head1 !=null)tail.next=head1;
+    if(head2 !=null)tail.next=head2;
+
+
+     return dummy.next;
+
 }
 
     public void printList(){
@@ -414,7 +418,21 @@ public static void mergeTwoList(Node head1, Node head2){
 
     System.out.print("List 2: ");
     list2.printList();
+    
 
+
+
+      // Merge the lists
+        Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
+
+        // Print merged list
+        System.out.print("Merged List: ");
+        Node current = mergedHead;
+        while (current != null) {
+            System.out.print(current.data + " → ");
+            current = current.next;
+            }
+        System.out.println("null");
 
 
     }
