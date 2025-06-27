@@ -389,10 +389,11 @@ class linkList{
         list2.addLast(4);
         list2.addLast(6);
 
-        // Print original lists
-        System.out.print("List 1: ");
-        list1.printList();
+     System.out.print("List 1: ");
+    list1.printList();
 
+    System.out.print("List 2: ");
+    list2.printList();
 
 
 
