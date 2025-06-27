@@ -363,7 +363,7 @@ class linkList{
     public void printList(){
         Node current = head;
 
-        while(current.next != null){
+        while(current != null){
             System.out.print( current.data + " -> ");
              current=current.next;
 
