@@ -488,6 +488,16 @@ public boolean isPalindrome(ListNode head ){
             Node mid= list1.findMiddle(list1.head);
             System.out.println(" the middle value  is "+ mid.data);
 
+              // Reverse list and print
+    Node reversedHead = list1.reverse(list1.head);
+    System.out.print("Reversed List: ");
+    Node current = reversedHead;
+    while (current != null) {
+        System.out.print(current.data + " -> ");
+        current = current.next;
+    }
+    System.out.println("NULL");
+
 
 
     }
