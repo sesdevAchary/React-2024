@@ -385,8 +385,19 @@ class linkList{
 // }
 
 public ListNode reverse( ListNode head){
-    
+    ListNode prev = null;
+    ListNode current=head;
+
+    while ( current != null){
+        current = current.next ;
+        current.next = prev;
+        prev = current;
+        current=next;
+    }
+    return prev;
 }
+
+
 
 
 public boolean isPalindrome(ListNode head ){
