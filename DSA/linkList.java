@@ -466,11 +466,7 @@ public boolean isPalindrome(ListNode head ){
 
     // System.out.print("List 2: ");
     // list2.printList();
-    
-
-
-
-      // Merge the lists
+                               // Merge the lists
         // Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
 
         // // Print merged list
@@ -481,6 +477,12 @@ public boolean isPalindrome(ListNode head ){
         //     current = current.next;
         //     }
         // System.out.println("null");
+
+
+                         //  printing the palindrome //
+            
+            System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
+
 
 
     }
