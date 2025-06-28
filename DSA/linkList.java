@@ -387,7 +387,26 @@ class linkList{
 
 
 public boolean isPalindrome(ListNode head ){
+      if( head == null || head.next == null ){
+        return true;
+      }
+
+      ListNode middle = findMiddle(head); // end of the first half //
+      ListNode secondHalfStart= reverse(middle.next);
+
+
+      ListNode firstHalfStart = head ;
+      while ( secondHalfStart != null ){
+        if ( firstHalfStart.value != secondHalfStart.value )
+        return false;
+
     
+      firstHalfStart= firstHalfStart.next ;
+      secondHalfStart=secondHalfStart.next ;
+      }
+      return true;
+
+
 }
     public void printList(){
         Node current = head;
