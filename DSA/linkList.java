@@ -466,7 +466,8 @@ public boolean isPalindrome(ListNode head ){
 
     // System.out.print("List 2: ");
     // list2.printList();
-                               // Merge the lists
+
+                         // Merge the lists
         // Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
 
         // // Print merged list
@@ -479,9 +480,13 @@ public boolean isPalindrome(ListNode head ){
         // System.out.println("null");
 
 
-                         //  printing the palindrome //
-            
+                     //  printing the palindrome //
             System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
+
+
+            // finding the middle //
+            Node mid= list1.findMiddle(list1.head);
+            System.out.println(" the middle value  is "+ mid.data);
 
 
 
