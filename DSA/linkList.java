@@ -384,6 +384,9 @@ class linkList{
 
 // }
 
+public ListNode reverse( ListNode head){
+    
+}
 
 
 public boolean isPalindrome(ListNode head ){
