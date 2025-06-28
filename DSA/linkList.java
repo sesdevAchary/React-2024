@@ -398,7 +398,14 @@ public ListNode reverse( ListNode head){
 }
 
 public ListNode findMiddle ( ListNode head){
-    
+    ListNode slow =  head;
+    ListNode fast = head ;
+
+    while(slow.next != null && fast.next.next != null){
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
 
 }
 
