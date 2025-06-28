@@ -397,7 +397,10 @@ public ListNode reverse( ListNode head){
     return prev;
 }
 
+public ListNode findMiddle ( ListNode head){
+    
 
+}
 
 
 public boolean isPalindrome(ListNode head ){
