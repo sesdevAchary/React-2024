@@ -389,10 +389,10 @@ public ListNode reverse( ListNode head){
     ListNode current=head;
 
     while ( current != null){
-        current = current.next ;
-        current.next = prev;
-        prev = current;
-        current=next;
+        Node next  = current.next ; // save first //
+        current.next = prev;        // reverse the node //
+        prev = current;             // move prev //
+        current=next;              // move curr //
     }
     return prev;
 }
@@ -401,7 +401,7 @@ public ListNode findMiddle ( ListNode head){
     ListNode slow =  head;
     ListNode fast = head ;
 
-    while(slow.next != null && fast.next.next != null){
+    while(fast != null && fast.next != null){
         slow = slow.next;
         fast = fast.next.next;
     }
@@ -456,31 +456,31 @@ public boolean isPalindrome(ListNode head ){
         list1.addLast(30);
 
 
-        linkList list2 = new linkList();
-        list2.addLast(2);
-        list2.addLast(4);
-        list2.addLast(6);
+        // linkList list2 = new linkList();
+        // list2.addLast(2);
+        // list2.addLast(4);
+        // list2.addLast(6);
 
      System.out.print("List 1: ");
     list1.printList();
 
-    System.out.print("List 2: ");
-    list2.printList();
+    // System.out.print("List 2: ");
+    // list2.printList();
     
 
 
 
       // Merge the lists
-        Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
+        // Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
 
-        // Print merged list
-        System.out.print("Merged List: ");
-        Node current = mergedHead;
-        while (current != null) {
-            System.out.print(current.data + " → ");
-            current = current.next;
-            }
-        System.out.println("null");
+        // // Print merged list
+        // System.out.print("Merged List: ");
+        // Node current = mergedHead;
+        // while (current != null) {
+        //     System.out.print(current.data + " → ");
+        //     current = current.next;
+        //     }
+        // System.out.println("null");
 
 
     }
