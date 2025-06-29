@@ -610,3 +610,23 @@ def get_intersection(head1, head2):
         a = a.next if a else head2
         b = b.next if b else head1
     return a
+class RandomNode:
+    def __init__(self, val, next=None, random=None):
+        self.val = val
+        self.next = next
+        self.random = random
+
+def copy_random_list(head):
+    if not head:
+        return None
+    m = {}
+    curr = head
+    while curr:
+        m[curr] = RandomNode(curr.val)
+        curr = curr.next
+    curr = head
+    while curr:
+        m[curr].next = m.get(curr.next)
+        m[curr].random = m.get(curr.random)
+        curr = curr.next
+    return m[head]
