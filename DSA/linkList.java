@@ -598,3 +598,9 @@ def merge_lists(l1, l2):
         tail = tail.next
     tail.next = l1 or l2
     return dummy.next
+def is_palindrome(head):
+    vals = []
+    while head:
+        vals.append(head.data)
+        head = head.next
+    return vals == vals[::-1]
