@@ -581,3 +581,9 @@ def has_cycle(head):
         if slow == fast:
             return True
     return False
+def length(head):
+    count = 0
+    while head:
+        count += 1
+        head = head.next
+    return count
