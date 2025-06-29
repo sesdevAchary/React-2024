@@ -559,3 +559,11 @@ def insert_at_end(head, data):
         temp = temp.next
     temp.next = new_node
     return head
+def reverse_list(head):
+    prev = None
+    while head:
+        next_node = head.next
+        head.next = prev
+        prev = head
+        head = next_node
+    return prev
