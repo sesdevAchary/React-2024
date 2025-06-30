@@ -331,6 +331,17 @@ import java.util.*;
     }
  }
 
+  public int countNd(){
+     int count =0;
+    Node current=head;  
+
+    while( current!= null) {
+     count++;
+     current=current.next;
+     }
+     return count;
+// 
+
 
  public int search (int key){
   Node current = head;
