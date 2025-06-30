@@ -322,6 +322,15 @@ import java.util.*;
 //     }
 // }
 
+ public void PrintList(){
+     Node current = head;
+
+     while(current != null){
+         System.out.print(current.data+"->");
+         current= current.next;
+    }
+ }
+
 
  public int search (int key){
   Node current = head;
