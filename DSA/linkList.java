@@ -384,51 +384,52 @@ class linkList{
 
 // }
 
-public ListNode reverse( ListNode head){
-    ListNode prev = null;
-    ListNode current=head;
+// public ListNode reverse( ListNode head){
+//     ListNode prev = null;
+//     ListNode current=head;
 
-    while ( current != null){
-        Node next  = current.next ; // save first //
-        current.next = prev;        // reverse the node //
-        prev = current;             // move prev //
-        current=next;              // move curr //
-    }
-    return prev;
-}
+//     while ( current != null){
+//         Node next  = current.next ; // save first //
+//         current.next = prev;        // reverse the node //
+//         prev = current;             // move prev //
+//         current=next;              // move curr //
+//     }
+//     return prev;
+// }
 
-public ListNode findMiddle ( ListNode head){
-    ListNode slow =  head;
-    ListNode fast = head ;
+// public ListNode findMiddle ( ListNode head){
+//     ListNode slow =  head;
+//     ListNode fast = head ;
 
-    while(fast != null && fast.next != null){
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    return slow;
+//     while(fast != null && fast.next != null){
+//         slow = slow.next;
+//         fast = fast.next.next;
+//     }
+//     return slow;
 
-}
-
-
-public boolean isPalindrome(ListNode head ){
-      if( head == null || head.next == null ){
-        return true;
-      }
-
-      ListNode middle = findMiddle(head); // end of the first half //
-      ListNode secondHalfStart= reverse(middle.next);
+// }
 
 
-      ListNode firstHalfStart = head ;
-      while ( secondHalfStart != null ){
-        if ( firstHalfStart.value != secondHalfStart.value )
-        return false;
+// public boolean isPalindrome(ListNode head ){
+//       if( head == null || head.next == null ){
+//         return true;
+//       }
+
+//       ListNode middle = findMiddle(head); // end of the first half //
+//       ListNode secondHalfStart= reverse(middle.next);
+
+
+//       ListNode firstHalfStart = head ;
+//       while ( secondHalfStart != null ){
+//         if ( firstHalfStart.value != secondHalfStart.value )
+//         return false;
 
     
-      firstHalfStart= firstHalfStart.next ;
-      secondHalfStart=secondHalfStart.next ;
-      }
-      return true;
+//       firstHalfStart= firstHalfStart.next ;
+//       secondHalfStart=secondHalfStart.next ;
+//       }
+//       return true;
+
 
 
 }
@@ -444,6 +445,18 @@ public boolean isPalindrome(ListNode head ){
     }
 
 
+/////// OrElse we can also the STACK method to use /////////
+
+   public boolean palindromeCheck( ){
+     stack<Integer> stack = new stack();  // We use a stack to store all the node values in reverse order LIFO //
+     Node current = head ;
+
+   }
+
+while ( current != null){
+    stack.push(current.data);
+    current = current.next
+}
 
 
 
