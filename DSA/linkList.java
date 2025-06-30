@@ -1,3 +1,5 @@
+import java.util.*;
+
 // // class linkList{
 // //     Node head ;
 // //     class Node{
@@ -446,7 +448,7 @@ class linkList{
 /////// OrElse we can also the STACK method to use /////////
 
    public boolean palindromeCheck( ){
-     stack<Integer> stack = new stack();  // We use a stack to store all the node values in reverse order LIFO //
+     Stack<Integer> stack = new Stack();  // We use a stack to store all the node values in reverse order LIFO //
      Node current = head ;
 
    
@@ -454,14 +456,14 @@ class linkList{
 // pushing elements to the stack //
 while ( current != null){
     stack.push(current.data);
-    current = current.next
+    current = current.next;
 }
 
 // comparing each value of the stack is palindrome //
 
 current = head;
 while ( current != null){
-    if (current.value != pop.data()){     // For each node, pop a value from the stack and compare it.//
+    if (current.data != stack.pop()){     // For each node, pop a value from the stack and compare it.//
         return false;
     }
     current = current.next ;
@@ -576,97 +578,97 @@ return true ;
 
 
 
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-def insert_at_beginning(head, data):
-    new_node = Node(data)
-    new_node.next = head
-    return new_node
-def insert_at_end(head, data):
-    new_node = Node(data)
-    if not head:
-        return new_node
-    temp = head
-    while temp.next:
-        temp = temp.next
-    temp.next = new_node
-    return head
-def reverse_list(head):
-    prev = None
-    while head:
-        next_node = head.next
-        head.next = prev
-        prev = head
-        head = next_node
-    return prev
-def find_middle(head):
-    slow = fast = head
-    while fast and fast.next:
-        slow = slow.next
-        fast = fast.next.next
-    return slow
-def has_cycle(head):
-    slow = fast = head
-    while fast and fast.next:
-        slow = slow.next
-        fast = fast.next.next
-        if slow == fast:
-            return True
-    return False
-def length(head):
-    count = 0
-    while head:
-        count += 1
-        head = head.next
-    return count
-def merge_lists(l1, l2):
-    dummy = Node(0)
-    tail = dummy
-    while l1 and l2:
-        if l1.data < l2.data:
-            tail.next, l1 = l1, l1.next
-        else:
-            tail.next, l2 = l2, l2.next
-        tail = tail.next
-    tail.next = l1 or l2
-    return dummy.next
-def is_palindrome(head):
-    vals = []
-    while head:
-        vals.append(head.data)
-        head = head.next
-    return vals == vals[::-1]
-def get_intersection(head1, head2):
-    a, b = head1, head2
-    while a != b:
-        a = a.next if a else head2
-        b = b.next if b else head1
-    return a
-class RandomNode:
-    def __init__(self, val, next=None, random=None):
-        self.val = val
-        self.next = next
-        self.random = random
+// class Node:
+//     def __init__(self, data):
+//         self.data = data
+//         self.next = None
+// def insert_at_beginning(head, data):
+//     new_node = Node(data)
+//     new_node.next = head
+//     return new_node
+// def insert_at_end(head, data):
+//     new_node = Node(data)
+//     if not head:
+//         return new_node
+//     temp = head
+//     while temp.next:
+//         temp = temp.next
+//     temp.next = new_node
+//     return head
+// def reverse_list(head):
+//     prev = None
+//     while head:
+//         next_node = head.next
+//         head.next = prev
+//         prev = head
+//         head = next_node
+//     return prev
+// def find_middle(head):
+//     slow = fast = head
+//     while fast and fast.next:
+//         slow = slow.next
+//         fast = fast.next.next
+//     return slow
+// def has_cycle(head):
+//     slow = fast = head
+//     while fast and fast.next:
+//         slow = slow.next
+//         fast = fast.next.next
+//         if slow == fast:
+//             return True
+//     return False
+// def length(head):
+//     count = 0
+//     while head:
+//         count += 1
+//         head = head.next
+//     return count
+// def merge_lists(l1, l2):
+//     dummy = Node(0)
+//     tail = dummy
+//     while l1 and l2:
+//         if l1.data < l2.data:
+//             tail.next, l1 = l1, l1.next
+//         else:
+//             tail.next, l2 = l2, l2.next
+//         tail = tail.next
+//     tail.next = l1 or l2
+//     return dummy.next
+// def is_palindrome(head):
+//     vals = []
+//     while head:
+//         vals.append(head.data)
+//         head = head.next
+//     return vals == vals[::-1]
+// def get_intersection(head1, head2):
+//     a, b = head1, head2
+//     while a != b:
+//         a = a.next if a else head2
+//         b = b.next if b else head1
+//     return a
+// class RandomNode:
+//     def __init__(self, val, next=None, random=None):
+//         self.val = val
+//         self.next = next
+//         self.random = random
 
-def copy_random_list(head):
-    if not head:
-        return None
-    m = {}
-    curr = head
-    while curr:
-        m[curr] = RandomNode(curr.val)
-        curr = curr.next
-    curr = head
-    while curr:
-        m[curr].next = m.get(curr.next)
-        m[curr].random = m.get(curr.random)
-        curr = curr.next
-    return m[head]
-def find_middle(head):
-    slow = fast = head
-    while fast and fast.next:
-        slow = slow.next
-        fast = fast.next.next
-    return slow
+// def copy_random_list(head):
+//     if not head:
+//         return None
+//     m = {}
+//     curr = head
+//     while curr:
+//         m[curr] = RandomNode(curr.val)
+//         curr = curr.next
+//     curr = head
+//     while curr:
+//         m[curr].next = m.get(curr.next)
+//         m[curr].random = m.get(curr.random)
+//         curr = curr.next
+//     return m[head]
+// def find_middle(head):
+//     slow = fast = head
+//     while fast and fast.next:
+//         slow = slow.next
+//         fast = fast.next.next
+//     return slow
