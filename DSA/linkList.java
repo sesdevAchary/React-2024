@@ -323,6 +323,20 @@ import java.util.*;
 // }
 
 
+ public int search (int key){
+  Node current = head;
+    int index =0;
+    while(current != null){
+       if ( current.data == key )
+      return index;
+    
+     current=current.next;
+     index ++;
+                 System.out.print(" asset found "+ index);
+
+     }
+  return -1;
+ }
 
 
 
