@@ -453,9 +453,20 @@ class linkList{
 
    }
 
+// pushing elements to the stack //
 while ( current != null){
     stack.push(current.data);
     current = current.next
+}
+
+// comparing each value of the stack is palindrome //
+
+current = head;
+while ( current != null){
+    if (current.value != pop.data()){
+        return false;
+    }
+    current = current.next ;
 }
 
 
