@@ -341,6 +341,14 @@ import java.util.*;
      }
      return count;
 // 
+public void PrintList(){
+     Node current = head;
+
+     while(current != null){
+         System.out.print(current.data+"->");
+         current= current.next;
+    }
+ }
 
 
  public int search (int key){
