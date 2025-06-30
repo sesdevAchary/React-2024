@@ -430,9 +430,7 @@ class linkList{
 //       }
 //       return true;
 
-
-
-}
+//}
     public void printList(){
         Node current = head;
 
@@ -451,7 +449,7 @@ class linkList{
      stack<Integer> stack = new stack();  // We use a stack to store all the node values in reverse order LIFO //
      Node current = head ;
 
-   }
+   
 
 // pushing elements to the stack //
 while ( current != null){
@@ -463,12 +461,14 @@ while ( current != null){
 
 current = head;
 while ( current != null){
-    if (current.value != pop.data()){
+    if (current.value != pop.data()){     // For each node, pop a value from the stack and compare it.//
         return false;
     }
     current = current.next ;
 }
+return true ;
 
+   }
 
 
     public static void main ( String args[]){
@@ -478,6 +478,9 @@ while ( current != null){
         list1.addLast(10);
         list1.addLast(20);
         list1.addLast(30);
+        list1.addLast(30);
+        list1.addLast(20);
+        list1.addLast(10);
 
 
         // linkList list2 = new linkList();
@@ -504,24 +507,27 @@ while ( current != null){
         // System.out.println("null");
 
 
-                     //  printing the palindrome //
-            System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
+    //                  //  printing the palindrome //
+    //         System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
 
 
-            // finding the middle //
-            Node mid= list1.findMiddle(list1.head);
-            System.out.println(" the middle value  is "+ mid.data);
+    //         // finding the middle //
+    //         Node mid= list1.findMiddle(list1.head);
+    //         System.out.println(" the middle value  is "+ mid.data);
 
-              // Reverse list and print
-    Node reversedHead = list1.reverse(list1.head);
-    System.out.print("Reversed List: ");
-    Node current = reversedHead;
-    while (current != null) {
-        System.out.print(current.data + " -> ");
-        current = current.next;
-    }
-    System.out.println("NULL");
+    //           // Reverse list and print
+    // Node reversedHead = list1.reverse(list1.head);
+    // System.out.print("Reversed List: ");
+    // Node current = reversedHead;
+    // while (current != null) {
+    //     System.out.print(current.data + " -> ");
+    //     current = current.next;
+    // }
+    // System.out.println("NULL");
 
+  if ( list1.palindromeCheck()){
+    
+  }
 
 
     }
