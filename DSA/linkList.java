@@ -526,7 +526,11 @@ return true ;
     // System.out.println("NULL");
 
   if ( list1.palindromeCheck()){
-    
+                System.out.println("✅ It is a Palindrome!");
+
+  }else{
+                System.out.println("❌ Not a Palindrome.");
+
   }
 
 
