@@ -703,26 +703,26 @@ def insert_at_end(head, data):
 //         self.next = next
 //         self.random = random
 
-// def copy_random_list(head):
-//     if not head:
-//         return None
-//     m = {}
-//     curr = head
-//     while curr:
-//         m[curr] = RandomNode(curr.val)
-//         curr = curr.next
-//     curr = head
-//     while curr:
-//         m[curr].next = m.get(curr.next)
-//         m[curr].random = m.get(curr.random)
-//         curr = curr.next
-//     return m[head]
-// def find_middle(head):
-//     slow = fast = head
-//     while fast and fast.next:
-//         slow = slow.next
-//         fast = fast.next.next
-//     return slow
+def copy_random_list(head):
+    if not head:
+        return None
+    m = {}
+    curr = head
+    while curr:
+        m[curr] = RandomNode(curr.val)
+        curr = curr.next
+    curr = head
+    while curr:
+        m[curr].next = m.get(curr.next)
+        m[curr].random = m.get(curr.random)
+        curr = curr.next
+    return m[head]
+def find_middle(head):
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow
 
 
 class Node:
