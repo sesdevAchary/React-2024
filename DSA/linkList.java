@@ -723,3 +723,9 @@ def insert_at_end(head, data):
 //         slow = slow.next
 //         fast = fast.next.next
 //     return slow
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
