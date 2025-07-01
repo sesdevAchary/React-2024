@@ -685,23 +685,23 @@ def insert_at_end(head, data):
 //         tail = tail.next
 //     tail.next = l1 or l2
 //     return dummy.next
-// def is_palindrome(head):
-//     vals = []
-//     while head:
-//         vals.append(head.data)
-//         head = head.next
-//     return vals == vals[::-1]
-// def get_intersection(head1, head2):
-//     a, b = head1, head2
-//     while a != b:
-//         a = a.next if a else head2
-//         b = b.next if b else head1
-//     return a
-// class RandomNode:
-//     def __init__(self, val, next=None, random=None):
-//         self.val = val
-//         self.next = next
-//         self.random = random
+def is_palindrome(head):
+    vals = []
+    while head:
+        vals.append(head.data)
+        head = head.next
+    return vals == vals[::-1]
+def get_intersection(head1, head2):
+    a, b = head1, head2
+    while a != b:
+        a = a.next if a else head2
+        b = b.next if b else head1
+    return a
+class RandomNode:
+    def __init__(self, val, next=None, random=None):
+        self.val = val
+        self.next = next
+        self.random = random
 
 
 def insert_at_beginning(head, data):
