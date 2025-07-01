@@ -735,3 +735,15 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+def delete_node(head, key):
+    if not head:
+        return head
+    if head.data == key:
+        return head.next
+    prev, curr = None, head
+    while curr and curr.data != key:
+        prev = curr
+        curr = curr.next
+    if curr:
+        prev.next = curr.next
+    return head
