@@ -703,6 +703,12 @@ def insert_at_end(head, data):
 //         self.next = next
 //         self.random = random
 
+
+def insert_at_beginning(head, data):
+    new_node = Node(data)
+    new_node.next = head
+    return new_node
+
 def copy_random_list(head):
     if not head:
         return None
