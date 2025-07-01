@@ -747,3 +747,9 @@ def delete_node(head, key):
     if curr:
         prev.next = curr.next
     return head
+def search(head, key):
+    while head:
+        if head.data == key:
+            return True
+        head = head.next
+    return False
