@@ -668,12 +668,12 @@ def insert_at_end(head, data):
 //         if slow == fast:
 //             return True
 //     return False
-// def length(head):
-//     count = 0
-//     while head:
-//         count += 1
-//         head = head.next
-//     return count
+def length(head):
+    count = 0
+    while head:
+        count += 1
+        head = head.next
+    return count
 def merge_lists(l1, l2):
     dummy = Node(0)
     tail = dummy
