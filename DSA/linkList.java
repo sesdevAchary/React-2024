@@ -715,4 +715,19 @@ def sort_stack(s):
     return temp_stack
 
 print(sort_stack([3, 1, 2]))  # [1, 2, 3]
+def infix_to_postfix(expr):
+    precedence = {'+':1, '-':1, '*':2, '/':2}
+    stack, output = [], ''
+    for c in expr:
+        if c.isalnum():
+            output += c
+        elif c in precedence:
+            while stack and precedence.get(stack[-1], 0) >= precedence[c]:
+                output += stack.pop()
+            stack.append(c)
+    while stack:
+        output += stack.pop()
+    return output
+
+print(infix_to_postfix("a+b*c"))  # "abc*+"
 
