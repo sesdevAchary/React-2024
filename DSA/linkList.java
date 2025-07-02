@@ -675,3 +675,9 @@ def eval_postfix(expr):
     return stack[0]
 
 print(eval_postfix("3 4 + 2 *"))  # 14
+stack = []
+stack.append("edit1")
+stack.append("edit2")
+undo = stack.pop()
+print("Undo:", undo)  # "Undo: edit2"
+
