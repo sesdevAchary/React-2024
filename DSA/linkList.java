@@ -664,3 +664,14 @@ def next_greater(nums):
     return result
 
 print(next_greater([4, 5, 2, 10]))  # [5, 10, 10, -1]
+def eval_postfix(expr):
+    stack = []
+    for token in expr.split():
+        if token.isdigit():
+            stack.append(int(token))
+        else:
+            b, a = stack.pop(), stack.pop()
+            stack.append(eval(f"{a}{token}{b}"))
+    return stack[0]
+
+print(eval_postfix("3 4 + 2 *"))  # 14
