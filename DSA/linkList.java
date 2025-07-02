@@ -701,4 +701,8 @@ m.push(3)
 m.push(5)
 m.push(2)
 print(m.get_max())  # 5
+def is_palindrome(s):
+    return s == s[::-1]
+
+print(is_palindrome("racecar"))  # True
 
