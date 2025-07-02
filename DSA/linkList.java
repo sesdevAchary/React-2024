@@ -644,3 +644,12 @@ stack = [1, 2, 3]
 print(stack[-1])  # 3
 stack = [1, 2, 3]
 print(len(stack))  # 3
+def hanoi(n, source, aux, dest):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {dest}")
+        return
+    hanoi(n-1, source, dest, aux)
+    print(f"Move disk {n} from {source} to {dest}")
+    hanoi(n-1, aux, source, dest)
+
+hanoi(3, 'A', 'B', 'C')
