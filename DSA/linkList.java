@@ -642,3 +642,5 @@ stack.append(2)
 print(stack.pop())  # 2
 stack = [1, 2, 3]
 print(stack[-1])  # 3
+stack = [1, 2, 3]
+print(len(stack))  # 3
