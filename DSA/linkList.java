@@ -705,4 +705,14 @@ def is_palindrome(s):
     return s == s[::-1]
 
 print(is_palindrome("racecar"))  # True
+def sort_stack(s):
+    temp_stack = []
+    while s:
+        tmp = s.pop()
+        while temp_stack and temp_stack[-1] > tmp:
+            s.append(temp_stack.pop())
+        temp_stack.append(tmp)
+    return temp_stack
+
+print(sort_stack([3, 1, 2]))  # [1, 2, 3]
 
