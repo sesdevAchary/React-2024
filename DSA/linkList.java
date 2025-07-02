@@ -640,3 +640,5 @@ stack = []
 stack.append(1)
 stack.append(2)
 print(stack.pop())  # 2
+stack = [1, 2, 3]
+print(stack[-1])  # 3
