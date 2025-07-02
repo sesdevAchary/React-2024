@@ -730,4 +730,27 @@ def infix_to_postfix(expr):
     return output
 
 print(infix_to_postfix("a+b*c"))  # "abc*+"
+class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
+
+    def push(self, x):
+        self.stack.append(x)
+        if not self.min_stack or x <= self.min_stack[-1]:
+            self.min_stack.append(x)
+
+    def pop(self):
+        if self.stack.pop() == self.min_stack[-1]:
+            self.min_stack.pop()
+
+    def get_min(self):
+        return self.min_stack[-1]
+
+m = MinStack()
+m.push(3)
+m.push(1)
+m.push(2)
+m.pop()
+print(m.get_min())  # 1
 
