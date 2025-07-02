@@ -680,4 +680,25 @@ stack.append("edit1")
 stack.append("edit2")
 undo = stack.pop()
 print("Undo:", undo)  # "Undo: edit2"
+class MaxStack:
+    def __init__(self):
+        self.stack = []
+        self.max_stack = []
+
+    def push(self, x):
+        self.stack.append(x)
+        self.max_stack.append(max(x, self.max_stack[-1] if self.max_stack else x))
+
+    def pop(self):
+        self.max_stack.pop()
+        return self.stack.pop()
+
+    def get_max(self):
+        return self.max_stack[-1]
+
+m = MaxStack()
+m.push(3)
+m.push(5)
+m.push(2)
+print(m.get_max())  # 5
 
