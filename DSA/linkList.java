@@ -753,4 +753,16 @@ m.push(1)
 m.push(2)
 m.pop()
 print(m.get_min())  # 1
+def is_balanced(expr):
+    stack = []
+    for char in expr:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
+
+print(is_balanced("(())"))  # True
 
