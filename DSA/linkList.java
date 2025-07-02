@@ -653,3 +653,14 @@ def hanoi(n, source, aux, dest):
     hanoi(n-1, aux, source, dest)
 
 hanoi(3, 'A', 'B', 'C')
+def next_greater(nums):
+    result = [-1]*len(nums)
+    stack = []
+    for i in range(len(nums)):
+        while stack and nums[i] > nums[stack[-1]]:
+            idx = stack.pop()
+            result[idx] = nums[i]
+        stack.append(i)
+    return result
+
+print(next_greater([4, 5, 2, 10]))  # [5, 10, 10, -1]
