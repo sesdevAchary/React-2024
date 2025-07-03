@@ -765,6 +765,17 @@ def is_balanced(expr):
     return not stack
 
 print(is_balanced("(())"))  # True
+  stack = []
+    for char in expr:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
+
+print(is_balanced("(())"))  # True
 
    def pop(self):
         if self.stack.pop() == self.min_stack[-1]:
