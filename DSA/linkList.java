@@ -766,6 +766,12 @@ def is_balanced(expr):
 
 print(is_balanced("(())"))  # True
 
+   def pop(self):
+        if self.stack.pop() == self.min_stack[-1]:
+            self.min_stack.pop()
+
+    def get_min(self):
+        return self.min_stack[-1]
 
 
  def push(self, x):
