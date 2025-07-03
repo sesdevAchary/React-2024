@@ -806,7 +806,19 @@ print(is_balanced("(())"))  # True
 
     def pop(self):
         self.max_stack.pop()
-        return self.stack.pop()
+        return self.stack.po
+           return not stack
+def is_balanced(expr):
+    stack = []
+    for char in expr:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
+p()
 
     def get_max(self):
         return self.max_stack[-1]
