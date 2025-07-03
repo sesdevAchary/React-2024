@@ -766,3 +766,15 @@ def is_balanced(expr):
 
 print(is_balanced("(())"))  # True
 
+
+
+ def push(self, x):
+        self.stack.append(x)
+        self.max_stack.append(max(x, self.max_stack[-1] if self.max_stack else x))
+
+    def pop(self):
+        self.max_stack.pop()
+        return self.stack.pop()
+
+    def get_max(self):
+        return self.max_stack[-1]
