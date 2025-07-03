@@ -735,6 +735,11 @@ class MinStack:
         self.stack = []
         self.min_stack = []
 
+print(infix_to_postfix("a+b*c"))  # "abc*+"
+class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
     def push(self, x):
         self.stack.append(x)
         if not self.min_stack or x <= self.min_stack[-1]:
