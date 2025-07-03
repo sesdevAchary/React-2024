@@ -831,3 +831,13 @@ class MinStack:
     def __init__(self):
         self.stack = []
         self.min_stack = []
+        print(is_balanced("(())"))  # True
+  stack = []
+    for char in expr:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
