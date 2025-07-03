@@ -14,5 +14,12 @@ public class circularLlist {
     }
 
 
-    
+    public void addLast( int data){
+        Node newNd = new Node(data);
+
+        if(head == null ){
+            head = newNd;tail=newNd;
+            newNd.next= head;
+        }
+    }
 }
