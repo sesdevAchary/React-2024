@@ -795,3 +795,7 @@ print(is_balanced("(())"))  # True
 
     def get_max(self):
         return self.max_stack[-1]
+        class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
