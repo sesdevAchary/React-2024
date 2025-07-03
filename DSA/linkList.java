@@ -763,6 +763,16 @@ def is_balanced(expr):
                 return False
             stack.pop()
     return not stack
+def is_balanced(expr):
+    stack = []
+    for char in expr:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                return False
+            stack.pop()
+    return not stack
 
 print(is_balanced("(())"))  # True
   stack = []
