@@ -814,3 +814,8 @@ print(is_balanced("(())"))  # True
     def __init__(self):
         self.stack = []
         self.min_stack = []
+        print(infix_to_postfix("a+b*c"))  # "abc*+"
+class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
