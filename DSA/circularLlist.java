@@ -55,8 +55,16 @@ public class circularLlist {
     public void deleteFromFirst(){
         if ( head == null){
             System.out.print(" empty list");
+            return;
         }
-        
+        if( head == tail){
+            head.next=null;
+            tail.next=null;
+        }else{
+            head=head.next;
+            tail.next=head;
+        }
+
     }
 
 
@@ -86,6 +94,8 @@ public class circularLlist {
         cll.addLast(30);
 
         cll.addFirst(5);
+
+        cll.deleteFromFirst();
         cll.printList();
 
 
