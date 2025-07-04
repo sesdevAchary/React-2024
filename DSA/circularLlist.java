@@ -40,7 +40,7 @@ public class circularLlist {
 
 
     public void addFirst(int data){
-        Node newNd= new Node ( int data);
+        Node newNd= new Node (data);
 
         if( head == null){
             head = newNd; tail= newNd;newNd.next= head;
@@ -50,6 +50,10 @@ public class circularLlist {
             head=newNd;     //  Update head to new node	Makes new node the first in the list//
             tail.next=head;  // Update circular link	Makes last node point to new head//
         }
+    }
+
+    public void deleteFromFirst(){
+        if ( head == null)
     }
 
 
