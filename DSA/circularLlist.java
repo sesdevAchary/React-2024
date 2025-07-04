@@ -39,6 +39,20 @@ public class circularLlist {
     }
 
 
+    public void addFirst(int data){
+        Node newNd= new Node ( int data);
+
+        if( head == null){
+            head = newNd; tail= newNd;newNd.next= head;
+        }
+        else{
+            newNd.next=head; // Point new node to current head	Connects new to old first node//
+            head=newNd;     //  Update head to new node	Makes new node the first in the list//
+            tail.next=head;  // Update circular link	Makes last node point to new head//
+        }
+    }
+
+
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
