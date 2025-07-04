@@ -19,7 +19,7 @@ public class circularLlist {
 
         if(head == null ){
             head = newNd;tail=newNd;
-            newNd.next= head;  //ircular reference.//
+            newNd.next= head;  //circular reference.//
         }
         else{
             tail.next = newNd;    //Link the current last node to the new one//
@@ -39,7 +39,7 @@ public class circularLlist {
     }
 
 
-    publilc void printList(){
+    public void printList(){
         if(head == null){
             System.out.println("List is empty");
             return;        
@@ -58,7 +58,7 @@ public class circularLlist {
 
 
     public static void main ( String args[]){
-        CircularLinkedList cll = new CircularLinkedList();
+        circularLlist cll = new circularLlist();
 
         cll.addLast(10);
         cll.addLast(20);
