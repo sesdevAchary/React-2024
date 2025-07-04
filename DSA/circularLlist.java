@@ -41,7 +41,23 @@ public class circularLlist {
 
     publilc void printList(){
         if(head == null){
-            System.out.println(" empty list ");
+            System.out.println("List is empty");
+            return;        
         }
+
+        Node current = head ;
+        do{
+            System.out.print(current.data + " -> ");
+            current=current.next;
+
+        } while(current!= head);
+
+        System.out.println("back to head");
+    }
+
+
+
+    public static void main ( String args[]){
+        
     }
 }
