@@ -58,6 +58,12 @@ public class circularLlist {
 
 
     public static void main ( String args[]){
-        
+        CircularLinkedList cll = new CircularLinkedList();
+
+        cll.addLast(10);
+        cll.addLast(20);
+        cll.addLast(30);
+        System.out.println("After adding last:");
+        cll.printList();
     }
 }
