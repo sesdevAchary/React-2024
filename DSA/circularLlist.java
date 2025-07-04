@@ -53,7 +53,10 @@ public class circularLlist {
     }
 
     public void deleteFromFirst(){
-        if ( head == null)
+        if ( head == null){
+            System.out.print(" empty list");
+        }
+        
     }
 
 
