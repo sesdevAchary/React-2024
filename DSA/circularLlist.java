@@ -37,4 +37,11 @@ public class circularLlist {
 
         }     
     }
+
+
+    publilc void printList(){
+        if(head == null){
+            System.out.println(" empty list ");
+        }
+    }
 }
