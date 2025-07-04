@@ -77,7 +77,10 @@ public class circularLlist {
         cll.addLast(10);
         cll.addLast(20);
         cll.addLast(30);
-        System.out.println("After adding last:");
+
+        cll.addFirst(5);
         cll.printList();
+
+
     }
 }
