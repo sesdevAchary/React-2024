@@ -89,7 +89,30 @@ public void deleteLast(){
 
 
 public void insertAtSpecificPlace(int data, int position){
-    
+    if(position <=1 || head == null){
+        addFirst(data);  // If position is 1 or less, OR if the list is empty, insert at front.
+        return ; 
+    }
+
+    Node current=head;
+    int index = 0;
+
+    while( index< position-1 && current.next != head){
+        current=current.next;  //stopping at the node just before the target position.
+        index++;
+    }
+
+    if( current.next ==  head){
+    addLast(data);  //If the loop hit the end of the list before reaching position − 1, just add to the end.
+
+    } else {
+        Node newNd= new Node ( data);
+        newNd.next = current.next;
+        current.next = newNd;
+
+
+    }
+
 
 }
 
