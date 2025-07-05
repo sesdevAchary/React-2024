@@ -190,6 +190,10 @@ A regular while could skip checking the first node in circular structure.
         System.out.println("inserting at index 3:");
 
 
+       cll.update(10,90);
+       System.out.println("updating old value, the new value is:");
+
+
         cll.printList();
 
 
