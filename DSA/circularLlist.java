@@ -116,15 +116,16 @@ public void insertAtSpecificPlace(int data, int position){
 
 }
 
+    public boolean search ( int target){
+        if(head == null) return false;
 
-   public boolean search(int target) {
-        if (head == null) return false;
-        Node current = head;
-        do {
-            if (current.data == target) return true;
+        Node current=head;
+        do{
+            if(current.data == target )return true;
             current = current.next;
-        } while (current != head);
+        }while(current != head);
         return false;
+
     }
 
 
