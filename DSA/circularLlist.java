@@ -66,12 +66,9 @@ public class circularLlist {
         }
 
     }
-
-public void printList(){
-        if(head == null){
-            System.out.println("List is empty");
-            return;        
-        }
+public void deleteLast(){
+    
+}
 
 
     public void printList(){
