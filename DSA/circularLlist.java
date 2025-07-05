@@ -116,7 +116,8 @@ public void insertAtSpecificPlace(int data, int position){
 
 }
 
-    public boolean search ( int target){
+//// search and Return boolean value ///////
+    public boolean search (int target){
         if(head == null) return false;
 
         Node current=head;
@@ -127,6 +128,22 @@ public void insertAtSpecificPlace(int data, int position){
         return false;
 
     }
+
+
+     /** Updates first node whose value == oldVal to newVal. */
+public boolean update ( int oldVal,int newVal){
+    if(head == null) return false;
+    Node current = head;
+    do{
+if ( current.data == oldVal){
+    current.data = newVal;
+    return true;
+}
+current=current.next;
+    }while( current != head);
+}
+
+
 
 
     public void printList(){
@@ -141,7 +158,9 @@ public void insertAtSpecificPlace(int data, int position){
             current=current.next;
 
         } while(current!= head);
-
+/* Use a do-while loop because:must check at least one node even if head == tail.
+A regular while could skip checking the first node in circular structure.
+*/
         System.out.println("back to head");
     }
 
