@@ -67,7 +67,24 @@ public class circularLlist {
 
     }
 public void deleteLast(){
-    
+    if( head == null ){
+        System.out.println( " empty list ");
+    }
+
+    if ( head == tail ){
+        head = null ;
+        tail = null;
+    }else {
+        Node current = head ;
+        while ( current.next!= tail){
+            current= current.next;
+
+        }
+        current.next = head ;
+        tail = current;
+    }
+
+
 }
 
 
