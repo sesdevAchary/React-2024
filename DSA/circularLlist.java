@@ -88,6 +88,12 @@ public void deleteLast(){
 }
 
 
+public void insertAtSpecificPlace(int data, int position){
+    
+
+}
+
+
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
@@ -112,12 +118,19 @@ public void deleteLast(){
         cll.addLast(10);
         cll.addLast(20);
         cll.addLast(30);
+        System.out.println("After adding last:");
+
 
         cll.addFirst(5);
+        System.out.println("After adding first:");
+
 
         cll.deleteFromFirst();
+        System.out.println("After deleting first:");
 
         cll.deleteLast();
+        System.out.println("After deleting last:");
+
         cll.printList();
 
 
