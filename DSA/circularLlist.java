@@ -116,6 +116,8 @@ public void deleteLast(){
         cll.addFirst(5);
 
         cll.deleteFromFirst();
+
+        cll.deleteLast();
         cll.printList();
 
 
