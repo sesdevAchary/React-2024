@@ -117,6 +117,17 @@ public void insertAtSpecificPlace(int data, int position){
 }
 
 
+   public boolean search(int target) {
+        if (head == null) return false;
+        Node current = head;
+        do {
+            if (current.data == target) return true;
+            current = current.next;
+        } while (current != head);
+        return false;
+    }
+
+
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
@@ -153,6 +164,11 @@ public void insertAtSpecificPlace(int data, int position){
 
         cll.deleteLast();
         System.out.println("After deleting last:");
+
+
+        cll.insertAtPosition(15, 3);      // 5 → 10 → 15 → 20 → 30
+        System.out.println("inserting at index 3:");
+
 
         cll.printList();
 
