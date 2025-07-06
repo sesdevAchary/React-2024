@@ -69,6 +69,13 @@ public void addFirst( int data ){
         dll.add(50);
         dll.add(60);
 
+        dll.prepend(0);  // insert at beginning
+        dll.prepend(1); 
+        dll.prepend(2);
+        dll.prepend(3);
+        dll.prepend(4);
+        
+
         dll.printForward();
     }
 }
