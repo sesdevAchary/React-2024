@@ -75,6 +75,9 @@ public void addFirst( int data ){
         dll.prepend(3);
         dll.prepend(4);
         
+public DoublyLinkedList() {
+    head = null;
+}
 
         dll.printForward();
     }
