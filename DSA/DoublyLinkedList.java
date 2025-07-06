@@ -36,6 +36,11 @@ public class DoublyLinkedList {
         newNd.prev = current;
     }
 
+
+
+public void addFirst( int data ){
+    
+}
     public void printForward() {
         Node current = head;
         System.out.println("Printing the DLL:");
