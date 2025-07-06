@@ -39,7 +39,14 @@ public class DoublyLinkedList {
 
 
 public void addFirst( int data ){
-    
+               if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        newNode.next = head;  // point forward to current head
+        head.prev = newNode;  // point back from old head
+        head = newNode;       // update head to new node
 }
     public void printForward() {
         Node current = head;
