@@ -35,7 +35,9 @@ class DoublyLinkedList{
         newNd.prev = current;
     }
 
-
+public void printForward(){
+    
+}
 
 
     public static void main ( String args[]){
