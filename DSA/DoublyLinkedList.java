@@ -36,7 +36,13 @@ class DoublyLinkedList{
     }
 
 public void printForward(){
-    
+    Node current = head ;
+    System.out.println(" printing the dll");
+    while( current != null){
+        System.out.print(current.data + " ");
+    current=current.next;
+    }
+    System.out.println();
 }
 
 
@@ -50,5 +56,9 @@ public void printForward(){
         dll.add(40);
         dll.add(50);
         dll.add(60);
+
+
+
+        dll.printForward();
     }
 }
