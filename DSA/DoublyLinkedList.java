@@ -120,7 +120,21 @@ public void deleteBeginning( ){
        */
 
  public void deleteFromEnd(){
-    
+    if ( head == null){
+        System.out.println(" empty list");
+        return ;
+    }
+     
+     if( head.next == null ){
+        head = null ;
+        return null;
+     }
+     Node current = head;
+     while( current != null){
+        current = current.next;
+     }
+     current.prev.next=null; // removing the last node //
+
  }
 
 
