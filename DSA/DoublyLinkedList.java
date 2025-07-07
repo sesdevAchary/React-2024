@@ -192,3 +192,39 @@ public void deleteBeginning( ){
         dll.printForward(); 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+    public void insertAtPosition(int data, int position) {
+        if (position <= 1) {
+            prepend(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        Node current = head;
+        int index = 1;
+
+        while (current != null && index < position - 1) {
+            current = current.next;
+            index++;
+        }
+
+        if (current == null || current.next == null) {
+            append(data);
+            return;
+        }
+
+        newNode.next = current.next;
+        newNode.prev = current;
+        current.next.prev = newNode;
+        current.next = newNode;
+    }
