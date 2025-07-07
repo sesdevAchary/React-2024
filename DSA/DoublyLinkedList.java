@@ -40,6 +40,7 @@ public class DoublyLinkedList {
 
 
 public void prepend( int data ){
+    Node newNode = new Node(data);
                if (head == null) {
             head = newNode;
             return;
@@ -69,11 +70,12 @@ public void insertAtPosition( int data , int position ){
         append(data);
         return ;
     }else{
-        newNd.next=cuurent.next;
+        newNd.next=current.next;
         newNd.prev=current;
-        cuurent.next.prev=newNd;
+        current.next.prev=newNd;
         current.next=newNd;
     }
+}
 
 public void deleteBeginning( ){
     if ( head == null ){
@@ -87,7 +89,7 @@ public void deleteBeginning( ){
         head.prev = null;
     }
 }
-}
+
 
     public void printForward() {
         Node current = head;
@@ -116,10 +118,16 @@ public void deleteBeginning( ){
         dll.prepend(3);
         dll.prepend(4);
         
-public DoublyLinkedList() {
-    head = null;
-}
 
-        dll.printForward();
+        dll.insertAtPosition(70,5);
+
+
+        System.out.println("Before deletion:");
+        dll.printForward();  
+
+        dll.deleteBeginning();
+
+        System.out.println("After deleting from beginning:");
+        dll.printForward();  
     }
 }
