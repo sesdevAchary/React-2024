@@ -105,10 +105,16 @@ public void deleteBeginning( ){
         }
 
         Node current = head ;
-        while( current != null){
+        while( current.next != null){
             current = current.next;
         }
         //print in reverse//
+        System.out.println(" printing in reverse ");
+        while( current != null){
+            System.out.print(current.data + " ");
+            current = current.prev;
+        }
+        System.out.println();
       }
 
 
