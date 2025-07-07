@@ -17,7 +17,7 @@ public class DoublyLinkedList {
         head = null;
     }
 
-    public void add(int data) {
+    public void append(int data) {
         Node newNd = new Node(data);
 
         if (head == null) {
@@ -30,6 +30,7 @@ public class DoublyLinkedList {
         // Traverse till the last node
         while (current.next != null) {
             current = current.next;
+            
         }
 
         current.next = newNd;
@@ -38,7 +39,7 @@ public class DoublyLinkedList {
 
 
 
-public void addFirst( int data ){
+public void prepend( int data ){
                if (head == null) {
             head = newNode;
             return;
@@ -61,13 +62,13 @@ public void addFirst( int data ){
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
 
-        dll.add(5);
-        dll.add(10);
-        dll.add(20);
-        dll.add(30);
-        dll.add(40);
-        dll.add(50);
-        dll.add(60);
+        dll.append(5);
+        dll.append(10);
+        dll.append(20);
+        dll.append(30);
+        dll.append(40);
+        dll.append(50);
+        dll.append(60);
 
         dll.prepend(0);  // insert at beginning
         dll.prepend(1); 
