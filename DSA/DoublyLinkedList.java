@@ -97,7 +97,8 @@ public void deleteBeginning( ){
     }
 }
 
-     /* Printing the List by backward  Traversal  */
+
+     /* Printing the List by backward  Traversal 
       public void printBackward(){
         if( head == null){
             System.out.println(" empty list");
@@ -116,8 +117,11 @@ public void deleteBeginning( ){
         }
         System.out.println();
       }
+       */
 
-
+ public void deleteFromEnd(){
+    
+ }
 
 
     /* Printing the List by Traversal  */
