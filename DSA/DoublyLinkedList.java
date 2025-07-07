@@ -49,6 +49,12 @@ public void prepend( int data ){
         head.prev = newNode;  // point back from old head
         head = newNode;       // update head to new node
 }
+
+
+public void insertAtPosition( int data , int position ){
+    
+}
+
     public void printForward() {
         Node current = head;
         System.out.println("Printing the DLL:");
