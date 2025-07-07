@@ -119,23 +119,30 @@ public void deleteBeginning( ){
       }
        */
 
- public void deleteFromEnd(){
-    if ( head == null){
-        System.out.println(" empty list");
-        return ;
+ public void deleteFromEnd() {
+    if (head == null) {
+        System.out.println("Empty list");
+        return;
     }
-     
-     if( head.next == null ){
-        head = null ;
-        return null;
-     }
-     Node current = head;
-     while( current != null){
-        current = current.next;
-     }
-     current.prev.next=null; // removing the last node //
 
- }
+    if (head.next == null) {
+        head = null;
+        return;
+    }
+
+    Node current = head;
+
+    // Traverse to the last node
+    while (current.next != null) {
+        current = current.next;
+    }
+
+    // Remove the last node
+    if (current.prev != null) {
+        current.prev.next = null;
+    }
+}
+
 
 
     /* Printing the List by Traversal  */
@@ -178,5 +185,10 @@ public void deleteBeginning( ){
 
         System.out.println("After deleting from beginning:");
         dll.printForward();  
+
+         dll.deleteFromEnd();
+
+        System.out.println("After deleting from end:");
+        dll.printForward(); 
     }
 }
