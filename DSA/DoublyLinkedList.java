@@ -17,6 +17,9 @@ public class DoublyLinkedList {
         head = null;
     }
 
+
+   /* isnerting new node at the last part */
+   
     public void append(int data) {
         Node newNd = new Node(data);
 
@@ -38,6 +41,7 @@ public class DoublyLinkedList {
     }
 
 
+    /* isnerting new node at the initial  part */
 
 public void prepend( int data ){
     Node newNode = new Node(data);
@@ -51,6 +55,7 @@ public void prepend( int data ){
         head = newNode;       // update head to new node
 }
 
+     /* isnerting new node at the middle part */
 
 public void insertAtPosition( int data , int position ){
     if( position<= 1){
@@ -75,7 +80,9 @@ public void insertAtPosition( int data , int position ){
         current.next.prev=newNd;
         current.next=newNd;
     }
-}
+} 
+
+   /* Deleting  node form the first position  */
 
 public void deleteBeginning( ){
     if ( head == null ){
@@ -90,6 +97,24 @@ public void deleteBeginning( ){
     }
 }
 
+     /* Printing the List by backward  Traversal  */
+      public void printBackward(){
+        if( head == null){
+            System.out.println(" empty list");
+            return ;
+        }
+
+        Node current = head ;
+        while( current != null){
+            current = current.next;
+        }
+        //print in reverse//
+      }
+
+
+
+
+    /* Printing the List by Traversal  */
 
     public void printForward() {
         Node current = head;
