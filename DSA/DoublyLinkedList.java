@@ -69,10 +69,15 @@ public void insertAtPosition( int data , int position ){
         append(data);
         return ;
     }else{
-        
+        newNd.next=cuurent.next;
+        newNd.prev=current;
+        cuurent.next.prev=newNd;
+        current.next=newNd;
     }
 
-
+public void deleteBeginning( ){
+    
+}
 }
 
     public void printForward() {
