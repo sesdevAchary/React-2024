@@ -76,7 +76,16 @@ public void insertAtPosition( int data , int position ){
     }
 
 public void deleteBeginning( ){
-    
+    if ( head == null ){
+        System.out.println("List is already empty.");
+        return;
+    }
+
+    head = head.next;
+
+    if( head != null){
+        head.prev = null;
+    }
 }
 }
 
