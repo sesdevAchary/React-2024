@@ -178,6 +178,13 @@ public void deleteBeginning( ){
 
 
 
+        /* searching for a value */
+
+        public boolean search(int target ){
+            
+        }
+
+
     /* Printing the List by Traversal  */
 
     public void printForward() {
