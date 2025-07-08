@@ -161,6 +161,19 @@ public void deleteBeginning( ){
         while ( current != null && current.data != value ){
             current=current.next;
         }
+
+        if ( current = null){
+            System.out.println("value not found ");
+            return ;
+        }
+        if( current.next == null){
+            deleteFromEnd();
+        }
+        
+        ccurrent.prev.next=current.next;
+        current.next.prev=current.prev;
+
+        
         }
 
 
