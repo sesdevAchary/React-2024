@@ -265,7 +265,13 @@ public int updateByIndex( int oldV , int newV){
         dll.search(60);
 
 
-        
+         int index = dll.updateByIndex(30, 300);
+        if (index != -1) {
+            System.out.println("Update by value (index): updated at position " + index);
+        } else {
+            System.out.println("Update by value (index): value not found");
+        }
+        dll.printForward();
     }
 }
 
