@@ -223,6 +223,12 @@ public void deleteBeginning( ){
 
         System.out.println("After deleting from end:");
         dll.printForward(); 
+
+
+        dll.deleteByValue(20);
+
+        System.out.println("After deleting 20:");
+        dll.printForward(); 
     }
 }
 
