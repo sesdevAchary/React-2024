@@ -147,7 +147,20 @@ public void deleteBeginning( ){
         /* deleting a node from the middle  poise with a certain value */
 
         public deleteByValue( int value){
-            
+            if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+
+        Node current = head;
+
+        if ( current.data ==  value){
+            deleteBeginning();
+            return ;
+        }
+        while ( current != null && current.data != value ){
+            current=current.next;
+        }
         }
 
 
