@@ -195,7 +195,18 @@ public void deleteBeginning( ){
         /* updating the value and returning the index value */
 
 public int updateByIndex( int oldV , int newV){
-    
+    Node current = head ;
+    int index = 0;
+
+    while ( current != null){
+        if( current.data == oldV){
+            current.data =  newV ;
+            return  index ;
+        }
+        current = curent.next;
+        index ++;
+    }
+    return -1; //old value not found//
 }
 
 
@@ -252,6 +263,9 @@ public int updateByIndex( int oldV , int newV){
         dll.printForward(); 
 
         dll.search(60);
+
+
+        
     }
 }
 
