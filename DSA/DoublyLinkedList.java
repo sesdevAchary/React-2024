@@ -222,6 +222,19 @@ public int updateByIndex( int oldV , int newV){
         System.out.println();
     }
 
+    public void reverseFullList(){
+        Node current = head ;
+        Node temp = null;
+
+        while( current != null){
+            temp = current.prev;
+            current.prev=current.next;
+            current.next=temp;
+
+            current = current.prev; // moving the ptr to next node //
+        }
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
 
