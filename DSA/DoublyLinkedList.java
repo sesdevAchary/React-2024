@@ -233,6 +233,10 @@ public int updateByIndex( int oldV , int newV){
 
             current = current.prev; // moving the ptr to next node //
         }
+        // After loop, temp is at old tail. Set it as new head.
+        if (temp != null) {
+            head = temp.prev;
+        }
     }
 
     public static void main(String[] args) {
@@ -286,6 +290,12 @@ public int updateByIndex( int oldV , int newV){
         }
         dll.printForward();
     }
+
+
+        dll.reverse();
+
+        System.out.println("After reverse:");
+        dll.printForward(); 
 }
 
 
