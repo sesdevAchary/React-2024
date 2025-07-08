@@ -118,7 +118,7 @@ public void deleteBeginning( ){
         System.out.println();
       }
        */
-
+    /* deleting a node from the last poise */
  public void deleteFromEnd() {
     if (head == null) {
         System.out.println("Empty list");
@@ -142,6 +142,13 @@ public void deleteBeginning( ){
         current.prev.next = null;
     }
 }
+
+
+        /* deleting a node from the middle  poise with a certain value */
+
+        public deleteByValue( int value){
+            
+        }
 
 
 
@@ -202,29 +209,3 @@ public void deleteBeginning( ){
 
 
 
-
-    public void insertAtPosition(int data, int position) {
-        if (position <= 1) {
-            prepend(data);
-            return;
-        }
-
-        Node newNode = new Node(data);
-        Node current = head;
-        int index = 1;
-
-        while (current != null && index < position - 1) {
-            current = current.next;
-            index++;
-        }
-
-        if (current == null || current.next == null) {
-            append(data);
-            return;
-        }
-
-        newNode.next = current.next;
-        newNode.prev = current;
-        current.next.prev = newNode;
-        current.next = newNode;
-    }
