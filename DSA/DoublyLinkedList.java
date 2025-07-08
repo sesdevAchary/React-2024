@@ -192,6 +192,12 @@ public void deleteBeginning( ){
             return false;
         }
 
+        /* updating the value and returning the index value */
+
+public int updateByIndex( int oldV , int newV){
+    
+}
+
 
     /* Printing the List by Traversal  */
 
@@ -244,6 +250,8 @@ public void deleteBeginning( ){
 
         System.out.println("After deleting 20:");
         dll.printForward(); 
+
+        dll.search(60);
     }
 }
 
