@@ -222,21 +222,28 @@ public int updateByIndex( int oldV , int newV){
         System.out.println();
     }
 
-    public void reverseFullList(){
-        Node current = head ;
-        Node temp = null;
+    // public void reverseFullList(){
+    //     Node current = head ;
+    //     Node temp = null;
 
-        while( current != null){
-            temp = current.prev;
-            current.prev=current.next;
-            current.next=temp;
+    //     while( current != null){
+    //         temp = current.prev;
+    //         current.prev=current.next;
+    //         current.next=temp;
 
-            current = current.prev; // moving the ptr to next node //
-        }
-        // After loop, temp is at old tail. Set it as new head.
-        if (temp != null) {
-            head = temp.prev;
-        }
+    //         current = current.prev; // moving the ptr to next node //
+    //     }
+    //     // After loop, temp is at old tail. Set it as new head.
+    //     if (temp != null) {
+    //         head = temp.prev;
+    //     }
+    // }
+
+
+
+
+    public int getLength(){
+
     }
 
     public static void main(String[] args) {
@@ -318,14 +325,3 @@ public int updateByIndex( int oldV , int newV){
 
 
 
-public void append(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-
-        Node current = head;
-        while (current.next != null) {
-            current = current.next;
-        }
