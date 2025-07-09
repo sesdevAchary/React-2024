@@ -277,3 +277,15 @@ class BrowseHistory {
             current = current.next;
         }
         System.out.println();
+
+
+        public boolean updateByValueReturnBoolean(int oldValue, int newValue) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == oldValue) {
+                current.data = newValue;
+                return true;
+            }
+            current = current.next;
+        }
+        return false; 
