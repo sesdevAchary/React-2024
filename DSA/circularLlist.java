@@ -212,6 +212,13 @@ A regular while could skip checking the first node in circular structure.
 
     int updateIndex = cll.update(10,70);
 
+    if ( updateIndex != -1){
+        System.out.println(" value updated at index" + updateIndex);
+    }
+    else{
+        System.out.println(" value not found");
+    }
+
 
         cll.printList();
 
