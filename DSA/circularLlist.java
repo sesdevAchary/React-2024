@@ -305,3 +305,9 @@ class BrowseHistory {
 
         return -1;  // oldValue not found
     }
+     int index = dll.updateByValueReturnIndex(30, 300);
+        if (index != -1) {
+            System.out.println("Update by value (index): updated at position " + index);
+        } else {
+            System.out.println("Update by value (index): value not found");
+        }
