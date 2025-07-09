@@ -241,7 +241,7 @@ public int updateByIndex( int oldV , int newV){
 
 
 
-
+/* Getting the Fulll length by counting it */
     public int getLength(){
      int count = 0;
      Node current = head ;
@@ -251,6 +251,13 @@ public int updateByIndex( int oldV , int newV){
         current = current.next;
      }
      return count ;
+    }
+
+
+    /* converting a doubly linked list into Array Format */
+
+    public int[] toArray(){
+        List<Integer> list = new ArrayList<>();
     }
 
     public static void main(String[] args) {
