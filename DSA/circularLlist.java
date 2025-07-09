@@ -143,8 +143,21 @@ current=current.next;
     }while( current != head);
 }
 
-public boolean update( int oldV, int newV){
+public int  update( int oldV, int newV){
     if(head == null) return false;
+
+    Node current = head ;
+    int index = 0;
+
+    do{
+        if( current.data == oldV){
+            current.data = newV;
+            return index ;
+        }
+        current = current.next;
+    } while ( current != head);
+    
+    return -1 ; // old value not found //
 }
 
 
@@ -194,8 +207,10 @@ A regular while could skip checking the first node in circular structure.
         System.out.println("inserting at index 3:");
 
 
-       cll.update(10,90);
-       System.out.println("updating old value, the new value is:");
+    //    cll.update(10,90);
+    //    System.out.println("updating old value, the new value is:");
+
+    int updateIndex = cll.update(10,70);
 
 
         cll.printList();
