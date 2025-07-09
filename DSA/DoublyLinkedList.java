@@ -210,18 +210,6 @@ public int updateByIndex( int oldV , int newV){
 }
 
 
-    /* Printing the List by Traversal  */
-
-    public void printForward() {
-        Node current = head;
-        System.out.println("Printing the DLL:");
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println();
-    }
-
     // public void reverseFullList(){
     //     Node current = head ;
     //     Node temp = null;
@@ -258,7 +246,36 @@ public int updateByIndex( int oldV , int newV){
 
     public int[] toArray(){
         List<Integer> list = new ArrayList<>();
+        Node current = head;
+
+        while ( current != null){
+            list.add(current.data);
+            current = current.next;
+        }
+
+        // convert list<Integer> to int[]//
+        // dynamic to primitive type //
+
+        int[] arr= new int[list.size()];
+        for ( int i =0 ; i< list.size();i++){
+            arr[i]= list.get(i);
+        }
+        return arr;
     }
+ 
+ /* Printing the List by Traversal  */
+
+    public void printForward() {
+        Node current = head;
+        System.out.println("Printing the DLL:");
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+
 
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
@@ -320,6 +337,15 @@ public int updateByIndex( int oldV , int newV){
 
 
         System.out.println("Length: " + dll.getLength());
+
+
+        int[] input = { 1,2,3,4,5,6,7,8,9,10};
+        dll.toArray(input);
+        System.out.println("After fromArray:");
+        dll.printForward();
+
+
+
 }
 
 
