@@ -232,5 +232,21 @@
 
 
 class BrowseHistory {
-    
+    Node current ;
+
+
+    class Node{
+        String url; // to hold the webpage like xyz.com//
+        Node next; // points to the next visited page//
+        Node prev; // points to the prev vstd page //
+
+        Node(String url){
+            this.url=url;  // con that stores the url into the node //
+        }
+    }
+
+    public BrowseHistory(homePage){
+        current= BrowseHistory(homePage); // when a browser is opened , starts on homepage //
+        
+    }
 }
