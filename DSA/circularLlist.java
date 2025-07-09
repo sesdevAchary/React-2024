@@ -143,6 +143,10 @@ current=current.next;
     }while( current != head);
 }
 
+public boolean update( int oldV, int newV){
+    if(head == null) return false;
+}
+
 
 
 
