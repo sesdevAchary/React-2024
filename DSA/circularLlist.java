@@ -289,3 +289,19 @@ class BrowseHistory {
             current = current.next;
         }
         return false; 
+
+         public int updateByValueReturnIndex(int oldValue, int newValue) {
+        Node current = head;
+        int index = 0;
+
+        while (current != null) {
+            if (current.data == oldValue) {
+                current.data = newValue;
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+
+        return -1;  // oldValue not found
+    }
