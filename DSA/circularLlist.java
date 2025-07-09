@@ -250,3 +250,30 @@ class BrowseHistory {
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   public void printForward() {
+        Node current = head;
+        System.out.println("Printing the DLL:");
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
