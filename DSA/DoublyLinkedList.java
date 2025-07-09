@@ -243,7 +243,14 @@ public int updateByIndex( int oldV , int newV){
 
 
     public int getLength(){
+     int count = 0;
+     Node current = head ;
 
+     while( current != null){
+        count ++ ;
+        current = current.next;
+     }
+     return count ;
     }
 
     public static void main(String[] args) {
@@ -303,6 +310,9 @@ public int updateByIndex( int oldV , int newV){
 
         System.out.println("After reverse:");
         dll.printForward(); 
+
+
+        System.out.println("Length: " + dll.getLength());
 }
 
 
