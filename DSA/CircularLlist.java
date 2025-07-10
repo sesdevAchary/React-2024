@@ -290,10 +290,11 @@ public void addLast(int data){
             tail.next = newNd;
             tail=newNd;
             tail.next = head;
-
         }
+}
 
-
+public void insertAtMiddle(int data , int position){
+    
 }
 
 public void printList(){
@@ -324,7 +325,7 @@ public static void main(String[] args) {
         cll.addLast(50);
         cll.printList();
 
-        
+
 
     }
 }
