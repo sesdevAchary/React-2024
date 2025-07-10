@@ -294,7 +294,10 @@ public void addLast(int data){
 }
 
 public void insertAtMiddle(int data , int position){
-    
+    if (position <= 1 || head == null) {
+            addFirst(data);
+            return;
+        }
 }
 
 public void printList(){
