@@ -385,3 +385,15 @@ public void addFirst(int data) {
             this.data = data;
         }
     }
+    public class CircularLinkedList {
+    Node head = null;
+    Node tail = null;
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
