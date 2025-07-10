@@ -346,3 +346,19 @@ public static void main(String[] args) {
 
 
 
+
+
+
+
+
+ public void addLast(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+            tail.next = head;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+            tail.next = head;
+        }
+    }
