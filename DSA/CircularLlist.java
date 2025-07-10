@@ -226,29 +226,35 @@
 
 
 
+// class BrowseHistory {
+//     Node current ;
 
 
+//     class Node{
+//         String url; // to hold the webpage like xyz.com//
+//         Node next; // points to the next visited page//
+//         Node prev; // points to the prev vstd page //
 
+//         Node(String url){
+//             this.url=url;  // con that stores the url into the node //
+//         }
+//     }
 
-
-class BrowseHistory {
-    Node current ;
-
-
-    class Node{
-        String url; // to hold the webpage like xyz.com//
-        Node next; // points to the next visited page//
-        Node prev; // points to the prev vstd page //
-
-        Node(String url){
-            this.url=url;  // con that stores the url into the node //
-        }
-    }
-
-    public BrowseHistory(homePage){
-        current= BrowseHistory(homePage); // when a browser is opened , starts on homepage //
+//     public BrowseHistory(homePage){
+//         current= BrowseHistory(homePage); // when a browser is opened , starts on homepage //
         
-    }
+//     }
+// }
+
+
+
+
+
+public class CircularLlist{
+    Node head = null;
+    Node tail = null;
+
+    
 }
 
 
@@ -261,53 +267,3 @@ class BrowseHistory {
 
 
 
-
-
-
-
-
-
-
-
-   public void printForward() {
-        Node current = head;
-        System.out.println("Printing the DLL:");
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println();
-
-
-        public boolean updateByValueReturnBoolean(int oldValue, int newValue) {
-        Node current = head;
-        while (current != null) {
-            if (current.data == oldValue) {
-                current.data = newValue;
-                return true;
-            }
-            current = current.next;
-        }
-        return false; 
-
-         public int updateByValueReturnIndex(int oldValue, int newValue) {
-        Node current = head;
-        int index = 0;
-
-        while (current != null) {
-            if (current.data == oldValue) {
-                current.data = newValue;
-                return index;
-            }
-            current = current.next;
-            index++;
-        }
-
-        return -1;  // oldValue not found
-    }
-     int index = dll.updateByValueReturnIndex(30, 300);
-        if (index != -1) {
-            System.out.println("Update by value (index): updated at position " + index);
-        } else {
-            System.out.println("Update by value (index): value not found");
-        }
