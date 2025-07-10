@@ -264,6 +264,9 @@ public class CircularLlist{
         }
     }
 
+public void addFirst( int data){
+    
+}
 
 public void printList(){
     if ( head == null){
