@@ -265,7 +265,16 @@ public class CircularLlist{
     }
 
 public void addFirst( int data){
-    
+    Node newNd = new Node(data);
+    if ( head == null){
+        head = tail = newNd;
+        tail.next = head;
+    }
+    else{
+        newNd.next= head;
+        head = newNd;
+        tail.next = head;  // Update circular link
+    }
 }
 
 public void printList(){
