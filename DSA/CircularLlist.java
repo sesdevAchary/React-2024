@@ -397,3 +397,14 @@ public void addFirst(int data) {
             this.data = data;
         }
     }
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+            tail.next = head;
+        } else {
+            newNode.next = head;
+            head = newNode;
+            tail.next = head;
+        }
+    }
