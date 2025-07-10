@@ -278,8 +278,22 @@ public void addFirst( int data){
 }
 
 
-public void addLast(){
-    
+public void addLast(int data){
+        Node newNd = new Node(data) //A linked list is made up of Node objects.So to insert, you first have to make a node.
+
+        if ( head == null )
+        {
+            head = tail = newNd;
+            tail.next= head;
+
+        }else{
+            tail.next = newNd;
+            tail=newNd;
+            tail.next = head;
+
+        }
+
+
 }
 
 public void printList(){
@@ -303,6 +317,19 @@ public void printList(){
 public static void main(String[] args) {
         CircularLlist cll = new CircularLlist();
         cll.printList();  // Empty
+
+
+        cll.addFirst(4);
+        cll.addFirst(3);
+        cll.addFirst(2);
+        cll.addFirst(1);
+
+        cll.addLast(10);
+        cll.addLast(20);
+        cll.addLast(30);
+        cll.addLast(40);
+        cll.addLast(50);
+
     }
 }
 
