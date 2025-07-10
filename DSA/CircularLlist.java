@@ -254,6 +254,21 @@ public class CircularLlist{
     Node head = null;
     Node tail = null;
 
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            //It initializes the data field. (next) is implicitly null at this point (default)
+        }
+    }
+
+
+public void printList(){
+    `
+}
+
     
 }
 
