@@ -266,11 +266,31 @@ public class CircularLlist{
 
 
 public void printList(){
-    `
+    if ( head == null){
+        System.out.println("List is empty.");
+        return;
+    }
+
+    Node current = head;
+    do{
+        System.out.println( current.data+"->");
+        current=current.next;
+
+    }while ( current != null);
+
+    System.out.println("(Back to Head: " + head.data + ")"); // to ensure that head data is there the last  //
+
+}
+
+
+public static void main(String[] args) {
+        CircularLlist cll = new CircularLlist();
+        cll.printList();  // Empty
+    }
 }
 
     
-}
+
 
 
 
