@@ -347,7 +347,15 @@ public static void main(String[] args) {
 
 
 
+public static void main(String[] args) {
+        CircularLinkedList cll = new CircularLinkedList();
 
+        cll.insertAtPosition(10, 1); // addFirst
+        cll.insertAtPosition(20, 2); // addLast
+        cll.insertAtPosition(30, 2); // middle
+        cll.insertAtPosition(5, 1);  // new head
+
+        cll.printList(); // 
 
 
 
