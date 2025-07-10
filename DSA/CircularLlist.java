@@ -277,6 +277,11 @@ public void addFirst( int data){
     }
 }
 
+
+public void addLast(){
+    
+}
+
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
