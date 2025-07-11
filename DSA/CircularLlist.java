@@ -331,6 +331,26 @@ public void deleteFirst(){
         tail.next=head;
     }
 }
+
+
+public void deleteLast(){
+     if( head == null){
+        System.out.println(" empty list");
+    }
+
+    if( head == tail){
+        head = tail = null;
+    }else{
+        Node current= head;
+        while(current.next != tail ){
+            current = current.next;
+        }
+        current.next = head;
+        tail = current;
+    }
+
+
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
@@ -363,6 +383,8 @@ public static void main(String[] args) {
         cll.printList();
 
         cll.deleteFirst();
+        cll.printList();  
+        cll.deleteLast();
         cll.printList();  
 
 
