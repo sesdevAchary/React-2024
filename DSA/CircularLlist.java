@@ -319,7 +319,17 @@ public void insertAtMiddle(int data , int position){
 
 
 public void deleteFirst(){
-    
+    if( head == null){
+        System.out.println(" empty list");
+    }
+
+    if( head == tail){
+        head = tail = null;
+    }
+    else{
+        head=head.next;
+        tail.next=head;
+    }
 }
 public void printList(){
     if ( head == null){
@@ -351,6 +361,9 @@ public static void main(String[] args) {
 
         cll.insertAtPosition(20, 2);
         cll.printList();
+
+        cll.deleteFirst();
+        cll.printList();  
 
 
 
