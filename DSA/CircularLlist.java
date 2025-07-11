@@ -398,7 +398,20 @@ public int search( int value){
 
 
 public int update( int oldv , int newv){
-    
+    if(head == null) return -1;
+
+    Node current = head;
+    int index =0;
+
+    do{
+        if(current.value == oldv){
+            current.data = newValue;
+                return index;
+        }
+
+        current=current.index;
+        index ++;
+    }while (current != head);
 }
 public void printList(){
     if ( head == null){
@@ -445,6 +458,10 @@ public static void main(String[] args) {
         }else {
             System.out.println("Value " + value + " not found in the list.");
         }
+
+        int pos = cll.update(20, 25);
+        System.out.println("Updated at index: " + pos);     // index of update
+        cll.printList();    
 
 
 
