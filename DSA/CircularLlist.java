@@ -307,6 +307,12 @@ public void insertAtMiddle(int data , int position){
         index++;
 
     }
+    newNd.next = current.next;
+    current.next = newNd;
+
+    if(current==tail){
+        tail=newNd;
+    }
 
 }
 
