@@ -364,7 +364,17 @@ public void deleteByValue(int value ){
     }
 
     Node current = head ;
-    
+    while ( current .next != head && current.next.data != value){
+        current=current.next;
+    }
+
+    if( current.next.data == value){
+        tail = current;
+    }
+    current.next.next= current.next;
+    else{
+          System.out.println("Value not found.");
+    }
 }
 public void printList(){
     if ( head == null){
