@@ -376,6 +376,25 @@ public void deleteByValue(int value ){
           System.out.println("Value not found.");
     }
 }
+
+
+public int search( int value){
+    if ( head == null) return -1;
+
+    Node current = head ;
+    int index =0; 
+    do{
+        if( current.data == value){
+            return index;
+        }
+           current = current.next;
+           index ++;
+    }while( current != head );
+
+   
+        return -1;
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
@@ -408,9 +427,20 @@ public static void main(String[] args) {
         cll.printList();
 
         cll.deleteFirst();
-        cll.printList();  
         cll.deleteLast();
+        cll.deleteByValue(100);
         cll.printList();  
+
+
+        CircularLlist cll = new CircularLlist();
+        int value = 50;
+        int result = cll.search(value);
+        if( result != -1){
+            System.out.println("Value " + value + " found at index: " + result);
+        }else {
+            System.out.println("Value " + value + " not found in the list.");
+        }
+
 
 
 
