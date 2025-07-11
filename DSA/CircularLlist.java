@@ -415,7 +415,17 @@ public int update( int oldv , int newv){
 }
 
 public int countNode(){
-    
+    if(head==null) return 0;
+
+    int count = 0;
+    Node current = head ;
+
+    do{
+        count ++
+        current = current.next;
+    }while(current != head);
+
+    return count;
 }
 public void printList(){
     if ( head == null){
@@ -467,6 +477,9 @@ public static void main(String[] args) {
         System.out.println("Updated at index: " + pos);     // index of update
         cll.printList();    
 
+
+
+        System.out.println("Node count: " + cll.countNode());
 
 
 
