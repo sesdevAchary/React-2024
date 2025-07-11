@@ -413,6 +413,10 @@ public int update( int oldv , int newv){
         index ++;
     }while (current != head);
 }
+
+public int countNode(){
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
