@@ -297,7 +297,17 @@ public void insertAtMiddle(int data , int position){
     if (position <= 1 || head == null) {
             addFirst(data);
             return;
-        }
+    }
+
+    Node newNd = new Node(data);
+    Node current = data ;
+    int index = 1;
+    while( index<position-1|| current.next != head  ){
+        current = current.next;
+        index++;
+
+    }
+
 }
 
 public void printList(){
@@ -334,85 +344,3 @@ public static void main(String[] args) {
 }
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-public static void main(String[] args) {
-        CircularLinkedList cll = new CircularLinkedList();
-
-        cll.insertAtPosition(10, 1); // addFirst
-        cll.insertAtPosition(20, 2); // addLast
-        cll.insertAtPosition(30, 2); // middle
-        cll.insertAtPosition(5, 1);  // new head
-
-        cll.printList(); // 
-
-
-
- public void addLast(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
-            tail.next = head;
-        } else {
-            tail.next = newNode;
-            tail = newNode;
-            tail.next = head;
-        }
-    }
-public void addFirst(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
-            tail.next = head;
-        } else {
-            newNode.next = head;
-            head = newNode;
-            tail.next = head;
-        }
-    }
-    public class CircularLinkedList {
-    Node head = null;
-    Node tail = null;
-
-    class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-        }
-    }
-    public class CircularLinkedList {
-    Node head = null;
-    Node tail = null;
-
-    class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-        }
-    }
-    public void addFirst(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = tail = newNode;
-            tail.next = head;
-        } else {
-            newNode.next = head;
-            head = newNode;
-            tail.next = head;
-        }
-    }
