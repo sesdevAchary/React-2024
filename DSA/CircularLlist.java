@@ -395,6 +395,11 @@ public int search( int value){
         return -1;
     
 }
+
+
+public int update( int oldv , int newv){
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
