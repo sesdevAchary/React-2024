@@ -351,6 +351,21 @@ public void deleteLast(){
 
 
 }
+
+
+public void deleteByValue(int value ){
+    if ( head == null){
+        System.out.print(" not found the list");
+        return ;
+    }
+
+    if ( head.data = value){
+        deleteLast();
+    }
+
+    Node current = head ;
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
