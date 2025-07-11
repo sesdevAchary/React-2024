@@ -316,6 +316,11 @@ public void insertAtMiddle(int data , int position){
 
 }
 
+
+
+public void deleteFirst(){
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
@@ -343,6 +348,10 @@ public static void main(String[] args) {
         cll.addLast(40);
         cll.addLast(50);
         cll.printList();
+
+        cll.insertAtPosition(20, 2);
+        cll.printList();
+
 
 
 
