@@ -419,6 +419,12 @@ class BrowseHistory{
         browser.visit("c.com");
         System.out.println("Current: " + browser.getCurrentPage());  // c.com
 
+        browser.back(1);
+        System.out.println("After back 1: " + browser.getCurrentPage());  // b.com
+
+        browser.back(1);
+        System.out.println("After back 1: " + browser.getCurrentPage());  // a.com
+
     
 }
 
