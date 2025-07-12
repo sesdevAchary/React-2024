@@ -430,6 +430,12 @@ class BrowseHistory{
 
         browser.visit("d.com");
         System.out.println("After visiting d.com: " + browser.getCurrentPage());  // d.com
+        BrowserHistory browser = new BrowserHistory("home.com");
+
+browser.visit("a.com");
+browser.visit("b.com");
+browser.visit("c.com");
+
 
     
 }
