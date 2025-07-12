@@ -397,13 +397,19 @@ class BrowseHistory{
         }
     }
 
-     public void forward(int steps) {
+     
+    // Go forward n steps
+    public void forward(int steps) {
         while (steps > 0 && current.next != null) {
             current = current.next;
             steps--;
         }
     }
 
+    // Get current page
+    public String getCurrentPage() {
+        return current.url;
+    }
 
     
 }
