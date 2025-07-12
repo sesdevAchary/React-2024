@@ -411,6 +411,14 @@ class BrowseHistory{
         return current.url;
     }
 
+    public static void main(String[] args) {
+        BrowserHistory browser = new BrowserHistory("home.com");
+
+        browser.visit("a.com");
+        browser.visit("b.com");
+        browser.visit("c.com");
+        System.out.println("Current: " + browser.getCurrentPage());  // c.com
+
     
 }
 
