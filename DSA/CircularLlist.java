@@ -427,6 +427,12 @@ public int countNode(){
 
     return count;
 }
+
+
+
+public void reverse(){
+    
+}
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
