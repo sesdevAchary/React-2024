@@ -358,7 +358,29 @@ public int updateByIndex( int oldV , int newV){
 
 
 
+class BrowseHistory{
+    Node current;
 
+    class Node{
+        String url; // stores the web address //
+         Node next; // next page refernce
+         Node prev; // prev page reference
+
+       Node(String url){
+        //Each Node represents a web page://
+        this.url=url 
+        //The this.url refers to the instance variable (field) of the Node class.
+        // The right-hand url is the parameter passed into the constructor.
+       }
+    }
+
+
+
+// when browser starts opens the homepage...cuurrent val points to the first node 
+    public BrowseHistory( String homePage){
+        current = new Node(homepage);
+    }
+}
 
 
 

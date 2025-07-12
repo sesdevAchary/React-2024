@@ -514,18 +514,3 @@ public static void main(String[] args) {
     
 
 
-
-
-
-
-
-
-class Node{
-    String url;
-    Node next;
-    Node prev;
-    
-    Node string(url){
-        this.url=url;
-    }
-}
