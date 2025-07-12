@@ -431,8 +431,23 @@ public int countNode(){
 
 
 public void reverse(){
-    
+    if( head == null || head.next== head) return ;
+
+    Node prev = tail , current = head , next;
+
+    do{
+        next = current.next;    // save the next val
+        current.next=prev;     // reverse the ptr
+        prev = current;        //prev++
+        currenrt = next;       // current ++
+    }while(current!= head);
+
+
+    tail = head ; head = tail // swapping the value of head and tail ..
+
 }
+
+
 public void printList(){
     if ( head == null){
         System.out.println("List is empty.");
@@ -486,6 +501,9 @@ public static void main(String[] args) {
 
 
         System.out.println("Node count: " + cll.countNode());
+
+        System.out.println("\n🔄 Reversed Circular Linked List:" + cll.reverse());
+        cll.printList();
 
 
 
