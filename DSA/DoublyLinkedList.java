@@ -380,6 +380,24 @@ class BrowseHistory{
     public BrowseHistory( String homePage){
         current = new Node(homepage);
     }
+
+    public void visit(String url){
+        // new node with the url , a new current page ..
+        Node newNd =  new Node(homePage); 
+
+        current.next = null ; // cut off the forward history //
+        newNd.prev = current ; // create the backward link ..set the ptr to point back to the current page
+        current.next=newNd; //This sets the next pointer of the current page to point forward to the new node.
+        current = newNd;
+    }
+  public void back(int steps) {
+        while (steps > 0 && current.prev != null) {
+            current = current.prev;
+            steps--;
+        }
+    }
+
+    
 }
 
 
