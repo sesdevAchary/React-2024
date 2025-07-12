@@ -397,6 +397,14 @@ class BrowseHistory{
         }
     }
 
+     public void forward(int steps) {
+        while (steps > 0 && current.next != null) {
+            current = current.next;
+            steps--;
+        }
+    }
+
+
     
 }
 
