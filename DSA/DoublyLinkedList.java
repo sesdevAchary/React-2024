@@ -436,6 +436,18 @@ browser.visit("a.com");
 browser.visit("b.com");
 browser.visit("c.com");
 
+System.out.println("Current: " + browser.getCurrentPage());  
+// Output: c.com
+
+browser.back(1);     // to b.com
+browser.back(1);     // to a.com
+browser.forward(1);  // to b.com
+
+browser.visit("d.com");
+// forward history cut: c.com is removed
+
+browser.forward(2);  // no effect, already at end
+
 
     
 }
