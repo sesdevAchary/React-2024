@@ -651,4 +651,46 @@ public boolean isPalindrome(ListNode head) {
     return true;
 }
 
+class Solution {
+    static class TrieNode {
+        TrieNode[] children = new TrieNode[26];
+        String word;
+    }
+
+    public List<String> findWords(char[][] board, String[] words) {
+        TrieNode root = new TrieNode();
+        for (String w : words) {
+            TrieNode node = root;
+            for (char c : w.toCharArray()) {
+                if (node.children[c - 'a'] == null)
+                    node.children[c - 'a'] = new TrieNode();
+                node = node.children[c - 'a'];
+            }
+            node.word = w;
+        }
+
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < board.length; i++)
+            for (int j = 0; j < board[0].length; j++)
+                dfs(board, i, j, root, result);
+        return result;
+    }
+
+    void dfs(char[][] b, int i, int j, TrieNode node, List<String> res) {
+        if (i < 0 || j < 0 || i >= b.length || j >= b[0].length || b[i][j] == '#' || node.children[b[i][j] - 'a'] == null)
+            return;
+        char c = b[i][j];
+        node = node.children[c - 'a'];
+        if (node.word != null) {
+            res.add(node.word);
+            node.word = null;
+        }
+        b[i][j] = '#';
+        dfs(b, i+1, j, node, res);
+        dfs(b, i-1, j, node, res);
+        dfs(b, i, j+1, node, res);
+        dfs(b, i, j-1, node, res);
+        b[i][j] = c;
+    }
+}
 
