@@ -565,5 +565,13 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     }
     return dummy.next;
 }
+public ListNode getIntersectionNode(ListNode a, ListNode b) {
+    ListNode p1 = a, p2 = b;
+    while (p1 != p2) {
+        p1 = (p1 == null) ? b : p1.next;
+        p2 = (p2 == null) ? a : p2.next;
+    }
+    return p1;
+}
 
 
