@@ -492,6 +492,52 @@ public Node copyRandomList(Node head) {
     }
     return map.get(head);
 }
+class LRUCache {
+    class Node {
+        int key, val;
+        Node prev, next;
+        Node(int k, int v) { key = k; val = v; }
+    }
+    int cap;
+    Node head = new Node(0, 0), tail = new Node(0, 0);
+    Map<Integer, Node> map = new HashMap<>();
+    
+    public LRUCache(int capacity) {
+        cap = capacity;
+        head.next = tail;
+        tail.prev = head;
+    }
+    
+    public int get(int key) {
+        if (map.containsKey(key)) {
+            Node n = map.get(key);
+            remove(n);
+            insert(n);
+            return n.val;
+        }
+        return -1;
+    }
+
+    public void put(int key, int value) {
+        if (map.containsKey(key)) remove(map.get(key));
+        if (map.size() == cap) remove(tail.prev);
+        insert(new Node(key, value));
+    }
+
+    void remove(Node n) {
+        map.remove(n.key);
+        n.prev.next = n.next;
+        n.next.prev = n.prev;
+    }
+
+    void insert(Node n) {
+        map.put(n.key, n);
+        n.next = head.next;
+        n.prev = head;
+        head.next.prev = n;
+        head.next = n;
+    }
+}
 
 
 
