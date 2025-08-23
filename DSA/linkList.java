@@ -322,94 +322,94 @@ import java.util.*;
 //     }
 // }
 
- public void PrintList(){
-     Node current = head;
+//  public void PrintList(){
+//      Node current = head;
 
-     while(current != null){
-         System.out.print(current.data+"->");
-         current= current.next;
-    }
- }
+//      while(current != null){
+//          System.out.print(current.data+"->");
+//          current= current.next;
+//     }
+//  }
 
-  public int countNd(){
-     int count =0;
-    Node current=head;  
+//   public int countNd(){
+//      int count =0;
+//     Node current=head;  
 
-    while( current!= null) {
-     count++;
-     current=current.next;
-     }
-     return count;
-// 
-public void PrintList(){
-     Node current = head;
+//     while( current!= null) {
+//      count++;
+//      current=current.next;
+//      }
+//      return count;
+// // 
+// public void PrintList(){
+//      Node current = head;
 
-     while(current != null){
-         System.out.print(current.data+"->");
-         current= current.next;
-    }
- }
+//      while(current != null){
+//          System.out.print(current.data+"->");
+//          current= current.next;
+//     }
+//  }
 
-public int countNd(){
-     int count =0;
-    Node current=head;  
+// public int countNd(){
+//      int count =0;
+//     Node current=head;  
 
-    while( current!= null) {
-     count++;
-     current=current.next;
-     }
-     return count;
+//     while( current!= null) {
+//      count++;
+//      current=current.next;
+//      }
+//      return count;
 
- public int search (int key){
-  Node current = head;
-    int index =0;
-    while(current != null){
-       if ( current.data == key )
-      return index;
+//  public int search (int key){
+//   Node current = head;
+//     int index =0;
+//     while(current != null){
+//        if ( current.data == key )
+//       return index;
     
-     current=current.next;
-     index ++;
-                 System.out.print(" asset found "+ index);
+//      current=current.next;
+//      index ++;
+//                  System.out.print(" asset found "+ index);
 
-     }
-  return -1;
- }
-
-
+//      }
+//   return -1;
+//  }
 
 
 
 
-class linkList{
-    Node head;
-
-   static  class Node{
-        int data; Node next;
 
 
-        Node(int data){
-            this.data = data;
-            this.next = null;
-        }
-    }
+// class linkList{
+//     Node head;
+
+//    static  class Node{
+//         int data; Node next;
+
+
+//         Node(int data){
+//             this.data = data;
+//             this.next = null;
+//         }
+//     }
 
 
 
-    public void addLast(int data){
-        Node newNd = new Node(data);
+//     public void addLast(int data){
+//         Node newNd = new Node(data);
 
-        if(head == null){
-            head= newNd ;
-            return;
-        }
+//         if(head == null){
+//             head= newNd ;
+//             return;
+//         }
 
-        Node current=head;
-        while(current.next != null){
-            current=current.next;
-        }
-        current.next = newNd;
+//         Node current=head;
+//         while(current.next != null){
+//             current=current.next;
+//         }
+//         current.next = newNd;
 
-    }
+//     }
 
 // public static  Node mergeTwoList(Node head1, Node head2){
 //     // takes 2 sorted LL as params then return head of a new merged sorted list//
@@ -483,113 +483,141 @@ class linkList{
 //       }
 //       return true;
 
-//}
-    public void printList(){
-        Node current = head;
+// //}
+//     public void printList(){
+//         Node current = head;
 
-        while(current != null){
-            System.out.print( current.data + " -> ");
-             current=current.next;
+//         while(current != null){
+//             System.out.print( current.data + " -> ");
+//              current=current.next;
 
-        }
-         System.out.println ( " NULL ");
-    }
+//         }
+//          System.out.println ( " NULL ");
+//     }
 
 
-/////// OrElse we can also the STACK method to use /////////
+// /////// OrElse we can also the STACK method to use /////////
 
-   public boolean palindromeCheck( ){
-     Stack<Integer> stack = new Stack();  // We use a stack to store all the node values in reverse order LIFO //
-     Node current = head ;
+//    public boolean palindromeCheck( ){
+//      Stack<Integer> stack = new Stack();  // We use a stack to store all the node values in reverse order LIFO //
+//      Node current = head ;
 
    
 
-// pushing elements to the stack //
-while ( current != null){
-    stack.push(current.data);
-    current = current.next;
-}
+// // pushing elements to the stack //
+// while ( current != null){
+//     stack.push(current.data);
+//     current = current.next;
+// }
 
-// comparing each value of the stack is palindrome //
+// // comparing each value of the stack is palindrome //
 
-current = head;
-while ( current != null){
-    if (current.data != stack.pop()){     // For each node, pop a value from the stack and compare it.//
-        return false;
+// current = head;
+// while ( current != null){
+//     if (current.data != stack.pop()){     // For each node, pop a value from the stack and compare it.//
+//         return false;
+//     }
+//     current = current.next ;
+// }
+// return true ;
+
+//    }
+
+
+//     public static void main ( String args[]){
+
+//         linkList list1 = new linkList();
+
+//         list1.addLast(10);
+//         list1.addLast(20);
+//         list1.addLast(30);
+//         list1.addLast(30);
+//         list1.addLast(20);
+//         list1.addLast(10);
+
+
+//         // linkList list2 = new linkList();
+//         // list2.addLast(2);
+//         // list2.addLast(4);
+//         // list2.addLast(6);
+
+//      System.out.print("List 1: ");
+//     list1.printList();
+
+//     // System.out.print("List 2: ");
+//     // list2.printList();
+
+//                          // Merge the lists
+//         // Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
+
+//         // // Print merged list
+//         // System.out.print("Merged List: ");
+//         // Node current = mergedHead;
+//         // while (current != null) {
+//         //     System.out.print(current.data + " → ");
+//         //     current = current.next;
+//         //     }
+//         // System.out.println("null");
+
+
+//     //                  //  printing the palindrome //
+//     //         System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
+
+
+//     //         // finding the middle //
+//     //         Node mid= list1.findMiddle(list1.head);
+//     //         System.out.println(" the middle value  is "+ mid.data);
+
+//     //           // Reverse list and print
+//     // Node reversedHead = list1.reverse(list1.head);
+//     // System.out.print("Reversed List: ");
+//     // Node current = reversedHead;
+//     // while (current != null) {
+//     //     System.out.print(current.data + " -> ");
+//     //     current = current.next;
+//     // }
+//     // System.out.println("NULL");
+
+//   if ( list1.palindromeCheck()){
+//                 System.out.println("✅ It is a Palindrome!");
+
+//   }else{
+//                 System.out.println("❌ Not a Palindrome.");
+
+//   }
+
+
+//     }
+// }
+// create a node class then 
+
+class linkList{
+    class Node{ //stores data  next
+        string data;
+        Node next;
+
+        Node ( String data){
+           this.data=data;
+           this.next=null;
+        }
+public void addfirst(){
+    if (head == null){
+        node newNd= head;
+        return;
+    }else{
+        newNd.next=head;
+        head=newNd;
     }
-    current = current.next ;
 }
-return true ;
-
-   }
-
-
-    public static void main ( String args[]){
-
-        linkList list1 = new linkList();
-
-        list1.addLast(10);
-        list1.addLast(20);
-        list1.addLast(30);
-        list1.addLast(30);
-        list1.addLast(20);
-        list1.addLast(10);
-
-
-        // linkList list2 = new linkList();
-        // list2.addLast(2);
-        // list2.addLast(4);
-        // list2.addLast(6);
-
-     System.out.print("List 1: ");
-    list1.printList();
-
-    // System.out.print("List 2: ");
-    // list2.printList();
-
-                         // Merge the lists
-        // Node mergedHead = linkList.mergeTwoList(list1.head, list2.head);
-
-        // // Print merged list
-        // System.out.print("Merged List: ");
-        // Node current = mergedHead;
-        // while (current != null) {
-        //     System.out.print(current.data + " → ");
-        //     current = current.next;
-        //     }
-        // System.out.println("null");
-
-
-    //                  //  printing the palindrome //
-    //         System.out.print(" Is it a palindrome ?" + list1.isPalindrome(list1.head));
-
-
-    //         // finding the middle //
-    //         Node mid= list1.findMiddle(list1.head);
-    //         System.out.println(" the middle value  is "+ mid.data);
-
-    //           // Reverse list and print
-    // Node reversedHead = list1.reverse(list1.head);
-    // System.out.print("Reversed List: ");
-    // Node current = reversedHead;
-    // while (current != null) {
-    //     System.out.print(current.data + " -> ");
-    //     current = current.next;
-    // }
-    // System.out.println("NULL");
-
-  if ( list1.palindromeCheck()){
-                System.out.println("✅ It is a Palindrome!");
-
-  }else{
-                System.out.println("❌ Not a Palindrome.");
-
-  }
-
+        
+    }
+    public static void main( Sring,args[]){
+        linkList ll= new linkList();
+        list.addfirst("a");
+        list.addfirst("linklist");
 
     }
 }
-
 
 
 
