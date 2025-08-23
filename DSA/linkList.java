@@ -592,30 +592,46 @@ import java.util.*;
 // create a node class then 
 
 class linkList{
+    Node head;
     class Node{ //stores data  next
-        string data;
+        String data;
         Node next;
 
         Node ( String data){
            this.data=data;
            this.next=null;
         }
-public void addfirst(){
+
+        
+    }
+
+    public void addfirst(String data){
+        Node newNd = new Node(data); 
     if (head == null){
-        node newNd= head;
+        head = newNd;
         return;
     }else{
         newNd.next=head;
         head=newNd;
     }
 }
-        
-    }
-    public static void main( Sring,args[]){
-        linkList ll= new linkList();
-        list.addfirst("a");
-        list.addfirst("linklist");
 
+public void printList(){
+
+    while(head != null ){
+        System.out.print(head.data+"->");
+        head=head.next;
+
+    }
+    System.out.println(" null");
+
+}
+    public static void main(String[] args){
+        linkList ll= new linkList();
+        ll.addfirst("a");
+        ll.addfirst("linklist");
+
+        ll.printList();
     }
 }
 
@@ -656,216 +672,3 @@ public void addfirst(){
 
 
 
-
-        else:
-            curr = curr.next
-    return head
-
-
-
-
-stack = []
-stack.append(1)
-stack.append(2)
-print(stack.pop())  # 2
-stack = [1, 2, 3]
-print(stack[-1])  # 3
-stack = [1, 2, 3]
-print(len(stack))  # 3
-def hanoi(n, source, aux, dest):
-    if n == 1:
-        print(f"Move disk 1 from {source} to {dest}")
-        return
-    hanoi(n-1, source, dest, aux)
-    print(f"Move disk {n} from {source} to {dest}")
-    hanoi(n-1, aux, source, dest)
-
-hanoi(3, 'A', 'B', 'C')
-def next_greater(nums):
-    result = [-1]*len(nums)
-    stack = []
-    for i in range(len(nums)):
-        while stack and nums[i] > nums[stack[-1]]:
-            idx = stack.pop()
-            result[idx] = nums[i]
-        stack.append(i)
-    return result
-
-print(next_greater([4, 5, 2, 10]))  # [5, 10, 10, -1]
-def eval_postfix(expr):
-    stack = []
-    for token in expr.split():
-        if token.isdigit():
-            stack.append(int(token))
-        else:
-            b, a = stack.pop(), stack.pop()
-            stack.append(eval(f"{a}{token}{b}"))
-    return stack[0]
-
-print(eval_postfix("3 4 + 2 *"))  # 14
-stack = []
-stack.append("edit1")
-stack.append("edit2")
-undo = stack.pop()
-print("Undo:", undo)  # "Undo: edit2"
-class MaxStack:
-    def __init__(self):
-        self.stack = []
-        self.max_stack = []
-
-    def push(self, x):
-        self.stack.append(x)
-        self.max_stack.append(max(x, self.max_stack[-1] if self.max_stack else x))
-
-    def pop(self):
-        self.max_stack.pop()
-        return self.stack.pop()
-
-    def get_max(self):
-        return self.max_stack[-1]
-
-m = MaxStack()
-m.push(3)
-m.push(5)
-m.push(2)
-print(m.get_max())  # 5
-def is_palindrome(s):
-    return s == s[::-1]
-
-print(is_palindrome("racecar"))  # True
-def sort_stack(s):
-    temp_stack = []
-    while s:
-        tmp = s.pop()
-        while temp_stack and temp_stack[-1] > tmp:
-            s.append(temp_stack.pop())
-        temp_stack.append(tmp)
-    return temp_stack
-
-print(sort_stack([3, 1, 2]))  # [1, 2, 3]
-def infix_to_postfix(expr):
-    precedence = {'+':1, '-':1, '*':2, '/':2}
-    stack, output = [], ''
-    for c in expr:
-        if c.isalnum():
-            output += c
-        elif c in precedence:
-            while stack and precedence.get(stack[-1], 0) >= precedence[c]:
-                output += stack.pop()
-            stack.append(c)
-    while stack:
-        output += stack.pop()
-    return output
-
-print(infix_to_postfix("a+b*c"))  # "abc*+"
-class MinStack:
-    def __init__(self):
-        self.stack = []
-        self.min_stack = []
-
-print(infix_to_postfix("a+b*c"))  # "abc*+"
-class MinStack:
-    def __init__(self):
-        self.stack = []
-        self.min_stack = []
-    def push(self, x):
-        self.stack.append(x)
-        if not self.min_stack or x <= self.min_stack[-1]:
-            self.min_stack.append(x)
-
-    def pop(self):
-        if self.stack.pop() == self.min_stack[-1]:
-            self.min_stack.pop()
-
-    def get_min(self):
-        return self.min_stack[-1]
-
-m = MinStack()
-m.push(3)
-m.push(1)
-m.push(2)
-m.pop()
-print(m.get_min())  # 1
-def is_balanced(expr):
-    stack = []
-    for char in expr:
-        if char == '(':
-            stack.append(char)
-        elif char == ')':
-            if not stack:
-                return False
-            stack.pop()
-    return not stack
-def is_balanced(expr):
-    stack = []
-    for char in expr:
-        if char == '(':
-            stack.append(char)
-        elif char == ')':
-            if not stack:
-                return False
-            stack.pop()
-    return not stack
-
-print(is_balanced("(())"))  # True
-  stack = []
-    for char in expr:
-        if char == '(':
-            stack.append(char)
-        elif char == ')':
-            if not stack:
-                return False
-            stack.pop()
-    return not stack
-
-print(is_balanced("(())"))  # True
-
-   def pop(self):
-        if self.stack.pop() == self.min_stack[-1]:
-            self.min_stack.pop()
-
-    def get_min(self):
-        return self.min_stack[-1]
-
-
- def push(self, x):
-        self.stack.append(x)
-        self.max_stack.append(max(x, self.max_stack[-1] if self.max_stack else x))
-
-    def pop(self):
-        self.max_stack.pop()
-        return self.stack.po
-           return not stack
-def is_balanced(expr):
-    stack = []
-    for char in expr:
-        if char == '(':
-            stack.append(char)
-        elif char == ')':
-            if not stack:
-                return False
-            stack.pop()
-    return not stack
-p()
-
-    def get_max(self):
-        return self.max_stack[-1]
-        class MinStack:
-    def __init__(self):
-        self.stack = []
-        self.min_stack = []
-        print(infix_to_postfix("a+b*c"))  # "abc*+"
-class MinStack:
-    def __init__(self):
-        self.stack = []
-        self.min_stack = []
-        print(is_balanced("(())"))  # True
-  stack = []
-    for char in expr:
-        if char == '(':
-            stack.append(char)
-        elif char == ')':
-            if not stack:
-                return False
-            stack.pop()
-    return not stack
