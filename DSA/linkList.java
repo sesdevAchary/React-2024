@@ -616,6 +616,22 @@ class linkList{
     }
 }
 
+public void addLast(String data){
+    Node newNd = new Node(data); 
+    if (head == null){
+        head = newNd;
+        return;
+    }
+        Node currnd=head;
+        while(currnd.next != null){
+            currnd=currnd.next;
+        }
+
+            currnd.next=newNd;
+        
+    }
+
+
 public void printList(){
 
     while(head != null ){
@@ -630,6 +646,8 @@ public void printList(){
         linkList ll= new linkList();
         ll.addfirst("a");
         ll.addfirst("linklist");
+
+        ll.addLast("addigTheLastElement");
 
         ll.printList();
     }
