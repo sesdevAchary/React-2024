@@ -631,6 +631,30 @@ public void addLast(String data){
         
     }
 
+public void deleteFirst(){
+    if(head == null){    
+         System.out.println(" list is empty , no need to delete");
+        return ;
+    }
+    head = head.next;
+
+    public void deleteLast(){
+        if(head == null){    
+         System.out.println(" list is empty , no need to delete");
+        return ;
+    }
+    elseif(head.next == null){
+        head=null;
+    }
+    else{
+        node current=head;
+        while(current.next.next != null){
+            current=curent.next;
+        }
+    }
+
+    }
+
 
 public void printList(){
 
@@ -655,6 +679,36 @@ public void printList(){
 
 
 
+
+// ///// deleting the first //////
+
+// //5//
+// // public void deleteFirst(){
+// //     if(head == null){
+// //         System.out.println(" list is empty , no need to delete")        ;
+// //     return ;
+// //     }
+// //     head=head.next;  // just shift the head to the next node.//
+// // }
+
+
+// ///// delete last  ///////
+
+// // public void deleteLast(){
+// //     if (head == null){
+// //         System.out.print("empty array");
+// //         return;
+// //     }
+// //     if(head.next==null){
+// //         head=null; // only one node
+// //         return ; 
+// //     }
+// //     node.current= head;
+// //     while(current.next.next!= null){    // ensures current stops at the second-last node. //
+// //         current=current.next;         // increasing the loop //
+// //     }
+// //     current.next=null;        // assigning the middle as last and deleting the last node //
+// // }
 
 
 
