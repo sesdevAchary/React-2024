@@ -632,18 +632,19 @@ public void addLast(String data){
     }
 
 public void deleteFirst(){
-    if(head == null){    
-         System.out.println(" list is empty , no need to delete");
-        return ;
+    
+    if(head == null){
+        System.out.println(" list is empty , no need to delete");
+        return;
     }
-    head = head.next;
+    head=head.next;
 
     public void deleteLast(){
         if(head == null){    
          System.out.println(" list is empty , no need to delete");
         return ;
     }
-    elseif(head.next == null){
+       (head.next == null){
         head=null;
     }
     else{
@@ -651,6 +652,7 @@ public void deleteFirst(){
         while(current.next.next != null){
             current=curent.next;
         }
+        current.next=null;
     }
 
     }
@@ -668,10 +670,13 @@ public void printList(){
 }
     public static void main(String[] args){
         linkList ll= new linkList();
-        ll.addfirst("a");
-        ll.addfirst("linklist");
+        // ll.addfirst("a");
+        // ll.addfirst("linklist");
 
-        ll.addLast("addigTheLastElement");
+        // ll.addLast("addigTheLastElement");
+
+        ll.deleteFirst();
+        ll.deleteLast();
 
         ll.printList();
     }
