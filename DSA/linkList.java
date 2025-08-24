@@ -592,30 +592,152 @@ import java.util.*;
 // create a node class then 
 
 class linkList{
-   
+    Node head;
+    class Node{ //stores data  next
+        String data;
+        Node next;
+
+        Node ( String data){
+           this.data=data;
+           this.next=null;
+        }
+
+        
+    }
+
+    public void addfirst(String data){
+        Node newNd = new Node(data); 
+    if (head == null){
+        head = newNd;
+        return;
+    }else{
+        newNd.next=head;
+        head=newNd;
+    }
+}
+
+public void addLast(String data){
+    Node newNd = new Node(data); 
+    if (head == null){
+        head = newNd;
+        return;
+    }
+        Node currnd=head;
+        while(currnd.next != null){
+            currnd=currnd.next;
+        }
+
+            currnd.next=newNd;
+        
+    }
+
+    ///// DELETE THE first ELEMENT //////
+public void deleteFirst(){
+    
+    if(head == null){
+        System.out.println(" list is empty , no need to delete");
+        return;
+    }
+    head=head.next;
+}
+
+///// DELETE THE LAST ELEMENT //////
+    public void deleteLast(){
+        if(head == null){    
+         System.out.println(" list is empty , no need to delete");
+        return ;
+    }
+       if (head.next == null){
+        head=null;
+        return;
+    }
+    
+        Node current=head;
+        while(current.next.next != null){
+            current=current.next;
+        }
+        current.next=null;
+    }
+
+public void reverseItr(){
+    Node next;
+    Node current=head;
+    Node prev=null;
+
+    while(current != null){
+        next=current.next; // stores the next value
+        current.next=prev; // now b->c will point to b->a reversing the path
+        prev=current;  // prev += 1
+        current=current.next; //
+    }
+    
+
+}
+    
 
 
+public void printList(){
+
+    while(head != null ){
+        System.out.print(head.data+"->");
+        head=head.next;
+
+    }
+    System.out.println(" null");
+
+}
     public static void main(String[] args){
         // linkList ll= new linkList();
         linkList<String> ll= new linkList<String>();
-        ll.addfirst("a");
-        ll.addfirst("linklist");
+        // ll.addfirst("a");
+        // ll.addfirst("linklist");
 
-        ll.addLast("addigTheLastElement");
+        // ll.addLast("addigTheLastElement");
 
-        // ll.deleteFirst();
-        // ll.deleteLast();
+        ll.deleteFirst();
+        ll.deleteLast();
 
-        // ll.printList();
-        System.out.println(list);
-        System.out.println(list);
-        System.out.println(list);
+        ll.printList();
     }
 }
 
 
 
 
+// //6//
+// // public void reverseItr(){
+    
+// //     Node next;
+// //     Node current=head;
+// //     Node previous = null;
+
+// //     while(current!= null){
+// //         next=current.next;       // stores the next value
+// //         current.next=previous;   // Now b → a instead of b → c. (reverse ptr)
+// //         previous = current;      // // move prev forward
+// //         current=next;            // // move current  forward
+// //     }
+// //     head = prev; // finally update head
+//  // }
+
+
+// ////// reversing through the recursive  method //////
+
+
+// //7//
+// // public Node reverseRecursive(Node head){
+// //     if ( head == null || head.next == null){
+// //         SYstem.out.println("No element found ");
+// //         return head ;
+// //     }
+    
+// //     Node newhd = reverseRecursive(head.next);   // Reverse everything after head  //
+// //     head.next.next=head;             // assigning prev value to head next --- makes d → c  //
+// //     head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
+// // }
+// // public void reverseRecursiveCaller() {
+// //     head = reverseRecursive(head);
+// // }
 
 
 
