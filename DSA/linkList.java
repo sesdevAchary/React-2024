@@ -592,152 +592,26 @@ import java.util.*;
 // create a node class then 
 
 class linkList{
-    Node head;
-    class Node{ //stores data  next
-        String data;
-        Node next;
-
-        Node ( String data){
-           this.data=data;
-           this.next=null;
-        }
-
-        
-    }
-
-    public void addfirst(String data){
-        Node newNd = new Node(data); 
-    if (head == null){
-        head = newNd;
-        return;
-    }else{
-        newNd.next=head;
-        head=newNd;
-    }
-}
-
-public void addLast(String data){
-    Node newNd = new Node(data); 
-    if (head == null){
-        head = newNd;
-        return;
-    }
-        Node currnd=head;
-        while(currnd.next != null){
-            currnd=currnd.next;
-        }
-
-            currnd.next=newNd;
-        
-    }
-
-public void deleteFirst(){
-    
-    if(head == null){
-        System.out.println(" list is empty , no need to delete");
-        return;
-    }
-    head=head.next;
-
-    public void deleteLast(){
-        if(head == null){    
-         System.out.println(" list is empty , no need to delete");
-        return ;
-    }
-       (head.next == null){
-        head=null;
-    }
-    else{
-        node current=head;
-        while(current.next.next != null){
-            current=curent.next;
-        }
-        current.next=null;
-    }
-
-    }
+   
 
 
-public void printList(){
-
-    while(head != null ){
-        System.out.print(head.data+"->");
-        head=head.next;
-
-    }
-    System.out.println(" null");
-
-}
     public static void main(String[] args){
-        linkList ll= new linkList();
-        // ll.addfirst("a");
-        // ll.addfirst("linklist");
+        // linkList ll= new linkList();
+        linkList<String> ll= new linkList<String>();
+        ll.addfirst("a");
+        ll.addfirst("linklist");
 
-        // ll.addLast("addigTheLastElement");
+        ll.addLast("addigTheLastElement");
 
-        ll.deleteFirst();
-        ll.deleteLast();
+        // ll.deleteFirst();
+        // ll.deleteLast();
 
-        ll.printList();
+        // ll.printList();
+        System.out.println(list);
+        System.out.println(list);
+        System.out.println(list);
     }
 }
-
-
-
-
-// ///// deleting the first //////
-
-// //5//
-// // public void deleteFirst(){
-// //     if(head == null){
-// //         System.out.println(" list is empty , no need to delete")        ;
-// //     return ;
-// //     }
-// //     head=head.next;  // just shift the head to the next node.//
-// // }
-
-
-// ///// delete last  ///////
-
-// // public void deleteLast(){
-// //     if (head == null){
-// //         System.out.print("empty array");
-// //         return;
-// //     }
-// //     if(head.next==null){
-// //         head=null; // only one node
-// //         return ; 
-// //     }
-// //     node.current= head;
-// //     while(current.next.next!= null){    // ensures current stops at the second-last node. //
-// //         current=current.next;         // increasing the loop //
-// //     }
-// //     current.next=null;        // assigning the middle as last and deleting the last node //
-// // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
