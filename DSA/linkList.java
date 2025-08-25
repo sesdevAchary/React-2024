@@ -668,8 +668,9 @@ public void reverseItr(){
         next=current.next; // stores the next value
         current.next=prev; // now b->c will point to b->a reversing the path
         prev=current;  // prev += 1
-        current=current.next; //
+        current=current.next; // curr += 1
     }
+    prev = head;
     
 
 }
