@@ -692,6 +692,7 @@ public void reverseRecursive(){
 
 }
 
+//////// SWAPPIG 2 PAIRS ITERATIVELY /////
 public void swapPairs(){
     Node dummy= new Node(0);
     dummy.next=head; Node prev=dummy;
@@ -707,7 +708,25 @@ public void swapPairs(){
 
     } 
 }
+
     
+
+//////// SWAPPIG 2 PAIRS RECURSIVELY /////
+
+public node swapRecursion(){
+    if ( head==null || head.next==null){
+        return head;
+    }
+
+    Node first=head,second=head.next;
+    //swappin the 2 variable //
+    first.next= swapRecursion(second.next);
+    second.next=first;
+
+    return second;
+
+}
+
 
 
 public void printList(){
