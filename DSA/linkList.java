@@ -674,6 +674,23 @@ public void reverseItr(){
     
 
 }
+
+// ////// reversing through the recursive  method //////
+
+public void reverseRecursive(){
+    if(head ==null || head.next== null){
+        System.out.println("No element found ");
+        return head;
+    }
+    
+    Node newhd= reverseRecursive(head.next);
+
+    head.next.next=head;
+    head.next=null;
+    return newhd;
+    
+
+}
     
 
 
@@ -701,48 +718,5 @@ public void printList(){
         ll.printList();
     }
 }
-
-
-
-
-// //6//
-// // public void reverseItr(){
-    
-// //     Node next;
-// //     Node current=head;
-// //     Node previous = null;
-
-// //     while(current!= null){
-// //         next=current.next;       // stores the next value
-// //         current.next=previous;   // Now b → a instead of b → c. (reverse ptr)
-// //         previous = current;      // // move prev forward
-// //         current=next;            // // move current  forward
-// //     }
-// //     head = prev; // finally update head
-//  // }
-
-
-// ////// reversing through the recursive  method //////
-
-
-// //7//
-// // public Node reverseRecursive(Node head){
-// //     if ( head == null || head.next == null){
-// //         SYstem.out.println("No element found ");
-// //         return head ;
-// //     }
-    
-// //     Node newhd = reverseRecursive(head.next);   // Reverse everything after head  //
-// //     head.next.next=head;             // assigning prev value to head next --- makes d → c  //
-// //     head.next = null;               //  cuts c → d, so it doesn't form a cycle   //
-// // }
-// // public void reverseRecursiveCaller() {
-// //     head = reverseRecursive(head);
-// // }
-
-
-
-
-
 
 
