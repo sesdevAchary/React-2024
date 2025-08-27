@@ -783,7 +783,16 @@ public boolean isPalindrome(ListNode head){
 
     ListNode middleval=middle(head); // end of first half
     ListNode secondHalfStart = reverse(middleval.next)
-    while ( )
+
+    ListNode firstHalfStart=head;
+    while ( secondHalfStart != null){
+        if( firstHalfStart != secondHalfStart){
+            return false;
+        }
+        firstHalfStart= firstHalfStart.next;
+        secondHalfStart= secondHalfStart.next;
+    }
+    retur true;
 }
 
 public void printList(){
