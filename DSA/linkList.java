@@ -713,20 +713,45 @@ public void swapPairs(){
 
 //////// SWAPPIG 2 PAIRS RECURSIVELY /////
 
-public node swapRecursion(){
+// public node swapRecursion(){
+//     if ( head==null || head.next==null){
+//         return head;
+//     }
+
+//     Node first=head,second=head.next;
+//     //swappin the 2 variable //
+//     first.next= swapRecursion(second.next);
+//     second.next=first;
+
+//     return second;
+
+// }
+
+
+///// deleting the size -n element from a l list/////
+
+public ListNode deleteFromNth(){
     if ( head==null || head.next==null){
         return head;
     }
 
-    Node first=head,second=head.next;
-    //swappin the 2 variable //
-    first.next= swapRecursion(second.next);
-    second.next=first;
+    int size =0;
+    Node curr=head;
+    while(curr != null){
+        curr=curr.next;
+        size ++;
 
-    return second;
+    }
 
+    int indexToSearch= size-n;
+    Node prev=head;int t=1;
+    while(t< indexToSearch){
+        prev=prev.next;
+        t++;
+    }
+    prev.next=prev.next.next;
+    return prev;
 }
-
 
 
 public void printList(){
