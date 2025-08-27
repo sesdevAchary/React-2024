@@ -753,12 +753,27 @@ public ListNode deleteFromNth(){
     return prev;
 }
 
-public ListNode middle(head){
+public ListNode middle( ListNdoe head){
     node turtle=head;node rabbit=head;
      while( turtle.next != null && rabbit.next.next != null){
         rabit=rabit.next;turtle=turtle.next;
      }
-     eturn turtl;
+     return turtle;
+}
+
+public ListNode reverse(ListNode head){
+    if(head == null || head.next==null){
+        return head;
+    }
+    ListNode prev=null;
+    ListNode curr=head;
+    while(current != null){
+        ListNode next=curr.next;
+        curr.next=prev;
+        prev=curr;
+        curr=next;
+    }
+    return prev;
 }
 
 public void printList(){
