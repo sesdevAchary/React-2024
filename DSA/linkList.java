@@ -776,6 +776,16 @@ public ListNode reverse(ListNode head){
     return prev;
 }
 
+public boolean isPalindrome(ListNode head){
+    if(head == null || head.next==null){
+        return head;
+    }
+
+    ListNode middleval=middle(head); // end of first half
+    ListNode secondHalfStart = reverse(middleval.next)
+    while ( )
+}
+
 public void printList(){
 
     while(head != null ){
