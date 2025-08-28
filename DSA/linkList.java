@@ -812,6 +812,25 @@ public boolean floydCycleDetect(){
     }
     return false;
 }
+///// DETECTING CYCLE IN HASHING FORMAT ///////
+
+
+public boolean detectLoop(){
+    java.util.HashSet<Node> set= new java.util.HashSet<>;
+    //stores unique elements only,internally uses hashmap//
+    //You can’t put integers, strings, etc. — only Node references.//
+
+    Node curr=head;
+    while(curr!=null){
+        if(set.contains(curr)){
+            return true; // Loop detected
+        }
+        set.add(curr)
+        curr=curr.next;
+    }
+    return false;  // No loop
+
+}
 
 
 public void printList(){
