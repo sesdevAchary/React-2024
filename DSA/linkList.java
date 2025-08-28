@@ -795,6 +795,25 @@ public boolean isPalindrome(ListNode head){
     retur true;
 }
 
+
+
+///// DETECTING CYCLE IN RABIT HARE FORMAT ///////
+public boolean floydCycleDetect(){
+    if(head==null && head.next == null){
+        return false;
+    }
+    Node hare=head; Node tortoise=head;
+
+    while( tortoise.next != null || hare.next.next != null){
+        tortoise=tortoise.next;hare=hare.next;
+        if(tortoise == hare){
+            return true;
+        }
+    }
+    return false;
+}
+
+
 public void printList(){
 
     while(head != null ){
