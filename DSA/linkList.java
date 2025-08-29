@@ -832,6 +832,37 @@ public boolean detectLoop(){
 
 }
 
+//////// DETECTING CYCLE AND DELETING IT /////////
+public void removeLoop(){
+    if( head == null || head.next == null)
+    return;
+
+    Node fast= head; Node slow=head;
+
+    // detecting loop//
+    while( fast != null && fast.next != null){
+        slow=slow.next; fast=fast.next.next;
+
+        if(slow == fast){
+        loopExists = true;
+        break;
+        }
+    }
+    if (!loopExists) return ;
+
+
+    // find the starting node //
+
+    slow = head;
+    while(slow != fast){
+        slow=slow.next;fast=fast.next;
+    }
+    Node startingPoint= slow;
+
+    // fid the start point of the loop
+    
+}
+
 
 public void printList(){
 
@@ -859,3 +890,56 @@ public void printList(){
 }
 
 
+ //4//
+// // public value deleteByValue(int key){
+//     //   if ( head == null){
+//     //     System.out.println("No value found here ");
+//     //     return ;
+//     //   }
+//     //   if(head.data=key){
+//     //     head=head.next;
+//     //     return;
+//     //   }
+//     //   Node current=head ;    // Traversal pointer. It will always point to the node just before the one we’re testing.//
+//     //   while ( current.next != null && current.next.data=key){
+//     //     current=current.next;
+//     //   }
+
+//     //   if(current.next == null )
+//     //   System.out.println(" value was unavailable");
+//     //   else
+//     //   current.next = current.next.next;
+// // }
+
+// ///// the same above we can do with the help of string key value too ///////
+// //4//
+// // public void deleteByValue(String key){
+// //     if ( head == null){
+// //         System.out.println(" not found ");
+// //         return;
+// //     }
+
+// //         // 2. Does the head itself contain the key?
+// //     if( head.data.equals(key)){
+// //         head = head.next ;
+// //         return;
+// //     }
+
+
+// //     Node current=head;
+
+// //         // 3. Walk until we’re right before the target (or end of list)
+// //     while(current.next != null && !current.next.data.equals(key)){
+// //         current=current.next;
+// //     }
+
+// //         // 4. Did we find it?
+// //     if(current.next == null){
+// //         System.out.print("value not found ");
+// //     }
+// //     else
+// //     {
+// //         curr.next = curr.next.next; // bypass the node, deleting it
+
+// //     }
+// // }
