@@ -860,7 +860,11 @@ public void removeLoop(){
     Node startingPoint= slow;
 
     // fid the start point of the loop
-    
+    Node ptr=startingPoint;
+    while(ptr.next != startingPoint){
+        ptr=ptr.next;
+    }
+    ptr.next =null;
 }
 
 
