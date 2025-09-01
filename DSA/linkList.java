@@ -792,7 +792,7 @@ public boolean isPalindrome(ListNode head){
         firstHalfStart= firstHalfStart.next;
         secondHalfStart= secondHalfStart.next;
     }
-    retur true;
+    return true;
 }
 
 
@@ -886,7 +886,7 @@ public ListNode mergeingRecursion( Node a1,Node a2){
 
 
 
-    public ListNode isPalindrome(Node head){
+   
         public void middleList(){
         Node slow = head; Node fast=head;
         while(fast != null || fast.next != null){
@@ -910,9 +910,26 @@ public ListNode mergeingRecursion( Node a1,Node a2){
     }
 
     }
+     public ListNode isPalindrome(Node head){
         if(head==null || head.next == null){
             return true;
         }
+
+        ListNdoe firstHalfStart=middleList(head);
+        ListNdoe secondHalfStart=reverseList(firstHalfStart.next);
+
+        while ( secondHalfStart != null){
+        if( firstHalfStart != secondHalfStart){
+            return false;
+        }
+        firstHalfStart= firstHalfStart.next;
+        secondHalfStart= secondHalfStart.next;
+    }
+    return true;
+
+        }
+
+
 
 
 
@@ -922,20 +939,7 @@ public ListNode mergeingRecursion( Node a1,Node a2){
 }
 
 
-public ListNode reverse(ListNode head){
-    if(head == null || head.next==null){
-        return head;
-    }
-    ListNode prev=null;
-    ListNode curr=head;
-    while(current != null){
-        ListNode next=curr.next;
-        curr.next=prev;
-        prev=curr;
-        curr=next;
-    }
-    return prev;
-}
+
 
 public void printList(){
 
