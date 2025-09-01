@@ -883,63 +883,23 @@ public ListNode mergeingRecursion( Node a1,Node a2){
     }
 
 
+public Node reverseK(Node head, int k){
+    Node curr=head;
+    int count =0;
 
-
-
-   
-        public void middleList(){
-        Node slow = head; Node fast=head;
-        while(fast != null || fast.next != null){
-            slow = slow .next;fast=fast.next.next;
-        }
-        return slow;
+    while(curr != null && count <k){
+        count=count.next;
+        count++;
     }
 
-    public ListNode reverseList(){
-        if(head == null || head.next==null){
-        return head;
-
-        ListNode prev=null; ListNdoe current=head;
-
-        while(current != null){
-            ListNdoe next=current.next;
-            current.next=prev;
-            prev=curent;
-            current=next;
-        }
-    }
-
-    }
-     public ListNode isPalindrome(Node head){
-        if(head==null || head.next == null){
-            return true;
-        }
-
-        ListNdoe firstHalfStart=middleList(head);
-        ListNdoe secondHalfStart=reverseList(firstHalfStart.next);
-
-        while ( secondHalfStart != null){
-        if( firstHalfStart != secondHalfStart){
-            return false;
-        }
-        firstHalfStart= firstHalfStart.next;
-        secondHalfStart= secondHalfStart.next;
-    }
-    return true;
-
-        }
-
-
-
-
-
-    
+    if(count == k){
+        curr=reverseK(curr,k); //recursion for the rest of the list//
     }
 
 }
 
 
-
+}
 
 public void printList(){
 
