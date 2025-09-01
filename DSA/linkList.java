@@ -896,7 +896,16 @@ public Node reverseK(Node head, int k){
         curr=reverseK(curr,k); //recursion for the rest of the list//
     }
 
+    while(count -->0){
+        Node temp=head.next;
+        head.next=curr; //link current node to "already reversed part"
+        curr=head;
+        head=temp;
+    }
+    head=curr;
+
 }
+reutrn head;
 
 
 }
