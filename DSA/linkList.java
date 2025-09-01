@@ -869,7 +869,7 @@ public void removeLoop(){
 
 
 
-public Node mergeingRecursion( Node a1,Node a2){
+public ListNode mergeingRecursion( Node a1,Node a2){
     if(l1 == null) return l2;
     if(l2 == null) return l1;
 
@@ -882,13 +882,33 @@ public Node mergeingRecursion( Node a1,Node a2){
         return l2;
     }
 
-    public boolean isPalindrome(Node head){
+
+
+
+
+    public ListNode isPalindrome(Node head){
         public void middleList(){
         Node slow = head; Node fast=head;
         while(fast != null || fast.next != null){
             slow = slow .next;fast=fast.next.next;
         }
         return slow;
+    }
+
+    public ListNode reverseList(){
+        if(head == null || head.next==null){
+        return head;
+
+        ListNode prev=null; ListNdoe current=head;
+
+        while(current != null){
+            ListNdoe next=current.next;
+            current.next=prev;
+            prev=curent;
+            current=next;
+        }
+    }
+
     }
         if(head==null || head.next == null){
             return true;
@@ -899,6 +919,22 @@ public Node mergeingRecursion( Node a1,Node a2){
     
     }
 
+}
+
+
+public ListNode reverse(ListNode head){
+    if(head == null || head.next==null){
+        return head;
+    }
+    ListNode prev=null;
+    ListNode curr=head;
+    while(current != null){
+        ListNode next=curr.next;
+        curr.next=prev;
+        prev=curr;
+        curr=next;
+    }
+    return prev;
 }
 
 public void printList(){
