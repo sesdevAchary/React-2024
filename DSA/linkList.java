@@ -882,6 +882,23 @@ public Node mergeingRecursion( Node a1,Node a2){
         return l2;
     }
 
+    public boolean isPalindrome(Node head){
+        public void middleList(){
+        Node slow = head; Node fast=head;
+        while(fast != null || fast.next != null){
+            slow = slow .next;fast=fast.next.next;
+        }
+        return slow;
+    }
+        if(head==null || head.next == null){
+            return true;
+        }
+
+
+
+    
+    }
+
 }
 
 public void printList(){
