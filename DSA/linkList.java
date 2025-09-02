@@ -948,6 +948,10 @@ public void removeDuplicate(){
 }
 
 public ListNdoe fetchingFromTheLast(int m){
+
+    /*Time: O(L), where L = length of list (only one traversal).
+      Space: O(1) (just two pointers).*/
+
     ListNdoefirst=head; ListNdoe secod=head;
     for(int i=0;i<m;i++){
         if(first == null) return ;
@@ -959,6 +963,15 @@ public ListNdoe fetchingFromTheLast(int m){
   return secod;
 } 
 
+
+public Node getIntersection(){
+    Node a=headA, b=headB;
+    while(a !=b){
+        a= (a==null)?headB:a.next;
+        b= (b==null)?headA:b.next;
+    }
+    return a;
+}
 }
 
 public void printList(){
