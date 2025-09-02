@@ -947,7 +947,17 @@ public void removeDuplicate(){
     }
 }
 
-
+public ListNdoe fetchingFromTheLast(int m){
+    ListNdoefirst=head; ListNdoe secod=head;
+    for(int i=0;i<m;i++){
+        if(first == null) return ;
+        first=first.next;
+    }
+    while(first != null){
+        first=first.next;second=second.next;
+    }
+  return secod;
+} 
 
 }
 
