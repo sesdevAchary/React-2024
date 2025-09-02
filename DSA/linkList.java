@@ -907,6 +907,25 @@ public Node reverseK(Node head, int k){
 }
 reutrn head;
 
+public node deleteAtPose(int pose){
+    if(head == null);return ;
+
+    if(pose == 0){
+        head=head.next;return;
+    }
+
+    Node temp=head;
+    for (int i=0 ; temp != null && i<pos-1;i++){
+        temp=temp.next;
+    }
+
+    if(temp == null || temp.next== null){
+        temp=temp.next.next;
+    }
+
+
+}
+
 
 }
 
