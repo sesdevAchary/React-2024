@@ -1011,7 +1011,16 @@ private void mergeInPlace(ListNode l1, ListNode l2) {
             l1 = temp1;
             l2 = temp2;
         }
-    } 
+    }  private ListNode findMiddle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
 
 }
 
