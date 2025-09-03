@@ -972,7 +972,27 @@ public Node getIntersection(){
     }
     return a;
 }
+
+public void reorderList(ListNode head) {
+
+        public ListNode middle(ListNode head){
+            if(head==null || head->next == null)
+            return;
+            ListNode slow=head,fast=head;
+        while(fast!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+        }
+
+
+        
+    }
+
+
 }
+
 
 public void printList(){
 
