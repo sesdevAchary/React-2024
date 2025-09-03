@@ -1000,7 +1000,18 @@ public void reorderList(ListNode head) {
         }
         return prev;
     }
-
+private void mergeInPlace(ListNode l1, ListNode l2) {
+        while (l2 != null) {
+            ListNode temp1 = l1.next;
+            ListNode temp2 = l2.next;
+            
+            l1.next = l2;
+            l2.next = temp1;
+            
+            l1 = temp1;
+            l2 = temp2;
+        }
+    } 
 
 }
 
