@@ -48,6 +48,19 @@ public void deleteLast(){
 
 }
 
+    public void addFirst(int data){
+        Node newNd= new Node (data);
+
+        if( head == null){
+            head = newNd; tail= newNd;newNd.next= head;
+        }
+        else{
+            newNd.next=head; // Point new node to current head	Connects new to old first node//
+            head=newNd;     //  Update head to new node	Makes new node the first in the list//
+            tail.next=head;  // Update circular link	Makes last node point to new head//
+        }
+    }
+
 
 public Static Void main(String args[]){
     circularLlist cll=new circularLlist();
@@ -60,18 +73,7 @@ public Static Void main(String args[]){
 
 
 
-//     public void addFirst(int data){
-//         Node newNd= new Node (data);
 
-//         if( head == null){
-//             head = newNd; tail= newNd;newNd.next= head;
-//         }
-//         else{
-//             newNd.next=head; // Point new node to current head	Connects new to old first node//
-//             head=newNd;     //  Update head to new node	Makes new node the first in the list//
-//             tail.next=head;  // Update circular link	Makes last node point to new head//
-//         }
-//     }
 
 //     public void deleteFromFirst(){
 //         if ( head == null){
