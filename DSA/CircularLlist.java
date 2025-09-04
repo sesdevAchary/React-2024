@@ -11,7 +11,7 @@ public class circularLlist{
         }
     }
 
-    public void addLast(){
+    public void addLast(int data ){
         Node newhd= new Node(data);
         if(head == null){
             head=Newhd;tail=newhd;newhd.next=head;
@@ -26,6 +26,15 @@ public class circularLlist{
 //             //   ^                        |
 //             //   |________________________|
 //             //  head              tail
+
+
+
+public void 
+public Static Void main(String args[]){
+    circularLlist cll=new circularLlist();
+
+    cll.addLast(12);
+}
 
 
 }
