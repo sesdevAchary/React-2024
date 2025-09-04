@@ -973,6 +973,7 @@ public Node getIntersection(){
     return a;
 }
 
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1027,32 +1028,22 @@ class Solution {
         return head;
     }
 
-    public ListNode merge(ListNode head1,ListNode head2){
-        if(head1==null)return head2;
-        if(head2==null)return head1;
+    private void merge(ListNode l1, ListNode l2) {
+    // Loop until the second list runs out of nodes.
+    while (l2 != null) {
+        // Save next pointers before we overwrite any .next links.
+        ListNode temp1 = l1.next;   // next node from the first list
+        ListNode temp2 = l2.next;   // next node from the second list
 
-        ListNode p1=head1; ListNode p2=head2;
-        ListNode dummyHead= new ListNode(); ListNode pMerge=dummyHead;
+        // Weave one node from l2 after current l1.
+        l1.next = l2;               // l1 -> l2
+        l2.next = temp1;            // l2 -> old (l1.next)
 
-        while(p1 != null && p2 != null){
-           if(p1.val<p2.val){
-            pMerge.next=p1;
-            p1=p1.next;
-           }
-           else{
-            pMerge.next=p2;p2=p2.next;
-           }
-           pMerge=pMerge.next;
-        }
-        if (p1 != null) {
-        pMerge.next = p1;
-    } else if (p2 != null) {
-        pMerge.next = p2;
+        // Advance both cursors to continue weaving.
+        l1 = temp1;                 // move to the next node in the first list
+        l2 = temp2;                 // move to the next node in the second list
     }
-
-    return dummyHead.next;
-
-    } 
+}
       
 }
 
