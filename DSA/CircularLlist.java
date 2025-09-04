@@ -47,6 +47,20 @@ public void deleteLast(){
 
 
 }
+    public void deleteFromFirst(){
+        if ( head == null){
+            System.out.print(" empty list");
+            return;
+        }
+        if( head == tail){
+            head.next=null;
+            tail.next=null;
+        }else{
+            head=head.next;
+            tail.next=head;
+        }
+
+    }
 
     public void addFirst(int data){
         Node newNd= new Node (data);
@@ -66,6 +80,9 @@ public Static Void main(String args[]){
     circularLlist cll=new circularLlist();
 
     cll.addLast(12);
+    cll.addLast(13);
+    cll.addLast(14);
+    cll.addFirst(17);
 }
 
 
@@ -75,20 +92,7 @@ public Static Void main(String args[]){
 
 
 
-//     public void deleteFromFirst(){
-//         if ( head == null){
-//             System.out.print(" empty list");
-//             return;
-//         }
-//         if( head == tail){
-//             head.next=null;
-//             tail.next=null;
-//         }else{
-//             head=head.next;
-//             tail.next=head;
-//         }
 
-//     }
 
 
 
