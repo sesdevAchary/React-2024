@@ -1,42 +1,35 @@
-// public class circularLlist {
-//     Node head = null ;   //Points to the first node.
-//     Node tail = null;   //Points to the last node.
 
 
-//     class Node {
-//         int data ;
-//         Node next;
+public class circularLlist{
+    Node head=null;
+    Node tail=null;
 
-//         Node ( int data){
-//             this.data= data;
-//             this.next= null;
-//         }
-//     }
+    class Node{
+        int data;Node next;
+        Node (int data){
+            this.data=data;this.next=null;
+        }
+    }
 
-
-//     public void addLast( int data){
-//         Node newNd = new Node(data);
-
-//         if(head == null ){
-//             head = newNd;tail=newNd;
-//             newNd.next= head;  //circular reference.//
-//         }
-//         else{
-//             tail.next = newNd;    //Link the current last node to the new one//
-//             tail= newNd;          //Update the tail reference points to the new node //
-//             tail.next=head;       //Re-link the new tail back to the head//
-            
-
-
+    public void addLast(){
+        Node newhd= new Node(data);
+        if(head == null){
+            head=Newhd;tail=newhd;newhd.next=head;
+        }
+        else{
+            tail.next=newhd;  // Link the curr last node to the new one//
+            tail=newhd;      //Update the tail reference points to the new node //
+            tail.next=head;  //Re-link the new tail back to the head//
+        }
+    }
 //             // [10] → [20] → [30] → [40] ─┐
 //             //   ^                        |
 //             //   |________________________|
 //             //  head              tail
 
 
+}
 
-//         }     
-//     }
 
 
 //     public void addFirst(int data){
@@ -246,271 +239,5 @@
 //     }
 // }
 
-
-
-
-
-public class CircularLlist{
-    Node head = null;
-    Node tail = null;
-
-    class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            //It initializes the data field. (next) is implicitly null at this point (default)
-        }
-    }
-
-public void addFirst( int data){
-    Node newNd = new Node(data);
-    if ( head == null){
-        head = tail = newNd;
-        tail.next = head;
-    }
-    else{
-        newNd.next= head;
-        head = newNd;
-        tail.next = head;  // Update circular link
-    }
-}
-
-
-public void addLast(int data){
-        Node newNd = new Node(data);//A linked list is made up of Node objects.So to insert, you first have to make a node.
-
-        if ( head == null )
-        {
-            head = tail = newNd;
-            tail.next= head;
-
-        }else{
-            tail.next = newNd;
-            tail=newNd;
-            tail.next = head;
-        }
-}
-
-public void insertAtMiddle(int data , int position){
-    if (position <= 1 || head == null) {
-            addFirst(data);
-            return;
-    }
-
-    Node newNd = new Node(data);
-    Node current = data ;
-    int index = 1;
-    while( index<position-1|| current.next != head  ){
-        current = current.next;
-        index++;
-
-    }
-    newNd.next = current.next;
-    current.next = newNd;
-
-    if(current==tail){
-        tail=newNd;
-    }
-
-}
-
-
-
-public void deleteFirst(){
-    if( head == null){
-        System.out.println(" empty list");
-    }
-
-    if( head == tail){
-        head = tail = null;
-    }
-    else{
-        head=head.next;
-        tail.next=head;
-    }
-}
-
-
-public void deleteLast(){
-     if( head == null){
-        System.out.println(" empty list");
-    }
-
-    if( head == tail){
-        head = tail = null;
-    }else{
-        Node current= head;
-        while(current.next != tail ){
-            current = current.next;
-        }
-        current.next = head;
-        tail = current;
-    }
-
-
-}
-
-
-public void deleteByValue(int value ){
-    if ( head == null){
-        System.out.print(" not found the list");
-        return ;
-    }
-
-    if ( head.data = value){
-        deleteLast();
-    }
-
-    Node current = head ;
-    while ( current .next != head && current.next.data != value){
-        current=current.next;
-    }
-
-    if( current.next.data == value){
-        tail = current;
-    }
-    current.next.next= current.next;
-    else{
-          System.out.println("Value not found.");
-    }
-}
-
-
-public int search( int value){
-    if ( head == null) return -1;
-
-    Node current = head ;
-    int index =0; 
-    do{
-        if( current.data == value){
-            return index;
-        }
-           current = current.next;
-           index ++;
-    }while( current != head );
-
-   
-        return -1;
-    
-}
-
-
-public int update( int oldv , int newv){
-    if(head == null) return -1;
-
-    Node current = head;
-    int index =0;
-
-    do{
-        if(current.value == oldv){
-            current.data = newValue;
-                return index;
-        }
-
-        current=current.index;
-        index ++;
-    }while (current != head);
-}
-
-public int countNode(){
-    if(head==null) return 0;
-
-    int count = 0;
-    Node current = head ;
-
-    do{
-        count ++
-        current = current.next;
-    }while(current != head);
-
-    return count;
-}
-
-
-
-public void reverse(){
-    if( head == null || head.next== head) return ;
-
-    Node prev = tail , current = head , next;
-
-    do{
-        next = current.next;    // save the next val
-        current.next=prev;     // reverse the ptr
-        prev = current;        //prev++
-        currenrt = next;       // current ++
-    }while(current!= head);
-
-
-    tail = head ; head = tail // swapping the value of head and tail ..
-
-}
-
-
-public void printList(){
-    if ( head == null){
-        System.out.println("List is empty.");
-        return;
-    }
-
-    Node current = head;
-    do{
-        System.out.println( current.data+"->");
-        current=current.next;
-
-    }while ( current != head );
-
-    System.out.println("(Back to Head: " + head.data + ")"); // to ensure that head data is there the last  //
-
-}
-
-
-public static void main(String[] args) {
-        CircularLlist cll = new CircularLlist();
-        //cll.printList();   Empty
-        cll.addLast(10);
-        cll.addLast(20);
-        cll.addLast(30);
-        cll.addLast(40);
-        cll.addLast(50);
-        cll.printList();
-
-        cll.insertAtPosition(20, 2);
-        cll.printList();
-
-        cll.deleteFirst();
-        cll.deleteLast();
-        cll.deleteByValue(100);
-        cll.printList();  
-
-
-        CircularLlist cll = new CircularLlist();
-        int value = 50;
-        int result = cll.search(value);
-        if( result != -1){
-            System.out.println("Value " + value + " found at index: " + result);
-        }else {
-            System.out.println("Value " + value + " not found in the list.");
-        }
-
-        int pos = cll.update(20, 25);
-        System.out.println("Updated at index: " + pos);     // index of update
-        cll.printList();    
-
-
-
-        System.out.println("Node count: " + cll.countNode());
-
-        System.out.println("\n🔄 Reversed Circular Linked List:" + cll.reverse());
-        cll.printList();
-
-
-
-
-    }
-}
-
-    
 
 
