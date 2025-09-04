@@ -75,6 +75,24 @@ public void deleteLast(){
         }
     }
 
+public void insertAtSpecificPlace(int data, int position){
+    if(position <=1 || head== null){
+        addFirst();
+        return;
+    }
+    int index=0;Node current=head;
+    while( index<position-1 && current.next != null){
+        index+=1;current=current.next;
+    }
+
+    if(current.next == head)
+    addLast();  //If the loop hit the end of the list before reaching position − 1, just add to the end.
+    else{
+        Node newhd= new Node(data);
+        newhd.next=current.next;
+        current.next=newhd;
+    }
+}
 
 public Static Void main(String args[]){
     circularLlist cll=new circularLlist();
@@ -82,47 +100,21 @@ public Static Void main(String args[]){
     cll.addLast(12);
     cll.addLast(13);
     cll.addLast(14);
+    System.out.println("After adding last:");
+
     cll.addFirst(17);
-}
+    cll.addFirst(5);
+    System.out.println("After adding first:");
+
+    cll.insertAtPosition(15, 3);      // 5 → 10 → 15 → 20 → 30
+    System.out.println("inserting at index 3:");
 
 
 }
 
 
+}
 
-
-
-
-
-
-
-// public void insertAtSpecificPlace(int data, int position){
-//     if(position <=1 || head == null){
-//         addFirst(data);  // If position is 1 or less, OR if the list is empty, insert at front.
-//         return ; 
-//     }
-
-//     Node current=head;
-//     int index = 0;
-
-//     while( index< position-1 && current.next != head){
-//         current=current.next;  //stopping at the node just before the target position.
-//         index++;
-//     }
-
-//     if( current.next ==  head){
-//     addLast(data);  //If the loop hit the end of the list before reaching position − 1, just add to the end.
-
-//     } else {
-//         Node newNd= new Node ( data);
-//         newNd.next = current.next;
-//         current.next = newNd;
-
-
-//     }
-
-
-// }
 
 // //// search and Return boolean value ///////
 //     public boolean search (int target){
@@ -198,8 +190,7 @@ public Static Void main(String args[]){
 //         System.out.println("After adding last:");
 
 
-//         cll.addFirst(5);
-//         System.out.println("After adding first:");
+        
 
 
 //         cll.deleteFromFirst();
@@ -209,8 +200,7 @@ public Static Void main(String args[]){
 //         System.out.println("After deleting last:");
 
 
-//         cll.insertAtPosition(15, 3);      // 5 → 10 → 15 → 20 → 30
-//         System.out.println("inserting at index 3:");
+
 
 
 //     //    cll.update(10,90);
