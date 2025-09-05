@@ -115,6 +115,21 @@ public Node searchVal(int target){
     return null;
 }
 
+
+
+boolean isCircular(){
+    if(head == null)
+    return true;
+
+    Node temp= head.next;
+    while(temp != null && temp != head){
+        temp=temp.next;
+    }
+    return(temp==head);
+
+
+}
+
 public void printList(){
     if(head == null)
     System.out.print("empty");
@@ -147,6 +162,8 @@ public static void main(String[] args){
 
     cll.searchVal(12);
     cll.printList();  
+
+    System.out.println("Circular list? " + cll.isCircular());
 
 
 }
