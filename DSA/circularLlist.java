@@ -100,9 +100,9 @@ public void printList(){
 
 Node curr=head;
 do{
-    System.out.print(current.data + " -> ");
+    System.out.print(curr.data + " -> ");
     curr=curr.next;
-}while(curr != null);
+}while(curr != head);
 System.out.println("(back to head)");
 }
 
@@ -112,15 +112,15 @@ public static void main(String[] args){
     cll.addLast(12);
     cll.addLast(13);
     cll.addLast(14);
-    System.out.println("After adding last:");
+    System.out.println("After adding last:"); //  12 -> 13 -> 14 -> (back to head)
     cll.printList();
 
     cll.addFirst(17);
     cll.addFirst(5);
-    System.out.println("After adding first:");
+    System.out.println("After adding first:"); //5 -> 17 -> 12 -> 13 -> 14 -> (back to head)
     cll.printList();
 
-    cll.insertAtSpecificPlace(15, 3);      // 5 → 10 → 15 → 20 → 30
+    cll.insertAtSpecificPlace(15, 3);    //  5 -> 17 -> 12 -> 15 -> 13 -> 14 -> (back to head)
     System.out.println("inserting at index 3:");
     cll.printList();    
 
