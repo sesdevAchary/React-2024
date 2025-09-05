@@ -14,7 +14,7 @@ public class circularLlist{
     public void addLast(int data ){
         Node newhd= new Node(data);
         if(head == null){
-            head=Newhd;tail=newhd;newhd.next=head;
+            head=newhd;tail=newhd;newhd.next=head;
         }
         else{
             tail.next=newhd;  // Link the curr last node to the new one//
@@ -53,8 +53,8 @@ public void deleteLast(){
             return;
         }
         if( head == tail){
-            head.next=null;
-            tail.next=null;
+            head=null;
+            tail=null;
         }else{
             head=head.next;
             tail.next=head;
@@ -77,7 +77,7 @@ public void deleteLast(){
 
 public void insertAtSpecificPlace(int data, int position){
     if(position <=1 || head== null){
-        addFirst();
+        addFirst(data);
         return;
     }
     int index=0;Node current=head;
@@ -86,7 +86,7 @@ public void insertAtSpecificPlace(int data, int position){
     }
 
     if(current.next == head)
-    addLast();  //If the loop hit the end of the list before reaching position − 1, just add to the end.
+    addLast(data);  //If the loop hit the end of the list before reaching position − 1, just add to the end.
     else{
         Node newhd= new Node(data);
         newhd.next=current.next;
@@ -94,20 +94,35 @@ public void insertAtSpecificPlace(int data, int position){
     }
 }
 
-public Static Void main(String args[]){
+public void printList(){
+    if(head == null)
+    System.out.print("empty");
+
+Node curr=head;
+do{
+    System.out.print(current.data + " -> ");
+    curr=curr.next;
+}while(curr != null);
+System.out.println("(back to head)");
+}
+
+public static void main(String[] args){
     circularLlist cll=new circularLlist();
 
     cll.addLast(12);
     cll.addLast(13);
     cll.addLast(14);
     System.out.println("After adding last:");
+    cll.printList();
 
     cll.addFirst(17);
     cll.addFirst(5);
     System.out.println("After adding first:");
+    cll.printList();
 
-    cll.insertAtPosition(15, 3);      // 5 → 10 → 15 → 20 → 30
+    cll.insertAtSpecificPlace(15, 3);      // 5 → 10 → 15 → 20 → 30
     System.out.println("inserting at index 3:");
+    cll.printList();    
 
 
 }
