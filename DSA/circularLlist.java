@@ -98,14 +98,20 @@ public Node searchVal(int target){
     if ( head == null){
         System.out.println("empty");
     }
-    else{
-        Node curr=head;
+    
+        Node curr=head;int idex=0
         do{
-            if(curr == target)
+            if(curr.data == target){
+                System.out.print("found the value "+target+ "at the index"+index);
             return curr;
+            }
+            
+            curr=curr.next;
+            index ++;
 
-        }while(head != curr)
-    }
+        }while(curr != head );
+    
+    System.out.print("Not found: " + target);
 }
 
 public void printList(){
