@@ -130,6 +130,17 @@ boolean isCircular(){
 
 }
 
+Node convertToCircular(){
+    if(head == null )return null;
+
+    Node temp=head;
+    while(temp.next != null){
+        temp=temp.next;
+    }
+    temp.next=head; // make circular
+    return head;
+}
+
 public void printList(){
     if(head == null)
     System.out.print("empty");
