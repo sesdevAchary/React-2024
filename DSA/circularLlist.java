@@ -164,6 +164,19 @@ void splitNodes(Node head,Node[] halves){
     halves[0]=head1;halves[1]=head2; //halves[0] = head of first half, halves[1] = head of second half.
 }
 
+
+public void insertToSortedList(Node head,int data){
+    Node newhd=new Node(data);
+    if( head == null){
+        newhd.next=newhd;return newhd;
+    }
+
+    Node temp=head;
+    while(temp != head && !(temp.data<=data && data<= temp.next.data)){
+        temp=temp.next;
+    }
+    newhd.next=temp.next;temp.next=newhd;
+}
 public void printList(){
     if(head == null)
     System.out.print("empty");
