@@ -149,6 +149,19 @@ void splitNodes(Node head,Node[] halves){
         slow=slow.next; fast=fast.next.next;
     }
     return slow;
+
+    Node head1=head;
+    Node head2=slow.next;
+    slow.next=head1; // make the first half circular//;
+
+
+    Node temp=head2;
+    while(temp != head){
+        temp=temp.next;
+    }
+    temp.next=head2;
+
+    halves[0]=head1;halves[1]=head2; //halves[0] = head of first half, halves[1] = head of second half.
 }
 
 public void printList(){
