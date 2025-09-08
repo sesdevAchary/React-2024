@@ -141,6 +141,16 @@ Node convertToCircular(){
     return head;
 }
 
+void splitNodes(Node head,Node[] halves){
+    if(head == null) return;
+
+    Node slow=head;Node fast=head;
+    while(fast.next != head && fast.next.next != head){
+        slow=slow.next; fast=fast.next.next;
+    }
+    return slow;
+}
+
 public void printList(){
     if(head == null)
     System.out.print("empty");
