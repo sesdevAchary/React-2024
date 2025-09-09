@@ -177,6 +177,28 @@ public void insertToSortedList(Node head,int data){
     }
     newhd.next=temp.next;temp.next=newhd;
 }
+
+public int josephus(int n,int k){
+    Node prev=head;Node head= new Node(1);
+    for(int i=2;i<n;i++){
+        prev.next= new Node(i); //adding 1 after another node
+        prev=prev.next
+    }
+    prev.next=head; //making the single line circular//
+
+    Node ptr=head;prevNode=prev;
+    while(ptr.next != ptr){
+        for(int c=1;c<k;c++){
+            ptr=ptr.next;
+            prevNode=ptr;
+        }
+        prevNode.next=ptr.next;ptr=prevNode.next;
+        
+
+    }
+    return ptr.data;
+
+}
 public void printList(){
     if(head == null)
     System.out.print("empty");
