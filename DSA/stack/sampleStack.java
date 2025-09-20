@@ -33,12 +33,13 @@ public class sampleStack{
             head = head.next;
             return top;
         }
+        
 
         public int peek() {
             if (isEmpty()) return -1;
             return head.data;
         }
-    }
+    
 
         //  public static int peek(){
         //     if(isEmpty())
