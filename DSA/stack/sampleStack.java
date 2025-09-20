@@ -1,14 +1,14 @@
 public class sampleStack{
     // the box is used
-    // static class Node{
-    //     int data;Node next;
-    //     public Node(int data){
-    //         this.data=data;
-    //         next=null;
-    //         // the plates 
-    //     }
+    static class Node{
+        int data;Node next;
+        public Node(int data){
+            this.data=data;
+            next=null;
+            // the plates 
+        }
 
-    // }
+    }
 
     static class Stack{
         // public Node head;
@@ -27,14 +27,18 @@ public class sampleStack{
 
         // }
 
-        // public static int pop(){
-        //     if(isEmpty())
-        //     return -1;
+        public int pop() {
+            if (isEmpty()) return -1;
+            int top = head.data;
+            head = head.next;
+            return top;
+        }
 
-        //     int top=head.data;
-        //     head=head.next;
-        //     return top;
-        // }
+        public int peek() {
+            if (isEmpty()) return -1;
+            return head.data;
+        }
+    }
 
         //  public static int peek(){
         //     if(isEmpty())
@@ -53,7 +57,7 @@ public class sampleStack{
 
         Stack s = new Stack();
         s.push(10);
-        System.out.println(s.pop());
+        System.out.println(s.push());
 
 
     }
