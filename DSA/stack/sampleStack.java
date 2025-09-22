@@ -54,6 +54,10 @@ public class sampleStack {
     }
 }
 
+ArrayDeque<Integer> dq = new ArrayDeque<>();
+dq.push(1); dq.pop(); dq.peek();
+
+
 
  // Push `data` to the BOTTOM of stack s using recursion
     public static void pushAtBottom(int data, Stack<Integer> s) {
