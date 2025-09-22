@@ -95,3 +95,44 @@ dq.push(1); dq.pop(); dq.peek();
         }
     }
 }
+
+import java.util.*;
+
+public class sampleStack {
+
+    // Push `data` to the BOTTOM of stack s using recursion
+    public static void pushAtBottom(int data, Stack<Integer> s) {
+        if (s.isEmpty()) {
+            s.push(data);        // base case: empty -> push at bottom
+            return;
+        }
+        int top = s.pop();       // temporarily remove top
+        pushAtBottom(data, s);   // recursive call to go deeper
+        s.push(top);             // restore the popped element
+    }
+
+    // Reverse the stack using recursion + pushAtBottom
+    public static void reverse(Stack<Integer> s) {
+        if (s.isEmpty()) {
+            return;              // base case: nothing to reverse
+        }
+        int top = s.pop();       // remove top
+        reverse(s);              // reverse remaining stack
+        pushAtBottom(top, s);    // insert removed top at bottom
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> s = new Stack<>();
+        s.push(1); s.push(2); s.push(3); s.push(4);
+
+        System.out.println("Before reversing (top -> bottom): " + s);
+        reverse(s);
+        System.out.println("After reversing  (top -> bottom): " + s);
+
+        System.out.println("Popping all elements (order printed):");
+        while (!s.isEmpty()) {
+            System.out.println(s.peek());
+            s.pop();
+        }
+    }
+}
