@@ -26,6 +26,15 @@ public class sampleStack {
         s.push(top);                // restore the saved top back on top
     }
 
+    public void reverse( stack <Integer> s){
+        if(s.isEmpty()){
+            return;                  // already reversed //
+        }
+        int top=s.pop();         // gettig the top element at each reverse fun call thus reverse(s) after each s.pop untill []
+        reverse(s);
+        pushAtBottom(top,s);    //  [1,2]->[2,1] again [2,1,3]->[3,2,1];
+    }
+
     public static void main( String args[]){
         stack<Integer>=new s stack<>();
         s.push(1); s.push(2); s.push(3); s. push(4);  // push 1,2,3,4 (4 is on top)
@@ -34,7 +43,7 @@ public class sampleStack {
 
         while( !s.isEmpty()){
             System.out.println(s.peek());
-            s.pop();
+            
         }
     }
     // // Reverse entire stack s using recursion
