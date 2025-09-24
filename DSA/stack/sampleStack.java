@@ -88,7 +88,7 @@ public class sampleStack{
 
                 char top = s.pop();
 
-                if((c==')' && c != '(') || (c=='}' && c != '{') || (c==']' && c != '[')){
+                if((c==')' && top != '(') || (c=='}' && top != '{') || (c==']' && top != '[')){
                     return false;
                 }
             }
