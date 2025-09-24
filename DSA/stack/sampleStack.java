@@ -75,39 +75,36 @@ import java.util.*;
 
 
 public class sampleStack{
-// string input and boolean output
-public static boolean isValid(String S) {
+    public static boolean isValid( String S){
+        Stack <Character> s = new Stack<>();   
+        
+        for( char c: S.toCharArray()){
+            if( c=='(' || c=='{' || c=='['){
+                s.push(c);
+            }else{
+                if(s.isEmpty()){
+                    return false;
+                }
 
-    Stack<Character> s = new Stack<>(); // empty stack of char type to store the open braces
-    // to loop through each char c and convert string it to charArray()
-    for (char c : S.toCharArray()) {
-        if (c == '(' || c == '{' || c == '[') {
-            s.push(c);
-        }
+                char top = s.pop();
 
-        else {
-            if (s.isEmpty())
-                return false; // no opening bracket\if string starts with ")(" → no matching opening → return
-                              // false.
-
-            char top = s.pop(); // pop out the elements from stack n stores in the stack
-
-            if ((c == ')' && top != '(') || (c == '}' && top != '{') || (c == ']' && top != '['))
-                return false;
-        }
+                if((c==')' && c != '(') || (c=='}' && c != '{') || (c==']' && c != '[')){
+                    return false;
+                }
+            }
         }
 
         return s.isEmpty();
 
     }
-public static void main ( String args[]){
-    String s1 = "()"; String s2 = "()[]{}"; String s3 = "(]";
 
-    System.out.println(isValid(s1));
-    System.out.println(isValid(s2));
-    System.out.println(isValid(s2));
+    public static void main( String args[]){
+        String s1 = "()";
+        String s2 = "()[]{}";
+        String s3 = "(]";
 
-}
-
-
+        System.out.println(isValid(s1));
+        System.out.println(isValid(s2));
+        System.out.println(isValid(s3));
+    }
 }
