@@ -75,36 +75,41 @@ import java.util.*;
 
 
 public class sampleStack{
-    public static boolean isValid( String S){
-        Stack <Character> s = new Stack<>();   
+    // public static boolean isValid( String S){
+    //     Stack <Character> s = new Stack<>();   
         
-        for( char c: S.toCharArray()){
-            if( c=='(' || c=='{' || c=='['){
-                s.push(c);
-            }else{
-                if(s.isEmpty()){
-                    return false;
-                }
+    //     for( char c: S.toCharArray()){
+    //         if( c=='(' || c=='{' || c=='['){
+    //             s.push(c);
+    //         }else{
+    //             if(s.isEmpty()){
+    //                 return false;
+    //             }
 
-                char top = s.pop();
+    //             char top = s.pop();
 
-                if((c==')' && top != '(') || (c=='}' && top != '{') || (c==']' && top != '[')){
-                    return false;
-                }
-            }
-        }
+    //             if((c==')' && top != '(') || (c=='}' && top != '{') || (c==']' && top != '[')){
+    //                 return false;
+    //             }
+    //         }
+    //     }
 
-        return s.isEmpty();
+    //     return s.isEmpty();
 
-    }
+    // }
 
-    public static void main( String args[]){
-        String s1 = "()";
-        String s2 = "()[]{}";
-        String s3 = "(]";
+    // public static void main( String args[]){
+    //     String s1 = "()";
+    //     String s2 = "()[]{}";
+    //     String s3 = "(]";
 
-        System.out.println(isValid(s1));
-        System.out.println(isValid(s2));
-        System.out.println(isValid(s3));
+    //     System.out.println(isValid(s1));
+    //     System.out.println(isValid(s2));
+    //     System.out.println(isValid(s3));
+    // }
+
+
+    public static int longestValidParanthesis(String S){
+        Stack<Integer> s= new Stack<>();
     }
 }
