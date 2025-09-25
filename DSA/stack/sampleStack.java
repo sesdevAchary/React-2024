@@ -111,5 +111,23 @@ public class sampleStack{
 
     public static int longestValidParanthesis(String S){
         Stack<Integer> s= new Stack<>();
+        s.push(-1);
+        int maxLen=0;
+
+        for ( int i=0;i<S.length();i++)
+        {
+            char c= S.charAt(i);
+
+            if( c== '('){
+                s.push(i);
+            }else
+            {
+                stack.pop();
+            }
+        }
+
+
+
+       return maxLen;
     }
 }
