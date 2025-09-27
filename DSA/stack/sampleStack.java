@@ -179,3 +179,13 @@ public void reverse(Stack<Integer> s) {
     reverse(s);
     s.push(top);   // putting element back on top
 }
+public static void pushAtBottom(int data, Stack<Integer> s) {
+    if (s.isEmpty()) {
+        s.push(data);
+        return;
+    }
+
+    int top = s.pop();            // remove top and save temporarily
+    pushAtBottom(data, s);        // recursive call to go deeper
+    s.push(top);                  // restore the saved top
+}
