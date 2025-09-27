@@ -159,3 +159,17 @@ if (stack.isEmpty()) {
 } else {
     maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
 }
+for (int i = 0; i < s.length(); i++) {
+    char c = s.charAt(i);
+    if (c == '(') {
+        stack.push(i);       // store index of '('
+    } else {                 // c == ')'
+        stack.pop();         // try to match with a previous '('
+        if (stack.isEmpty()) {
+            stack.push(i);   // no matching '(', set new base index
+        } else {
+            maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
+        }
+    }
+}
+return maxLen;
