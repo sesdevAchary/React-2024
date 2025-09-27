@@ -153,3 +153,9 @@ if (c == '(') {
         maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
     }
 }
+stack.pop();         // try to match with a previous '('
+if (stack.isEmpty()) {
+    stack.push(i);   // no matching '(', set new base index
+} else {
+    maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
+}
