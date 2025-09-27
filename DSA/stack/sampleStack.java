@@ -173,3 +173,9 @@ for (int i = 0; i < s.length(); i++) {
     }
 }
 return maxLen;
+public void reverse(Stack<Integer> s) {
+    if (s.isEmpty()) return;
+    int top = s.pop();
+    reverse(s);
+    s.push(top);   // putting element back on top
+}
