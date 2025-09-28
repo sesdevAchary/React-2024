@@ -143,49 +143,11 @@ public class sampleStack{
 }
 
 
-if (c == '(') {
-    stack.push(i);       // store index of '('
-} else {                 // c == ')'
-    stack.pop();         // try to match with a previous '('
-    if (stack.isEmpty()) {
-        stack.push(i);   // no matching '(', set new base index
-    } else {
-        maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
-    }
-}
-stack.pop();         // try to match with a previous '('
-if (stack.isEmpty()) {
-    stack.push(i);   // no matching '(', set new base index
-} else {
-    maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
-}
-for (int i = 0; i < s.length(); i++) {
-    char c = s.charAt(i);
-    if (c == '(') {
-        stack.push(i);       // store index of '('
-    } else {                 // c == ')'
-        stack.pop();         // try to match with a previous '('
-        if (stack.isEmpty()) {
-            stack.push(i);   // no matching '(', set new base index
-        } else {
-            maxLen = Math.max(maxLen, i - stack.peek()); // current valid length
-        }
-    }
-}
-return maxLen;
-public void reverse(Stack<Integer> s) {
-    if (s.isEmpty()) return;
-    int top = s.pop();
-    reverse(s);
-    s.push(top);   // putting element back on top
-}
-public static void pushAtBottom(int data, Stack<Integer> s) {
-    if (s.isEmpty()) {
-        s.push(data);
-        return;
-    }
 
-    int top = s.pop();            // remove top and save temporarily
-    pushAtBottom(data, s);        // recursive call to go deeper
-    s.push(top);                  // restore the saved top
-}
+ public static void reverse(Stack<Integer> s) {
+        if (s.isEmpty()) {        // base case: empty stack is already reversed
+            return;
+        }
+        int top = s.pop();        // remove top element
+        reverse(s);               // reverse the remaining (smaller) stack
+        pushAtBottom(top, s);  
