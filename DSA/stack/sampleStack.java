@@ -169,4 +169,5 @@ public class sampleStack{
         int top = s.pop();        // remove top and save it temporarily
         pushAtBottom(data, s);    // recursive call to go deeper (toward bottom)
         s.push(top);              // restore the saved top back on top
-    }
+    }ArrayDeque<Integer> dq = new ArrayDeque<>();
+dq.push(1); dq.pop(); dq.peek();
