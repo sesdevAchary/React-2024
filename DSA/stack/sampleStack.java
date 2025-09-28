@@ -179,3 +179,12 @@ dq.push(1); dq.pop(); dq.peek();
         reverse(s);              // reverse remaining stack
         pushAtBottom(top, s);    // insert removed top at bottom
     }
+     public static void pushAtBottom(int data, Stack<Integer> s) {
+        if (s.isEmpty()) {
+            s.push(data);        // base case: empty -> push at bottom
+            return;
+        }
+        int top = s.pop();       // temporarily remove top
+        pushAtBottom(data, s);   // recursive call to go deeper
+        s.push(top);             // restore the popped element
+    }
