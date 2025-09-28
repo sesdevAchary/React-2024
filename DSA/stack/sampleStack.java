@@ -161,4 +161,12 @@ public class sampleStack{
         System.out.println("After reversing  (bottom -> top): " + s);
 
         System.out.println("Popping all elements (printed in order):");
-        while (!s.isEmpty()) {
+        while (!s.isEmpty()) {public static void pushAtBottom(int data, Stack<Integer> s) {
+        if (s.isEmpty()) {        // base case
+            s.push(data);         // when stack empty, pushing here places `data` at bottom
+            return;
+        }
+        int top = s.pop();        // remove top and save it temporarily
+        pushAtBottom(data, s);    // recursive call to go deeper (toward bottom)
+        s.push(top);              // restore the saved top back on top
+    }
