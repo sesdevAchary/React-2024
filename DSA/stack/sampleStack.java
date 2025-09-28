@@ -171,3 +171,11 @@ public class sampleStack{
         s.push(top);              // restore the saved top back on top
     }ArrayDeque<Integer> dq = new ArrayDeque<>();
 dq.push(1); dq.pop(); dq.peek();
+ public static void reverse(Stack<Integer> s) {
+        if (s.isEmpty()) {
+            return;              // base case: nothing to reverse
+        }
+        int top = s.pop();       // remove top
+        reverse(s);              // reverse remaining stack
+        pushAtBottom(top, s);    // insert removed top at bottom
+    }
