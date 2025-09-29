@@ -109,7 +109,7 @@ public class sampleStack{
     // }
 
 
-    public static int longestValidParantheses( String string1){
+    public static int longestValidParentheses( String string1){
         Stack<Integer> s= new Stack<>();
         s.push(-1);
         int maxlen=0;
@@ -117,16 +117,25 @@ public class sampleStack{
         for( int i=0;i< string1.length();i++){
             char c = string1.charAt(i);
 
-            if( c=='c'){
+            if( c=='('){
                 s.push(i);
             }else{
                 s.pop();
 
-                if(s.isEmpty(){
-                    s.pus(i);
-                })
+                if(s.isEmpty()){
+                    s.push(i);
+                }else{
+                    maxlen=Math.max(maxlen, i-s.peek());
+                }
             }
         }
+        return maxlen;
+    }
+    
+
+    public static void main(String[] args) {
+        System.out.println(longestValidParantheses("(()"));    // prints 2
+        System.out.println(longestValidParantheses(")()())")); // prints 4
     }
 }
 
