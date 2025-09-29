@@ -110,32 +110,32 @@ public class sampleStack{
 
 
     public static int longestValidParentheses( String string1){
-        Stack<Integer> s= new Stack<>();
-        s.push(-1);
-        int maxlen=0;
+        Stack<Integer> s= new Stack<>();  // creates a new stack
+        s.push(-1);                       // push -1 for initial reference
+        int maxlen=0;                     // counting the maxlen
 
-        for( int i=0;i< string1.length();i++){
-            char c = string1.charAt(i);
+        for( int i=0;i< string1.length();i++){     // going through the given string
+            char c = string1.charAt(i);            // placing the index value of the each char converted s
 
-            if( c=='('){
-                s.push(i);
+            if( c=='('){                         // if opening bracket then simply push its index to the stack [0]
+                s.push(i);                            
             }else{
-                s.pop();
+                s.pop();                         // else pop an element from the []
 
                 if(s.isEmpty()){
                     s.push(i);
                 }else{
-                    maxlen=Math.max(maxlen, i-s.peek());
+                    maxlen=Math.max(maxlen, i-s.peek()); // if i=4 then 4-top i.e.=0 so 4-0=0;
                 }
             }
         }
-        return maxlen;
+        return maxlen;     // returning 4
     }
     
 
     public static void main(String[] args) {
-        System.out.println(longestValidParantheses("(()"));    // prints 2
-        System.out.println(longestValidParantheses(")()())")); // prints 4
+        System.out.println(longestValidParentheses("(()"));    // prints 2
+        System.out.println(longestValidParentheses(")()())")); // prints 4
     }
 }
 
