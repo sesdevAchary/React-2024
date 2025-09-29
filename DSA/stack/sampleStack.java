@@ -109,78 +109,26 @@ public class sampleStack{
     // }
 
 
-    public static int longestValidParentheses(String S){
+    public static int longestValidParantheses( String string1){
         Stack<Integer> s= new Stack<>();
         s.push(-1);
-        int maxLen=0;
+        int maxlen=0;
 
-        for ( int i=0;i<S.length();i++)
-        {
-            char c= S.charAt(i);
+        for( int i=0;i< string1.length();i++){
+            char c = string1.charAt(i);
 
-            if( c== '('){
+            if( c=='c'){
                 s.push(i);
-            }else
-            {
+            }else{
                 s.pop();
 
-                if(s.isEmpty()){
-                    s.push(i);
-                }
-                maxLen=Math.max(maxLen,i-s.peek());
+                if(s.isEmpty(){
+                    s.pus(i);
+                })
             }
         }
-
-
-
-       return maxLen;
-    }
-
-     public static void main(String[] args) {
-        System.out.println(longestValidParentheses("(()"));    // prints 2
-        System.out.println(longestValidParentheses(")()())")); // prints 4
     }
 }
 
 
 
-import java.util.*;
-
-public class sampleStack {
-
-    // Push `data` to the BOTTOM of stack s using recursion
-    public static void pushAtBottom(int data, Stack<Integer> s) {
-        if (s.isEmpty()) {
-            s.push(data);        // base case: empty -> push at bottom
-            return;
-        }
-        int top = s.pop();       // temporarily remove top
-        pushAtBottom(data, s);   // recursive call to go deeper
-        s.push(top);             // restore the popped element
-    }
-
-    // Reverse the stack using recursion + pushAtBottom
-    public static void reverse(Stack<Integer> s) {
-        if (s.isEmpty()) {
-            return;              // base case: nothing to reverse
-        }
-        int top = s.pop();       // remove top
-        reverse(s);              // reverse remaining stack
-        pushAtBottom(top, s);    // insert removed top at bottom
-    }
-
-    public static void main(String[] args) {
-        Stack<Integer> s = new Stack<>();
-        s.push(1); s.push(2); s.push(3); s.push(4);
-
-        System.out.println("Before reversing (top -> bottom): " + s);
-        reverse(s);
-        System.out.println("After reversing  (top -> bottom): " + s);
-
-        System.out.println("Popping all elements (order printed):");
-        while (!s.isEmpty()) {
-            System.out.println(s.peek());
-            s.pop();
-        }
-    }
-}
