@@ -167,5 +167,24 @@ public int maxWater( int[] height){
 
     // building the right max 
 
+    rightmax[n-1]=height[n-1];
+    for ( int i=n-2;i>=0;i--){
+        rightmax[i]= Math.max(rightmax[i+1],height[i]);
+    }
+
+    // building the leftmax //
+
+     leftmax[0]=height[0];
+     for (  int i=1;i<n;i++){
+        leftmax[i]=Math.max( leftmax[i-1], height[i]);
+     }
+
+
+     // calculating the tapped water inside it
+     int tapped=0;
+     for(int i=0;i<n;i++){
+        tapped=tapped + Math.min( leftmax[i],rightmax[i]-height[0]);
+     }
+   return tapped;
 }
 }
