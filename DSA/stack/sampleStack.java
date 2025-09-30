@@ -162,6 +162,10 @@ public int maxWater( int[] height){
 
     if(n==0) return 0;
 
+    int[] leftmax= new int[n];
+    int[] rightmax=new int[n];
+
     // building the right max 
+
 }
 }
