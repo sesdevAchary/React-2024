@@ -109,35 +109,59 @@ public class sampleStack{
     // }
 
 
-    public static int longestValidParentheses( String string1){
-        Stack<Integer> s= new Stack<>();  // creates a new stack
-        s.push(-1);                       // push -1 for initial reference
-        int maxlen=0;                     // counting the maxlen
+//     public static int longestValidParentheses( String string1){
+//         Stack<Integer> s= new Stack<>();  // creates a new stack
+//         s.push(-1);                       // push -1 for initial reference
+//         int maxlen=0;                     // counting the maxlen
 
-        for( int i=0;i< string1.length();i++){     // going through the given string
-            char c = string1.charAt(i);            // placing the index value of the each char converted s
+//         for( int i=0;i< string1.length();i++){     // going through the given string
+//             char c = string1.charAt(i);            // placing the index value of the each char converted s
 
-            if( c=='('){                         // if opening bracket then simply push its index to the stack [0]
-                s.push(i);                            
-            }else{
-                s.pop();                         // else pop an element from the []
+//             if( c=='('){                         // if opening bracket then simply push its index to the stack [0]
+//                 s.push(i);                            
+//             }else{
+//                 s.pop();                         // else pop an element from the []
 
-                if(s.isEmpty()){
-                    s.push(i);
-                }else{
-                    maxlen=Math.max(maxlen, i-s.peek()); // if i=4 then 4-top i.e.=0 so 4-0=0;
-                }
-            }
-        }
-        return maxlen;     // returning 4
-    }
+//                 if(s.isEmpty()){
+//                     s.push(i);
+//                 }else{
+//                     maxlen=Math.max(maxlen, i-s.peek()); // if i=4 then 4-top i.e.=0 so 4-0=0;
+//                 }
+//             }
+//         }
+//         return maxlen;     // returning 4
+//     }
     
 
-    public static void main(String[] args) {
-        System.out.println(longestValidParentheses("(()"));    // prints 2
-        System.out.println(longestValidParentheses(")()())")); // prints 4
-    }
+//     public static void main(String[] args) {
+//         System.out.println(longestValidParentheses("(()"));    // prints 2
+//         System.out.println(longestValidParentheses(")()())")); // prints 4
+//     }
+// }
+
+
+
+// for the longest valid paranthesis and the int main*() fuunction has its iqo414.
+// for{
+//     int i=0;i<num.function 1;i
+//     if( int i=0)
+//     {
+//         for( any value of i =12)
+//         for(any char c= s.toCharArray(index(p)))
+//         for(any char c= s.toCharArray(index t))
+//         foreach (char i &&  char u){
+//             if( int i=0;i++;i for each case of y)
+//         }
+//     }
+
+
+
+
+public int maxWater( int[] height){
+    int n= height.length;
+
+    if(n==0) return 0;
+
+    // building the right max 
 }
-
-
-
+}
