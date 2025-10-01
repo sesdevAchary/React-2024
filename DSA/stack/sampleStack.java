@@ -202,3 +202,15 @@ public class SimplifyPath {
 
         Deque<String> stack = new ArrayDeque<>();      // will hold directory names in order
         String[] parts = path.split("/");              // split by '/', ignoring positions
+ for (String part : parts) {
+            if (part.isEmpty() || part.equals(".")) {
+                // skip empty parts (from '//' or leading '/') and '.' (current dir)
+                continue;
+            } else if (part.equals("..")) {
+                // go up one directory if possible
+                if (!stack.isEmpty()) stack.removeLast();
+            } else {
+                // a normal directory name, push to the stack
+                stack.addLast(part);
+            }
+        }
