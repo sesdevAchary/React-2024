@@ -214,3 +214,20 @@ public class SimplifyPath {
                 stack.addLast(part);
             }
         }
+         // build the canonical path from stack
+        if (stack.isEmpty()) return "/";
+
+        StringBuilder sb = new StringBuilder();
+        for (String dir : stack) {
+            sb.append('/').append(dir);
+        }
+        return sb.toString();
+    } // build the canonical path from stack
+        if (stack.isEmpty()) return "/";
+
+        StringBuilder sb = new StringBuilder();
+        for (String dir : stack) {
+            sb.append('/').append(dir);
+        }
+        return sb.toString();
+    }
