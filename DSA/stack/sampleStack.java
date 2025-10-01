@@ -188,3 +188,17 @@ public int maxWater( int[] height){
    return tapped;
 }
 }
+
+
+
+
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class SimplifyPath {
+    public static String simplifyPath(String path) {
+        if (path == null || path.length() == 0) return "/";
+
+        Deque<String> stack = new ArrayDeque<>();      // will hold directory names in order
+        String[] parts = path.split("/");              // split by '/', ignoring positions
