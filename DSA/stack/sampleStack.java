@@ -231,3 +231,21 @@ public class SimplifyPath {
         }
         return sb.toString();
     }
+       // quick tests
+    public static void main(String[] args) {
+        System.out.println(simplifyPath("/home/"));                // -> /home
+        System.out.println(simplifyPath("/../"));                  // -> /
+        System.out.println(simplifyPath("/home//foo/"));           // -> /home/foo
+        System.out.println(simplifyPath("/a/./b/../../c/"));       // -> /c
+        System.out.println(simplifyPath("/a//b////c/d//././/..")); // -> /a/b/c
+    }
+}
+   // quick tests
+    public static void main(String[] args) {
+        System.out.println(simplifyPath("/home/"));                // -> /home
+        System.out.println(simplifyPath("/../"));                  // -> /
+        System.out.println(simplifyPath("/home//foo/"));           // -> /home/foo
+        System.out.println(simplifyPath("/a/./b/../../c/"));       // -> /c
+        System.out.println(simplifyPath("/a//b////c/d//././/..")); // -> /a/b/c
+    }
+}
