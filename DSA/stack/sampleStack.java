@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 // // public class sampleStack{
 // // //    public static void main(String args[]){
@@ -73,7 +73,7 @@ import java.util.*;
 //     // }
 // }
 
-
+import java.util.*;
 public class sampleStack{
     // public static boolean isValid( String S){
     //     Stack <Character> s = new Stack<>();   
@@ -157,35 +157,50 @@ public class sampleStack{
 
 
 
-public int maxWater( int[] height){
-    int n= height.length;
+// public int maxWater( int[] height){
+//     int n= height.length;
 
-    if(n==0) return 0;
+//     if(n==0) return 0;
 
-    int[] leftmax= new int[n];
-    int[] rightmax=new int[n];
+//     int[] leftmax= new int[n];
+//     int[] rightmax=new int[n];
 
-    // building the right max 
+//     // building the right max 
 
-    rightmax[n-1]=height[n-1];
-    for ( int i=n-2;i>=0;i--){
-        rightmax[i]= Math.max(rightmax[i+1],height[i]);
+//     rightmax[n-1]=height[n-1];
+//     for ( int i=n-2;i>=0;i--){
+//         rightmax[i]= Math.max(rightmax[i+1],height[i]);
+//     }
+
+//     // building the leftmax //
+
+//      leftmax[0]=height[0];
+//      for (  int i=1;i<n;i++){
+//         leftmax[i]=Math.max( leftmax[i-1], height[i]);
+//      }
+
+
+//      // calculating the tapped water inside it
+//      int tapped=0;
+//      for(int i=0;i<n;i++){
+//         tapped=tapped + Math.min( leftmax[i],rightmax[i]-height[0]);
+//      }
+//    return tapped;
+// }
+
+
+public static String simplifyPath(String path){
+    if(path == null || path.length()==0) return "/";
+
+    Deque<String> s= new ArrayDeque<>();     // will hold directory names in order
+    String part = path.split("/");     // split by '/', ignoring positions
+
+    for(String p:part){
+
+
     }
 
-    // building the leftmax //
 
-     leftmax[0]=height[0];
-     for (  int i=1;i<n;i++){
-        leftmax[i]=Math.max( leftmax[i-1], height[i]);
-     }
-
-
-     // calculating the tapped water inside it
-     int tapped=0;
-     for(int i=0;i<n;i++){
-        tapped=tapped + Math.min( leftmax[i],rightmax[i]-height[0]);
-     }
-   return tapped;
 }
 }
 
