@@ -260,6 +260,16 @@ public class LargestRectangle {
             }
             stack.push(i); // push current index as a candidate left boundary
         }
+         // Clean up remaining bars in stack (they extend to the end of histogram)
+        while (stack.peek() != -1) {
+            int height = heights[stack.pop()];
+            int width = n - stack.peek() - 1;       // right boundary is n-1
+            maxArea = Math.max(maxArea, height * width);
+        }
+
+        return maxArea;
+    }
+}
 
 
 
