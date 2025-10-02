@@ -74,7 +74,9 @@
 // }
 
 import java.util.*;
-public class sampleStack{
+// public class sampleStack{
+
+
     // public static boolean isValid( String S){
     //     Stack <Character> s = new Stack<>();   
         
@@ -188,6 +190,7 @@ public class sampleStack{
 //    return tapped;
 // }
 
+public class sampleStack{
 
 public static String simplifyPath(String path){
     if(path == null || path.length()==0) return "/";
@@ -231,12 +234,22 @@ public static void main ( String[] args){
         System.out.println(simplifyPath("/../"));                  // -> /
         System.out.println(simplifyPath("/home//foo/"));           // -> /home/foo
         System.out.println(simplifyPath("/a/./b/../../c/"));       // -> /c
-        System.out.println(simplifyPath("/a//b////c/d//././/.."));
+        System.out.println(simplifyPath("/a//b////c/d//././/..")); // -> /a/b/c
 
 }
 }
 
 
+
+
+import java.util.Stack;
+
+public class LargestRectangle {
+    public int largestRectangleArea(int[] heights) {
+        int n = heights.length;
+        Stack<Integer> stack = new Stack<>();   // stack of indices, increasing heights
+        stack.push(-1);                         // sentinel to simplify width calc
+        int maxArea = 0;
 
 
 
