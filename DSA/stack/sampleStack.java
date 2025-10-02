@@ -193,11 +193,34 @@ public static String simplifyPath(String path){
     if(path == null || path.length()==0) return "/";
 
     Deque<String> s= new ArrayDeque<>();     // will hold directory names in order
-    String part = path.split("/");     // split by '/', ignoring positions
+    String parts = path.split("/");     // split by '/', ignoring positions
 
-    for(String p:part){
+    for(String p:parts){
+        if(p.isEmpty() || p.equals("."))
+        {
+            continue; //// skip empty parts (from '//' or leading '/') and '.' (current dir)
+        }
+        else if ( p.equals(".."))
+        {
+            if(!s.isEmpty()) s.removeLast();
+        }
+        else{
+            s.addLast(parts);
+        }
 
 
+
+
+    }
+
+    if(s.isEmpty()) return("/");
+    else{
+        StringBuilder sb = new StringBuilder();
+        for( String dir:s){
+            sb.append("/").append(dir);
+
+        }
+        return sb.toString();
     }
 
 
