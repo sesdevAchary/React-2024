@@ -250,6 +250,16 @@ public class LargestRectangle {
         Stack<Integer> stack = new Stack<>();   // stack of indices, increasing heights
         stack.push(-1);                         // sentinel to simplify width calc
         int maxArea = 0;
+        for (int i = 0; i < n; i++) {
+            // While current bar is lower or equal than top-of-stack bar,
+            // the top-of-stack bar's right boundary is i-1, so compute area.
+            while (stack.peek() != -1 && heights[stack.peek()] >= heights[i]) {
+                int height = heights[stack.pop()];
+                int width = i - stack.peek() - 1;   // distance between previous smaller and i
+                maxArea = Math.max(maxArea, height * width);
+            }
+            stack.push(i); // push current index as a candidate left boundary
+        }
 
 
 
