@@ -23,6 +23,21 @@ public class queueClass{
             arr[rear]=data;
         }
 
+        public static int delete(){
+            if(isEmpty()){
+                System.out.println("Queue is already the least");
+                return -1;
+            }
+
+            int front=arr[0];
+            for(int i=0;i<rear;i++){
+                arr[i]=arr[i+1];
+                
+            }
+            rear --;
+            return front;
+        }
+
     }
 
     public static void main ( String[] args){
