@@ -1,3 +1,34 @@
+
+class LinkList {
+    Node head;
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // methods...
+}
+
+public class Main {
+    public static void main(String[] args) {
+        LinkList ll = new LinkList();
+        ll.addLast(10);
+        ll.addLast(20);
+        ll.addLast(30);
+
+        ll.printList();
+    }
+}
+
+
+
+
 import java.util.*;
 
 // // class linkList{
@@ -1063,7 +1094,7 @@ public void printList(){
 }
     public static void main(String[] args){
         // linkList ll= new linkList();
-        linkList<String> ll= new linkList<String>();
+        LinkList<String> ll= new LinkList<String>();
         // ll.addfirst("a");
         // ll.addfirst("linklist");
 
