@@ -190,54 +190,54 @@ import java.util.*;
 //    return tapped;
 // }
 
-public class sampleStack{
+// public class sampleStack{
 
-public static String simplifyPath(String path){
-    if(path == null || path.length()==0) return "/";
+// public static String simplifyPath(String path){
+//     if(path == null || path.length()==0) return "/";
 
-    Deque<String> s= new ArrayDeque<>();     // will hold directory names in order
-    String[] parts = path.split("/");     // split by '/', ignoring positions
+//     Deque<String> s= new ArrayDeque<>();     // will hold directory names in order
+//     String[] parts = path.split("/");     // split by '/', ignoring positions
 
-    for(String p:parts){
-        if(p.isEmpty() || p.equals("."))
-        {
-            continue; //// skip empty parts (from '//' or leading '/') and '.' (current dir)
-        }
-        else if ( p.equals(".."))
-        {
-            if(!s.isEmpty()) s.removeLast();
-        }
-        else{
-            s.addLast(p);
-        }
-
-
+//     for(String p:parts){
+//         if(p.isEmpty() || p.equals("."))
+//         {
+//             continue; //// skip empty parts (from '//' or leading '/') and '.' (current dir)
+//         }
+//         else if ( p.equals(".."))
+//         {
+//             if(!s.isEmpty()) s.removeLast();
+//         }
+//         else{
+//             s.addLast(p);
+//         }
 
 
-    }
-
-    if(s.isEmpty()) return("/");
-    else{
-        StringBuilder sb = new StringBuilder();
-        for( String dir:s){
-            sb.append("/").append(dir);
-
-        }
-        return sb.toString();
-    }
 
 
-}
+//     }
 
-public static void main ( String[] args){
-        System.out.println(simplifyPath("/home/"));                // -> /home
-        System.out.println(simplifyPath("/../"));                  // -> /
-        System.out.println(simplifyPath("/home//foo/"));           // -> /home/foo
-        System.out.println(simplifyPath("/a/./b/../../c/"));       // -> /c
-        System.out.println(simplifyPath("/a//b////c/d//././/..")); // -> /a/b/c
+//     if(s.isEmpty()) return("/");
+//     else{
+//         StringBuilder sb = new StringBuilder();
+//         for( String dir:s){
+//             sb.append("/").append(dir);
 
-}
-}
+//         }
+//         return sb.toString();
+//     }
+
+
+// }
+
+// public static void main ( String[] args){
+//         System.out.println(simplifyPath("/home/"));                // -> /home
+//         System.out.println(simplifyPath("/../"));                  // -> /
+//         System.out.println(simplifyPath("/home//foo/"));           // -> /home/foo
+//         System.out.println(simplifyPath("/a/./b/../../c/"));       // -> /c
+//         System.out.println(simplifyPath("/a//b////c/d//././/..")); // -> /a/b/c
+
+// }
+// }
 
 
 
