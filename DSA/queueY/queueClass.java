@@ -50,8 +50,24 @@ public class queueClass{
         public static boolean isEmpty(){
             return  front == -1 && rear == -1 ;
         }
-        public static boolean isFUll(){
+        public static boolean isFull(){
             return (rear +1 ) % size == front;
+        }
+
+        public static void add(int data){
+            if(isFull()){
+                System.out.println("Already Full)");return;
+
+            }
+
+            // for 1st element //
+            if(front == -1)
+            {
+                front=0;
+            }
+
+            rear=(rear+1)%size;
+            arr[rear]=data;
         }
 
 
