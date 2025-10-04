@@ -9,41 +9,51 @@ public class queueClass{
             this.size=n;
             
         }
+////////////////// FOR NORMAL QUEUE //////////////////////
+        // public static boolean isEmpty(){
+        //      return rear == -1;
+        // }
 
-        public static boolean isEmpty(){
-             return rear == -1;
-        }
+        // public static void add(int data){
+        //     if(rear == size -1){
+        //         System.out.println (" Queue is already full my Lord");
+        //     }
 
-        public static void add(int data){
-            if(rear == size -1){
-                System.out.println (" Queue is already full my Lord");
-            }
+        //     rear++;
+        //     arr[rear]=data;
+        // }
 
-            rear++;
-            arr[rear]=data;
-        }
+        // public static int delete(){
+        //     if(isEmpty()){
+        //         System.out.println("Queue is already the least");
+        //         return -1;
+        //     }
 
-        public static int delete(){
-            if(isEmpty()){
-                System.out.println("Queue is already the least");
-                return -1;
-            }
-
-            int front=arr[0];
-            for(int i=0;i<rear;i++){
-                arr[i]=arr[i+1];
+        //     int front=arr[0];
+        //     for(int i=0;i<rear;i++){
+        //         arr[i]=arr[i+1];
                 
-            }
-            rear --;
-            return front;
+        //     }
+        //     rear --;
+        //     return front;
+        // }
+        // public static int peek(){
+        //     if(isEmpty()){
+        //         System.out.println("Queue is already the least");
+        //         return -1;
+        //     }
+        //     return arr[0];
+        // }
+
+
+        ////////////////// FOR CIRCULAR  QUEUE //////////////////////
+        public static boolean isEmpty(){
+            return  front == -1 && rear == -1 ;
         }
-        public static int peek(){
-            if(isEmpty()){
-                System.out.println("Queue is already the least");
-                return -1;
-            }
-            return arr[0];
+        public static boolean isFUll(){
+            return (rear +1 ) % size == front;
         }
+
 
     }
 
