@@ -2,7 +2,7 @@ public class queueClass{
     static class queue{
         static int arr[];
         static int size;
-        static int rear=-1;
+        static int rear=-1; static int front = -1;
 
         queue(int n){
             arr= new  int[n];
@@ -37,10 +37,23 @@ public class queueClass{
             rear --;
             return front;
         }
+        public static int peek(){
+            if(isEmpty()){
+                System.out.println("Queue is already the least");
+                return -1;
+            }
+            return arr[0];
+        }
 
     }
 
     public static void main ( String[] args){
+        queue q= new queue(5);
+        q.add(1);q.add(2);q.add(3);
+
+        System.out.println(q.peek());
+        q.delete();
+
 
     }
     
