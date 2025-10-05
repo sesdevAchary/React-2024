@@ -81,8 +81,13 @@ public class queueClass{
                 front=(front+1)%size;
             }
             return result;
+        }
 
-
+        public static int peek(){
+            if(isEmpty()){
+                System.out.println("Already empty sorry ");return -1;
+            }
+            return arr[front];
         }
 
 
@@ -94,7 +99,7 @@ public class queueClass{
 
         while ( !q.isEmpty()){
             System.out.println(q.peek());
-        q.delete();
+        
         }
 
 
