@@ -69,6 +69,21 @@ public class queueClass{
             rear=(rear+1)%size;
             arr[rear]=data;
         }
+        public static int  delete(){
+            if(isEmpty()){
+                System.out.println("Already empty sorry ");return -1;
+            }
+            int result=arr[front];
+
+            if(front ==rear){
+                rear=front=-1;
+            }else{
+                front=(front+1)%size;
+            }
+            return result;
+
+
+        }
 
 
     }
