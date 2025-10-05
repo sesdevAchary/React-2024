@@ -99,7 +99,7 @@ public class queueClass{
 
         while ( !q.isEmpty()){
             System.out.println(q.peek());
-        
+        q.delete();
         }
 
 
