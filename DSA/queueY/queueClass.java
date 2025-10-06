@@ -95,7 +95,12 @@ public class queueClass{
 
     public static void main ( String[] args){
         queue q= new queue(5);
-        q.add(1);q.add(2);q.add(3);
+        q.add(1);q.add(2);q.add(3);q.add(4);q.add(5);
+        System.out.println(q.delete());
+        q.add(6);
+        System.out.println(q.delete());
+        q.add(7);
+
 
         while ( !q.isEmpty()){
             System.out.println(q.peek());
