@@ -124,6 +124,22 @@ public class queueClass{
         static Node head=null;
         static Node tail= null;
 
+
+        public static boolean isEmpty(){
+            return head==null & tail==null; 
+        }
+
+        public static void add(int data){
+            Node nd= new Node(data);
+            if(tail == null){
+                tail=head=nd;
+            }
+
+            tail.next=nd;
+            tail=nd;
+
+        }
+
     }
 
 
