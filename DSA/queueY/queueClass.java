@@ -1,3 +1,4 @@
+import java.util.*;
 public class queueClass{
 //     static class queue{
 //         static int arr[];
@@ -111,67 +112,94 @@ public class queueClass{
 //     }
 //         ////////////////// FOR   QUEUE  USING LINKEDLIST //////////////////////
 
-    static class Node{  // CREATING node for linklist//
-    int data;
-    Node next;
+//     static class Node{  // CREATING node for linklist//
+//     int data;
+//     Node next;
 
-    Node(int data){
-        this.data=data;
-        next=null;
-    }
-   }
+//     Node(int data){
+//         this.data=data;
+//         next=null;
+//     }
+//    }
 
-   static class queue{  // creating queue class of variable size cause linkedlist is of variable size//
-    static Node head=null;
-    static Node tail=null;
+//    static class queue{  // creating queue class of variable size cause linkedlist is of variable size//
+//     static Node head=null;
+//     static Node tail=null;
 
-    static boolean isEmpty(){
-        return (head == null & tail == null);
-    }
+//     static boolean isEmpty(){
+//         return (head == null & tail == null);
+//     }
 
-    public static void  add(int data)
+//     public static void  add(int data)
+//     {
+//         Node nd= new Node(data);
+
+//         if(tail == null)
+//         {
+//             head=tail=nd;
+//         }
+//         tail.next=nd;
+//         tail=nd;
+//     }
+//     public static int delete(){
+//         if(isEmpty()){
+//             System.out.println("Already empty you cant delete anything ");
+//             return -1;
+//         }
+//         int front=head.data;
+
+//         if(head== null)
+//         tail=null;
+
+//         head=head.next;
+//         return front;
+//     }
+
+//     public static int peek(){
+//         if(isEmpty()){
+//             System.out.println("Already empty you cant delete anything ");
+//             return -1;
+//         }
+//         return head.data;
+//     }
+// }
+
+// public static void main(String args[]){
+//     queue q =  new queue();
+//     q.add(1); q.add(2); q.add(3); q.add(4); q.add(5);  q.add(6);
+
+//     while(!q.isEmpty()){
+//         System.out.println(q.peek());
+//         q.delete();
+//     }
+// }
+
+////////  QUEUE USING COLLECTION FRAMEWORK ////////////
+
+public static void main( String args[])
+{
+    Queue<Integer> q= new LinkedList<>();
+    /*   //creates a new ll behaves like a queue n store it a var thst allows queue operations//
+    QUEUE IS AN INTERFACE - A CONTRACT
+                                DEFINE WHAT METHOD EXIST,NOT HOW THEY WORK
+    LL IS A CLASS -CONTRACTER
+                       PROVIDES REAL IMPLEMETATION FOR THE QUEUE METHODS{add,remove}
+    */
+    
+    q.add(1);q.add(2);
+    while(!q.isEmpty())
     {
-        Node nd= new Node(data);
-
-        if(tail == null)
-        {
-            head=tail=nd;
-        }
-        tail=tail.next;
-        tail=nd;
-    }
-    public static int delete(){
-        if(isEmpty()){
-            System.out.println("Already empty you cant delete anything ");
-            return -1;
-        }
-        int front=head.data;
-
-        if(head== null)
-        tail=null;
-
-        head=head.next;
-        return front;
-    }
-
-    public static int peek(){
-        if(isEmpty()){
-            System.out.println("Already empty you cant delete anything ");
-            return -1;
-
-        }
-        return head.data;
-    }
-}
-
-public static void main(String args[]){
-    queue q =  new queue();
-    q.add(1); q.add(2); q.add(3); q.add(4); q.add(5);  q.add(6);
-
-    while(!q.isEmpty()){
         System.out.println(q.peek());
-        q.delete();
+        q.remove();
+
     }
+
+    /*we can do the above same like
+     * Queue<Integer> q = new ArrayDeque<>();
+     * BOTH SAME o(1)
+     * BUT WHEN WE SEARCH AN MIDDLE ELEMENT ARRAYDEQUE O(1) LL-O(n)
+     */
+    
 }
 
 }
