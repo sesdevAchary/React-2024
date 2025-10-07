@@ -110,37 +110,21 @@ public class queueClass{
 
 
 //     }
-    class Node{
-        int data;
-        Node next;
+    static class Node{
+    int data;
+    Node next;
 
-        Node(int data){
-            this.data=data;
-            next=null; 
-        }
+    Node(int data){
+        this.data=data;
+        next=null;
     }
+   }
 
-    static class queue{
-        static Node head=null;
-        static Node tail= null;
+   static class queue{
+    static Node head=null;
+    static Node tail=null;
 
-
-        public static boolean isEmpty(){
-            return head==null & tail==null; 
-        }
-
-        public static void add(int data){
-            Node nd= new Node(data);
-            if(tail == null){
-                tail=head=nd;
-            }
-
-            tail.next=nd;
-            tail=nd;
-
-        }
-
-    }
-
+    
+   }
 
 }
