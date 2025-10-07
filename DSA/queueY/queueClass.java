@@ -139,6 +139,19 @@ public class queueClass{
         tail=tail.next;
         tail=nd;
     }
+    public static int deque(){
+        if(isEmpty()){
+            System.out.println("Already empty you cant delete anything ");
+            return -1;
+        }
+        int front=head.data;
+
+        if(head== null)
+        tail=null;
+
+        head=head.next;
+        return front;
+    }
 }
 
 }
