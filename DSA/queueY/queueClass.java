@@ -7,8 +7,7 @@ public class queueClass{
 //         queue(int n){
 //             arr= new  int[n];
 //             this.size=n;
-            
-//         }
+//        }
 // ////////////////// FOR NORMAL QUEUE //////////////////////
 //         // public static boolean isEmpty(){
 //         //      return rear == -1;
@@ -110,7 +109,9 @@ public class queueClass{
 
 
 //     }
-    static class Node{
+//         ////////////////// FOR   QUEUE  USING LINKEDLIST //////////////////////
+
+    static class Node{  // CREATING node for linklist//
     int data;
     Node next;
 
@@ -120,7 +121,7 @@ public class queueClass{
     }
    }
 
-   static class queue{
+   static class queue{  // creating queue class of variable size cause linkedlist is of variable size//
     static Node head=null;
     static Node tail=null;
 
@@ -139,7 +140,7 @@ public class queueClass{
         tail=tail.next;
         tail=nd;
     }
-    public static int deque(){
+    public static int delete(){
         if(isEmpty()){
             System.out.println("Already empty you cant delete anything ");
             return -1;
@@ -151,6 +152,25 @@ public class queueClass{
 
         head=head.next;
         return front;
+    }
+
+    public static int peek(){
+        if(isEmpty()){
+            System.out.println("Already empty you cant delete anything ");
+            return -1;
+
+        }
+        return head.data;
+    }
+}
+
+public static void main(String args[]){
+    queue q =  new queue();
+    q.add(1); q.add(2); q.add(3); q.add(4); q.add(5);  q.add(6);
+
+    while(!q.isEmpty()){
+        System.out.println(q.peek());
+        q.delete();
     }
 }
 
