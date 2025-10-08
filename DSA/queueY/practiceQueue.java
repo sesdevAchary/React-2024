@@ -11,18 +11,28 @@ public class practiceQueue {
     }
 
     public static void add(int data){
-        if(!s1.isEmpty())
+        while(!s1.isEmpty())
         {
             s2.push(s1.pop());
         }
 
         s1.push(data);
 
-        if(!s2.isEmpty()){
+        while(!s2.isEmpty()){
             s1.push(s2.pop());
             
         }
     }
+
+    public static int remove(){
+        if(s1.isEmpty()){
+            System.out.println("empty list");
+            return -1;
+        }
+        return s1.pop();
+    }
+
+    
    }
     
 }
