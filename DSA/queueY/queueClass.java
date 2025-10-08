@@ -174,7 +174,7 @@ public class queueClass{
 //     }
 // }
 
-////////  QUEUE USING COLLECTION FRAMEWORK ////////////
+////////  QUEUE USING COLLECTION FRAMEWORK //////////// ARRAYDEQUW LINKLIST//
 
 public static void main( String args[])
 {
