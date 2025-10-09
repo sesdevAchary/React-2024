@@ -213,6 +213,28 @@ static class queue{
     public static boolean isFull(){
         return  (rear+1)%size==front;
     }
+
+    public static void add(int data)
+    {
+        if(isFull())
+        return;
+
+        rear=(rear+1)%size;
+        arr[rear]=data;
+    }
+    public static int remove(){
+        if(isEmpty())
+        return -1;
+
+        else if(rear == front)
+        rear=front=-1;
+
+        front=(front+1)%size;
+
+        return
+
+
+    }
 }
 
  }
