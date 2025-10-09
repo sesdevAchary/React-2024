@@ -231,11 +231,22 @@ static class queue{
 
         front=(front+1)%size;
 
-        return
+        return front;
 
 
     }
+
+    public static int peek ()
+    {
+        if(isEmpty())
+        return -1;
+
+        return arr[front];
+    }
 }
+
+
+
 
  }
 
