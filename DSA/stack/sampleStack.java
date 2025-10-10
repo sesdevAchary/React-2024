@@ -271,7 +271,11 @@
 //     }
 // }
 
-/////////////// LINKED LIST USING STACK ///////////
+/////////////// Implement Stack using Linked List ///////////
+/// 
+/// 
+/// 
+/// 
 import java.util.*;
 
 public class sampleStack{
@@ -282,8 +286,18 @@ public class sampleStack{
             this.data=data; next=null;
         }
     }
-    class stackLl{
+    class stackLL{
         public Node top;
+        stackLL(){
+            top=null;
+        }
+
+        public void push(int data){
+            Node newNode=new Node(data);
+            newNode.next=top;
+            top=newNode;
+            System.out.println(data+"pushed to the stack success");
+        }
     }
 }
 
