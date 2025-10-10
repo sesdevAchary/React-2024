@@ -274,9 +274,11 @@
 /////////////// LINKED LIST USING STACK ///////////
 import java.util.*;
 
-publicclass sampleStack{
+public class sampleStack{
     public class Node{
-        
+        int data;Node next;
+
+        Node
     }
 }
 
