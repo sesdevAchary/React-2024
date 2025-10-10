@@ -279,14 +279,15 @@
 import java.util.*;
 
 public class sampleStack{
-    public class Node{
-        int data;Node next;
+    static class Node{
+        int data;
+        Node next;
 
         Node(int data){
             this.data=data; next=null;
         }
     }
-    class stackLL{
+    static class stackLL{
         public Node top;
         stackLL(){
             top=null;
@@ -316,7 +317,7 @@ public class sampleStack{
             Node temp=top;
             while(temp != null)
             {
-                system.out.println(temp.data+"->");
+                System.out.println(temp.data+"->");
                 temp=temp.next;
             }
             System.out.println("NULL");
@@ -325,9 +326,14 @@ public class sampleStack{
 
     public static void main( String args[])
     {
-        stackLL l=new stackLL;
+        stackLL l= new stackLL();
         l.push(1);l.push(2);l.push(3);l.push(4);
-        s.display();
+        l.display();
+
+        System.out.println("Popped: " + l.pop());
+        l.display();
+
+        System.out.println("Top element: " + l.peek());
     }
 }
 
