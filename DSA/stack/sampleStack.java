@@ -296,8 +296,38 @@ public class sampleStack{
             Node newNode=new Node(data);
             newNode.next=top;
             top=newNode;
-            System.out.println(data+"pushed to the stack success");
+            System.out.println(data+"pushed to the stack ");
         }
+
+        public int pop(){
+            if(top==null)return -1;
+            top=top.next;
+            return top.data;
+        }
+
+        public int peek()
+        {
+            if(top == null) return -1;
+            return top.data;
+        }
+
+        public void display()
+        {
+            Node temp=top;
+            while(temp != null)
+            {
+                system.out.println(temp.data+"->");
+                temp=temp.next;
+            }
+            System.out.println("NULL");
+        }
+    }
+
+    public static void main( String args[])
+    {
+        stackLL l=new stackLL;
+        l.push(1);l.push(2);l.push(3);l.push(4);
+        s.display();
     }
 }
 
