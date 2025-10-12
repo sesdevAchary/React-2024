@@ -366,5 +366,49 @@ public class ValidParentheses {
         System.out.println(expr + " → " + isValid(expr));
     }
 }
+class Node {
+    int data;
+    Node next;
+    Node(int d) { data = d; next = null; }
+}
+
+public class DetectLoop {
+    Node head;
+
+    void push(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    boolean detectLoop() {
+        Node slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        DetectLoop list = new DetectLoop();
+        list.push(10);
+        list.push(20);
+        list.push(30);
+        list.push(40);
+
+        // create loop manually
+        list.head.next.next.next.next = list.head.next;
+
+        if (list.detectLoop())
+            System.out.println("Loop detected");
+        else
+            System.out.println("No loop");
+    }
+}
 
 
