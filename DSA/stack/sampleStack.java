@@ -410,5 +410,53 @@ public class DetectLoop {
             System.out.println("No loop");
     }
 }
+class Node {
+    int data;
+    Node next;
+    Node(int d) { data = d; next = null; }
+}
+
+public class MiddleOfLinkedList {
+    Node head;
+
+    void push(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    void printList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("NULL");
+    }
+
+    void findMiddle() {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        System.out.println("Middle element: " + slow.data);
+    }
+
+    public static void main(String[] args) {
+        MiddleOfLinkedList list = new MiddleOfLinkedList();
+        list.push(10);
+        list.push(20);
+        list.push(30);
+        list.push(40);
+        list.push(50);
+
+        list.printList();
+        list.findMiddle();
+    }
+}
 
 
