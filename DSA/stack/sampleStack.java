@@ -338,41 +338,13 @@ public class sampleStack{
 }
 
 
-
-import java.util.*;
-
-public class ValidParentheses {
-    public static boolean isValid(String str) {
-        Stack<Character> stack = new Stack<>();
-
-        for (char ch : str.toCharArray()) {
-            if (ch == '(' || ch == '{' || ch == '[') {
-                stack.push(ch);
-            } else {
-                if (stack.isEmpty()) return false;
-                char top = stack.pop();
-                if ((ch == ')' && top != '(') ||
-                    (ch == '}' && top != '{') ||
-                    (ch == ']' && top != '[')) {
-                    return false;
-                }
-            }
-        }
-        return stack.isEmpty();
-    }
-
-    public static void main(String[] args) {
-        String expr = "{[()]}";
-        System.out.println(expr + " → " + isValid(expr));
-    }
-}
 class Node {
     int data;
     Node next;
-    Node(int d) { data = d; next = null; }
+    Node(int data) { this.data = data; this.next = null; }
 }
 
-public class DetectLoop {
+public class ReverseLL {
     Node head;
 
     void push(int data) {
@@ -381,82 +353,42 @@ public class DetectLoop {
         head = newNode;
     }
 
-    boolean detectLoop() {
-        Node slow = head, fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+    // Iterative reversal
+    Node reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
 
-            if (slow == fast) {
-                return true;
-            }
+        while (curr != null) {
+            next = curr.next;   // save next
+            curr.next = prev;   // reverse link
+            prev = curr;        // move prev
+            curr = next;        // move curr
         }
-        return false;
+        head = prev;
+        return head;
     }
 
-    public static void main(String[] args) {
-        DetectLoop list = new DetectLoop();
-        list.push(10);
-        list.push(20);
-        list.push(30);
-        list.push(40);
-
-        // create loop manually
-        list.head.next.next.next.next = list.head.next;
-
-        if (list.detectLoop())
-            System.out.println("Loop detected");
-        else
-            System.out.println("No loop");
-    }
-}
-class Node {
-    int data;
-    Node next;
-    Node(int d) { data = d; next = null; }
-}
-
-public class MiddleOfLinkedList {
-    Node head;
-
-    void push(int data) {
-        Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
-    }
-
-    void printList() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
+    void printList(Node node) {
+        while (node != null) {
+            System.out.print(node.data + " -> ");
+            node = node.next;
         }
         System.out.println("NULL");
     }
 
-    void findMiddle() {
-        Node slow = head;
-        Node fast = head;
-
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        System.out.println("Middle element: " + slow.data);
-    }
-
     public static void main(String[] args) {
-        MiddleOfLinkedList list = new MiddleOfLinkedList();
+        ReverseLL list = new ReverseLL();
         list.push(10);
         list.push(20);
         list.push(30);
-        list.push(40);
-        list.push(50);
 
-        list.printList();
-        list.findMiddle();
+        System.out.println("Original List:");
+        list.printList(list.head);
+
+        list.reverse();
+
+        System.out.println("Reversed List:");
+        list.printList(list.head);
     }
 }
-
-
