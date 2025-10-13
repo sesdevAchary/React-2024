@@ -202,66 +202,17 @@ import java.util.*;
     
 // }
 
-static class queue{
-    static int arr[];
-    static int size;
-    static int rear=-1; static int front=-1;
 
-    public static boolean isEmpty(){
-        return rear == -1 & front ==-1;
-    }
-    public static boolean isFull(){
-        return  (rear+1)%size==front;
-    }
 
-    public static void add(int data)
+static void reverseQuese(Queue<Integer> q)
+{
+    Stack <Integer> s= new Stack<>();
+
+    //pushing elements to stack//
+    while(!q.isEmpty())
     {
-        if(isFull())
-        return;
-
-        rear=(rear+1)%size;
-        arr[rear]=data;
+        s1.push(q.remove());
     }
-    public static int remove(){
-        if(isEmpty())
-        return -1;
-
-        else if(rear == front)
-        rear=front=-1;
-
-        front=(front+1)%size;
-
-        return front;
-
-
-    }
-
-    public static int peek ()
-    {
-        if(isEmpty())
-        return -1;
-
-        return arr[front];
-    }
-}
-
-
-public static void main(String[] args) {
-    Queue q = new Queue(5);
-
-    q.add(1);q.add(2);
-    while(!q.isEmpty)
-    {
-        System.err.println(q.peek());
-        q.remove();
-    }
-    q.add(2);
-    q.add(3);
-    q.add(4);
-    q.add(7);
-    q.add(89);
-    
 }
 
  }
-
