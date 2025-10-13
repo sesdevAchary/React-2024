@@ -211,8 +211,19 @@ static void reverseQuese(Queue<Integer> q)
     //pushing elements to stack//
     while(!q.isEmpty())
     {
-        s1.push(q.remove());
+        s.push(q.remove());
     }
+
+    //pop from stack and push to q
+    while(!s.isEmpty())
+    {
+        q.add(s.pop());
+    }
+}
+public static void main(String args[])
+{
+    Queu
+
 }
 
  }
