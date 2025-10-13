@@ -1,6 +1,6 @@
 package DSA.linkedList;
 
-public class linkList {
+public class ReverseQueue {
     Node head;
     class Node{
         int data;Node next;
@@ -36,7 +36,7 @@ public class linkList {
     }
     public static void main ( String args[])
     {
-        linkList l= new linkList();
+        ReverseQueue l= new ReverseQueue();
         l.reverseItr();
         l.printList();
     }
@@ -45,3 +45,14 @@ public class linkList {
     
     
 }
+
+
+
+
+
+
+
+
+
+
+

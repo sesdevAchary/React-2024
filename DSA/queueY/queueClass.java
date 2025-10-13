@@ -205,6 +205,7 @@ import java.util.*;
 
 
 static void reverseQuese(Queue<Integer> q)
+//“When this method is called, we eed  to pass a queue of integers so that It can work on it"//
 {
     Stack <Integer> s= new Stack<>();
 
@@ -222,7 +223,7 @@ static void reverseQuese(Queue<Integer> q)
 }
 public static void main(String args[])
 {
-    Queu
+   Queue<Integer> q =     new LinkedList<>();
 
 }
 
