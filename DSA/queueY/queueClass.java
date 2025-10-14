@@ -266,3 +266,16 @@ public static void generateBinary(int n)
     q.add(front + "0");
     q.add(front + "1");
 }
+import java.util.*;
+
+public class GenerateNumbers {
+    public static void generateNumbers(int n) {
+        Queue<Integer> q = new LinkedList<>();
+
+        // Step 1: start with 1
+        q.add(1);
+
+        // Step 2: repeat n times
+        for (int i = 1; i <= n; i++) {
+            int front = q.remove();      // remove first
+            System.out.println(front);   // print it
