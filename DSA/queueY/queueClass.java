@@ -204,32 +204,41 @@ import java.util.*;
 
 
 
-static void reverseQuese(Queue<Integer> q)
-//“When this method is called, we eed  to pass a queue of integers so that It can work on it"//
+// static void reverseQuese(Queue<Integer> q)
+// //“When this method is called, we eed  to pass a queue of integers so that It can work on it"//
+// {
+//     Stack <Integer> s= new Stack<>();
+
+//     //pushing elements to stack//
+//     while(!q.isEmpty())
+//     {
+//         s.push(q.remove());
+//     }
+
+//     //pop from stack and push to q
+//     while(!s.isEmpty())
+//     {
+//         q.add(s.pop());
+//     }
+// }
+// public static void main(String args[])
+// {
+//    Queue<Integer> q =     new LinkedList<>();
+
+//    q.add(10);q.add(20);q.add(30);q.add(40);
+//    System.out.println("Original Queue: " + q);
+//         reverseQuese(q);
+//         System.out.println("Reversed Queue: " + q);
+
+// }
+
+//  }
+
+public static generateBinary(int n)
 {
-    Stack <Integer> s= new Stack<>();
+    Queue q= new LinkedList<>();
+    q.add(1);
 
-    //pushing elements to stack//
-    while(!q.isEmpty())
-    {
-        s.push(q.remove());
-    }
-
-    //pop from stack and push to q
-    while(!s.isEmpty())
-    {
-        q.add(s.pop());
-    }
+    
 }
-public static void main(String args[])
-{
-   Queue<Integer> q =     new LinkedList<>();
-
-   q.add(10);q.add(20);q.add(30);q.add(40);
-   System.out.println("Original Queue: " + q);
-        reverseQuese(q);
-        System.out.println("Reversed Queue: " + q);
-
-}
-
  }
