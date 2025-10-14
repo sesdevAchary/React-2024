@@ -279,3 +279,15 @@ public class GenerateNumbers {
         for (int i = 1; i <= n; i++) {
             int front = q.remove();      // remove first
             System.out.println(front);   // print it
+             // generate next two numbers (like binary tree)
+            q.add(front * 2);
+            q.add(front * 2 + 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println("Generated numbers from 1 to " + n + ":");
+        generateNumbers(n);
+    }
+}
