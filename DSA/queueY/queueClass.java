@@ -254,3 +254,15 @@ public static void generateBinary(int n)
         generateBinary(n);
     }
  }
+
+
+
+
+
+
+ for (int i = 1; i <= n; i++) {
+    String front = q.remove();
+    System.out.println(front);
+    q.add(front + "0");
+    q.add(front + "1");
+}
