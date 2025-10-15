@@ -234,34 +234,6 @@ import java.util.*;
 
 //  }
 
-public static void generateBinary(int n)
-{
-    Queue q= new LinkedList<>();
-    q.add("1");
-
-    for(int i=0;i<=n;i++)
-    {
-        String front=q.remove(); // remove 1 first ,10,11,100
-        System.out.println(front); //print 1, i2-10 , i3-11,i4-100
-
-        q.add(front+"0"); // add 0 to 1 i2- add 0 to 10, i3- add 0
-        q.add(front+"1"); // add 1 to 1 i2- add 1 to 10, i3- add 1
-    }
-}
- public static void main(String[] args) {
-        int n = 10;
-        System.out.println("Binary numbers from 1 to " + n + ":");
-        generateBinary(n);
-    }
- 
-
-
-
-
-
-
-
-
 public static void reverseKElements(Queue<Integer> q , int k)
 {
     Stack<Integer> s= new Stack<>();
@@ -300,5 +272,26 @@ public static void main(String[] args){
 }
 
 
+
+public static void generateBinary(int n)
+{
+    Queue q= new LinkedList<>();
+    q.add("1");
+
+    for(int i=0;i<=n;i++)
+    {
+        String front=q.remove(); // remove 1 first ,10,11,100
+        System.out.println(front); //print 1, i2-10 , i3-11,i4-100
+
+        q.add(front+"0"); // add 0 to 1 i2- add 0 to 10, i3- add 0
+        q.add(front+"1"); // add 1 to 1 i2- add 1 to 10, i3- add 1
+    }
+}
+ public static void main(String[] args) {
+        int n = 10;
+        System.out.println("Binary numbers from 1 to " + n + ":");
+        generateBinary(n);
+    }
+ 
 
 }
