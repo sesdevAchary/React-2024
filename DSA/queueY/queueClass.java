@@ -253,7 +253,7 @@ public static void generateBinary(int n)
         System.out.println("Binary numbers from 1 to " + n + ":");
         generateBinary(n);
     }
- }
+ 
 
 
 
@@ -262,15 +262,22 @@ public static void generateBinary(int n)
 
 
 
-public class reverseKElements(Queue<Integer> q , int k)
+public void reverseKElements(Queue<Integer> q , int k)
 {
+    Stack<Integer> s= new Stack<>();
+
+    if(q.isEmpty() || k<0 || k>q.size()) return;
+
+    for(int i=0;i<k;i++)
+    {
+        s.push(q.remove());
+    }
     
- for (int i = 1; i <= n; i++) {
-    String front = q.remove();
-    System.out.println(front);
-    q.add(front + "0");
-    q.add(front + "1");
+ 
+
+
 }
+
 
 
 }
