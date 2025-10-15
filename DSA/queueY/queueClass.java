@@ -286,7 +286,17 @@ public static void reverseKElements(Queue<Integer> q , int k)
 }
 
 
+public static void main(String[] args){
+    Queue<Integer> q = new LinkedList<>();
+    q.add(10);q.add(20);q.add(30);q.add(40);q.add(50);q.add(60);
 
+    int k=3;
+
+    System.out.println("Original Queue: " + q);
+
+    reverseKElements(q, k);
+
+    System.out.println("Queue after reversing first " + k + " elements: " + q);
 }
 
 
