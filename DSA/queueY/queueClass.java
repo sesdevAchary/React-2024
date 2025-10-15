@@ -262,7 +262,7 @@ public static void generateBinary(int n)
 
 
 
-public void reverseKElements(Queue<Integer> q , int k)
+public static void reverseKElements(Queue<Integer> q , int k)
 {
     Stack<Integer> s= new Stack<>();
 
@@ -272,8 +272,19 @@ public void reverseKElements(Queue<Integer> q , int k)
     {
         s.push(q.remove());
     }
-    
- 
+
+    while(!s.isEmpty())
+    {
+        q.add(s.pop());
+    }
+
+    int rem=q.size()-k;
+    for(int o=0;o<rem;o++)
+    {
+        q.add(q.remove());
+    }
+}
+
 
 
 }
