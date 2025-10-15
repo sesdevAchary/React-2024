@@ -260,34 +260,17 @@ public static void generateBinary(int n)
 
 
 
+
+
+public class reverseKElements(Queue<Integer> q , int k)
+{
+    
  for (int i = 1; i <= n; i++) {
     String front = q.remove();
     System.out.println(front);
     q.add(front + "0");
     q.add(front + "1");
 }
-import java.util.*;
 
-public class GenerateNumbers {
-    public static void generateNumbers(int n) {
-        Queue<Integer> q = new LinkedList<>();
 
-        // Step 1: start with 1
-        q.add(1);
-
-        // Step 2: repeat n times
-        for (int i = 1; i <= n; i++) {
-            int front = q.remove();      // remove first
-            System.out.println(front);   // print it
-             // generate next two numbers (like binary tree)
-            q.add(front * 2);
-            q.add(front * 2 + 1);
-        }
-    }
-
-    public static void main(String[] args) {
-        int n = 10;
-        System.out.println("Generated numbers from 1 to " + n + ":");
-        generateNumbers(n);
-    }
 }
